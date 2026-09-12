@@ -29,9 +29,19 @@ courses/
 resolves unchanged. Don't nest courses under a series directory; it breaks that.
 
 ```bash
-./scripts/new-course.sh <name> [series]      # scaffold
-./scripts/assemble-course.sh courses/<name>  # sections/*.html -> index.html
+./scripts/new-course.sh <name> [series]               # scaffold
+./scripts/assemble-course.sh courses/<name>           # -> self-contained index.html
+./scripts/assemble-course.sh courses/<name> --linked  # authoring only; T cycles themes
 ```
+
+**The default build inlines everything and that is deliberate** (docs/adr/0005).
+Safari refuses to load `file://` subresources from parent directories, so a
+linked build renders **completely unstyled** in the default macOS browser while
+looking perfect under `render.sh`, which is headless Chrome. A Course also gets
+emailed and opened on machines that have never seen this repo.
+
+**Never review a course only in Chrome.** Open the built file in Safari too, or
+check that `grep -cE '(src|href)="\.\.' index.html` returns 0.
 
 ## Status is per Section, not per gate
 
