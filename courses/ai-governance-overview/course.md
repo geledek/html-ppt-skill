@@ -553,11 +553,27 @@ system says.** The simplest principle in the deck.
 > "Air Canada suggests the chatbot is a separate legal entity that is responsible
 > for its own actions. This is a remarkable submission. … It should be obvious to
 > Air Canada that it is responsible for all the information on its website."
-Damages: CAD 812.02. The number is the point — trivial award, total principle.
+Damages: CAD **812.02** ($650.88 + $36.14 interest + $125 fees). Trivial award,
+load-bearing principle. Also usable:
+> "it does not explain why customers should have to double-check information
+> found in one part of its website on another part of its website."
+⚠️ **Do NOT say Air Canada disabled the chatbot** — no primary source. Air Canada
+did not appeal.
+
+**EN-7b · NYC "MyCity" chatbot — the refusal to withdraw is the lesson.**
+The Markup, 29 Mar 2024: the city's small-business chatbot advised that a
+landlord could refuse a housing-voucher tenant, that "There are no restrictions
+on the amount of rent that you can charge a residential tenant", and that an
+employer could take a cut of workers' tips. The city's response was that it had
+"already provided thousands of people with timely, accurate answers" and would
+"continue to focus on upgrading this tool". **It was not taken down.**
+⚠️ Journalism, not a regulator finding. Frame as reported.
 
 **EN-8 · Zillow Offers — no regulator, no lawsuit, a quarter of the company.**
-~**$304m** Q3 2021 inventory write-down, $240–265m further expected, ~**25%** of
-staff cut, after a pricing model was confidently wrong.
+~**$304m** Q3 2021 inventory write-down, $240–265m further expected, Homes
+segment pre-tax loss **$(421.6)m**, and a workforce cut of "approximately 25%"
+after a pricing model was confidently wrong. ⚠️ The company gave only the
+percentage; the widely quoted ~2,000 headcount is media arithmetic.
 > "the unpredictability in forecasting home prices far exceeds what we
 > anticipated"
 SEC filing, 2 Nov 2021. Best case in the set for a CFO audience.
@@ -583,8 +599,10 @@ Reg B §1002.9 still bind regardless of the withdrawal.
 **EN-10c · Apple Card / Goldman Sachs — the regulator found NO discrimination.**
 NYDFS reviewed ~400,000 New York applications and found neither disparate
 treatment nor disparate impact. The lesson is reputational, not legal: a viral
-thread triggered a state investigation the bank won and still lost. NYDFS went
-further than its own finding:
+thread triggered a state investigation the bank won and still lost.
+⚠️ **Do not say "DFS called it a black box."** DFS attributes that characterisation
+to the complaining consumer, and records that Goldman *could* explain every
+complainant's decision when asked. NYDFS went further than its own finding:
 > "even the exclusive consideration of such financial characteristics does not
 > prevent that history of discrimination from affecting credit scores."
 
@@ -604,7 +622,14 @@ consent with no finding about the recommender.
   researched.** Flagged as likely the most powerful financial-services-adjacent
   case available. Search budget ran out. Decide whether the course needs it.
 - Robodebt: the settlement was **$112m inclusive of costs**. $1.763bn is debts
-  *withdrawn* and $751m *refunded*. Do not conflate.
+  *withdrawn* and $751m *refunded* (a subset). "$1.872 billion" is unverified.
+- Post Office Horizon: cite **[2019] EWHC 3408 (QB)**, not TCC. ~1,000 people
+  prosecuted. On the 13 deaths Sir Wyn **declines a causal finding** — "I cannot
+  make a definitive finding … I do not rule it out as a real possibility."
+  At least 59 contemplated suicide, ten attempted.
+- Air India or any airline/bank withdrawing an AI product: **not found**. Leave out.
+- AI hallucination case counts (~1,668 by Jul 2026) and *Couvrette v. Wisnovsky*:
+  database blocked, **unverified**. No number on a slide without re-checking.
 - France/CNIL: recommend dropping entirely — CNIL de-publishes sanctions and no
   live page backs the Clearview €20m.
 
