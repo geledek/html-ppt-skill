@@ -326,6 +326,21 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
   [class*="anim-"]{animation:none!important;transition:none!important}
 }
 /* --- template: course --- */
+/* ---- fixed stage ----------------------------------------------------------
+   The deck is laid out at exactly 1920x1080 and scaled to fit the window, the
+   way PowerPoint scales a fixed canvas. Without this the viewport IS the slide:
+   type stays at fixed px while the box reflows, so a headline wraps differently
+   on a laptop than on a monitor and content drifts. Scale factor comes from
+   assets/stage.js. See docs/adr/0006. */
+.tpl-course.stage-fixed{overflow:hidden;background:var(--bg-soft)}
+.tpl-course.stage-fixed .deck{
+  width:1920px;height:1080px;
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%) scale(var(--stage-scale,1));
+  transform-origin:center center;
+}
+.tpl-course.stage-fixed .slide{position:absolute;inset:0}
+
 /* course — teaching furniture, fully themeable.
    Structure only: every color, radius, shadow and font comes from a token, so
    any assets/themes/*.css reskins this without touching the markup.
@@ -352,8 +367,12 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 .tpl-course .slide.full{grid-template-columns:1fr;display:flex;flex-direction:column;justify-content:center}
 /* Prose at 1760px is unreadable. Cap the measure; tables and the layer stack
    opt out with .wide. */
-.tpl-course .main{min-width:0;max-width:1180px;margin:0 auto;width:100%;display:contents}
+/* 1180px is a reading measure, right for prose. Tables and diagrams are not
+   prose: .wide lets a body use the full stage. */
+.tpl-course .main{display:contents}
 .tpl-course .slide-head,.tpl-course .slide-body{max-width:1180px;width:100%;margin-inline:auto}
+.tpl-course .slide-body.wide{max-width:1560px}
+.tpl-course .slide-head.wide{max-width:1560px}
 .tpl-course .main .wide{max-width:none}
 
 /* objectives sidebar */
@@ -377,9 +396,9 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 .tpl-course .slide.full .h1{font-size:88px}
 
 /* teaching blocks */
-.tpl-course .callout{border-left:4px solid var(--accent-2);background:var(--surface-2);padding:20px 24px;border-radius:0 var(--radius) var(--radius) 0;margin-top:24px}
+.tpl-course .callout{font-size:19px;border-left:4px solid var(--accent-2);background:var(--surface-2);padding:24px 30px;border-radius:0 var(--radius) var(--radius) 0;margin-top:24px}
 .tpl-course .callout b{color:var(--accent-2)}
-.tpl-course .concept-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 26px;box-shadow:var(--shadow)}
+.tpl-course .concept-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:30px 34px;box-shadow:var(--shadow);font-size:19px}
 .tpl-course .concept-box h4{margin-top:0;color:var(--accent)}
 .tpl-course .exercise{background:color-mix(in srgb,var(--accent-2) 8%,var(--surface));border:1.5px dashed var(--accent-2);border-radius:var(--radius);padding:24px 28px}
 .tpl-course .exercise::before{content:"✎ Exercise";display:block;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--accent-2);margin-bottom:10px;text-transform:uppercase}
@@ -395,10 +414,10 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 
 /* quiz — inert until clicked; behaviour in assets/quiz.js */
 .tpl-course .quiz{margin:0}
-.tpl-course .mcq{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 22px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start;cursor:pointer;transition:border-color .18s var(--ease),background .18s var(--ease)}
+.tpl-course .mcq{font-size:19px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start;cursor:pointer;transition:border-color .18s var(--ease),background .18s var(--ease)}
 .tpl-course .mcq:hover{border-color:var(--border-strong)}
 .tpl-course .mcq .letter{flex:none;width:28px;height:28px;border-radius:50%;border:2px solid var(--text-3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:var(--text-2);transition:all .18s var(--ease)}
-.tpl-course .mcq .why{display:none;font-size:13px;color:var(--text-2);margin:6px 0 0}
+.tpl-course .mcq .why{display:none;font-size:16px;color:var(--text-2);margin:8px 0 0}
 
 /* revealed states — only ever applied by quiz.js */
 .tpl-course .quiz.revealed .mcq{cursor:default}
@@ -406,8 +425,8 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 .tpl-course .quiz.revealed .mcq .why{display:block}
 /* Once revealed the letter becomes a tick or a cross. The green box already says
    which answer is right, so the letter is free to carry the verdict instead. */
-.tpl-course .quiz.revealed .mcq .letter{color:transparent;position:relative}
-.tpl-course .quiz.revealed .mcq .letter::after{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700}
+.tpl-course .quiz.revealed .mcq .letter{font-size:0;position:relative}
+.tpl-course .quiz.revealed .mcq .letter::after{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;line-height:1}
 .tpl-course .quiz.revealed .mcq.correct .letter::after{content:"\2713";color:var(--surface)}
 .tpl-course .quiz.revealed .mcq:not(.correct) .letter::after{content:"\2715";color:var(--text-3)}
 .tpl-course .quiz.revealed .mcq.wrong .letter::after{color:var(--surface)}
@@ -429,17 +448,18 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 .tpl-course .layer-stack{position:relative;margin-top:24px;padding-left:132px}
 .tpl-course .layer-stack::before{content:"";position:absolute;left:104px;top:0;bottom:0;width:2px;background:var(--accent)}
 .tpl-course .layer-stack::after{content:"all three apply at once";position:absolute;left:0;top:50%;width:96px;text-align:right;transform:translateY(-50%);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);line-height:1.4}
-.tpl-course .layer{border:1px solid var(--border);border-bottom:none;background:var(--surface);padding:18px 24px;display:flex;gap:24px;align-items:baseline}
+.tpl-course .layer{border:1px solid var(--border);border-bottom:none;background:var(--surface);padding:26px 32px;display:flex;gap:24px;align-items:baseline}
 .tpl-course .layer:first-child{border-radius:var(--radius) var(--radius) 0 0}
 .tpl-course .layer:last-child{border-bottom:1px solid var(--border);border-radius:0 0 var(--radius) var(--radius)}
-.tpl-course .layer .layer-name{flex:none;width:230px;font-weight:700;color:var(--text-1)}
-.tpl-course .layer .layer-note{color:var(--text-2);font-size:15px}
+.tpl-course .layer{font-size:19px}
+.tpl-course .layer .layer-name{flex:none;width:300px;font-weight:700;color:var(--text-1)}
+.tpl-course .layer .layer-note{color:var(--text-2);font-size:19px}
 .tpl-course .layer.is-binding{border-left:4px solid var(--accent)}
 .tpl-course .layer.is-expectation{border-left:4px solid var(--accent-2)}
 .tpl-course .layer.is-voluntary{border-left:4px solid var(--text-3)}
 </style>
 </head>
-<body class="tpl-course">
+<body class="tpl-course stage-fixed">
 <div class="deck">
 
 <!-- section: 03-legal-force.html -->
@@ -459,27 +479,27 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
   </section>
 
   <section class="slide" data-section="3" data-title="Singapore, and the rest">
-    <header class="slide-head">
+    <header class="slide-head wide">
       <p class="kicker">SINGAPORE FIRST</p>
       <h2 class="h2 mt-s">The same shape, twice.</h2>
     </header>
-    <div class="slide-body">
-      <table class="mt-l wide" style="width:100%;border-collapse:collapse;font-size:15px">
+    <div class="slide-body wide">
+      <table class="mt-l" style="width:100%;border-collapse:collapse;font-size:19px">
         <thead><tr>
-          <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-strong);width:170px"></th>
-          <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-strong)">Singapore</th>
-          <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-strong)">United Kingdom</th>
+          <th style="text-align:left;padding:16px 18px;border-bottom:2px solid var(--border-strong);width:230px"></th>
+          <th style="text-align:left;padding:16px 18px;border-bottom:2px solid var(--border-strong)">Singapore</th>
+          <th style="text-align:left;padding:16px 18px;border-bottom:2px solid var(--border-strong)">United Kingdom</th>
         </tr></thead>
         <tbody>
-          <tr><td style="padding:12px;border-bottom:1px solid var(--border)"><b>Binding law</b></td>
-            <td style="padding:12px;border-bottom:1px solid var(--border)">PDPA &middot; Workplace Fairness Act &middot; Online Criminal Harms Act codes</td>
-            <td style="padding:12px;border-bottom:1px solid var(--border)">UK GDPR &amp; DPA 2018 &middot; Equality Act &middot; Online Safety Act</td></tr>
-          <tr><td style="padding:12px;border-bottom:1px solid var(--border)"><b>Supervisory expectation</b></td>
-            <td style="padding:12px;border-bottom:1px solid var(--border)">PDPC advisory guidelines &middot; MAS guidelines</td>
-            <td style="padding:12px;border-bottom:1px solid var(--border)">ICO guidance &middot; PRA SS1/23</td></tr>
-          <tr><td style="padding:12px"><b>Voluntary</b></td>
-            <td style="padding:12px">3 Model AI Governance Frameworks &middot; AI Verify</td>
-            <td style="padding:12px">AI Cyber Security Code &middot; DSIT toolkit</td></tr>
+          <tr><td style="padding:22px 18px;border-bottom:1px solid var(--border)"><b>Binding law</b></td>
+            <td style="padding:22px 18px;border-bottom:1px solid var(--border)">PDPA &middot; Workplace Fairness Act &middot; Online Criminal Harms Act codes</td>
+            <td style="padding:22px 18px;border-bottom:1px solid var(--border)">UK GDPR &amp; DPA 2018 &middot; Equality Act &middot; Online Safety Act</td></tr>
+          <tr><td style="padding:22px 18px;border-bottom:1px solid var(--border)"><b>Supervisory expectation</b></td>
+            <td style="padding:22px 18px;border-bottom:1px solid var(--border)">PDPC advisory guidelines &middot; MAS guidelines</td>
+            <td style="padding:22px 18px;border-bottom:1px solid var(--border)">ICO guidance &middot; PRA SS1/23</td></tr>
+          <tr><td style="padding:22px 18px"><b>Voluntary</b></td>
+            <td style="padding:22px 18px">3 Model AI Governance Frameworks &middot; AI Verify</td>
+            <td style="padding:22px 18px">AI Cyber Security Code &middot; DSIT toolkit</td></tr>
         </tbody>
       </table>
       <p class="pill-academic mt-l">Neither country has an AI Act.</p>
@@ -1629,6 +1649,42 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 
   // Assembled courses and preview iframes can inject slides after load.
   window.htmlPptQuiz = { wire: wire };
+})();
+</script>
+<script>
+/* html-ppt :: stage.js — fixed 1920x1080 stage, scaled to fit.
+ *
+ * HTML decks reflow with the window while their type stays at fixed px, so the
+ * same deck looks different on every screen: headlines wrap at one width and not
+ * another, and content drifts. PowerPoint does not have this problem because it
+ * has a FIXED CANVAS and scales the whole thing.
+ *
+ * This does the same. The deck is laid out at exactly 1920x1080 and transformed
+ * to fit whatever window it is in, letterboxed. What you position stays
+ * positioned, on every screen, at every size.
+ *
+ * A new file rather than an edit to runtime.js, per docs/adr/0001. Opt in by
+ * putting class="stage-fixed" on <body> (the course template does).
+ */
+(function () {
+  'use strict';
+  if (!document.body || !document.body.classList.contains('stage-fixed')) {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+  function init() {
+    if (!document.body.classList.contains('stage-fixed')) return;
+    var W = 1920, H = 1080;
+    function fit() {
+      var s = Math.min(window.innerWidth / W, window.innerHeight / H);
+      document.documentElement.style.setProperty('--stage-scale', String(s));
+    }
+    window.addEventListener('resize', fit);
+    window.addEventListener('orientationchange', fit);
+    fit();
+  }
 })();
 </script>
 </body></html>

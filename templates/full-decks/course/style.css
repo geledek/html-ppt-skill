@@ -1,3 +1,18 @@
+/* ---- fixed stage ----------------------------------------------------------
+   The deck is laid out at exactly 1920x1080 and scaled to fit the window, the
+   way PowerPoint scales a fixed canvas. Without this the viewport IS the slide:
+   type stays at fixed px while the box reflows, so a headline wraps differently
+   on a laptop than on a monitor and content drifts. Scale factor comes from
+   assets/stage.js. See docs/adr/0006. */
+.tpl-course.stage-fixed{overflow:hidden;background:var(--bg-soft)}
+.tpl-course.stage-fixed .deck{
+  width:1920px;height:1080px;
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%) scale(var(--stage-scale,1));
+  transform-origin:center center;
+}
+.tpl-course.stage-fixed .slide{position:absolute;inset:0}
+
 /* course — teaching furniture, fully themeable.
    Structure only: every color, radius, shadow and font comes from a token, so
    any assets/themes/*.css reskins this without touching the markup.
@@ -24,8 +39,12 @@
 .tpl-course .slide.full{grid-template-columns:1fr;display:flex;flex-direction:column;justify-content:center}
 /* Prose at 1760px is unreadable. Cap the measure; tables and the layer stack
    opt out with .wide. */
-.tpl-course .main{min-width:0;max-width:1180px;margin:0 auto;width:100%;display:contents}
+/* 1180px is a reading measure, right for prose. Tables and diagrams are not
+   prose: .wide lets a body use the full stage. */
+.tpl-course .main{display:contents}
 .tpl-course .slide-head,.tpl-course .slide-body{max-width:1180px;width:100%;margin-inline:auto}
+.tpl-course .slide-body.wide{max-width:1560px}
+.tpl-course .slide-head.wide{max-width:1560px}
 .tpl-course .main .wide{max-width:none}
 
 /* objectives sidebar */
@@ -49,9 +68,9 @@
 .tpl-course .slide.full .h1{font-size:88px}
 
 /* teaching blocks */
-.tpl-course .callout{border-left:4px solid var(--accent-2);background:var(--surface-2);padding:20px 24px;border-radius:0 var(--radius) var(--radius) 0;margin-top:24px}
+.tpl-course .callout{font-size:19px;border-left:4px solid var(--accent-2);background:var(--surface-2);padding:24px 30px;border-radius:0 var(--radius) var(--radius) 0;margin-top:24px}
 .tpl-course .callout b{color:var(--accent-2)}
-.tpl-course .concept-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 26px;box-shadow:var(--shadow)}
+.tpl-course .concept-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:30px 34px;box-shadow:var(--shadow);font-size:19px}
 .tpl-course .concept-box h4{margin-top:0;color:var(--accent)}
 .tpl-course .exercise{background:color-mix(in srgb,var(--accent-2) 8%,var(--surface));border:1.5px dashed var(--accent-2);border-radius:var(--radius);padding:24px 28px}
 .tpl-course .exercise::before{content:"✎ Exercise";display:block;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--accent-2);margin-bottom:10px;text-transform:uppercase}
@@ -67,10 +86,10 @@
 
 /* quiz — inert until clicked; behaviour in assets/quiz.js */
 .tpl-course .quiz{margin:0}
-.tpl-course .mcq{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 22px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start;cursor:pointer;transition:border-color .18s var(--ease),background .18s var(--ease)}
+.tpl-course .mcq{font-size:19px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start;cursor:pointer;transition:border-color .18s var(--ease),background .18s var(--ease)}
 .tpl-course .mcq:hover{border-color:var(--border-strong)}
 .tpl-course .mcq .letter{flex:none;width:28px;height:28px;border-radius:50%;border:2px solid var(--text-3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:var(--text-2);transition:all .18s var(--ease)}
-.tpl-course .mcq .why{display:none;font-size:13px;color:var(--text-2);margin:6px 0 0}
+.tpl-course .mcq .why{display:none;font-size:16px;color:var(--text-2);margin:8px 0 0}
 
 /* revealed states — only ever applied by quiz.js */
 .tpl-course .quiz.revealed .mcq{cursor:default}
@@ -78,8 +97,8 @@
 .tpl-course .quiz.revealed .mcq .why{display:block}
 /* Once revealed the letter becomes a tick or a cross. The green box already says
    which answer is right, so the letter is free to carry the verdict instead. */
-.tpl-course .quiz.revealed .mcq .letter{color:transparent;position:relative}
-.tpl-course .quiz.revealed .mcq .letter::after{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700}
+.tpl-course .quiz.revealed .mcq .letter{font-size:0;position:relative}
+.tpl-course .quiz.revealed .mcq .letter::after{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;line-height:1}
 .tpl-course .quiz.revealed .mcq.correct .letter::after{content:"\2713";color:var(--surface)}
 .tpl-course .quiz.revealed .mcq:not(.correct) .letter::after{content:"\2715";color:var(--text-3)}
 .tpl-course .quiz.revealed .mcq.wrong .letter::after{color:var(--surface)}
@@ -101,11 +120,12 @@
 .tpl-course .layer-stack{position:relative;margin-top:24px;padding-left:132px}
 .tpl-course .layer-stack::before{content:"";position:absolute;left:104px;top:0;bottom:0;width:2px;background:var(--accent)}
 .tpl-course .layer-stack::after{content:"all three apply at once";position:absolute;left:0;top:50%;width:96px;text-align:right;transform:translateY(-50%);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);line-height:1.4}
-.tpl-course .layer{border:1px solid var(--border);border-bottom:none;background:var(--surface);padding:18px 24px;display:flex;gap:24px;align-items:baseline}
+.tpl-course .layer{border:1px solid var(--border);border-bottom:none;background:var(--surface);padding:26px 32px;display:flex;gap:24px;align-items:baseline}
 .tpl-course .layer:first-child{border-radius:var(--radius) var(--radius) 0 0}
 .tpl-course .layer:last-child{border-bottom:1px solid var(--border);border-radius:0 0 var(--radius) var(--radius)}
-.tpl-course .layer .layer-name{flex:none;width:230px;font-weight:700;color:var(--text-1)}
-.tpl-course .layer .layer-note{color:var(--text-2);font-size:15px}
+.tpl-course .layer{font-size:19px}
+.tpl-course .layer .layer-name{flex:none;width:300px;font-weight:700;color:var(--text-1)}
+.tpl-course .layer .layer-note{color:var(--text-2);font-size:19px}
 .tpl-course .layer.is-binding{border-left:4px solid var(--accent)}
 .tpl-course .layer.is-expectation{border-left:4px solid var(--accent-2)}
 .tpl-course .layer.is-voluntary{border-left:4px solid var(--text-3)}

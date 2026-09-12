@@ -60,7 +60,7 @@ A="$HERE/assets"
 T="$HERE/templates/full-decks/$TEMPLATE"
 for f in "$A/fonts.css" "$A/base.css" "$A/themes/$THEME.css" \
          "$A/animations/animations.css" "$T/style.css" \
-         "$A/runtime.js" "$A/quiz.js"; do
+         "$A/runtime.js" "$A/quiz.js" "$A/stage.js"; do
   [[ -f "$f" ]] || { echo "error: missing asset $f" >&2; exit 1; }
 done
 
@@ -88,7 +88,7 @@ OUT="$DIR/index.html"
     echo "<link rel=\"stylesheet\" href=\"$R/animations/animations.css\">"
     echo "<link rel=\"stylesheet\" href=\"../../templates/full-decks/$TEMPLATE/style.css\">"
     echo '</head>'
-    echo "<body class=\"tpl-$TEMPLATE\" data-themes=\"$THEMES\" data-theme-base=\"$R/themes/\">"
+    echo "<body class=\"tpl-$TEMPLATE stage-fixed\" data-themes=\"$THEMES\" data-theme-base=\"$R/themes/\">"
   else
     # @import rules must precede every other rule, so fonts.css goes first.
     echo '<style>'
@@ -101,7 +101,7 @@ OUT="$DIR/index.html"
     echo '</head>'
     # No data-themes: with the theme inlined there are no files for the T key to
     # swap to, so the key stays inert rather than breaking the page.
-    echo "<body class=\"tpl-$TEMPLATE\">"
+    echo "<body class=\"tpl-$TEMPLATE stage-fixed\">"
   fi
 
   echo '<div class="deck">'
@@ -116,9 +116,11 @@ OUT="$DIR/index.html"
   if [[ "$MODE" == "--linked" ]]; then
     echo "<script src=\"../../assets/runtime.js\"></script>"
     echo "<script src=\"../../assets/quiz.js\"></script>"
+    echo "<script src=\"../../assets/stage.js\"></script>"
   else
     echo '<script>'; cat "$A/runtime.js"; echo '</script>'
     echo '<script>'; cat "$A/quiz.js";    echo '</script>'
+    echo '<script>'; cat "$A/stage.js";   echo '</script>'
   fi
   echo '</body></html>'
 } > "$OUT"
