@@ -1,12 +1,13 @@
 ---
 title: Overview for AI Governance
+series: ai-for-business-leaders
 
 template: course
 theme: corporate-clean
 themes: corporate-clean,minimal-white,swiss-grid,academic-paper,course-warm
 lang: en
-delivery: self-paced   # presenter-led | self-paced | recorded  (gate 1)
-rate: 110          # EFFECTIVE wpm, not raw reading speed — 250 x 30 = 7,500 words is far too dense for an exec module. Leaves ~40% of the time for diagrams, quiz checks and thinking. Budget ~3,300 words.
+delivery: recorded     # presenter-led | self-paced | recorded  (gate 1)
+rate: 150          # spoken wpm. Narration is a VOICEOVER SCRIPT, not on-slide prose. 30 min of runtime = ~21 min of script plus quizzes, transitions and pauses.
 duration: 30       # minutes
 accepted_hash:     # set at gate 3; a mismatch means index.html has diverged
 ---
@@ -28,24 +29,44 @@ explains "global" without walking through five regimes.
 of how sector supervision layers on top — MAS in Singapore, FCA and the Bank of
 England in the UK give something concrete to point at.
 
-**Delivery.** Self-paced online, 30 minutes. Narration renders **on-slide**, not
-in `.notes` — nobody is speaking. Quiz checks must work.
+**Delivery.** Recorded, 30 minutes, watched at the learner's own pace.
+
+A voiceover is recorded from the Narration below, so the Narration is a **script
+to be read aloud** and does not appear on the slide. Slides carry the headline
+and the visual — a table, the layer stack, the figures — and nothing the voice is
+already saying. Printing the script on screen while someone reads it aloud is the
+worst way to present either.
+
+In the built deck the script lives in each slide's `<div class="notes">`, hidden
+from the audience view and readable by pressing `S`.
+
+Quiz checks are interactive: the learner clicks, or the answer reveals when the
+recording advances.
 
 ### Outcomes
 
 After 30 minutes, a business leader can:
 
-1. Place their organisation's AI uses on a risk map, and say which face **binding
-   obligation**, which face **supervisory expectation**, and which carry only
-   reputational and operational risk. In Singapore and the UK most sit in the
-   middle band, which is the point most executives get wrong.
-2. Name who owns AI risk in their organisation, and what that person is
-   accountable for.
-3. Ask three questions of any AI proposal that expose the governance gaps.
-4. Decide what to do in the next 90 days, and what can wait.
+1. Sort their organisation's AI uses by which rules actually apply in Singapore —
+   binding law, supervisory expectation, or voluntary guidance — and recognise
+   where other jurisdictions differ.
+2. Designate an accountable owner for each consequential AI use, and in a
+   regulated firm, identify who already holds it.
+3. Interrogate any AI proposal with a short set of questions that expose
+   governance gaps before approval.
+4. Leave with an actionable AI governance roadmap: what to do in the next 90
+   days, and what follows.
 
 Outcome 4 is what makes this an executive course rather than a briefing. Without
-it they leave informed and idle.
+it they leave informed and idle. The course therefore ends on a **one-page
+roadmap** the learner can screenshot or print, not on a closing sentence.
+
+Three phrases were cut from an earlier draft of these outcomes and should stay
+cut. **"Risk map"** promised an artefact the course never shows. **"Middle band"**
+was jargon from the three-tier framing, used before the learner has seen it. And
+**"the point most executives get wrong"** had no source — the 46% figure is about
+understanding AI systems, not about understanding which rules apply — so it broke
+the course's own provenance rule.
 
 ## Research Brief
 
@@ -733,27 +754,29 @@ Rendered to `sample.html` and reviewed live at gate 2.
 
 ## Narration
 
-Delivery is **self-paced**, so this text renders **on-slide**, not in
-`<div class="notes">`. Slide numbers below (1.2, 3.4 …) are Section.Slide.
-Edited through the `no-ai-slop` skill; zero banned words remain, and every em
-dash is a structural slide label rather than prose.
+Delivery is **recorded**, so this text is a **voiceover script**. It does NOT
+appear on the slide — it lives in each slide's `<div class="notes">`, hidden from
+the audience view and readable with `S`. Slide numbers below (1.2, 3.4 …) are
+Section.Slide.
 
-**Measured against allocation** at 110 effective wpm:
+Edited through the `no-ai-slop` skill; zero banned words remain.
 
-| S | Words | Target | Diff | Min |
-|---|---|---|---|---|
-| 1 | 196 | 220 | −24 | 1.8 |
-| 2 | 204 | 220 | −16 | 1.9 |
-| 3 | 629 | 660 | −31 | 5.7 |
-| 4 | 522 | 440 | **+82** | 4.7 |
-| 5 | 449 | 440 | +9 | 4.1 |
-| 6 | 527 | 550 | −23 | 4.8 |
-| 7 | 689 | 770 | −81 | 6.3 |
-| **Total** | **3216** | 3300 | −84 | **29.2** |
+**Measured at 150 spoken wpm:**
 
-S4 runs ~45 seconds long and S7 ~45 seconds short, so the course lands at 29.2
-minutes. Left as measured rather than padded — the S4 overrun was predicted at
-gate 1 and every sentence in it is carrying a sourced case.
+| S | Script words | Min spoken |
+|---|---|---|
+| 1 | 200 | 1.3 |
+| 2 | 204 | 1.4 |
+| 3 | 619 | 4.1 |
+| 4 | 451 | 3.0 |
+| 5 | 438 | 2.9 |
+| 6 | 539 | 3.6 |
+| 7 | 683 | 4.6 |
+| **Total** | **3134** | **20.9** |
+
+Script runs 21 minutes. The remaining ~9 minutes of the 30-minute runtime are the
+four quiz pauses, transitions, and time on the roadmap one-pager. If the recorded
+cut comes in short, S7 has the most room to grow — it carries the roadmap.
 
 ### S1 · Is that enough to approve launch?  (2 min · target 220)
 
