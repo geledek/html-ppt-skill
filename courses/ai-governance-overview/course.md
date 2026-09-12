@@ -242,6 +242,71 @@ high-stakes or irreversible actions. Preserve both conditions and advisory force
 Status: inherited bounded source; no new quotation. Human oversight is also
 supported as recommended practice by R02. This source is outside the sample.
 
+### R20 · Singapore AI adoption (economy-wide)
+
+Non-SME AI adoption rose from 44.0% (2023) to **62.5%** (2024); SME adoption more
+than tripled from 4.2% to **14.5%**, driven by micro and small SMEs adopting
+off-the-shelf generative AI tools.
+[IMDA, Singapore Digital Economy Report 2025](https://www.imda.gov.sg/assets/e77d879a-6b39-4de4-b024-5e0c6da0eff3.pdf), published 6 October 2025 (data year 2024);
+restated by MDDI, 21 May 2026.
+⚠️ Economy-wide, not financial services. Same data year as the UK survey.
+**No Singapore source publishes a percentage for board oversight of AI or for
+"partial understanding".** That absence is a finding: label the UK figures as UK,
+2024, financial services rather than substituting something weaker.
+
+### R21 · MAS on banks' AI, qualitative only
+
+MAS reports its supervisory findings qualitatively, never as survey percentages.
+> "use of Generative AI in banks appears to still be at an early stage"
+> "Generative AI used by banks were pre-dominantly based on pre-trained models
+> from external providers. As disclosure standards relating to such AI are still
+> evolving globally, banks may lack full access to essential risk management
+> information"
+[MAS Information Paper on AI Model Risk Management](https://www.mas.gov.sg/publications/monographs-or-information-paper/2024/artificial-intelligence-model-risk-management), 5 December 2024.
+
+### R22 · MAS AI Risk Management Toolkit
+
+> "MAS today announced the successful conclusion of phase two of Project
+> MindForge, which culminates in the publication of an Artificial Intelligence
+> (AI) Risk Management Toolkit for the financial services sector… developed
+> collaboratively by a consortium of 24 leading banks, insurance companies,
+> capital market firms, and other industry partners"
+20 March 2026. Binding guidelines remain pending:
+> "MAS is presently reviewing responses to an earlier public consultation on a set
+> of Guidelines on AI Risk Management."
+https://www.mas.gov.sg/news/media-releases/2026/mas-partners-industry-to-develop-ai-risk-management-toolkit-for-the-financial-sector
+
+### R23 · UK AI Risk Management Toolkit
+
+Voluntary guidance, **8 September 2026**, gov.uk. Helps teams "understand, assess
+and manage risks when designing, procuring or delivering AI products". HTML
+guidance plus a risk workbook.
+https://www.gov.uk/government/publications/ai-risk-management-toolkit
+⚠️ The page still attributes it to DSIT, which was abolished in July 2026. Could
+not establish whether that is a stale organisation tag or a legacy badge.
+**Cite it as "gov.uk, 8 September 2026" and name no department.**
+
+### R24 · Malaysia — no binding AI law as at 13 September 2026
+
+Three distinct things, three statuses:
+- **AIGE**, National Guidelines on AI Governance and Ethics, MOSTI, 20 Sep 2024.
+  Voluntary. > "The aspiration for these National Guidelines is for the voluntary adoption"
+  https://mastic.mosti.gov.my/storage/2024/09/THE-NATIONAL-GUIDELINES-ON-AI-GOVERNANCE-ETHICS.pdf
+- **AI Governance Bill** — public consultation 10 Jul – 1 Aug 2026, stage
+  "Pre-drafting". https://upc.mpc.gov.my/view-consultation/264
+- **10 Sep 2026**: the Digital Minister said the draft is complete and will go to
+  Cabinet, with tabling targeted "this quarter or in the first quarter of next
+  year". ⚠️ Secondary source (Malay Mail). Flag as reported, not primary.
+
+### R25 · Japan — enacted, but no penalties
+
+Act on Promotion of Research and Development and Utilization of AI-Related
+Technologies, passed 28 May 2025; a full-text scan returns zero occurrences of
+罰則 / 罰金 / 懲役. Basic AI Plan adopted by Cabinet 23 Dec 2025.
+https://laws.e-gov.go.jp/law/507AC0000000053
+**Must appear on any jurisdiction map.** Showing Korea as APAC's only legislated
+regime while omitting Japan is misleading.
+
 ### Source corrections applied
 
 Removed the shared explainability/contestability claim across unrelated cases;
@@ -484,19 +549,28 @@ The same responsibilities continue when the system changes or a significant inci
 
 #### 10 · AI governance across jurisdictions
 
-**Sources:** [R04], [R05], [R07], [R08], [R09]
+**Sources:** [R04], [R05], [R07], [R08], [R09], [R24], [R25]
+**Delivery:** Select each jurisdiction as it is named. Allow the map to settle before moving on.
 
 **Narration:**
-Systems, suppliers and affected people can be in different countries.
-We will compare three selected approaches: Singapore, the European Union and the United Kingdom.
-These are selected examples.
+Your systems, your suppliers and the people affected by them can sit in different countries.
+The map groups nine jurisdictions by the kind of instrument each relies on, because that difference matters more than the map's geography.
+These are selected examples, not a complete list.
 
-Singapore combines existing legal obligations with sector supervision and voluntary governance frameworks.
-The EU AI Act adds a cross-sector legal regime with requirements that depend on the system, activity and role.
-The UK approach relies on existing regulators and legal frameworks, with policy principles and guidance supporting implementation.
+Three have binding AI law. The European Union's AI Act sets cross-sector requirements that depend on the system, the activity and your role.
+South Korea's AI Framework Act has been in force since January 2026.
+China has no single AI law, and it does enforce binding rules on generative AI and on labelling AI-generated content.
 
-Identify the use, affected people, locations and the organisation's role.
-A company may need to consider more than one jurisdiction for the same service.
+Five rely on existing law supported by guidance. Singapore combines existing legal obligations with sector supervision and voluntary frameworks.
+The United Kingdom relies on its existing regulators, with policy principles supporting implementation.
+Japan passed a promotion act that carries no penalties provision.
+India works through sectoral regulators, and separately requires the labelling of synthetically generated content.
+Malaysia has voluntary guidelines, and a governance Bill that has been drafted but not tabled.
+
+The United States is different again. There is no federal AI statute, and state laws are now being challenged by the federal government.
+
+Identify the use, the affected people, the locations served, and whether your organisation is a provider or a deployer.
+One service can require you to consider more than one jurisdiction at the same time.
 
 #### 11 · Different instruments have different legal effects
 

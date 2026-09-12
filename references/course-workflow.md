@@ -334,8 +334,14 @@ as a sequence of captions.
 ```
 
 It measures rather than eyeballs: every text block's line count, the headline and
-body coordinates on every slide, whether anything moves when a quiz is revealed,
-and whether any local subresource would leave the build unstyled in Safari.
+body coordinates on every slide, **whether anything runs off the bottom of the
+1080px stage**, whether anything moves when a quiz is revealed, and whether any
+local subresource would leave the build unstyled in Safari.
+
+The overflow check exists because a nine-item legend beside a map ran 691px tall
+and pushed a slide 64px off the stage, while the line-count and position checks
+both passed it. A slide can satisfy every rule about its parts and still not
+fit.
 
 **Run it before every gate 3 review.** A twenty-six slide deck reviewed by eye at
 2am is exactly where these rules quietly degrade.

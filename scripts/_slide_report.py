@@ -22,6 +22,15 @@ if pos:
         for p in pos:
             print("        slide %s: h %s,%s  body %s,%s" % (p['slide'], p['hx'], p['hy'], p['bx'], p['by']))
 
+ov = d.get('over') or []
+if ov:
+    fail = 1
+    print("FAIL  content overflows the 1080px stage (%d slide(s)):" % len(ov))
+    for v in ov:
+        print("        slide %s: %spx past the bottom - %s..." % (v['slide'], v['px'], v['text']))
+else:
+    print("ok    nothing overflows the stage")
+
 r = d['reveal']
 if r is None:
     print("skip  no quiz on this deck")

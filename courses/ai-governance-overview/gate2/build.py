@@ -27,6 +27,12 @@ SOURCE_LABELS = {
  'R12': ('UK Treasury Committee · January 2026 report', 'https://publications.parliament.uk/pa/cm5901/cmselect/cmtreasy/684/report.html'),
  'R14': ('PDPC · Re HSBC Bank (Singapore) [2021] SGPDPC 3 · paragraphs 17–19', 'https://www.pdpc.gov.sg/-/media/files/pdpc/pdf-files/commissions-decisions/decision--hsbc-bank-singapore-limited--10032021.pdf'),
  'R18': ('MAS P017-2025 §3.4 · consultation proposal, finance-specific', 'https://www.mas.gov.sg/publications/consultations/2025/consultation-paper-on-guidelines-on-artificial-intelligence-risk-management'),
+ 'R20': ('IMDA · Singapore Digital Economy Report 2025 · data year 2024', 'https://www.imda.gov.sg/assets/e77d879a-6b39-4de4-b024-5e0c6da0eff3.pdf'),
+ 'R21': ('MAS · Information paper on AI model risk management · 5 December 2024', 'https://www.mas.gov.sg/publications/monographs-or-information-paper/2024/artificial-intelligence-model-risk-management'),
+ 'R22': ('MAS · AI Risk Management Toolkit · 20 March 2026', 'https://www.mas.gov.sg/news/media-releases/2026/mas-partners-industry-to-develop-ai-risk-management-toolkit-for-the-financial-sector'),
+ 'R23': ('AI Risk Management Toolkit · gov.uk · 8 September 2026', 'https://www.gov.uk/government/publications/ai-risk-management-toolkit'),
+ 'R24': ('Malaysia · National Guidelines on AI Governance and Ethics, 2024 · AI Governance Bill consultation, July 2026', 'https://upc.mpc.gov.my/view-consultation/264'),
+ 'R25': ('Japan · Act on Promotion of R&D and Utilization of AI-Related Technologies, 2025', 'https://laws.e-gov.go.jp/law/507AC0000000053'),
 }
 
 def narration_blocks(source):
@@ -42,26 +48,79 @@ def narration_blocks(source):
 
 EU = {'AUT','BEL','BGR','HRV','CYP','CZE','DNK','EST','FIN','FRA','DEU','GRC','HUN','IRL','ITA','LVA','LTU','LUX','MLT','NLD','POL','PRT','ROU','SVK','SVN','ESP','SWE'}
 
+# Jurisdictions shown on the map, and how their approach is classified.
+# Classification drives colour; omitting a major economy or colouring binding law
+# the same as guidance would both mislead. See R01-R25 in course.md.
+REGIONS = {
+    'eu': ('binding',   'European Union',  'Cross-sector AI Act. Duties by system, activity and role.',            15,   49,  14,   4),
+    'kor':('binding',   'South Korea',     'AI Framework Act in force since 22 January 2026.',                    127.8, 36,  14,   4),
+    'chn':('binding',   'China',           'Binding rules on generative AI and content labelling, already enforced.', 104, 35, -60, -14),
+    'sgp':('guidance',  'Singapore',       'Existing law, sector supervision and voluntary frameworks.',         103.8,  1.35, -78, 34),
+    'gbr':('guidance',  'United Kingdom',  'Existing regulators and legal frameworks, plus policy principles.',    -2,   54, -48, -16),
+    'jpn':('guidance',  'Japan',           'A promotion act with no penalties provision.',                        138,   37,  16,  -6),
+    'ind':('guidance',  'India',           'Sectoral regulators, plus binding labelling of synthetic content.',     79,   22, -52,  20),
+    'mys':('guidance',  'Malaysia',        'Voluntary guidelines. A governance Bill is drafted, not tabled.',      102,   4,  -70, -18),
+    'usa':('fragmented','United States',   'No federal AI statute. State laws, and federal action against them.',  -99,  40, -58, -22),
+}
+ISO_TO_REGION = {'GBR':'gbr','KOR':'kor','CHN':'chn','SGP':'sgp','JPN':'jpn','IND':'ind','MYS':'mys','USA':'usa'}
+# EU members' overseas territories (French Guiana, Réunion, the Canaries…) sit far
+# from Europe. Highlighting them paints unlabelled patches on other continents,
+# so EU rings are clipped to a Europe bounding box.
+EU_BOX = (-32, 34, 45, 72)   # lon_min, lat_min, lon_max, lat_max
+
+
 def world_map():
     data = json.loads((HERE/'assets/world.geojson').read_text())
-    parts=['<svg class="world-map" viewBox="0 0 900 415" role="img" aria-labelledby="map-title map-desc"><title id="map-title">Singapore, the European Union and the United Kingdom</title><desc id="map-desc">Three selected jurisdictions are highlighted. The accompanying text explains their different regulatory approaches.</desc>']
+    title = 'AI governance approaches in nine selected jurisdictions'
+    parts=[f'<svg class="world-map" viewBox="0 0 900 415" role="img" aria-labelledby="map-title map-desc"><title id="map-title">{title}</title><desc id="map-desc">Nine jurisdictions are shaded by the kind of instrument they rely on: binding law, guidance and voluntary frameworks, or fragmented state-level law. Selecting one explains its approach.</desc>']
     for f in data['features']:
         p,g=f['properties'],f['geometry']
         if p['ADMIN']=='Antarctica': continue
         iso=p['ADM0_A3']
-        region='eu' if iso in EU else 'uk' if iso=='GBR' else None
+        region = 'eu' if iso in EU else ISO_TO_REGION.get(iso)
         polys=g['coordinates'] if g['type']=='MultiPolygon' else [g['coordinates']]
         paths=[]
         for poly in polys:
             for ring in poly:
+                if region=='eu':
+                    lons=[c[0] for c in ring]; lats=[c[1] for c in ring]
+                    cx,cy=sum(lons)/len(lons), sum(lats)/len(lats)
+                    if not (EU_BOX[0]<=cx<=EU_BOX[2] and EU_BOX[1]<=cy<=EU_BOX[3]):
+                        continue   # overseas territory: draw it unhighlighted below
                 coords=[((lon+180)*2.5,(85-lat)*2.5) for lon,lat,*_ in ring]
                 paths.append('M'+'L'.join(f'{x:.1f},{y:.1f}' for x,y in coords)+'Z')
-        region_attr=f' data-region="{region}"' if region else ''
-        parts.append(f'<path class="country'+(' selected' if region else '')+f'"{region_attr} d="'+''.join(paths)+'"><title>'+html.escape(p['ADMIN'])+'</title></path>')
-    for key,label,lon,lat,dx,dy in [('uk','UK',-2,54,-45,-15),('eu','EU',15,49,12,6),('sg','Singapore',103.82,1.35,-75,32)]:
+        if not paths:
+            region=None
+            for poly in polys:
+                for ring in poly:
+                    coords=[((lon+180)*2.5,(85-lat)*2.5) for lon,lat,*_ in ring]
+                    paths.append('M'+'L'.join(f'{x:.1f},{y:.1f}' for x,y in coords)+'Z')
+        cls='country'
+        attr=''
+        if region:
+            cls+=' selected '+REGIONS[region][0]
+            attr=f' data-region="{region}"'
+        parts.append(f'<path class="{cls}"{attr} d="'+''.join(paths)+f'"><title>{html.escape(p["ADMIN"])}</title></path>')
+    for key,(kind,label,_desc,lon,lat,dx,dy) in REGIONS.items():
         x,y=(lon+180)*2.5,(85-lat)*2.5
-        parts.append(f'<circle class="map-pin" data-region="{key}" cx="{x:.1f}" cy="{y:.1f}" r="6"/><text class="map-label" x="{x+dx:.1f}" y="{y+dy:.1f}">{label}</text>')
+        parts.append(f'<g class="map-marker {kind}" data-region="{key}"><circle class="map-pin" cx="{x:.1f}" cy="{y:.1f}" r="5"/><text class="map-label" x="{x+dx:.1f}" y="{y+dy:.1f}">{html.escape(label)}</text></g>')
     return ''.join(parts)+'</svg>'
+
+
+def map_controls():
+    order=['eu','kor','chn','sgp','gbr','jpn','ind','mys','usa']
+    kinds={'binding':'Binding AI law','guidance':'Guidance and existing law','fragmented':'Fragmented state law'}
+    groups={}
+    for k in order:
+        kind,label,desc,*_ = REGIONS[k]
+        groups.setdefault(kind,[]).append((k,label,desc))
+    out=[]
+    for kind in ['binding','guidance','fragmented']:
+        out.append(f'<div class="map-group-block {kind}"><p class="map-group">{kinds[kind]}</p>')
+        for k,label,desc in groups[kind]:
+            out.append(f'<button class="map-control {kind}" data-map="{k}" aria-pressed="false" data-desc="{html.escape(desc,quote=True)}">{html.escape(label)}</button>')
+        out.append('</div>')
+    return ''.join(out)
 
 
 def section_for(n):
@@ -79,6 +138,7 @@ def main():
     for n,kicker,title,body,refs in SLIDES:
         if set(refs)-set(notes[n]['sources']): raise ValueError(f'Slide {n} source not in narration metadata')
         if '{{WORLD_MAP}}' in body: body=body.replace('{{WORLD_MAP}}',world_map())
+        if '{{MAP_CONTROLS}}' in body: body=body.replace('{{MAP_CONTROLS}}',map_controls())
         note_html=''.join('<p>'+html.escape(p.replace('\n',' '))+'</p>' for p in notes[n]['text'].split('\n\n'))
         footer=[]
         for r in refs:
@@ -97,14 +157,57 @@ def main():
     css='\n'.join((REPO/p).read_text() for p in css_paths)+'\n'+(HERE/'style.css').read_text()
     scripts='\n'.join('<script>\n'+(REPO/p).read_text()+'\n</script>' for p in ['assets/runtime.js','assets/quiz.js','assets/stage.js'])
     extra='''<script>
-    document.querySelectorAll('.deck [data-map]').forEach(function(button){
-      button.addEventListener('click',function(){
-        var map=document.querySelector('.deck .world-map');
-        var was=button.getAttribute('aria-pressed')==='true';
-        document.querySelectorAll('.deck [data-map]').forEach(function(b){b.setAttribute('aria-pressed','false');});
-        if(was){map.removeAttribute('data-focus');}else{map.setAttribute('data-focus',button.dataset.map);button.setAttribute('aria-pressed','true');}
+    // Map selection. Selecting a jurisdiction — from the panel OR from the map
+    // itself — highlights the country, its marker and its panel entry, and draws
+    // a line between the two so the eye does not have to hunt for the pairing.
+    (function(){
+      var layout=document.querySelector('.deck .map-layout');
+      if(!layout) return;
+      var stage=layout.querySelector('.map-stage');
+      var link=layout.querySelector('.map-link line');
+      function clear(){
+        layout.classList.remove('has-selection');
+        if(layout.querySelector('.map-detail')) layout.querySelector('.map-detail').innerHTML='Select a jurisdiction to see its approach.';
+        layout.querySelectorAll('[data-map]').forEach(function(b){b.setAttribute('aria-pressed','false');});
+        layout.querySelectorAll('.is-active').forEach(function(el){el.classList.remove('is-active');});
+      }
+      function draw(region){
+        var marker=layout.querySelector('.map-marker[data-region="'+region+'"] .map-pin');
+        var panel=layout.querySelector('[data-map="'+region+'"]');
+        if(!marker||!panel||!link) return;
+        var box=stage.getBoundingClientRect();
+        var m=marker.getBoundingClientRect(), p=panel.getBoundingClientRect();
+        link.setAttribute('x1',(m.left+m.width/2-box.left).toFixed(1));
+        link.setAttribute('y1',(m.top+m.height/2-box.top).toFixed(1));
+        link.setAttribute('x2',(box.width).toFixed(1));
+        link.setAttribute('y2',(p.top+p.height/2-box.top).toFixed(1));
+      }
+      var detail=layout.querySelector('.map-detail');
+      function select(region){
+        var already=layout.querySelector('[data-map="'+region+'"]').getAttribute('aria-pressed')==='true';
+        clear();
+        if(already) return;
+        layout.classList.add('has-selection');
+        var btn=layout.querySelector('[data-map="'+region+'"]');
+        btn.setAttribute('aria-pressed','true');
+        if(detail) detail.innerHTML='<b>'+btn.textContent+'</b> '+btn.dataset.desc;
+        layout.querySelectorAll('.country[data-region="'+region+'"]').forEach(function(el){el.classList.add('is-active');});
+        var mk=layout.querySelector('.map-marker[data-region="'+region+'"]');
+        if(mk) mk.classList.add('is-active');
+        draw(region);
+      }
+      layout.querySelectorAll('[data-map]').forEach(function(b){
+        b.addEventListener('click',function(){select(b.dataset.map);});
       });
-    });
+      layout.querySelectorAll('.world-map [data-region]').forEach(function(el){
+        el.style.cursor='pointer';
+        el.addEventListener('click',function(){select(el.dataset.region||el.getAttribute('data-region'));});
+      });
+      window.addEventListener('resize',function(){
+        var on=layout.querySelector('[aria-pressed="true"]');
+        if(on) draw(on.dataset.map);
+      });
+    })();
     function revealForPrint(){document.querySelectorAll('.quiz').forEach(function(q){
       q.classList.add('revealed');q.querySelector('[data-correct]').classList.add('correct');
       var v=q.querySelector('.verdict');if(v)v.textContent='Answer: '+q.querySelector('[data-correct] b').textContent;

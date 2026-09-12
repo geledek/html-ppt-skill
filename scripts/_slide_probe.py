@@ -27,6 +27,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 bx: Math.round(b.left), by: Math.round(b.top)});
     }
   });
+  // Content running off the bottom of the 1920x1080 stage. The line-count and
+  // position checks both pass on a slide whose panel overflows the frame, which
+  // is how an overflowing map slide shipped.
+  var over = [];
+  document.querySelectorAll('.slide').forEach(function (sl, i) {
+    var lim = sl.getBoundingClientRect().bottom;
+    var worst = 0, who = '';
+    sl.querySelectorAll('.slide-body *, .cover-main *, .quote-body *').forEach(function (el) {
+      if (!el.getClientRects().length) return;
+      var b = el.getBoundingClientRect().bottom;
+      if (b - lim > worst) { worst = b - lim; who = (el.textContent || '').trim().slice(0, 40); }
+    });
+    if (worst > 4) over.push({slide: i + 1, px: Math.round(worst), text: who});
+  });
+
   var shift = null, q = document.querySelector('.quiz');
   if (q) {
     var opt = q.querySelector('.mcq');
@@ -38,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
     shift = {before: before, after: after,
              moved: before[0] !== after[0] || before[1] !== after[1] || before[2] !== after[2]};
   }
-  document.title = JSON.stringify({maxLines: max, long: long, pos: pos, reveal: shift});
+  document.title = JSON.stringify({maxLines: max, long: long, pos: pos, reveal: shift, over: over});
 });
 </script>"""
 open(out, 'w').write(s.replace('</body></html>', probe + '\n</body></html>'))
