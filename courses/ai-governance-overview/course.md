@@ -650,13 +650,13 @@ revisited in S3, S6 and S7.
 
 | # | Section | Min | Words | Teaching intent | Findings | Outline | Narration | Slides |
 |---|---------|-----|-------|-----------------|----------|---------|-----------|--------|
-| 1 | Is that enough to approve launch? | 2 | 220 | Create the gap with a bounded, answerable decision; correct it immediately | SG-3, FI-11 | approved | pending | pending |
-| 2 | One definition, many rulebooks | 2 | 220 | Reframe "is AI regulated?" into "which use, where, judged by whom?" | GL-12, GL-11 | approved | pending | pending |
-| 3 | The three tiers of legal force · **quiz** | 6 | 660 | Outcome 1. Legal force is a separate axis from severity of harm | SG-1/3/14, FI-2/3, UK-3/13, GL-2/3/4 | approved | pending | pending |
-| 4 | Where enforcement actually is · **quiz** | 4 | 440 | Accuracy alone does not establish lawful deployment | EN-1/2/5/6/7/8 | approved | pending | pending |
-| 5 | The sector layer: financial services · **quiz** | 4 | 440 | Outcome 2. Responsibility maps to an existing owner | FI-4/6/9/10 | approved | pending | pending |
-| 6 | Three questions + the decision rule · **quiz** | 5 | 550 | Outcome 3, applied to the running example | EN-3b/7/10c, FI-4, SG-15, FI-7 | approved | pending | pending |
-| 7 | Your next 90 days · **quiz** | 7 | 770 | Outcome 4. A prioritisation decision, not a checklist | EN-3b, SG-15 | approved | pending | pending |
+| 1 | Is that enough to approve launch? | 2 | 220 | Create the gap with a bounded, answerable decision; correct it immediately | SG-3, FI-11 | approved | drafted | pending |
+| 2 | One definition, many rulebooks | 2 | 220 | Reframe "is AI regulated?" into "which use, where, judged by whom?" | GL-12, GL-11 | approved | drafted | pending |
+| 3 | The three tiers of legal force · **quiz** | 6 | 660 | Outcome 1. Legal force is a separate axis from severity of harm | SG-1/3/14, FI-2/3, UK-3/13, GL-2/3/4 | approved | drafted | **built — REPRESENTATIVE** |
+| 4 | Where enforcement actually is · **quiz** | 4 | 440 | Accuracy alone does not establish lawful deployment | EN-1/2/5/6/7/8 | approved | drafted | pending |
+| 5 | The sector layer: financial services · **quiz** | 4 | 440 | Outcome 2. Responsibility maps to an existing owner | FI-4/6/9/10 | approved | drafted | pending |
+| 6 | Three questions + the decision rule · **quiz** | 5 | 550 | Outcome 3, applied to the running example | EN-3b/7/10c, FI-4, SG-15, FI-7 | approved | drafted | pending |
+| 7 | Your next 90 days · **quiz** | 7 | 770 | Outcome 4. A prioritisation decision, not a checklist | EN-3b, SG-15 | approved | drafted | pending |
 
 Total 30 min · 3,300 words · ~26 slides · 4 quizzes.
 Quiz stems, options and per-option feedback **count inside** each section's word
@@ -721,10 +721,458 @@ from S6.
 Deferred as out of scope: piloting the module with representative executives and
 measuring section completion.
 
+## Representative Section — S3
+
+Chosen as the **most demanding** section: the widest table (two jurisdictions ×
+three tiers), the most blockquotes, the EU timeline, and a quiz. Six slides. It
+stresses more layout components than any other section, which is what a design
+sample has to do. S7 is marginally longer in words (689 vs 629) but is mostly
+prose and a list, so it would prove less.
+
+Rendered to `sample.html` and reviewed live at gate 2.
+
 ## Narration
 
-<!-- One script for the whole course, organised by Section, written against the
-     minute budgets above. Edit directly; hand-edits are detected by hash. -->
+Delivery is **self-paced**, so this text renders **on-slide**, not in
+`<div class="notes">`. Slide numbers below (1.2, 3.4 …) are Section.Slide.
+Edited through the `no-ai-slop` skill; zero banned words remain, and every em
+dash is a structural slide label rather than prose.
 
-### 1.
+**Measured against allocation** at 110 effective wpm:
+
+| S | Words | Target | Diff | Min |
+|---|---|---|---|---|
+| 1 | 196 | 220 | −24 | 1.8 |
+| 2 | 204 | 220 | −16 | 1.9 |
+| 3 | 629 | 660 | −31 | 5.7 |
+| 4 | 522 | 440 | **+82** | 4.7 |
+| 5 | 449 | 440 | +9 | 4.1 |
+| 6 | 527 | 550 | −23 | 4.8 |
+| 7 | 689 | 770 | −81 | 6.3 |
+| **Total** | **3216** | 3300 | −84 | **29.2** |
+
+S4 runs ~45 seconds long and S7 ~45 seconds short, so the course lands at 29.2
+minutes. Left as measured rather than padded — the S4 overrun was predicted at
+gate 1 and every sentence in it is carrying a sourced case.
+
+### S1 · Is that enough to approve launch?  (2 min · target 220)
+
+**1.2 — The decision**
+A Singapore business wants to launch a customer service chatbot. The supplier
+says its product follows Singapore's Model AI Governance Framework. You are
+asked to approve the launch.
+
+Is that enough?  ( Yes · No · Need more information )
+
+**1.3 — What you are missing**
+Need more information. "No" is also defensible. "Yes" is not.
+
+IMDA wrote the Model Framework, and says in the framework itself that adopting
+it "will not absolve organisations from compliance with current laws and
+regulations." The framework is voluntary. The Personal Data Protection Act is not.
+
+Four things you still do not know: what data the chatbot collects and what it was
+trained on; what it can tell a customer that costs you money; where your
+customers are sitting when they use it; and who in your organisation answers for
+it when it is wrong.
+
+Those four gaps are the next 28 minutes. None of them is answered by a framework,
+and all of them are answerable by you.
+
+If you picked Yes, you have company. In the Bank of England and FCA survey of UK
+financial firms, 46% of those using AI reported only partial understanding of the
+AI they use.
+
+### S2 · One definition, many rulebooks  (2 min · target 220)
+
+**2.1 — The agreement**
+Forty-seven countries have adhered to the same definition of an AI system. The
+OECD wrote it in 2019 and revised it in 2024. The EU copied it almost word for
+word into Article 3(1) of the AI Act.
+
+Agreement stops there.
+
+**2.2 — The divergence**
+The EU sets risk tiers in law, with fines reaching 7% of worldwide turnover.
+
+Singapore and the UK hand the job to the regulators that already exist, and
+publish guidance rather than rules. India says the same thing about philosophy, but has
+binding rules on labelling synthetic content in force since February 2026.
+
+Korea passed a framework act, in force January 2026. China has no comprehensive
+AI law, and binding rules on generative AI and content labelling that it already
+enforces.
+
+The United States reversed direction in 2025 and is now litigating against its
+own states.
+
+**2.3 — The reframe**
+So "is AI regulated?" has no answer. The word covers a Korean statute, a Chinese
+labelling rule, a Singapore guideline and an American lawsuit against a state.
+
+"Which of my uses, where, judged by whom?" does have an answer, and you can work
+it out in an afternoon. That question is the shape of everything that follows.
+
+### S3 · The three tiers of legal force  (6 min · target 660)
+
+**3.1 — Three layers, not three rungs**
+Every jurisdiction in this course stacks three layers, and they apply at the same
+time to the same system.
+
+Binding law that was not written about AI, and binds anyway.
+Supervisory expectation. Not law. Not optional either.
+Voluntary frameworks. Genuinely voluntary.
+
+The common mistake is treating these as a ladder where the top rung excuses the
+ones below. They are layers.
+
+**3.2 — Singapore and the UK**
+[ table: Singapore | UK across the three tiers ]
+
+Neither country has an AI Act, and both have said why. Singapore: "We cannot
+adopt a one-size-fits-all approach to regulate it, nor can we anticipate every
+risk out there." The UK, from the despatch box in July 2026: "the best way of
+regulating is through context-specific regulation."
+
+**3.3 — What the middle tier actually costs**
+This is where executives misjudge, in both directions. Some treat guidance as
+law. Others treat it as decoration.
+
+MAS spelled out the cost of ignoring a non-binding guideline in its draft
+third-party risk management guidelines, published March 2026. Where MAS is not
+satisfied with a firm's observance, it "may require the FI to take additional
+measures", will "take non-observance into account in its assessment of the FI",
+and "may also directly communicate with the home or host regulators of the FI and
+the FI's service provider."
+
+Supervision enforces that guidance, rather than penalties. A firm that ignores it
+keeps its licence and loses the benefit of the doubt.
+
+**3.4 — Legal force is not severity**
+Two dimensions, and mixing them is the most expensive error in this course.
+
+Legal force asks which layers apply. Consequence asks how bad it is when this is
+wrong. They are independent.
+
+A use can sit under binding law and be trivial. A use can sit under nothing but
+voluntary guidance and be the one that ends up in the newspaper. Adopting a
+framework does not move an activity into a low-risk bucket; it does not move it
+at all.
+
+Tag the layers. Then rank by consequence. Separately, and in that order, because
+the layers tell you who asks the questions and the consequence tells you how fast
+you need an answer.
+
+**3.5 — The EU, and the half-truth**
+You are not in the EU. You may still be in scope. Article 2(1)(c) reaches
+providers and deployers in a third country "where the output produced by the AI
+system is used in the Union."
+
+You will read that the EU delayed the AI Act. That is half true, and the wrong
+half is the dangerous one.
+
+Regulation (EU) 2026/1744, in force 27 July 2026, postponed the high-risk
+obligations to December 2027 and August 2028.
+
+It moved nothing else. Prohibitions have applied since February 2025.
+General-purpose AI obligations since August 2025. Transparency under Article 50
+since August 2026. Those are live now, and penalties reach 35 million euro or 7%
+of worldwide turnover, whichever is higher.
+
+**3.6 — Quiz**
+A Singapore retailer launches a chatbot that collects customer contact details
+and purchase history to personalise offers. The vendor's product follows the
+Model AI Governance Framework and displays an AI info card. The retailer has
+published nothing about how it uses customer data. Where is the exposure?
+
+A. Covered. The Model Framework and the info card address transparency.
+   → Both are voluntary. IMDA's own framework says adopting it "will not absolve
+   organisations from compliance with current laws and regulations."
+B. ✓ The PDPA applies regardless, and voluntary measures do not discharge it.
+   → The PDPA is binding law. PDPC's advisory guidelines interpret it. The Model
+   Framework sits in a different tier and does not displace either.
+C. Reputational only, since Singapore has no AI statute.
+   → Singapore has no AI statute, and that changes nothing here. The PDPA binds
+   whether or not AI is involved.
+
+### S4 · Where enforcement actually is  (4 min · target 440)
+
+**4.1 — Start with the absence**
+As at September 2026, this research found no AI-specific enforcement decision
+from Singapore's PDPC, and no AI or model-risk enforcement action from MAS.
+Singapore publishes more AI governance material than almost any country and has
+penalised none of it.
+
+Look instead at where enforcement does land.
+
+**4.2 — Four headline cases, four different outcomes**
+Italy fined OpenAI 15 million euro; a Rome court annulled it in March 2026 on
+jurisdiction, without examining the substance. Italy fined Clearview AI 20
+million euro, never collected. The UK fined Clearview 7.55 million pounds in
+2022, still unadjudicated on the merits four years later. New York City's
+hiring-audit law turned up one compliance issue across 32 companies surveyed.
+
+Annulled, uncollected, undecided, barely detected. Four different outcomes, and
+not one of them is a precedent.
+
+**4.3 — What did produce consequences**
+The Dutch tax authority used nationality as an indicator in a risk-classification
+model. The regulator found that unlawful and discriminatory, and fined it 2.75
+million euro. At least 244,273 people were affected, over 43,000 are now
+recognised victims receiving at least 30,000 euro each, and the cabinet resigned
+in January 2021.
+
+Australia's Robodebt asserted 1.763 billion dollars of debt against roughly
+433,000 people. A judge called it "a massive failure of public administration."
+
+Italy fined Deliveroo 2.5 million euro and Glovo 5 million over rider-management
+algorithms, where a suspended rider "received an automatic message without any
+possibility of providing explanations or contesting the decision."
+
+**4.4 — And the ones with no regulator at all**
+Air Canada's chatbot gave a passenger wrong bereavement-fare advice. The airline
+argued the chatbot was "a separate legal entity that is responsible for its own
+actions." The tribunal called that "a remarkable submission" and awarded 812
+Canadian dollars. Trivial sum, load-bearing principle.
+
+Zillow's home-pricing model was confidently wrong: 304 million dollars written
+down in a quarter, roughly 25% of staff cut, no regulator involved.
+
+And MAS's hardest recent action against a bank, roughly 1.6 billion Singapore
+dollars of additional capital on DBS plus a six-month freeze on non-essential IT
+changes, was for technology risk governance and change management.
+
+Accuracy is not irrelevant. Zillow was a forecasting failure and Air Canada was
+wrong information. It is just never the whole question, and it is never the part
+regulators reach first.
+
+**4.5 — Quiz**
+A rider-management algorithm assigns shifts. An audit shows it is accurate and
+well calibrated. Suspended riders receive an automated message. They can appeal,
+and the appeal re-runs the same algorithm. Which change addresses the governance
+gap?
+
+A. Improve the model's accuracy further.
+   → Accuracy was not the finding in the Italian rider cases. A well-calibrated
+   model that cannot be contested still fails.
+B. Publish a fuller explanation of how the algorithm works.
+   → Explanation helps, and it is not what was missing. The finding turned on the
+   absence of any route to contest. An explanation a rider cannot act on is not
+   a route.
+C. ✓ Give a person the authority to overturn the decision.
+   → Foodinho's riders got "an automatic message without any possibility of
+   providing explanations or contesting the decision." An appeal that re-runs the
+   same algorithm is not a review.
+
+### S5 · The sector layer: financial services  (4 min · target 440)
+
+**5.1 — Sectors add a layer**
+Everything so far applies whatever business you are in. Your sector adds to it.
+
+In Singapore, MAS published FEAT in 2018: fourteen principles on fairness,
+ethics, accountability and transparency. It is advisory. MAS files it as an
+Information Paper, which its own hierarchy does not list as a regulatory
+instrument at all.
+
+MAS consulted on Guidelines on AI Risk Management in November 2025 and proposed a
+twelve-month transition after issuance. As at September 2026 they have not been
+issued, so the transition has not started. Firms waiting for a starting gun have
+been waiting ten months.
+
+**5.2 — The UK answered the same question differently, and arrived at the same place**
+The FCA was asked whether it would write AI rules. It said no. Its Chief Data,
+Information and Intelligence Officer told the Treasury Committee in January 2026
+that the Senior Managers regime and the Consumer Duty together give the regulator
+"enough regulatory bite that we don't need to write new rules for AI."
+
+So who owns AI risk in a UK regulated firm? Somebody already does. Responsibility
+follows the activity, business area or function: technology systems normally sit
+with the Chief Operations function, risk controls with the Chief Risk function.
+
+The FCA considered creating a dedicated AI Senior Manager and decided against it,
+on the basis that existing governance already reached the problem.
+
+**5.3 — What travels beyond finance**
+Your sector regulator probably already has a view, and it probably is not written
+in a document with "AI" in the title.
+
+And the absence of an AI-specific rule does not create an absence of an owner. If
+nobody in your organisation can be named, that is a finding about your
+organisation rather than about the regulation.
+
+**5.4 — Quiz**
+A bank is launching a credit-decisioning tool built by a vendor. The vendor says
+the model is tested and monitored. The business sponsor says the vendor is
+accountable for model performance. The risk function says nobody has asked it to
+review anything. Who must own this before launch?
+
+A. The vendor. It built the model and monitors it.
+   → FEAT Principle 8: firms are "accountable for both internally developed and
+   externally sourced AIDA models." Outsourcing the build does not outsource the
+   accountability.
+B. ✓ A named senior manager inside the bank, with the risk function's review done.
+   → Responsibility follows the activity and the function. The FCA declined to
+   create an AI-specific role precisely because an existing owner already holds it.
+C. Nobody yet. No AI-specific rule requires an owner before launch.
+   → The absence of an AI rule is not an absence of an owner. FEAT, the Senior
+   Managers regime and the Consumer Duty all attach to the firm regardless.
+
+### S6 · Three questions, and the one that decides  (5 min · target 550)
+
+**6.1 — Three questions**
+You will not have time to assess every AI proposal properly. You will have time
+for three questions.
+
+Who is accountable when this is wrong, and what is their name?
+How does a person affected by this contest what it decided?
+What have we told customers this does?
+
+**6.2 — Where each one comes from**
+Each comes from a case you just saw.
+
+Accountability: FEAT Principle 8 makes firms accountable for externally sourced
+models as well as their own. A third of AI use cases in UK financial services
+arrive through third parties.
+
+Contestability: the Dutch, Deliveroo and Foodinho findings all turned on whether
+a person could argue with a decision.
+
+Disclosure: Air Canada. And the SEC's first AI-washing settlements in 2024, where
+two advisers paid 400,000 dollars between them for claiming AI they were not
+using.
+
+One caution on the third. Goldman Sachs and Apple came through a New York
+regulator's review of roughly 400,000 Apple Card applications with no finding of
+discrimination, and could explain every complainant's decision when asked. They
+still lost the week. Being right and being believed are different problems.
+
+**6.3 — The question that actually decides**
+You can get satisfying answers to all three and still approve something with no
+evidence that it works.
+
+A fourth question closes that gap. What evidence would justify approving this,
+restricting it, or stopping it?
+
+Four things make up that evidence. Tested in the setting it will actually run in,
+not on the vendor's benchmark. A human who can intervene, with the authority to
+overrule. Monitoring that would tell you it had drifted. A stop or rollback that
+somebody has actually tried.
+
+Singapore's agentic AI framework states the hard line: systems "should not allow
+high stakes or irreversible actions to take place without human review."
+
+Note what that does and does not say. It does not ban autonomy. It bans autonomy
+where the action cannot be undone.
+
+**6.4 — Back to the chatbot**
+Return to the decision you were asked to make 25 minutes ago.
+
+The supplier follows a voluntary framework. That answers none of the four
+questions. What you ask instead: whose name is on this, how a customer disputes
+what it told them, what your marketing claims it can do, and what happens when it
+is confidently wrong at two in the morning on a Saturday.
+
+**6.5 — Quiz**
+An AI tool flags insurance claims for manual review. It has a named accountable
+owner, a published appeals process, and accurate marketing copy. It has been
+tested on the vendor's benchmark dataset. There is no monitoring in production
+and no rollback plan. Approve, restrict, or stop?
+
+A. Approve. Accountability, contestability and disclosure are all in place.
+   → Those three are necessary and not sufficient. None of them tells you whether
+   it works in your setting.
+B. ✓ Restrict. A limited pilot with monitoring and a rollback, then reassess.
+   → The gap is evidence, not governance paperwork. A bounded pilot produces what
+   a vendor benchmark cannot.
+C. Stop. It cannot be deployed without production monitoring.
+   → Defensible, and disproportionate here. The action is a flag for human
+   review, which is neither high-stakes nor irreversible. Reserve stopping for
+   decisions that are.
+
+### S7 · Your next 90 days  (7 min · target 770)
+
+**7.1 — The one case that ended well**
+In 2021 a rejected credit-card applicant asked HSBC Singapore for the
+algorithmically generated scores behind the refusal. HSBC declined. Singapore's
+Deputy Commissioner agreed the bank was entitled to decline, because the scores
+were evaluative opinion data. The law settled that.
+
+Then he went further than he needed to. HSBC "had acted reasonably by providing
+information about how it uses data and technology to conduct credit facility
+assessments. From the perspective of accountability and disclosure of policies
+and practices, HSBC had acquitted itself."
+
+He was pointing at two documents HSBC had published: a Principle for the Ethical
+Use of Big Data and AI, and a Credit Decisioning Policy Statement.
+
+Read that precisely. The publications did not win the case. What they did was let
+a regulator satisfy itself quickly that the organisation was in control. It is
+the cheapest item on the next slide, and the only one with a regulator's
+endorsement attached.
+
+**7.2 — Four things, in this order**
+Inventory. You cannot govern what you cannot list, and the list should include
+what people are already using without asking.
+
+Name an owner for each consequential use. A person, not a committee, not a
+vendor.
+
+Build a contest path for anything that affects a customer or an employee. A route
+to a human with authority to overturn the outcome.
+
+Put AI terms into procurement. A third of use cases arrive through suppliers, and
+FEAT Principle 8 makes you accountable for those too.
+
+**7.3 — Write it down as five fields**
+A list of four good intentions is not a plan. Pick your highest-consequence use
+and fill in five fields. If you cannot fill them, that is the output.
+
+Use case. Accountable owner, by name. What a person affected can do about it.
+What evidence says it works here. Next decision, and by when.
+
+Worked example. Automated triage of customer complaints.
+Owner: the Head of Customer Operations, named, not the vendor.
+Contest path: none today; complaints escalated by the tool are never re-read by a
+person before closure.
+Evidence: vendor benchmark only; never tested on our complaint mix.
+Next decision: whether to restrict to a pilot, by the end of this month.
+
+That record took four lines and produced two findings and a deadline. Do it for
+your top three uses and you have a governance programme, which is not a phrase
+worth being frightened of.
+
+**7.4 — What can usually wait**
+Usually secondary to closing a live control gap: ISO 42001 certification,
+assurance tooling, and a dedicated AI function or Head of AI Governance.
+
+"Usually" is carrying weight there. Certification becomes urgent when a customer
+contract requires it, when a procurement process scores it, or when your
+organisation is large enough that ad-hoc ownership stops scaling. These are
+contextual choices, not permanently wrong ones.
+
+One caution. No public figure exists for how many organisations hold ISO 42001.
+The body that compiled certification statistics ceased operations in January
+2026. If a vendor quotes you an adoption number, ask where it came from.
+
+**7.5 — Quiz**
+A firm finished its AI inventory last month: 31 use cases, with named owners for
+the 6 it considers consequential. Next week it plans to switch on a tool that
+automatically declines low-value insurance claims. No appeals route has been
+designed and there is no monitoring. The board has asked about ISO 42001
+certification. What comes first?
+
+A. Start ISO 42001 certification. It answers the board and reassures customers.
+   → Certification is usually secondary to closing a live control gap, and it
+   takes months. The deployment is next week.
+B. ✓ Design the appeals route and the monitoring before the tool goes live.
+   → An automatic decline affecting customers with no route to contest is the
+   pattern behind the Dutch, Deliveroo and Foodinho findings. The inventory is
+   done; this is the gap it revealed.
+C. Extend the inventory to name owners for all 31 use cases.
+   → Worth doing, and not what is about to go wrong next week. The inventory has
+   already surfaced the thing that needs attention.
+
+**7.6 — Start here**
+Start with the inventory. Everything else on the list depends on knowing what you
+have.
 
