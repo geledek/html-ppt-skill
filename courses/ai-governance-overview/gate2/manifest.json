@@ -1,0 +1,27 @@
+{
+  "course_source_sha256": "74949313b1e5fef8b4d31e5ad79b448f416bc93c9212f0c3cdff1f4fd709fc38",
+  "sample_sha256": "cd29692d30d7dc5bd4309e3b18c80cf66057b592bda8fa197d401446c6b40ecb",
+  "course_slides": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    16,
+    18,
+    26,
+    30
+  ],
+  "sample_count": 18,
+  "full_deck_rebuilt": false,
+  "acceptance": "pending"
+}

@@ -1,0 +1,85 @@
+{
+  "words_per_minute": 150,
+  "method": "Unicode word tokens with internal apostrophe/hyphen; narration only",
+  "sections": [
+    {
+      "section": "S1",
+      "slides": [
+        1,
+        4
+      ],
+      "words": 395,
+      "spoken_minutes": 2.633,
+      "nonspoken_seconds": 22.0,
+      "allocated_minutes": 3
+    },
+    {
+      "section": "S2",
+      "slides": [
+        5,
+        9
+      ],
+      "words": 701,
+      "spoken_minutes": 4.673,
+      "nonspoken_seconds": 19.6,
+      "allocated_minutes": 5
+    },
+    {
+      "section": "S3",
+      "slides": [
+        10,
+        16
+      ],
+      "words": 900,
+      "spoken_minutes": 6.0,
+      "nonspoken_seconds": 60.0,
+      "allocated_minutes": 7
+    },
+    {
+      "section": "S4",
+      "slides": [
+        17,
+        19
+      ],
+      "words": 442,
+      "spoken_minutes": 2.947,
+      "nonspoken_seconds": 63.2,
+      "allocated_minutes": 4
+    },
+    {
+      "section": "S5",
+      "slides": [
+        20,
+        23
+      ],
+      "words": 515,
+      "spoken_minutes": 3.433,
+      "nonspoken_seconds": 34.0,
+      "allocated_minutes": 4
+    },
+    {
+      "section": "S6",
+      "slides": [
+        24,
+        27
+      ],
+      "words": 478,
+      "spoken_minutes": 3.187,
+      "nonspoken_seconds": 48.8,
+      "allocated_minutes": 4
+    },
+    {
+      "section": "S7",
+      "slides": [
+        28,
+        30
+      ],
+      "words": 347,
+      "spoken_minutes": 2.313,
+      "nonspoken_seconds": 41.2,
+      "allocated_minutes": 3
+    }
+  ],
+  "total_words": 3778,
+  "allocated_minutes": 30
+}

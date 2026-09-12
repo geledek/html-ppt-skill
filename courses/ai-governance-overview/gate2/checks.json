@@ -1,0 +1,128 @@
+{
+  "sampleCount": 18,
+  "findings": [
+    {
+      "courseSlide": 1,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 2,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 2,
+      "issues": [],
+      "state": "revealed"
+    },
+    {
+      "courseSlide": 3,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 4,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 5,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 6,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 7,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 8,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 9,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 10,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 11,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 12,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 13,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 14,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 16,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 16,
+      "issues": [],
+      "state": "revealed"
+    },
+    {
+      "courseSlide": 18,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 26,
+      "issues": [],
+      "state": "initial"
+    },
+    {
+      "courseSlide": 30,
+      "issues": [],
+      "state": "initial"
+    }
+  ],
+  "keyboard": {
+    "before": "2",
+    "reveal": {
+      "slide": "2",
+      "revealed": true
+    },
+    "after": "3"
+  },
+  "mapChecks": [
+    {
+      "region": "sg",
+      "ok": true
+    },
+    {
+      "region": "eu",
+      "ok": true
+    },
+    {
+      "region": "uk",
+      "ok": true
+    }
+  ],
+  "failures": 0
+}
