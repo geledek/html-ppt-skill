@@ -955,12 +955,13 @@ C. Reputational only, since Singapore has no AI statute.
 **4.1 — What produced real consequences**
 The Dutch tax authority used nationality as an indicator in a risk-classification
 model. The regulator found that unlawful and discriminatory, and fined it 2.75
-million euro. At least 244,273 people were affected, over 43,000 are now
-recognised victims receiving at least 30,000 euro each, and the cabinet resigned
+million euros. At least 244,273 people were affected. More than 43,000 are now
+recognised as victims, each receiving at least 30,000 euros. The cabinet resigned
 in January 2021.
 
-Australia's Robodebt asserted 1.763 billion dollars of debt against roughly
-433,000 people. A judge called it "a massive failure of public administration."
+Australia's Robodebt scheme asserted 1.763 billion Australian dollars of debt
+against roughly 433,000 people. A judge called it "a massive failure of public
+administration."
 
 Italy fined Deliveroo 2.5 million euro and Glovo 5 million over rider-management
 algorithms, where a suspended rider "received an automatic message without any
@@ -980,13 +981,14 @@ Annulled, uncollected, undecided, barely detected. Plan against the pattern in
 4.1, not against the headlines.
 
 **4.3 — And the ones with no regulator at all**
-Air Canada's chatbot gave a passenger wrong bereavement-fare advice. The airline
-argued the chatbot was "a separate legal entity that is responsible for its own
-actions." The tribunal called that "a remarkable submission" and awarded 812
-Canadian dollars. Trivial sum, load-bearing principle.
+Air Canada's chatbot gave a passenger the wrong advice on bereavement fares. The
+airline argued that the chatbot was "a separate legal entity that is responsible
+for its own actions." The tribunal called that "a remarkable submission." It
+awarded 812 Canadian dollars. The sum is small. The principle is not.
 
-Zillow's home-pricing model was confidently wrong: 304 million dollars written
-down in a quarter, roughly 25% of staff cut, no regulator involved.
+Zillow's home-pricing model was confidently wrong. The company wrote down 304
+million United States dollars in a single quarter and cut roughly 25% of its
+staff. No regulator was involved.
 
 Accuracy is not irrelevant. Zillow was a forecasting failure and Air Canada was
 wrong information. It is just never the whole question.
@@ -1064,8 +1066,8 @@ C. Nobody yet. No AI-specific rule requires an owner before launch.
 ### S6 · Three questions, and the one that decides  (5 min · target 550)
 
 **6.1 — Three questions**
-You will not have time to assess every AI proposal properly. You will have time
-for three questions.
+Few executives have time to assess every AI proposal properly. Most have time for
+three questions.
 
 Who is accountable when this is wrong, and what is their name?
 How does a person affected by this contest what it decided?
@@ -1081,41 +1083,41 @@ arrive through third parties.
 Contestability: the Dutch, Deliveroo and Foodinho findings all turned on whether
 a person could argue with a decision.
 
-Disclosure: Air Canada. And the SEC's first AI-washing settlements in 2024, where
-two advisers paid 400,000 dollars between them for claiming AI they were not
-using.
+Disclosure comes from Air Canada, and from the first AI-washing settlements
+brought by the SEC in 2024. Two advisers paid 400,000 United States dollars
+between them for claiming to use AI that they were not using.
 
-One caution on the third. Goldman Sachs and Apple came through a New York
-regulator's review of roughly 400,000 Apple Card applications with no finding of
-discrimination, and could explain every complainant's decision when asked. The
-public criticism continued anyway. Being able to explain a decision protects you
-with a regulator. It does not, on its own, protect your reputation.
+One caution on the third. A New York regulator reviewed roughly 400,000 Apple
+Card applications. It found no discrimination by Goldman Sachs or Apple, and both
+could explain every complainant's decision when asked. The public criticism
+continued anyway. Being able to explain a decision will protect a firm in a
+regulator's assessment. On its own, it will not protect its reputation.
 
 **6.3 — The question that actually decides**
-You can get satisfying answers to all three and still approve something with no
-evidence that it works.
+A firm can obtain satisfactory answers to all three and still approve a system
+with no evidence that it works.
 
 A fourth question closes that gap. What evidence would justify approving this,
 restricting it, or stopping it?
 
-Four things make up that evidence. Tested in the setting it will actually run in,
-not on the vendor's benchmark. A human who can intervene, with the authority to
-overrule. Monitoring that would tell you it had drifted. A stop or rollback that
-somebody has actually tried.
+Four things make up that evidence. It has been tested in the setting where it
+will run, not on the vendor's benchmark. A person can intervene, and has the
+authority to overrule it. Monitoring would show if it had drifted. And a stop or
+rollback exists that somebody has actually tried.
 
 Singapore's agentic AI framework states the hard line: systems "should not allow
 high stakes or irreversible actions to take place without human review."
 
-Note what that does and does not say. It does not ban autonomy. It bans autonomy
-where the action cannot be undone.
+Note what that does and does not say. It does not prohibit autonomy. It prohibits
+autonomy where the action cannot be undone.
 
 **6.4 — Back to the chatbot**
-Return to the decision you were asked to make 25 minutes ago.
+Return to the decision put to you 25 minutes ago.
 
 The supplier follows a voluntary framework. That answers none of the four
-questions. What you ask instead: whose name is on this, how a customer disputes
-what it told them, what your marketing claims it can do, and what happens when it
-is confidently wrong at two in the morning on a Saturday.
+questions. Ask these instead. Whose name is on this? How does a customer dispute
+what it told them? What does your marketing claim it can do? And what happens
+when it is confidently wrong at two in the morning on a Saturday?
 
 **6.5 — Quiz**
 An AI tool flags insurance claims for manual review. It has a named accountable
