@@ -1,6 +1,6 @@
 ---
 name: html-ppt
-description: HTML PPT Studio — author professional static HTML presentations in many styles, layouts, and animations, all driven by templates. Use when the user asks for a presentation, PPT, slides, keynote, deck, slideshow, "幻灯片", "演讲稿", "做一份 PPT", "做一份 slides", a reveal-style HTML deck, a 小红书 图文, or any kind of multi-slide pitch/report/sharing document that should look tasteful and be usable with keyboard navigation. Triggers include keywords like "presentation", "ppt", "slides", "deck", "keynote", "reveal", "slideshow", "幻灯片", "演讲稿", "分享稿", "小红书图文", "talk slides", "pitch deck", "tech sharing", "technical presentation".
+description: HTML PPT Studio — author professional static HTML presentations in many styles, layouts, and animations, all driven by templates. Use when the user asks for a presentation, PPT, slides, keynote, deck, slideshow, "幻灯片", "演讲稿", "做一份 PPT", "做一份 slides", a reveal-style HTML deck, a 小红书 图文, or any kind of multi-slide pitch/report/sharing document that should look tasteful and be usable with keyboard navigation. Triggers include keywords like "presentation", "ppt", "slides", "deck", "keynote", "reveal", "slideshow", "幻灯片", "演讲稿", "分享稿", "小红书图文", "talk slides", "pitch deck", "tech sharing", "technical presentation", "course", "curriculum", "lesson", "module", "workshop", "training", "课程", "教程", "培训", "讲义".
 ---
 
 # html-ppt — HTML PPT Studio
@@ -20,7 +20,7 @@ One command, no build. Pure static HTML/CSS/JS with only CDN webfonts.
 ## What the skill gives you
 
 - **36 themes** (`assets/themes/*.css`) — minimal-white, editorial-serif, soft-pastel, sharp-mono, arctic-cool, sunset-warm, catppuccin-latte/mocha, dracula, tokyo-night, nord, solarized-light, gruvbox-dark, rose-pine, neo-brutalism, glassmorphism, bauhaus, swiss-grid, terminal-green, xiaohongshu-white, rainbow-gradient, aurora, blueprint, memphis-pop, cyberpunk-neon, y2k-chrome, retro-tv, japanese-minimal, vaporwave, midcentury, corporate-clean, academic-paper, news-broadcast, pitch-deck-vc, magazine-bold, engineering-whiteprint
-- **15 full-deck templates** (`templates/full-decks/<name>/`) — complete multi-slide decks with scoped `.tpl-<name>` CSS. 8 extracted from real-world decks (xhs-white-editorial, graphify-dark-graph, knowledge-arch-blueprint, hermes-cyber-terminal, obsidian-claude-gradient, testing-safety-alert, xhs-pastel-card, dir-key-nav-minimal), 7 scenario scaffolds (pitch-deck, product-launch, tech-sharing, weekly-report, xhs-post 3:4, course-module, **presenter-mode-reveal** — 演讲者模式专用)
+- **16 full-deck templates** (`templates/full-decks/<name>/`) — complete multi-slide decks with scoped `.tpl-<name>` CSS. 8 extracted from real-world decks (xhs-white-editorial, graphify-dark-graph, knowledge-arch-blueprint, hermes-cyber-terminal, obsidian-claude-gradient, testing-safety-alert, xhs-pastel-card, dir-key-nav-minimal), 8 scenario scaffolds (pitch-deck, product-launch, tech-sharing, weekly-report, xhs-post 3:4, course-module, **course** — 教学课程专用，唯一可换主题且测验真的能点, **presenter-mode-reveal** — 演讲者模式专用)
 - **31 layouts** (`templates/single-page/*.html`) with realistic demo data
 - **27 CSS animations** (`assets/animations/animations.css`) via `data-anim`
 - **20 canvas FX animations** (`assets/animations/fx/*.js`) via `data-fx` — particle-burst, confetti-cannon, firework, starfield, matrix-rain, knowledge-graph (force-directed), neural-net (pulses), constellation, orbit-ring, galaxy-swirl, word-cascade, letter-explode, chain-react, magnetic-field, data-stream, gradient-blob, sparkle-trail, shockwave, typewriter-multi, counter-explosion
@@ -59,6 +59,28 @@ Only `presenter-mode-reveal` is designed from the ground up around the feature w
 
 Keyboard in presenter window: `← →` navigate (syncs audience) · `R` reset timer · `Esc` close popup.
 Keyboard in audience window: `S` open presenter · `T` cycle theme · `← →` navigate (syncs presenter) · `F` fullscreen · `O` overview.
+
+### 📚 Course mode (教学课程 · three human gates)
+
+If the user asks for a **course, curriculum, lesson, module, workshop or 教程** —
+teaching material rather than a one-off deck — **read
+[references/course-workflow.md](references/course-workflow.md) and follow it
+instead of the authoring flow below.**
+
+A Course is not a Deck. It is defined by an audience, learning outcomes, a
+duration budget and a **delivery mode**, and it is built through three gates
+where generation stops and a human approves a named artifact:
+
+1. **Research Brief + Outline** — sourced findings, then up to three outlines
+   differing on teaching strategy, each Section budgeted in minutes.
+2. **Narration + Representative Section** — one course-wide script, plus the
+   single hardest Section rendered live to prove the design and the quiz.
+3. **Acceptance** — the full course, reviewed from a contact sheet, hash recorded.
+
+Courses are scaffolded with `scripts/new-course.sh` into `courses/<name>/` —
+beside the skill, never inside it — and assembled from per-Section fragments by
+`scripts/assemble-course.sh`. Use `templates/full-decks/course/`, the only
+teaching template that is themeable, and whose quiz actually works.
 
 ## Before you author anything — ALWAYS ask or recommend
 
@@ -160,6 +182,7 @@ Chinese + English deck, and how to export.
 - [references/animations.md](references/animations.md) — 27 CSS + 20 canvas FX animations.
 - [references/full-decks.md](references/full-decks.md) — all 15 full-deck templates.
 - [references/presenter-mode.md](references/presenter-mode.md) — **演讲者模式 + 逐字稿编写指南（技术分享/演讲必看）**.
+- [references/course-workflow.md](references/course-workflow.md) — **教学课程三道人工关卡（做课程/教程必看）**.
 - [references/authoring-guide.md](references/authoring-guide.md) — full workflow.
 
 ## File structure
