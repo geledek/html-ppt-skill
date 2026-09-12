@@ -635,16 +635,91 @@ consent with no finding about the recommender.
 
 ## Outline
 
-<!-- Approved at gate 1, together with the Research Brief above.
-     Strategy: concept-first | example-first | problem-first -->
+**Teaching Strategy: problem-first.** ✅ **Gate 1 approved 2026-09-12** (Research
+Brief + Outline together). Revised after an external review; see "Review
+corrections" below.
 
-| # | Section | Min | Teaching intent | Findings | Outline | Narration | Slides |
-|---|---------|-----|-----------------|----------|---------|-----------|--------|
-| 1 |         |     |                 |          | pending | pending   | pending |
+**Failure mode of this strategy:** problem-first frustrates beginners, and
+self-paced is where that bites hardest — no presenter is there to recover a
+learner who bounces off the opening. Mitigated by making the opening a bounded
+scenario with immediate corrective feedback, not an open-ended audit.
 
-<!-- Per-Section status is the gate. A gate passes when every Section has passed
-     it. Changing a Section's outline marks that Section's narration and slides
-     stale — and nothing else. -->
+**Running example:** a Singapore business wants to launch a customer chatbot; the
+supplier says it follows the Model AI Governance Framework. Introduced in S1,
+revisited in S3, S6 and S7.
+
+| # | Section | Min | Words | Teaching intent | Findings | Outline | Narration | Slides |
+|---|---------|-----|-------|-----------------|----------|---------|-----------|--------|
+| 1 | Is that enough to approve launch? | 2 | 220 | Create the gap with a bounded, answerable decision; correct it immediately | SG-3, FI-11 | approved | pending | pending |
+| 2 | One definition, many rulebooks | 2 | 220 | Reframe "is AI regulated?" into "which use, where, judged by whom?" | GL-12, GL-11 | approved | pending | pending |
+| 3 | The three tiers of legal force · **quiz** | 6 | 660 | Outcome 1. Legal force is a separate axis from severity of harm | SG-1/3/14, FI-2/3, UK-3/13, GL-2/3/4 | approved | pending | pending |
+| 4 | Where enforcement actually is · **quiz** | 4 | 440 | Accuracy alone does not establish lawful deployment | EN-1/2/5/6/7/8 | approved | pending | pending |
+| 5 | The sector layer: financial services · **quiz** | 4 | 440 | Outcome 2. Responsibility maps to an existing owner | FI-4/6/9/10 | approved | pending | pending |
+| 6 | Three questions + the decision rule · **quiz** | 5 | 550 | Outcome 3, applied to the running example | EN-3b/7/10c, FI-4, SG-15, FI-7 | approved | pending | pending |
+| 7 | Your next 90 days · **quiz** | 7 | 770 | Outcome 4. A prioritisation decision, not a checklist | EN-3b, SG-15 | approved | pending | pending |
+
+Total 30 min · 3,300 words · ~26 slides · 4 quizzes.
+Quiz stems, options and per-option feedback **count inside** each section's word
+budget. The 110 wpm effective rate already discounts for thinking time — do not
+add a second interaction allowance on top.
+
+### Review corrections applied at gate 1
+
+An external review (codex, high reasoning effort) checked the outline against this
+brief. Accepted and folded in:
+
+1. **Outcome 1 conflated two axes.** "Binding obligation / supervisory expectation
+   / reputational risk only" mixes *legal force* with *severity of harm*. All
+   three layers can apply to one use at once, and a voluntary framework does not
+   move an activity into a reputational-only bucket. Teach: tag the applicable
+   layers, then assess consequence and urgency separately.
+2. **Rebalanced from orientation to application.** S1-S5 had 23 of 30 minutes.
+   Now 2/2/6/4/4/5/7.
+3. **Opening replaced.** The original bundled "list your uses" with "classify
+   their legal status", assumed learners could not, and resolved with a statistic
+   that normalises the wrong gap — understanding an AI system is not the same as
+   understanding its legal obligations. Replaced with the bounded chatbot
+   scenario. FI-11's 46% demoted to dated context.
+4. **"None was about model accuracy" is false inside its own section.** Zillow
+   *was* a forecasting failure; Air Canada *was* wrong information. Correct claim:
+   **accuracy alone does not establish lawful or responsible deployment.**
+5. **FI-2 must carry its provenance** — draft TPRM guidelines, March 2026, not an
+   issued AI guideline.
+6. **S4 quiz key was unsupported.** EN-5 evidences no contest route for the
+   *rider* cases. It does not establish that as the common factual finding across
+   the Dutch and Robodebt cases. Rewritten as a judgement question.
+7. **"Frontier cases that failed" groups four different outcomes** — annulment on
+   jurisdiction, non-collection, unadjudicated merits, few violations detected.
+   Label them individually. Say Clearview **Italy** €20m; say the UK case is
+   unadjudicated **on the merits**.
+8. **EN-1 needs scope and date**: "as at 12 Sep 2026 this research found no
+   AI-specific PDPC enforcement decision", and distinguish decisions,
+   investigations and penalties.
+9. **SMF24/SMF4 are examples, not a universal rule.** The FCA's words say
+   responsibility follows the relevant activity, business area or function.
+10. **HSBC lesson narrowed.** The decision also holds HSBC was *entitled* to
+    withhold. Publication did not win the case; it was credited on accountability
+    and disclosure.
+11. **India is not purely principles-based** — binding synthetic-content rules
+    since 20 Feb 2026 (GL-11). **China has no comprehensive AI law**; Korea has a
+    framework act.
+12. **Apple Card stays reputational.** NYDFS found no discrimination, so it is not
+    evidence of deceptive claims.
+13. **All four quizzes become judgement, not recall**, each with explanatory
+    feedback on *every* option.
+14. **NEW — the missing executive decision.** The three questions can all be
+    answered satisfactorily while approving a system with no evidence it works.
+    S6 adds a deployment decision rule: what evidence justifies approve, restrict
+    or stop. Anchored on SG-15 ("should not allow high stakes or irreversible
+    actions to take place without human review") and FI-7.
+15. **DBS still needs browser verification** before it ships (EN-2).
+
+Rejected: cutting S4 to 3 minutes. The Dutch childcare case is the only item in
+the brief where an algorithm brought down a government; it earns its minute, taken
+from S6.
+
+Deferred as out of scope: piloting the module with representative executives and
+measuring section completion.
 
 ## Narration
 
