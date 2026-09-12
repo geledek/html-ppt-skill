@@ -114,6 +114,14 @@ to a Finding, or is marked illustrative. Quiz answer keys cite. A course teaches
 learners do not fact-check the thing they are learning from, and a wrong answer
 key actively trains the wrong answer.
 
+**Run the Narration through the `no-ai-slop` skill before showing it.** Not a
+polish pass — for a self-paced Course the Narration *is* the learner-facing
+content, and the patterns that skill bans are exactly the ones executive material
+attracts: importance puffery, weasel attribution ("experts agree"), colon
+reveals, summary-recap endings. Edit mode, minimum effective edit, then self-check
+against its `eval.md`. Its rule against inventing claims and its demand for named
+sources reinforce the provenance rule above rather than competing with it.
+
 **Choose the Representative Section** — the *most demanding* one, not the
 friendliest. Largest allocation, densest content, longest code, widest table. It
 must cover the quiz, or assemble the sample as that section plus the quiz slide.
