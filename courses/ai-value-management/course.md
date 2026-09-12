@@ -1525,6 +1525,299 @@ workflow rather than a demand for an ROI model nobody can build.
    enterprise ROI of 5.9%"; "89% adopted but only 23% can measure ROI"; Meta's
    circulating "200,000 users per group / 2–4 weeks" holdout thresholds.
 
+### Where value shows up, disclosed numbers, and the cost side  ✅ researched 2026-09-12
+
+#### ⭐ The anchor case — Klarna. The whole course in one company.
+
+**D-1 · In the audited 20-F, with its measurement source named. The rare good
+disclosure.**
+> "In February 2024, we launched our AI assistant in partnership with OpenAI. Our
+> AI assistant has handled 80% of customer service chats in the year ended
+> December 31, 2025 (according to our service chat log data), with no drop in
+> consumer satisfaction levels since its introduction (according to internal
+> consumer satisfaction surveys)."
+Klarna Group plc, Form 20-F FY2025.
+https://www.sec.gov/Archives/edgar/data/2003292/000200329226000007/klar-20251231.htm
+**Note it is a volume share, not a saving.**
+
+**D-2 · On the earnings call, a dollar figure and an FTE-equivalent, no method.**
+> "it used to do about 700 full-time jobs. Now it is doing about 853 full-time
+> jobs of a saving of $60 million."
+Sebastian Siemiatkowski, CEO, Klarna Q3 2025 call, 18 Nov 2025. No baseline, no
+definition of a "full-time job", no derivation of $60m.
+
+**D-3 · ⭐ And the audited customer-service expense line WENT UP in the same year.**
+> "Customer service and operations expenses for the year ended December 31, 2025
+> increased by $4 million, or 2%, compared to the year ended December 31, 2024.
+> Cost increased at a slower pace than volumes, with volumes up 32% year-over-year
+> and transactions up 25% year-over-year, indicating continued operating leverage."
+Audited line: **2023 $240m → 2024 $203m → 2025 $207m.** And in the one year the
+cost actually fell, the filing does not credit AI:
+> "This decrease was primarily driven by a decrease in customer service costs as
+> we continued to make significant efforts to optimize and manage such costs."
+
+**Nobody lied.** The call reports a counterfactual; the statement reports what was
+spent. The filing claims **operating leverage against growth**, not absolute
+saving. **The question to teach is not "what did AI save?" but "against what
+baseline, and who audited it?"**
+
+**D-4 · ⚠️ The rebalancing, stated carefully.** The CEO conceded quality slipped:
+"As cost unfortunately seems to have been a too predominant evaluation factor…
+what you end up having is lower quality." **Media interview, not official
+reporting** (Bloomberg, May 2025). The 20-F asserts "no drop in consumer
+satisfaction levels" and describes a "dual-track approach of combining broad and
+continuing implementation of scalable AI in customer service with high-quality
+human support." **Present as rebalancing, not abandonment — the AI share went up
+(700 → 853 FTE-equivalent) while humans returned for complex work.**
+
+#### The second teaching artefact — a denominator that excluded the work
+
+**D-5 · ⭐ Presto Automation: "85% non-intervention" while humans typed the order.
+The SEC opened a formal investigation.**
+10-K FY2023 (11 Oct 2023):
+> "Presto Voice currently achieves an 85% non-intervention rate on average,
+> meaning that restaurant staff does not need to intervene in 85% of the orders
+> placed… We have achieved an approximately 95% non-intervention rate at certain
+> locations."
+> "Our systems currently use a human agent (located offsite of the restaurant) to
+> enter, review, validate and correct orders received by Presto Voice"
+> "we had 137 full-time employees … and 149 contractors, consisting primarily of
+> human agents supporting our HITL approach, who are primarily located in the
+> Asia-Pacific region."
+Four months later, the 10-Q (21 Feb 2024):
+> "Pending the completion of that roll out, locations that use our AI technology
+> currently use human agent intervention, including entering the order, in all
+> instances."
+> "the SEC had commenced a formal investigation into disclosures that the Company
+> had made regarding certain aspects of its AI technology."
+https://www.sec.gov/Archives/edgar/data/1822145/000155837023016336/prst-20230630x10k.htm
+**"Restaurant staff" was the denominator. The offsite contractors were not counted,
+and there were more contractors than employees. Always ask what the denominator
+excludes.**
+
+#### ⭐ The structural finding: where a number lives predicts how rigorous it is
+
+**Quantified AI *benefits* live in CEO letters, prepared remarks and analyst
+answers. Audited filings quantify AI's *costs* precisely and its benefits not at
+all.**
+
+| Costs, audited and precise | Benefits, unaudited |
+|---|---|
+| SAP restructuring **€3.2bn** (20-F) | SAP: "can save up to 90 minutes per consultant and day" — **"can" plus "up to" is a ceiling with no baseline** |
+| Chegg goodwill impairment **$635.4m** (10-K) | IBM **$4.5bn** "productivity savings" — CEO letter and call, no baseline |
+| Intuit restructuring **$300m** — **AI never named as the cause** | IBM **45%** developer gain — "reporting productivity gains", i.e. self-report |
+| HP **$650m** restructuring cost | HP **$1bn** "gross run rate savings by end of fiscal 2028" — forward-looking, **gross, not net of the $650m** |
+| CBA: AI appears as a cost — "investment in technology to support infrastructure, resilience and AI capabilities" | Sysco **$100m** "cost-savings program enabled by AI-driven process improvements, automation initiatives, and operating efficiencies" — no baseline, no period, no split |
+
+**D-9 · ⚠️ IBM's $4.5bn is described as a stock and as a flow within three months.**
+Annual Report: "approximately $4.5 billion in productivity savings **since the
+beginning of 2023**." Q4 2025 call: "exiting 2025 with $4.5 billion of **annual run
+rate** savings." Cumulative and annual run-rate are different quantities. Not
+AI-only either — attributed to "simplifying our application and infrastructure
+environments, aligning our teams by workflow and enabling a higher value-add
+workforce through automation and AI-driven efficiencies." **The 10-K carries the
+figure nowhere, and says instead:** "IBM's drive for greater agility,
+productivity, flexibility and cost savings by continuously transforming with the
+use of AI may not yield intended gains."
+
+**D-10 · IBM's 45% is exactly the quantity METR showed is unreliable.**
+> "We have more than 20,000 IBMers that are using Project Bob, reporting
+> productivity gains averaging 45%"
+Q4 2025 call, 28 Jan 2026. One quarter later the population grew to the entire
+developer workforce, 45% stayed identical, and "reporting" was dropped. **Put this
+slide next to the METR forecast/belief/measurement gap.**
+
+**D-16 · JPMorgan defines "AI benefits" to include estimated revenue, then declines
+to give the number.**
+> "Benefits from AI include estimated growth in revenue, cost reduction and
+> savings from risk reduction, such as fraud, that are directly attributable to AI
+> initiatives"
+Asked for the figure, Dimon: "we're not going to give you information which I think
+puts us at a competitive disadvantage… you're going to have just, part of you has
+to trust me, I'm sorry." 8-K EX-99.2, 23 Feb 2026; official transcript 13 Jan 2026.
+
+**D-17 · ⭐ How it should be written. Use as the counter-example.**
+> "Agentic messaging resolve rate¹ … 86% … FY26
+> ¹ Percentage of customer conversations initiated through the agentic chatbot
+> channel that are successfully resolved without a human assisted servicing
+> pathway."
+Commonwealth Bank of Australia, FY2026 Full Year Results Presentation.
+**A defined denominator, a defined success condition, in an investor document.**
+
+**D-13 · The only fully auditable number came from a tribunal, not a company.**
+> "In effect, Air Canada suggests the chatbot is a separate legal entity that is
+> responsible for its own actions. This is a remarkable submission."
+> "I order Air Canada to pay Mr. Moffatt a total of $812.02"
+*Moffatt v. Air Canada*, 2024 BCCRT 149, 14 Feb 2024. Worked line by line.
+
+**D-14 · McDonald's ended a 100+ restaurant AI test and published no number at
+all.** "the technology will be shut off in all restaurants currently testing it no
+later than July 26, 2024." ⚠️ **Franchisee memo, news-reported only** — no release,
+8-K or 10-K passage found. **The absence is the finding: the company best placed to
+measure told shareholders nothing.**
+
+**D-6 / D-7 · Two disclosed failures, kept separate.** Zillow wrote down **$304m**
+on inventory bought "at higher prices than our current estimates of future selling
+prices" and wound down Zillow Offers with a 25% workforce reduction (8-K Ex-99.3,
+2 Nov 2021) — an algorithmic business failing. Chegg wrote goodwill to zero,
+**$635.4m**, and kept AI out of the causal sentence, mentioning "Google's roll out
+of AI Overviews" only in MD&A — **AI disrupting a company, not an AI project
+failing.** Do not put these on the same slide.
+
+**⭐ NOT ESTABLISHED, and the absence is a finding.** EDGAR full-text search
+returns **0 hits** for "anticipated benefits of artificial intelligence" in 10-Ks
+and for "may not realize the anticipated benefits of our artificial intelligence"
+across all forms. **Companies disclose AI risk prospectively and AI wins
+retrospectively, almost never the reverse.** Pfizer is the closest: "the risk that
+anticipated cost savings from AI, automation and digital enablement efforts may not
+be realized in the expected amounts or within expected timeframes" (10-Q, 4 Aug
+2026) — and Pfizer quantifies no AI saving anywhere.
+
+#### Where value shows up, when it does
+
+**V-6 · ⭐ The cost/revenue proportion. Revenue is overwhelmingly aspirational.**
+> "revenue growth largely remains an aspiration, with 74% of organizations hoping
+> to grow revenue through their AI initiatives in the future compared to just 20%
+> that are already doing so"
+Achieving today / hope to achieve: efficiency and productivity **66/60** ·
+decision-making **53/61** · reduce costs **40/65** · customer relationships
+**38/60** · products and innovation **38/60** · **increase revenue 20/74**.
+Deloitte, Jan 2026, n=3,235.
+
+**V-1 / V-2 · McKinsey's function breakdown, and how to read it honestly.**
+Cost decreases concentrate in supply chain (3% cut ≥20%, 10% cut 11–19%, 28% cut
+≤10%), service operations (7/6/25) and manufacturing (1/8/28). Revenue increases
+concentrate in marketing and sales (7% up >10%, 9% up 6–10%, 21% up ≤5%), product
+development (8/10/18) and software engineering (11/5/15). McKinsey 2026, Exhibits
+6–7, n=1,719. **⚠️ Even in the best function only ~41% report any cost decrease,
+the largest band is the smallest effect, and non-reporters are excluded from the
+chart — so the visual overstates the base rate.** And McKinsey's own threshold for
+"meaningful" revenue is only 5% (2024 edition).
+
+**V-8 / V-9 · Augmentation dominates, and predicted reductions did not arrive.**
+Census: "Most users (66%) rely on AI solely to augment tasks, while AI-related
+employment decreases are rare, occurring in only 2% of firms." McKinsey:
+> "Just 14 percent of respondents from organizations using AI report that AI
+> contributed to an overall decline in workforce size in the past year—less than
+> half the 32 percent who, in last year's survey, expected workforce reductions
+> over the same period."
+McKinsey controlled for sample drift on this: "we also looked only at the 552
+respondents who completed the survey in both 2025 and 2026 and the findings fully
+reflected that of the overall sample." **So a cost case built on headcount removal
+bets against the measured base rate.**
+
+#### The cost side
+
+**K-1 · The model is a small fraction of the system.**
+> "only a tiny fraction of the code in many ML systems is actually devoted to
+> learning or prediction … much of the remainder may be described as 'plumbing'."
+> "Because a mature system might end up being (at most) 5% machine learning code
+> and (at least) 95% glue code"
+> "developing and deploying ML systems is relatively fast and cheap, but
+> maintaining them over time is difficult and expensive."
+Sculley et al. (Google), *Hidden Technical Debt in Machine Learning Systems*,
+NeurIPS 2015. ⚠️ The 5%/95% is an estimate ("might end up being"), **not a
+measurement — quote as expert testimony.**
+
+**K-5 · ⭐ One in five organisations is already throttling AI use over running
+cost. Inference cost is no longer theoretical.**
+> "One in five respondents says their organization is limiting AI use because of
+> operating costs, a share that is broadly consistent across organizations of
+> different sizes and across many industries."
+> "Twenty-eight percent of respondents say their organizations are spending more
+> than 10 percent of their total enterprise-wide budget for information and
+> communication technology on AI technologies."
+McKinsey 2026, n=1,719, method published.
+
+**K-12 · ⭐ Most of the NEW work AI creates is oversight, not production.**
+> "only 41% of new tasks focus on 'productive AI use'… while the remaining 59%
+> relate to 'AI implementation and oversight' (AI Quality Review, AI Integration,
+> and AI Ethics & Compliance)."
+> "about 25% spend more time on the same tasks they initially saved time on."
+Humlum & Vestergaard, NBER WP 33777. Survey linked to administrative panel data.
+**The strongest source on "the work moves to verification."**
+
+**K-10 · Switching cost: prompts measurably regress on vendor model updates, and
+you cannot stay put.**
+> "we found that regression does exist over API updates: 58.8% of prompt + model
+> combinations drop accuracy over API updates. Among them, 70.2% drop accuracy
+> greater than 5%."
+> "four out of these five models are already scheduled to be deprecated in 2024,
+> effectively forcing application developers to switch"
+Ma, Yang & Kästner (CMU), CAIN 2024, peer-reviewed. ⚠️ Narrow — 10 update pairs,
+2 datasets. Good for the mechanism, not an effect size.
+
+**K-3 · Leaders underestimate the data work, in RAND's interview data.**
+> "Many interviewees (30 of 50) discussed persistent issues with data quality."
+> "many interviewees (14 of 50) reported finding that senior leaders often
+> underestimated the amount of time that it would take to train an AI model…
+> They expect AI projects to take weeks instead of months"
+⚠️ "80 percent of AI is the dirty work of data engineering" is **one interviewee's
+phrase**, not a RAND measurement.
+
+**K-18 · IT cost risk is fat-tailed.**
+> "The analysis of a sample of 1,471 IT projects showed that the average cost
+> overrun was 27% — but that figure masks a far more alarming 'fat tail' risk.
+> Fully one in six of the projects in the sample was a Black Swan, with a cost
+> overrun of 200%, on average, and a schedule overrun of almost 70%."
+Flyvbjerg & Budzier, *HBR*, Sep 2011. ⚠️ **92% public sector, 83% US, mean project
+$167m, and pre-AI.** Do not present as a private-sector or small-project figure.
+
+**K-8 / K-9 · Overruns, with provenance flags.** DoiT survey (fielded by Sapio,
+Feb 2026, 500 finance leaders, ±4.4pp): "79% experienced cost overruns in the past
+12 months", mean overspend 30.9%, "only 15% can calculate AI ROI without
+significant bottlenecks". ⚠️ **Vendor-commissioned — DoiT sells cloud cost
+optimisation — but with a named independent fielder and published margin of
+error.** Corroboration: 68% report at least some AI initiatives over budget, "Only
+9% reported that over three-quarters of AI initiatives delivered measurable
+financial returns" (WitnessAI via CFO Dive, ⚠️ dates and frame unstated).
+
+**K-16 · ⚠️ RAND's "80% of AI projects fail" is a citation to a journalism piece,
+not a RAND finding.** RAND's own contribution is the 65 interviews on *why*.
+**The most commonly mis-cited number in this space.** The course must not repeat
+it.
+
+#### NOT ESTABLISHED — value, disclosure and cost
+
+**Figures that must not be used:**
+1. **BCG's "10-20-70"** cost split — no published sample or method, consultancy
+   marketing. Use C-8/K-12 instead.
+2. **"Share of AI project time spent on data preparation"** — circulating figures
+   (Anaconda ~45%, CrowdFlower 60–80%, Kaggle ~15%) are vendor-published, disagree
+   by 5×, no sampling frames.
+3. **Any "3× TCO" claim** — almost certainly vendor content. Nearest real figures
+   are the 30.9% mean overspend and the fat tail.
+4. **Lumen's "~$50m AI savings"** — a misattribution. That figure is interest-expense
+   saving from a bond coupon reduction. Lumen's own words attribute "over $400
+   million in run rate savings" to "modernization and simplification", no AI.
+5. **IBM "$3.5bn in productivity"** — not in any primary. Disclosed series is $2bn →
+   $4.5bn → $5.5bn.
+6. **IBM AskHR figures** ("94% handled", "HR 700 → 50") — zero hits across the 10-K,
+   Annual Report and both transcripts. Press interviews and marketing only.
+7. **Salesforce "9,000 → 5,000 support headcount", "$100m savings", "~85% of
+   requests"** — absent from transcripts and the FY2026 10-K. Salesforce's stated
+   figure is 64%. Traces to media interviews.
+8. **ServiceNow "$350m annualized value", "2.3m hours"** — trace to a pre-earnings
+   Fortune interview, absent from four checked earnings events.
+9. **JPMorgan "$1bn–$1.5bn of value" / "$2bn"** — not in the 2023/2024/2025
+   shareholder letters, the 2025 Annual Report, or the Investor Day deck.
+10. **CBA "scam losses fell 76%", "call volumes down ~40%"** — newsroom media
+    release only, not in investor materials.
+11. **IBM's total loss on Watson Health** — IBM discloses a **$258m gain** on the
+    asset sale and no impairment. The circulating "~$4bn spent, ~$1bn recovered" is
+    not IBM's arithmetic. Do not attribute it to them.
+
+**Genuine gaps in the literature:**
+12. **The cost of migrating a production system between models or vendors.** K-10
+    shows migration is forced; **nobody has priced it.**
+13. **The cost of a parallel or shadow run, or the review burden.** K-12 gives task
+    composition, not cost. **Nobody has costed the parallel run.**
+14. **Any survey validating AI self-reports against measured financials.** None in
+    this set does.
+15. Exact per-function respondent counts behind McKinsey's Exhibits 6–7 (SVG).
+16. Microsoft 365 Copilot's current list price from Microsoft's own live page
+    (JS-rendered). The 2023 launch price was "USD30 per user, per month".
+
 ### Worked examples — all anonymised, all with before/after numbers
 
 **ST-17 · Invoice processing · $1B+ US logistics company** (pp.16–18). Fleet of

@@ -135,3 +135,27 @@
 .tpl-course .layer.is-binding{border-left:4px solid var(--accent)}
 .tpl-course .layer.is-expectation{border-left:4px solid var(--accent-2)}
 .tpl-course .layer.is-voluntary{border-left:4px solid var(--text-3)}
+
+/* roadmap — a gate, parallel tracks, and a triggered tail.
+   Not a flowchart: nothing here branches on a decision. The one real structural
+   fact is that the inventory gates everything else, and that the "later" items
+   are triggered by a condition rather than scheduled to a date. */
+.tpl-course .roadmap{display:grid;grid-template-columns:330px 56px 1fr 380px;gap:0 26px;align-items:stretch;margin-top:8px}
+.tpl-course .rm-label{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:10px}
+.tpl-course .rm-gate{background:var(--surface);border:2px solid var(--accent);border-radius:var(--radius);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
+.tpl-course .rm-gate .rm-label{color:var(--accent)}
+.tpl-course .rm-gate h4{font-size:30px;margin:0 0 10px}
+.tpl-course .rm-gate p{font-size:20px;color:var(--text-2);margin:0}
+.tpl-course .rm-cite{font-family:var(--font-mono);font-size:14px;color:var(--text-3);margin-top:14px!important}
+.tpl-course .rm-join{position:relative}
+.tpl-course .rm-join::before{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:var(--border-strong)}
+.tpl-course .rm-join::after{content:"";position:absolute;right:0;top:calc(50% - 7px);border-left:10px solid var(--border-strong);border-top:7px solid transparent;border-bottom:7px solid transparent}
+.tpl-course .rm-tracks{display:flex;flex-direction:column;gap:12px}
+.tpl-course .rm-track{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:var(--radius-sm);padding:18px 24px;flex:1;display:flex;align-items:center;gap:18px}
+.tpl-course .rm-track b{font-size:22px;flex:none;width:290px;color:var(--text-1)}
+.tpl-course .rm-track span{font-size:19px;color:var(--text-2)}
+.tpl-course .rm-beyond{background:var(--surface-2);border:1px dashed var(--border-strong);border-radius:var(--radius);padding:26px 28px}
+.tpl-course .rm-beyond ul{list-style:none;margin:0;padding:0}
+.tpl-course .rm-beyond li{font-size:19px;color:var(--text-2);padding:12px 0;border-bottom:1px solid var(--border)}
+.tpl-course .rm-beyond li:last-child{border-bottom:none}
+.tpl-course .rm-beyond li b{display:block;color:var(--text-1);font-size:20px;margin-bottom:3px}
