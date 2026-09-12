@@ -68,13 +68,15 @@
 .tpl-course .quiz.revealed .mcq{cursor:default}
 .tpl-course .quiz.revealed .mcq:hover{border-color:var(--border)}
 .tpl-course .quiz.revealed .mcq .why{display:block}
-.tpl-course .quiz.revealed .mcq.correct{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,var(--surface))}
-.tpl-course .quiz.revealed .mcq.correct .letter{border-color:var(--accent);background:var(--accent);color:var(--surface)}
+/* --good, not --accent: "correct" is a semantic state, and --good is green in
+   every theme while --accent is whatever the brand colour happens to be. */
+.tpl-course .quiz.revealed .mcq.correct{border-color:var(--good);background:color-mix(in srgb,var(--good) 8%,var(--surface))}
+.tpl-course .quiz.revealed .mcq.correct .letter{border-color:var(--good);background:var(--good);color:var(--surface)}
 .tpl-course .quiz.revealed .mcq.wrong{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 7%,var(--surface))}
 .tpl-course .quiz.revealed .mcq.wrong .letter{border-color:var(--bad);background:var(--bad);color:var(--surface)}
 .tpl-course .quiz .verdict{display:none;margin-top:14px;font-size:14px;font-weight:700}
 .tpl-course .quiz.revealed .verdict{display:block}
-.tpl-course .quiz.revealed .verdict.right{color:var(--accent)}
+.tpl-course .quiz.revealed .verdict.right{color:var(--good)}
 .tpl-course .quiz.revealed .verdict.miss{color:var(--bad)}
 
 /* layer stack — concurrent layers, not parallel columns. Full-width bands that

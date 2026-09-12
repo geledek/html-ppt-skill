@@ -765,7 +765,7 @@ asked to approve the launch.
 Is that enough?  ( Yes · No · Need more information )
 
 **1.3 — What you are missing**
-Need more information. "No" is also defensible. "Yes" is not.
+Need more information is the right answer. "No" is also reasonable. "Yes" is not.
 
 IMDA wrote the Model Framework, and says in the framework itself that adopting
 it "will not absolve organisations from compliance with current laws and
@@ -864,21 +864,18 @@ Tag the layers. Then rank by consequence. Separately, and in that order, because
 the layers tell you who asks the questions and the consequence tells you how fast
 you need an answer.
 
-**3.5 — The EU, and the half-truth**
+**3.5 — The EU AI Act is partially live**
 You are not in the EU. You may still be in scope. Article 2(1)(c) reaches
 providers and deployers in a third country "where the output produced by the AI
 system is used in the Union."
 
-You will read that the EU delayed the AI Act. That is half true, and the wrong
-half is the dangerous one.
+Some obligations were postponed. Regulation (EU) 2026/1744, in force 27 July
+2026, moved the high-risk obligations to December 2027 and August 2028.
 
-Regulation (EU) 2026/1744, in force 27 July 2026, postponed the high-risk
-obligations to December 2027 and August 2028.
+Others are already in force: prohibitions since February 2025, general-purpose AI
+obligations since August 2025, and Article 50 transparency since August 2026.
 
-It moved nothing else. Prohibitions have applied since February 2025.
-General-purpose AI obligations since August 2025. Transparency under Article 50
-since August 2026. Those are live now, and penalties reach 35 million euro or 7%
-of worldwide turnover, whichever is higher.
+Penalties reach 35 million euro or 7% of worldwide turnover, whichever is higher.
 
 **3.6 — Quiz**
 A Singapore retailer launches a chatbot that collects customer contact details
@@ -898,25 +895,7 @@ C. Reputational only, since Singapore has no AI statute.
 
 ### S4 · Where enforcement actually is  (4 min · target 440)
 
-**4.1 — Start with the absence**
-As at September 2026, this research found no AI-specific enforcement decision
-from Singapore's PDPC, and no AI or model-risk enforcement action from MAS.
-Singapore publishes more AI governance material than almost any country and has
-penalised none of it.
-
-Look instead at where enforcement does land.
-
-**4.2 — Four headline cases, four different outcomes**
-Italy fined OpenAI 15 million euro; a Rome court annulled it in March 2026 on
-jurisdiction, without examining the substance. Italy fined Clearview AI 20
-million euro, never collected. The UK fined Clearview 7.55 million pounds in
-2022, still unadjudicated on the merits four years later. New York City's
-hiring-audit law turned up one compliance issue across 32 companies surveyed.
-
-Annulled, uncollected, undecided, barely detected. Four different outcomes, and
-not one of them is a precedent.
-
-**4.3 — What did produce consequences**
+**4.1 — What produced real consequences**
 The Dutch tax authority used nationality as an indicator in a risk-classification
 model. The regulator found that unlawful and discriminatory, and fined it 2.75
 million euro. At least 244,273 people were affected, over 43,000 are now
@@ -930,7 +909,20 @@ Italy fined Deliveroo 2.5 million euro and Glovo 5 million over rider-management
 algorithms, where a suspended rider "received an automatic message without any
 possibility of providing explanations or contesting the decision."
 
-**4.4 — And the ones with no regulator at all**
+None of these turned on how accurate the model was. All three turned on whether a
+person could argue with the decision.
+
+**4.2 — The headline AI fines mostly did not survive**
+Italy fined OpenAI 15 million euro; a Rome court annulled it in March 2026 on
+jurisdiction, without examining the substance. Italy fined Clearview AI 20
+million euro, never collected. The UK fined Clearview 7.55 million pounds in
+2022, still unadjudicated on the merits four years later. New York City's
+hiring-audit law turned up one compliance issue across 32 companies surveyed.
+
+Annulled, uncollected, undecided, barely detected. Plan against the pattern in
+4.1, not against the headlines.
+
+**4.3 — And the ones with no regulator at all**
 Air Canada's chatbot gave a passenger wrong bereavement-fare advice. The airline
 argued the chatbot was "a separate legal entity that is responsible for its own
 actions." The tribunal called that "a remarkable submission" and awarded 812
@@ -939,15 +931,10 @@ Canadian dollars. Trivial sum, load-bearing principle.
 Zillow's home-pricing model was confidently wrong: 304 million dollars written
 down in a quarter, roughly 25% of staff cut, no regulator involved.
 
-And MAS's hardest recent action against a bank, roughly 1.6 billion Singapore
-dollars of additional capital on DBS plus a six-month freeze on non-essential IT
-changes, was for technology risk governance and change management.
-
 Accuracy is not irrelevant. Zillow was a forecasting failure and Air Canada was
-wrong information. It is just never the whole question, and it is never the part
-regulators reach first.
+wrong information. It is just never the whole question.
 
-**4.5 — Quiz**
+**4.4 — Quiz**
 A rider-management algorithm assigns shifts. An audit shows it is accurate and
 well calibrated. Suspended riders receive an automated message. They can appeal,
 and the appeal re-runs the same algorithm. Which change addresses the governance
@@ -977,8 +964,7 @@ instrument at all.
 
 MAS consulted on Guidelines on AI Risk Management in November 2025 and proposed a
 twelve-month transition after issuance. As at September 2026 they have not been
-issued, so the transition has not started. Firms waiting for a starting gun have
-been waiting ten months.
+issued, so the transition has not started.
 
 **5.2 — The UK answered the same question differently, and arrived at the same place**
 The FCA was asked whether it would write AI rules. It said no. Its Chief Data,
@@ -1044,8 +1030,9 @@ using.
 
 One caution on the third. Goldman Sachs and Apple came through a New York
 regulator's review of roughly 400,000 Apple Card applications with no finding of
-discrimination, and could explain every complainant's decision when asked. They
-still lost the week. Being right and being believed are different problems.
+discrimination, and could explain every complainant's decision when asked. The
+public criticism continued anyway. Being able to explain a decision protects you
+with a regulator. It does not, on its own, protect your reputation.
 
 **6.3 — The question that actually decides**
 You can get satisfying answers to all three and still approve something with no
@@ -1139,8 +1126,7 @@ Evidence: vendor benchmark only; never tested on our complaint mix.
 Next decision: whether to restrict to a pilot, by the end of this month.
 
 That record took four lines and produced two findings and a deadline. Do it for
-your top three uses and you have a governance programme, which is not a phrase
-worth being frightened of.
+your top three uses and you have the foundation of your governance programme.
 
 **7.4 — What can usually wait**
 Usually secondary to closing a live control gap: ISO 42001 certification,
