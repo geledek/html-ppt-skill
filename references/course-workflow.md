@@ -236,3 +236,32 @@ slide down.
 
 **The stage is fixed at 1920×1080** and scaled to fit (docs/adr/0006), so
 positions are deterministic. Size type for that canvas, not for a browser window.
+
+### Check them, do not remember them
+
+```bash
+./scripts/check-slides.sh courses/<name>     # exit 0 = all rules hold
+```
+
+It measures rather than eyeballs: every text block's line count, the headline and
+body coordinates on every slide, whether anything moves when a quiz is revealed,
+and whether any local subresource would leave the build unstyled in Safari.
+
+**Run it before every gate 3 review.** A twenty-six slide deck reviewed by eye at
+2am is exactly where these rules quietly degrade.
+
+## Capturing feedback into the skill
+
+When the human gives design or layout feedback at gate 2, **write the rule down
+before applying it**, in this order:
+
+1. Add it to "Slide layout rules" above, in one sentence, with the reason.
+2. If it can be measured, add it to `scripts/check-slides.sh`.
+3. **Prove the check fails.** Break the rule deliberately in a copy of the deck
+   and confirm a non-zero exit. A check that only ever passes is worthless — the
+   line-count check shipped broken because an inline element's bounding rect is
+   its glyph box rather than lines × line-height, and only a deliberate failure
+   exposed it.
+4. Then fix the deck.
+
+Applying feedback without recording it means relearning it on the next course.
