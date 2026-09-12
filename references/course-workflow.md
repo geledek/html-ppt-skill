@@ -292,6 +292,26 @@ sentence of a slide's script produces "Your sector adds to it." and "Each comes
 from a case you just saw." Write what the slide argues: "Singapore finance:
 advisory, and still unissued."
 
+### Motion rules
+
+**Pace motion to the voice, not the eye.** In a recorded course a narrator needs
+roughly 2.5 seconds an item at 150 wpm. A stagger that finishes in 1.3 seconds is
+decoration; the learner has read the whole list before the voice reaches item two.
+
+**Animate what the voice enumerates. Leave static what the learner reads at
+once.** A list the narrator walks through should build. A definition, a quotation,
+a decision record, a quiz's options and a reference block should not — a learner
+choosing a quiz answer needs to see every option at the same time.
+
+**Every capture path must force the finished state.** With speech-paced motion a
+screenshot or a PDF page catches a slide part-built. The deck carries a `stills`
+body class, applied by `?stills`, by `beforeprint`, and available to any renderer.
+Forgetting it produces contact sheets of half-drawn slides.
+
+**Repeated per-slide citations belong at the back.** A reference block on every
+slide stops being read. Keep a source marker on the slide and put the full list on
+a closing References slide.
+
 ### Content and copy rules
 
 **A kicker must not repeat the line beneath it.** If the headline already says

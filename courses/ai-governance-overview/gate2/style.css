@@ -42,7 +42,7 @@
 .tpl-course .lifecycle h4{font-size:30px;margin:16px 0}
 .tpl-course .lifecycle p{font-size:26px;line-height:1.4;color:var(--text-2);margin:0}
 .tpl-course .oversight-line{border:1px solid var(--border-strong);border-radius:var(--radius);font-size:28px;padding:22px 28px;margin-bottom:32px}
-.tpl-course .review-loop{margin-top:34px;font-size:27px;color:var(--text-2);border-bottom:2px solid var(--accent-2);padding-bottom:20px}
+.tpl-course .review-loop{margin-top:34px;font-size:27px;color:var(--text-2)}
 .tpl-course .component-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 60px;counter-reset:component}
 .tpl-course .component{display:grid;grid-template-columns:50px 1fr;gap:15px;padding:22px 0;border-top:1px solid var(--border-strong);counter-increment:component}
 .tpl-course .component::before{content:counter(component,decimal-leading-zero);font:25px var(--font-mono);color:var(--accent-2);padding-top:4px}
@@ -130,13 +130,15 @@
 /* stagger: build a group one item at a time on slide entry. Recorded delivery,
    so this runs on its own rather than needing a click. */
 .slide .stagger > * { opacity: 0; transform: translateY(10px); }
-.slide.is-active .stagger > * { animation: rise .42s var(--ease, cubic-bezier(.4,0,.2,1)) forwards; }
-.slide.is-active .stagger > *:nth-child(1) { animation-delay: .10s }
-.slide.is-active .stagger > *:nth-child(2) { animation-delay: .34s }
-.slide.is-active .stagger > *:nth-child(3) { animation-delay: .58s }
-.slide.is-active .stagger > *:nth-child(4) { animation-delay: .82s }
-.slide.is-active .stagger > *:nth-child(5) { animation-delay: 1.06s }
-.slide.is-active .stagger > *:nth-child(6) { animation-delay: 1.30s }
+.slide.is-active .stagger > * { animation: rise .7s var(--ease, cubic-bezier(.4,0,.2,1)) forwards; }
+/* Paced to the voice. At ~150 wpm a narrator needs roughly 2.5s per item, so an
+   animation that finished in 1.3s was decoration rather than teaching. */
+.slide.is-active .stagger > *:nth-child(1) { animation-delay: .2s }
+.slide.is-active .stagger > *:nth-child(2) { animation-delay: 2.7s }
+.slide.is-active .stagger > *:nth-child(3) { animation-delay: 5.2s }
+.slide.is-active .stagger > *:nth-child(4) { animation-delay: 7.7s }
+.slide.is-active .stagger > *:nth-child(5) { animation-delay: 10.2s }
+.slide.is-active .stagger > *:nth-child(6) { animation-delay: 12.7s }
 @keyframes rise { to { opacity: 1; transform: none } }
 @media (prefers-reduced-motion: reduce) {
   .slide .stagger > *, .slide.is-active .stagger > * { opacity: 1; transform: none; animation: none }
@@ -252,8 +254,72 @@ ul.check li::before {
   border-radius: var(--radius-sm); padding: 5px 12px; margin: 0 5px 5px 0; cursor: pointer;
 }
 .map-control::before { content: none }
+/* R3-14: a faint line under the map was not an obvious result. The detail is now
+   a bordered card in the accent colour that only exists once something is
+   selected — its appearance IS the feedback. */
 .map-detail {
-  margin-top: 12px; font-size: 20px; color: var(--text-2);
-  border-top: 1px solid var(--border); padding-top: 10px; min-height: 2.2em;
+  margin-top: 14px; font-size: 22px; color: var(--text-2); line-height: 1.45;
+  border: 1px solid var(--border); border-left: 5px solid var(--border-strong);
+  border-radius: var(--radius-sm); padding: 16px 22px; min-height: 3.2em;
 }
-.map-detail b { color: var(--text-1) }
+.map-detail b { display: block; font-size: 26px; color: var(--text-1); margin-bottom: 4px }
+.map-layout.has-selection .map-detail {
+  border-left-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 6%, var(--surface));
+}
+.map-layout.has-selection .map-detail b { color: var(--accent) }
+.map-prompt { font-size: 21px; color: var(--text-2); margin: 0 0 14px }
+
+/* R3-17: the extraterritorial reach is a takeaway, not a footnote. */
+.eu-takeaway {
+  margin-top: 18px; font-size: 23px; color: var(--text-1);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+  border-left: 5px solid var(--accent); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 16px 24px;
+}
+/* R3-18: a decision record is scanned, not enumerated — it must not animate. */
+.decision-review { margin-top: 18px }
+.decision-review button {
+  font: inherit; font-size: 20px; font-weight: 600; color: var(--accent);
+  background: var(--surface); border: 1px solid var(--accent);
+  border-radius: var(--radius-sm); padding: 10px 20px; cursor: pointer;
+}
+.decision-review .answer { display: none; margin-top: 14px; font-size: 21px; color: var(--text-2) }
+.decision-review.open .answer { display: block }
+.decision-review.open button { display: none }
+
+/* R3-01: per-slide citations became wallpaper. Slides now carry a number; the
+   full references live on a closing slide. */
+.source-line {
+  position: absolute; left: 80px; bottom: 34px;
+  font-family: var(--font-mono); font-size: 15px; color: var(--text-3);
+  border: none; padding: 0;
+}
+.source-line::before { content: "Sources "; letter-spacing: .04em }
+.ref-list { list-style: none; margin: 0; padding: 0; column-count: 2; column-gap: 56px }
+.ref-list li {
+  break-inside: avoid; display: grid; grid-template-columns: 34px 1fr; gap: 12px;
+  font-size: 17px; line-height: 1.4; color: var(--text-2);
+  padding: 9px 0; border-bottom: 1px solid var(--border);
+}
+.ref-no { font-family: var(--font-mono); font-weight: 700; color: var(--accent) }
+.ref-list a { color: var(--text-2) }
+
+/* keyword emphasis: a tint, not a link */
+.definition mark, .case-quote mark {
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: inherit; text-decoration: none; border-radius: 3px;
+  padding: 0 .12em; box-decoration-break: clone;
+}
+
+/* Stills. With motion paced to speech a screenshot or a PDF page catches a slide
+   part-built, so every capture path must force the finished state. */
+body.stills .stagger > *,
+body.stills .slide.is-active .stagger > * { opacity: 1; transform: none; animation: none }
+body.stills .decision-review .answer { display: block }
+body.stills .decision-review button { display: none }
+@media print {
+  .stagger > *, .slide.is-active .stagger > * { opacity: 1 !important; transform: none !important; animation: none !important }
+  .decision-review .answer { display: block !important }
+  .decision-review button { display: none !important }
+}
