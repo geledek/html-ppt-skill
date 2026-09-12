@@ -815,16 +815,17 @@ it out in an afternoon. That question is the shape of everything that follows.
 
 ### S3 · The three tiers of legal force  (6 min · target 660)
 
-**3.1 — Three layers, not three rungs**
-Every jurisdiction in this course stacks three layers, and they apply at the same
-time to the same system.
+**3.1 — Three layers, all at once**
+Every jurisdiction in this course has three layers, and all three apply to the
+same system at the same time.
 
 Binding law that was not written about AI, and binds anyway.
 Supervisory expectation. Not law. Not optional either.
 Voluntary frameworks. Genuinely voluntary.
 
-The common mistake is treating these as a ladder where the top rung excuses the
-ones below. They are layers.
+The common mistake is reading these as a ranking, where satisfying the top one
+excuses the others. They are not a ranking, and satisfying one says nothing about
+the other two.
 
 **3.2 — Singapore and the UK**
 [ table: Singapore | UK across the three tiers ]

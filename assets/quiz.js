@@ -23,6 +23,7 @@
 
   var RIGHT = 'Correct.';
   var WRONG = 'Not quite — see the highlighted answer.';
+  var SKIPPED = 'Here is the answer.';
 
   function reveal(quiz, chosen) {
     if (quiz.classList.contains('revealed')) return;
@@ -39,8 +40,9 @@
 
     var verdict = quiz.querySelector('.verdict');
     if (verdict) {
-      verdict.textContent = verdict.textContent.trim() || (hit ? RIGHT : WRONG);
-      verdict.classList.add(hit ? 'right' : 'miss');
+      var msg = chosen ? (hit ? RIGHT : WRONG) : SKIPPED;
+      verdict.textContent = verdict.textContent.trim() || msg;
+      verdict.classList.add(chosen && !hit ? 'miss' : 'right');
     }
     quiz.classList.add('revealed');
   }
@@ -77,6 +79,29 @@
     e.stopPropagation();
     onPick(e);
   }
+
+  // Self-paced learners advance without answering. Reveal before they leave:
+  // the first Right/Space/PageDown on an unanswered quiz reveals it, the second
+  // advances. Bound in CAPTURE phase so it runs before runtime.js's bubble-phase
+  // handler, which owns navigation.
+  function activeUnrevealedQuiz() {
+    var slide = document.querySelector('.slide.is-active') ||
+                document.querySelector('.slide');
+    if (!slide) return null;
+    var q = slide.querySelector('.quiz');
+    return (q && !q.classList.contains('revealed')) ? q : null;
+  }
+
+  function onAdvance(e) {
+    if (e.key !== 'ArrowRight' && e.key !== ' ' && e.key !== 'PageDown') return;
+    if (e.target && e.target.closest && e.target.closest('.mcq')) return;
+    var q = activeUnrevealedQuiz();
+    if (!q) return;
+    reveal(q, null);          // no option chosen — show the answer, mark nothing wrong
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  document.addEventListener('keydown', onAdvance, true);
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () { wire(); });

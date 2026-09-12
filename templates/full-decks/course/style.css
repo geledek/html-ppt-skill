@@ -6,9 +6,19 @@
 .tpl-course{font-family:var(--font-sans)}
 
 /* layout */
-.tpl-course .slide{padding:64px 80px;background:var(--bg);display:grid;grid-template-columns:260px 1fr;gap:56px;align-content:start}
+/* Single column by default. The objectives sidebar repeats the same four items
+   on every slide and costs 260px of every one; opt in per-slide with
+   .has-sidebar where a persistent progress cue is worth that. */
+/* Vertically centred: without a sidebar, top-aligned content strands a third of
+   the frame. A self-paced learner reads one slide at a time with nothing else on
+   screen, so centre the column both ways. */
+.tpl-course .slide{padding:64px 80px;background:var(--bg);display:flex;flex-direction:column;justify-content:center}
+.tpl-course .slide.has-sidebar{display:grid;grid-template-columns:260px 1fr;gap:56px}
 .tpl-course .slide.full{grid-template-columns:1fr;display:flex;flex-direction:column;justify-content:center}
-.tpl-course .main{min-width:0}
+/* Prose at 1760px is unreadable. Cap the measure; tables and the layer stack
+   opt out with .wide. */
+.tpl-course .main{min-width:0;max-width:1180px;margin:0 auto;width:100%}
+.tpl-course .main .wide{max-width:none}
 
 /* objectives sidebar */
 .tpl-course .sidebar{border-right:1px solid var(--border);padding-right:32px;position:relative}
@@ -66,3 +76,18 @@
 .tpl-course .quiz.revealed .verdict{display:block}
 .tpl-course .quiz.revealed .verdict.right{color:var(--accent)}
 .tpl-course .quiz.revealed .verdict.miss{color:var(--bad)}
+
+/* layer stack — concurrent layers, not parallel columns. Full-width bands that
+   share borders so they read as a stack applying at once, with a spine tying
+   them together. Columns would say "pick one"; this says "all three". */
+.tpl-course .layer-stack{position:relative;margin-top:24px;padding-left:132px}
+.tpl-course .layer-stack::before{content:"";position:absolute;left:104px;top:0;bottom:0;width:2px;background:var(--accent)}
+.tpl-course .layer-stack::after{content:"all three apply at once";position:absolute;left:0;top:50%;width:96px;text-align:right;transform:translateY(-50%);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);line-height:1.4}
+.tpl-course .layer{border:1px solid var(--border);border-bottom:none;background:var(--surface);padding:18px 24px;display:flex;gap:24px;align-items:baseline}
+.tpl-course .layer:first-child{border-radius:var(--radius) var(--radius) 0 0}
+.tpl-course .layer:last-child{border-bottom:1px solid var(--border);border-radius:0 0 var(--radius) var(--radius)}
+.tpl-course .layer .layer-name{flex:none;width:230px;font-weight:700;color:var(--text-1)}
+.tpl-course .layer .layer-note{color:var(--text-2);font-size:15px}
+.tpl-course .layer.is-binding{border-left:4px solid var(--accent)}
+.tpl-course .layer.is-expectation{border-left:4px solid var(--accent-2)}
+.tpl-course .layer.is-voluntary{border-left:4px solid var(--text-3)}

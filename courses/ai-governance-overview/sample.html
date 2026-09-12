@@ -334,9 +334,19 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 .tpl-course{font-family:var(--font-sans)}
 
 /* layout */
-.tpl-course .slide{padding:64px 80px;background:var(--bg);display:grid;grid-template-columns:260px 1fr;gap:56px;align-content:start}
+/* Single column by default. The objectives sidebar repeats the same four items
+   on every slide and costs 260px of every one; opt in per-slide with
+   .has-sidebar where a persistent progress cue is worth that. */
+/* Vertically centred: without a sidebar, top-aligned content strands a third of
+   the frame. A self-paced learner reads one slide at a time with nothing else on
+   screen, so centre the column both ways. */
+.tpl-course .slide{padding:64px 80px;background:var(--bg);display:flex;flex-direction:column;justify-content:center}
+.tpl-course .slide.has-sidebar{display:grid;grid-template-columns:260px 1fr;gap:56px}
 .tpl-course .slide.full{grid-template-columns:1fr;display:flex;flex-direction:column;justify-content:center}
-.tpl-course .main{min-width:0}
+/* Prose at 1760px is unreadable. Cap the measure; tables and the layer stack
+   opt out with .wide. */
+.tpl-course .main{min-width:0;max-width:1180px;margin:0 auto;width:100%}
+.tpl-course .main .wide{max-width:none}
 
 /* objectives sidebar */
 .tpl-course .sidebar{border-right:1px solid var(--border);padding-right:32px;position:relative}
@@ -394,6 +404,21 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 .tpl-course .quiz.revealed .verdict{display:block}
 .tpl-course .quiz.revealed .verdict.right{color:var(--accent)}
 .tpl-course .quiz.revealed .verdict.miss{color:var(--bad)}
+
+/* layer stack — concurrent layers, not parallel columns. Full-width bands that
+   share borders so they read as a stack applying at once, with a spine tying
+   them together. Columns would say "pick one"; this says "all three". */
+.tpl-course .layer-stack{position:relative;margin-top:24px;padding-left:132px}
+.tpl-course .layer-stack::before{content:"";position:absolute;left:104px;top:0;bottom:0;width:2px;background:var(--accent)}
+.tpl-course .layer-stack::after{content:"all three apply at once";position:absolute;left:0;top:50%;width:96px;text-align:right;transform:translateY(-50%);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);line-height:1.4}
+.tpl-course .layer{border:1px solid var(--border);border-bottom:none;background:var(--surface);padding:18px 24px;display:flex;gap:24px;align-items:baseline}
+.tpl-course .layer:first-child{border-radius:var(--radius) var(--radius) 0 0}
+.tpl-course .layer:last-child{border-bottom:1px solid var(--border);border-radius:0 0 var(--radius) var(--radius)}
+.tpl-course .layer .layer-name{flex:none;width:230px;font-weight:700;color:var(--text-1)}
+.tpl-course .layer .layer-note{color:var(--text-2);font-size:15px}
+.tpl-course .layer.is-binding{border-left:4px solid var(--accent)}
+.tpl-course .layer.is-expectation{border-left:4px solid var(--accent-2)}
+.tpl-course .layer.is-voluntary{border-left:4px solid var(--text-3)}
 </style>
 </head>
 <body class="tpl-course">
@@ -401,42 +426,20 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 
 <!-- section: 03-legal-force.html -->
   <section class="slide" data-section="3" data-title="Three layers, not three rungs">
-    <aside class="sidebar">
-      <div class="brand">AI GOVERNANCE</div>
-      <h5>What you'll be able to do</h5>
-      <ul class="obj-list">
-        <li class="current">Map your AI uses by legal force</li>
-        <li>Name who owns AI risk</li>
-        <li>Ask three questions of any proposal</li>
-        <li>Decide your next 90 days</li>
-      </ul>
-      <h5>Section</h5>
-      <p class="dim" style="font-size:13px">3 of 7 &middot; about 6 minutes</p>
-    </aside>
     <div class="main">
       <p class="kicker">THE THREE TIERS OF LEGAL FORCE</p>
-      <h2 class="h2 mt-s">Three layers, not three rungs.</h2>
-      <p class="lede mt-l">Every jurisdiction in this course stacks three layers, and they apply at the same time to the same system.</p>
-      <div class="grid g3 mt-l">
-        <div class="concept-box"><h4>Binding law</h4><p class="dim">Written for something else. Binds AI anyway.</p></div>
-        <div class="concept-box"><h4>Supervisory expectation</h4><p class="dim">Not law. Not optional either.</p></div>
-        <div class="concept-box"><h4>Voluntary frameworks</h4><p class="dim">Genuinely voluntary.</p></div>
+      <h2 class="h2 mt-s">Three layers, all at once.</h2>
+      <p class="lede mt-l">Every jurisdiction in this course has three layers, and all three apply to the same system at the same time.</p>
+      <div class="layer-stack">
+        <div class="layer is-binding"><div class="layer-name">Binding law</div><div class="layer-note">Written for something else. Binds AI anyway.</div></div>
+        <div class="layer is-expectation"><div class="layer-name">Supervisory expectation</div><div class="layer-note">Not law. Not optional either.</div></div>
+        <div class="layer is-voluntary"><div class="layer-name">Voluntary frameworks</div><div class="layer-note">Genuinely voluntary.</div></div>
       </div>
-      <div class="callout mt-l"><b>The common mistake</b> is treating these as a ladder where the top rung excuses the ones below. They are layers.</div>
+      <div class="callout mt-l"><b>The common mistake</b> is reading these as a ranking, where satisfying the top one excuses the others. They are not a ranking, and satisfying one says nothing about the other two.</div>
     </div>
   </section>
 
   <section class="slide" data-section="3" data-title="Singapore and the UK">
-    <aside class="sidebar">
-      <div class="brand">AI GOVERNANCE</div>
-      <h5>What you'll be able to do</h5>
-      <ul class="obj-list">
-        <li class="current">Map your AI uses by legal force</li>
-        <li>Name who owns AI risk</li>
-        <li>Ask three questions of any proposal</li>
-        <li>Decide your next 90 days</li>
-      </ul>
-    </aside>
     <div class="main">
       <p class="kicker">THE SAME SHAPE, TWICE</p>
       <h2 class="h2 mt-s">Singapore and the UK.</h2>
@@ -473,16 +476,6 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
   </section>
 
   <section class="slide" data-section="3" data-title="What the middle tier costs">
-    <aside class="sidebar">
-      <div class="brand">AI GOVERNANCE</div>
-      <h5>What you'll be able to do</h5>
-      <ul class="obj-list">
-        <li class="current">Map your AI uses by legal force</li>
-        <li>Name who owns AI risk</li>
-        <li>Ask three questions of any proposal</li>
-        <li>Decide your next 90 days</li>
-      </ul>
-    </aside>
     <div class="main">
       <p class="kicker">THE MIDDLE TIER</p>
       <h2 class="h2 mt-s">What ignoring guidance actually costs.</h2>
@@ -496,16 +489,6 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
   </section>
 
   <section class="slide" data-section="3" data-title="Legal force is not severity">
-    <aside class="sidebar">
-      <div class="brand">AI GOVERNANCE</div>
-      <h5>What you'll be able to do</h5>
-      <ul class="obj-list">
-        <li class="current">Map your AI uses by legal force</li>
-        <li>Name who owns AI risk</li>
-        <li>Ask three questions of any proposal</li>
-        <li>Decide your next 90 days</li>
-      </ul>
-    </aside>
     <div class="main">
       <p class="kicker">TWO DIMENSIONS</p>
       <h2 class="h2 mt-s">Legal force is not severity.</h2>
@@ -520,16 +503,6 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
   </section>
 
   <section class="slide" data-section="3" data-title="The EU half-truth">
-    <aside class="sidebar">
-      <div class="brand">AI GOVERNANCE</div>
-      <h5>What you'll be able to do</h5>
-      <ul class="obj-list">
-        <li class="current">Map your AI uses by legal force</li>
-        <li>Name who owns AI risk</li>
-        <li>Ask three questions of any proposal</li>
-        <li>Decide your next 90 days</li>
-      </ul>
-    </aside>
     <div class="main">
       <p class="kicker">THE EU, AND WHY IT REACHES YOU</p>
       <h2 class="h2 mt-s">&ldquo;The EU delayed the AI Act.&rdquo;<br>Half true. The wrong half is dangerous.</h2>
@@ -543,18 +516,6 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
   </section>
 
   <section class="slide" data-section="3" data-title="Check your understanding">
-    <aside class="sidebar">
-      <div class="brand">AI GOVERNANCE</div>
-      <h5>What you'll be able to do</h5>
-      <ul class="obj-list">
-        <li class="current">Map your AI uses by legal force</li>
-        <li>Name who owns AI risk</li>
-        <li>Ask three questions of any proposal</li>
-        <li>Decide your next 90 days</li>
-      </ul>
-      <h5>Check</h5>
-      <p class="dim" style="font-size:13px">Pick one. You'll see why each option works or doesn't.</p>
-    </aside>
     <div class="main">
       <p class="kicker">CHECK YOUR UNDERSTANDING</p>
       <h2 class="h2 mt-s">Where is the exposure?</h2>
@@ -1557,6 +1518,7 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 
   var RIGHT = 'Correct.';
   var WRONG = 'Not quite — see the highlighted answer.';
+  var SKIPPED = 'Here is the answer.';
 
   function reveal(quiz, chosen) {
     if (quiz.classList.contains('revealed')) return;
@@ -1573,8 +1535,9 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 
     var verdict = quiz.querySelector('.verdict');
     if (verdict) {
-      verdict.textContent = verdict.textContent.trim() || (hit ? RIGHT : WRONG);
-      verdict.classList.add(hit ? 'right' : 'miss');
+      var msg = chosen ? (hit ? RIGHT : WRONG) : SKIPPED;
+      verdict.textContent = verdict.textContent.trim() || msg;
+      verdict.classList.add(chosen && !hit ? 'miss' : 'right');
     }
     quiz.classList.add('revealed');
   }
@@ -1611,6 +1574,29 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
     e.stopPropagation();
     onPick(e);
   }
+
+  // Self-paced learners advance without answering. Reveal before they leave:
+  // the first Right/Space/PageDown on an unanswered quiz reveals it, the second
+  // advances. Bound in CAPTURE phase so it runs before runtime.js's bubble-phase
+  // handler, which owns navigation.
+  function activeUnrevealedQuiz() {
+    var slide = document.querySelector('.slide.is-active') ||
+                document.querySelector('.slide');
+    if (!slide) return null;
+    var q = slide.querySelector('.quiz');
+    return (q && !q.classList.contains('revealed')) ? q : null;
+  }
+
+  function onAdvance(e) {
+    if (e.key !== 'ArrowRight' && e.key !== ' ' && e.key !== 'PageDown') return;
+    if (e.target && e.target.closest && e.target.closest('.mcq')) return;
+    var q = activeUnrevealedQuiz();
+    if (!q) return;
+    reveal(q, null);          // no option chosen — show the answer, mark nothing wrong
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  document.addEventListener('keydown', onAdvance, true);
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () { wire(); });
