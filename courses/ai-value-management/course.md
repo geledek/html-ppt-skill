@@ -1933,14 +1933,73 @@ were clear, concise, and precise." **Sample size not stated — NOT ESTABLISHED.
 
 ## Outline
 
-<!-- Written after the Research Brief. Up to three Outlines differing on
-     Teaching Strategy, outcomes and duration held constant. -->
+**Teaching Strategy: problem-first.** Fixed by Ray's direction to open on the 95%
+and ask why. Its failure mode is that problem-first can frustrate beginners — not
+a live risk here, because the audience already has the problem.
 
-_Pending._
+**Minutes are an estimate and stay one until Narration exists (gate 2).**
+Budget: 30 min × 135 effective wpm ≈ 4,050 words.
+
+### Outline A — evidence ladder  ⬅ RECOMMENDED
 
 | # | Section | Min | Words | Teaching intent | Findings | Outline | Narration | Slides |
 |---|---------|-----|-------|-----------------|----------|---------|-----------|--------|
-| 1 |         |     |       |                 |          | pending | pending   | pending |
+| 1 | "95% of AI pilots fail" — is it? · **quiz** | 3 | 405 | Open on the provocation, then dismantle it honestly. Earn the right to the next 27 minutes | F-1/2/3/4/5/5b/6/7/9 | pending | pending | pending |
+| 2 | What four primaries agree on instead · **quiz** | 3 | 405 | Replace one weak number with a convergence. Plant the self-report problem | F-10/11/12/13/15/16, F-NM | pending | pending | pending |
+| 3 | Why: the value was never stuck in the model · **quiz** | 5 | 675 | The thesis. Organisation, not technology | ST-1/4/35/36/38, C-8, C-1/2/3, ST-17 | pending | pending | pending |
+| 4 | Which of four stages are you stuck at? · **quiz** | 5 | 675 | **Outcome 1.** A diagnosis they can run on their own portfolio | C-7, C-12/13, W-6, F-10, C-10 | pending | pending | pending |
+| 5 | Why a working model doesn't move the P&L · **quiz** | 5 | 675 | **Outcome 2.** The measured mechanism, and the four breaks in the chain | T-13, C-10, K-12, T-12, T-24, T-20, T-21 | pending | pending | pending |
+| 6 | Klarna: $60m or +$4m? · **quiz** | 4 | 540 | The anchor case. Where a number lives predicts its rigour | D-1/2/3/4, D-5, D-9/10, D-17, the cost/benefit table | pending | pending | pending |
+| 7 | Can value be attributed at all? · **quiz** | 3 | 405 | **Outcome 3.** Yes — at the workflow. No — at the P&L | A-13/14, A-32/33/34, A-45, A-27, A-22/23 | pending | pending | pending |
+| 8 | The next 90 days · **quiz** | 2 | 270 | **Outcome 4.** A prioritisation decision and a four-line test | A-50, A-51, A-46, W-3, ST-29/30 | pending | pending | pending |
+| | **Total** | **30** | **4,050** | | | | | |
+
+**Why this shape.** Sections 1–2 spend six minutes buying credibility, which is
+expensive but recoverable: an audience that has heard the 95% quoted at them all
+year will discount everything after it unless the number is dealt with first.
+Sections 3–5 are the diagnosis, ordered so the measured evidence (Census 64%,
+Dillon's 66 firms, the Danish nulls) carries the weight and the survey evidence
+only corroborates. Section 6 is where an executive audience actually wakes up,
+because it is one company's own filings contradicting its own earnings call.
+Sections 7–8 convert all of it into a test they can apply on Monday.
+
+**The risk to name.** Eight sections in 30 minutes is tight, and S4 and S5 both
+run 5 minutes on adjacent material. If gate 2's word count overruns, S2 merges
+into S1 and S4 absorbs the stage table, giving six sections. Better to discover
+that against measured narration than to guess now.
+
+### Outline B — Klarna as the running case
+
+Same opener, same outcomes, same duration. Klarna becomes the spine rather than
+section 6: introduced at minute 3, returned to in every section, with each stage
+of the diagnosis illustrated on one company before generalising.
+
+**Its failure mode, which is real.** It over-fits one example. Klarna is fintech
+customer service — a single function, in a single sector, with an unusually
+aggressive public posture. Generalisation to a manufacturer or a hospital gets
+asserted rather than evidenced, and the Census and Danish data get demoted to
+footnotes precisely where they are the strongest material available. It would be
+a more engaging 30 minutes and a less defensible one.
+
+**A third Outline would be manufactured.** Concept-first is the obvious candidate
+and it contradicts an approved decision — it moves the 95% out of the opening
+slot. Offering it as a live option would be padding.
+
+## Representative Section for gate 2
+
+**Proposed: S5 · Why a working model doesn't move the P&L.**
+
+The most demanding section by every test the workflow names. Joint-largest
+allocation at 5 minutes. Densest evidence — two causal studies, a task-composition
+finding, and a four-step chain that has to read clearly as a diagram rather than a
+list. It is outcome 2, which is the course's core claim. And its quiz is the
+hardest to write, because the correct answer is a null result and the plausible
+wrong answers are all things executives already believe.
+
+S1 would look beautiful and prove nothing; it is a number and a correction.
+**S6 (Klarna) is the honest alternative** — it carries the most complex on-slide
+composition, a three-way comparison between a call, a filing and an expense line.
+If the worry is layout rather than argument, S6 is the better sample. Say which.
 
 ## Narration
 

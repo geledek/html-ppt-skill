@@ -212,3 +212,27 @@ click:
 
 Put `data-section="N"` on every `<section class="slide">` so the Section→Slide
 map stays true. Set `data-title` for the overview grid.
+
+## Slide layout rules
+
+**No text block exceeds three lines.** Not the headline, not a callout, not a
+quiz option, not a cell. If it runs to four, cut words — do not shrink the type.
+Audit it rather than eyeballing it: measure each block's height against its
+computed `line-height` and fail the build in review if anything exceeds three.
+
+**Use the full width.** Bodies are full width by default, and a wide measure with
+a three-line ceiling means *fewer* lines, not a longer read. The line count is
+the constraint; the width is what buys it.
+
+**Both bands are pinned.** Every slide is a grid with one `minmax(0,1fr)` column
+and `justify-items:start`, so the kicker, headline and body start at the same x
+and y on every slide. Without the explicit column the implicit one is auto-sized
+to its content and centred, and the headline slides sideways between slides.
+
+**Nothing may move on reveal.** Quiz explanations and the verdict use
+`visibility`, not `display`, so they occupy their space from the start. With
+`display:none` every option grows when the answer is revealed and pushes the
+slide down.
+
+**The stage is fixed at 1920×1080** and scaled to fit (docs/adr/0006), so
+positions are deterministic. Size type for that canvas, not for a browser window.

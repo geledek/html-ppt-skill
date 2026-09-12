@@ -49,8 +49,10 @@
    between slides. Both bands now start at the padding edge on every slide;
    .wide only changes how far right the content may run. */
 .tpl-course .main{display:contents}
-.tpl-course .slide-head,.tpl-course .slide-body{max-width:1400px;width:100%;margin-inline:0;justify-self:start}
-.tpl-course .slide-body.wide,.tpl-course .slide-head.wide{max-width:100%}
+/* Full width by default. With a three-line ceiling on any text block, a wide
+   measure means FEWER lines, not a longer read — the constraint is the line
+   count, and the width is what buys it. */
+.tpl-course .slide-head,.tpl-course .slide-body{max-width:100%;width:100%;margin-inline:0;justify-self:start}
 .tpl-course .main .wide{max-width:none}
 
 /* objectives sidebar */
@@ -70,7 +72,7 @@
 .tpl-course .h2{font-family:var(--font-display);font-size:68px;line-height:1.08;font-weight:700;letter-spacing:-.02em;color:var(--text-1)}
 .tpl-course h3,.tpl-course h4{color:var(--text-1)}
 .tpl-course .kicker{color:var(--accent-2);font-size:17px;font-weight:700;letter-spacing:.14em}
-.tpl-course .lede{font-size:29px;color:var(--text-2);line-height:1.55;max-width:38ch}
+.tpl-course .lede{font-size:29px;color:var(--text-2);line-height:1.5;max-width:none}
 .tpl-course .slide.full .h1{font-size:88px}
 
 /* teaching blocks */
@@ -140,7 +142,7 @@
    Not a flowchart: nothing here branches on a decision. The one real structural
    fact is that the inventory gates everything else, and that the "later" items
    are triggered by a condition rather than scheduled to a date. */
-.tpl-course .roadmap{display:grid;grid-template-columns:330px 56px 1fr 380px;gap:0 26px;align-items:stretch;margin-top:8px}
+.tpl-course .roadmap{display:grid;grid-template-columns:340px 56px 1fr 460px;gap:0 26px;align-items:stretch;margin-top:8px}
 .tpl-course .rm-label{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:10px}
 .tpl-course .rm-gate{background:var(--surface);border:2px solid var(--accent);border-radius:var(--radius);padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
 .tpl-course .rm-gate .rm-label{color:var(--accent)}
@@ -152,7 +154,7 @@
 .tpl-course .rm-join::after{content:"";position:absolute;right:0;top:calc(50% - 7px);border-left:10px solid var(--border-strong);border-top:7px solid transparent;border-bottom:7px solid transparent}
 .tpl-course .rm-tracks{display:flex;flex-direction:column;gap:12px}
 .tpl-course .rm-track{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:var(--radius-sm);padding:18px 24px;flex:1;display:flex;align-items:center;gap:18px}
-.tpl-course .rm-track b{font-size:22px;flex:none;width:290px;color:var(--text-1)}
+.tpl-course .rm-track b{font-size:22px;flex:none;width:330px;color:var(--text-1)}
 .tpl-course .rm-track span{font-size:19px;color:var(--text-2)}
 .tpl-course .rm-beyond{background:var(--surface-2);border:1px dashed var(--border-strong);border-radius:var(--radius);padding:26px 28px}
 .tpl-course .rm-beyond ul{list-style:none;margin:0;padding:0}
