@@ -1931,6 +1931,36 @@ were clear, concise, and precise." **Sample size not stated — NOT ESTABLISHED.
 5. An aggregate dollar value across the 51 cases — only per-case figures exist.
 6. Sample size of B's lawyer blind-evaluation pilot.
 
+## Gate 1 — APPROVED 13 September 2026
+
+Ray approved: **Outline A**; **both S5 and S6** as Representative Sections; and
+**disclose the Workhelix interest**.
+
+Two standing instructions recorded here because they bind every later stage:
+
+**Language.** Narration passes through `no-ai-slop` and then `sg-english`, in that
+order, **before** it is shown. Consequences that change how the script is written,
+not just how it is edited:
+
+- British spelling throughout. Dates as 13 September 2026. **S$ for Singapore
+  dollars, and every other dollar qualified** — a bare "dollar" reads as S$ to this
+  audience, so US figures are "US$60 million".
+- No "lands" or "doesn't land" for succeeds or convinces. Ray had already called
+  this; `sg-english` bans it independently.
+- **This Course is recorded, so the spoken rules apply:** sentences of 15–20 words,
+  at most one clause of subordination, **no parenthetical asides** and no dashes as
+  rhythm. None of those can be heard.
+- No rhetorical questions to the listener, no exclamation marks, no sports or
+  military metaphor.
+- Collective nouns take a singular verb: "the committee is".
+
+**Klarna balance.** Ray recalls Siemiatkowski saying on *Diary of a CEO* that he
+was misinterpreted. Verification dispatched 13 September 2026. Until it returns,
+S6 must not assert the "Klarna reversed course on AI" narrative. The distinctions
+to keep separate, because they are not the same claim: he was misquoted; he was
+quoted correctly but the conclusion drawn was wrong; he changed his mind; he is
+managing a reputational problem. Findings land under `### Klarna — balance`.
+
 ## Outline
 
 **Teaching Strategy: problem-first.** Fixed by Ray's direction to open on the 95%

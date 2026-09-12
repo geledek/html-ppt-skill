@@ -46,10 +46,35 @@ courses/
 resolves unchanged. Don't nest courses under a series directory; it breaks that.
 
 ```bash
-./scripts/new-course.sh <name> [series]               # scaffold
-./scripts/assemble-course.sh courses/<name>           # -> self-contained index.html
-./scripts/assemble-course.sh courses/<name> --linked  # authoring only; T cycles themes
+./scripts/new-course.sh <name> [series]                        # scaffold
+./scripts/build-course.sh courses/<name>                       # full deck -> index.html
+./scripts/build-course.sh courses/<name> --sample 1,5,10       # layout proof -> sample.html
+./scripts/check-slides.sh courses/<name>                       # five rules, exit 1 on any failure
 ```
+
+A course is three files plus generated output:
+
+| File | Holds | Edited by |
+|---|---|---|
+| `course.md` | narration, per-slide sources, research brief, outline | the human and you |
+| `slides.py` | audience-facing compositions, source labels | you |
+| `style.css` | course-specific CSS only | you |
+| `index.html`, `sample.html`, `sections/` | **generated — never edit** | the build |
+
+Everything reusable lives in the skill: `scripts/course/engine.py` builds,
+`templates/full-decks/course/style.css` holds the components, and
+`assets/course-interactions.js` holds the behaviour. **Before inventing a
+component, read the template stylesheet.** When you do build something reusable,
+promote it there so the next course inherits it.
+
+**The sample and the full deck come from the same source.** `--sample` selects
+course-slide numbers; nothing is authored twice. The sample exists to prove
+layouts and motion, so keep it to one slide per layout family — once it grows
+into a draft deck it has stopped doing its job.
+
+Two build guards are deliberate. A slide may not cite a source its narration
+block does not declare, and every cited source must have a label. Both exist so a
+citation on a slide always traces back to the narration it came from.
 
 **The default build inlines everything and that is deliberate** (docs/adr/0005).
 Safari refuses to load `file://` subresources from parent directories, so a

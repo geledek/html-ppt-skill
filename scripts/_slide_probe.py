@@ -20,8 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
       if (n > max) max = n;
       if (n > 3) long.push({slide: i + 1, lines: n, text: el.textContent.trim().slice(0, 50)});
     });
+    // A cover legitimately has no kicker/headline band and centres instead, so it
+    // is excluded rather than forced to match. Everything with a head must match.
     var h2 = sl.querySelector('.h2'), bd = sl.querySelector('.slide-body');
-    if (h2 && bd) {
+    if (h2 && bd && !sl.classList.contains('cover')) {
       var a = h2.getBoundingClientRect(), b = bd.getBoundingClientRect();
       pos.push({slide: i + 1, hx: Math.round(a.left), hy: Math.round(a.top),
                 bx: Math.round(b.left), by: Math.round(b.top)});

@@ -186,3 +186,215 @@
 .tpl-course .stat-row{display:flex;gap:96px;align-items:flex-start;margin-top:8px}
 .tpl-course .stat-fig{font-family:var(--font-display);font-size:132px;line-height:1;font-weight:800;letter-spacing:-.04em;color:var(--accent);margin:0}
 .tpl-course .stat-unit{font-size:26px;color:var(--text-2);margin:10px 0 0;max-width:22ch}
+
+
+/* ==== components promoted from the first course built with this template ====
+   Lists, stagger, checklists, the jurisdiction map, references and the
+   decision check are course-agnostic. They live here so the next course
+   inherits them instead of reinventing them. */
+/* ---- round-2 feedback -----------------------------------------------------
+   Ray, 13 Sep 2026. Stagger, list layouts and a checklist. */
+
+/* stagger: build a group one item at a time on slide entry. Recorded delivery,
+   so this runs on its own rather than needing a click. */
+.slide .stagger > * { opacity: 0; transform: translateY(10px); }
+.slide.is-active .stagger > * { animation: rise .7s var(--ease, cubic-bezier(.4,0,.2,1)) forwards; }
+/* Paced to the voice. At ~150 wpm a narrator needs roughly 2.5s per item, so an
+   animation that finished in 1.3s was decoration rather than teaching. */
+.slide.is-active .stagger > *:nth-child(1) { animation-delay: .2s }
+.slide.is-active .stagger > *:nth-child(2) { animation-delay: 2.7s }
+.slide.is-active .stagger > *:nth-child(3) { animation-delay: 5.2s }
+.slide.is-active .stagger > *:nth-child(4) { animation-delay: 7.7s }
+.slide.is-active .stagger > *:nth-child(5) { animation-delay: 10.2s }
+.slide.is-active .stagger > *:nth-child(6) { animation-delay: 12.7s }
+@keyframes rise { to { opacity: 1; transform: none } }
+@media (prefers-reduced-motion: reduce) {
+  .slide .stagger > *, .slide.is-active .stagger > * { opacity: 1; transform: none; animation: none }
+}
+
+/* a list of things gets a list layout */
+.q-list { list-style: none; margin: 0; padding: 0; counter-reset: q }
+.q-list li {
+  counter-increment: q; display: grid; grid-template-columns: 58px 340px 1fr;
+  gap: 0 24px; align-items: baseline;
+  padding: 22px 0; border-bottom: 1px solid var(--border);
+}
+.q-list li:last-child { border-bottom: none }
+.q-list li::before {
+  content: counter(q, decimal-leading-zero);
+  font-family: var(--font-mono); font-size: 19px; color: var(--accent); font-weight: 700;
+}
+.q-list b { font-size: 25px; color: var(--text-1) }
+.q-list span { font-size: 22px; color: var(--text-2) }
+.q-list.answered li::before { content: "\2713"; font-size: 24px }
+
+/* EU slide: two blocks that needed naming */
+.block-label {
+  font-size: 15px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--text-3); margin: 0 0 12px;
+}
+.eu-components + .block-label { margin-top: 30px }
+
+/* roadmap as a checklist */
+ul.check { list-style: none; margin: 10px 0 0; padding: 0 }
+ul.check li {
+  position: relative; padding: 9px 0 9px 34px;
+  font-size: 20px; color: var(--text-2); line-height: 1.45;
+}
+ul.check li::before {
+  content: ""; position: absolute; left: 0; top: 15px;
+  width: 18px; height: 18px; border: 2px solid var(--accent);
+  border-radius: 4px;
+}
+
+/* An empty kicker must still reserve its space, or removing one drops the
+   headline 25px and the deck jumps between slides. The checker caught this. */
+.slide-head .kicker { min-height: 1.2em }
+.slide-head .kicker:empty::before { content: "\00a0" }
+
+/* ---- jurisdiction map -----------------------------------------------------
+   Shaded by the kind of instrument, not by one flat "selected" colour: showing
+   binding law and voluntary guidance in the same shade misleads regardless of
+   which countries appear. */
+.map-stage { position: relative }
+.world-map .country { fill: var(--surface-2); stroke: var(--bg); stroke-width: .4 }
+.world-map .country.binding    { fill: color-mix(in srgb, var(--accent) 62%, var(--surface)) }
+.world-map .country.guidance   { fill: color-mix(in srgb, var(--accent) 26%, var(--surface)) }
+.world-map .country.fragmented { fill: color-mix(in srgb, var(--accent-2) 34%, var(--surface)) }
+.world-map .map-pin { fill: var(--text-1); opacity: .55 }
+.world-map .map-label {
+  font-size: 11px; font-weight: 700; fill: var(--text-2);
+  letter-spacing: .02em; paint-order: stroke; stroke: var(--bg); stroke-width: 3px;
+}
+.world-map .map-marker { transition: opacity .25s var(--ease) }
+
+/* selection: the country, its marker and its panel entry all light up, and a
+   line joins the two so the eye does not have to hunt */
+.map-layout.has-selection .world-map .country.selected { opacity: .35 }
+.map-layout.has-selection .world-map .map-marker { opacity: .3 }
+.map-layout.has-selection .world-map .country.is-active {
+  opacity: 1; stroke: var(--accent); stroke-width: 1.2;
+}
+.map-layout.has-selection .world-map .map-marker.is-active { opacity: 1 }
+.map-layout.has-selection .world-map .map-marker.is-active .map-pin { fill: var(--accent); opacity: 1 }
+.map-layout.has-selection .world-map .map-marker.is-active .map-label { fill: var(--accent) }
+
+.map-link { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0 }
+.map-link line { stroke: var(--accent); stroke-width: 2; stroke-dasharray: 4 4 }
+.map-layout.has-selection .map-link { opacity: 1 }
+
+.map-group {
+  font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--text-3); margin: 12px 0 4px;
+}
+.map-group:first-child { margin-top: 0 }
+.map-control { position: relative; transition: border-color .2s var(--ease), background .2s var(--ease) }
+.map-control::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+}
+.map-control.binding::before    { background: color-mix(in srgb, var(--accent) 62%, var(--surface)) }
+.map-control.guidance::before   { background: color-mix(in srgb, var(--accent) 26%, var(--surface)) }
+.map-control.fragmented::before { background: color-mix(in srgb, var(--accent-2) 34%, var(--surface)) }
+.map-control[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+}
+.map-control[aria-pressed="true"] b { color: var(--accent) }
+
+/* The legend sits BELOW the map as three horizontal groups. Stacked in a side
+   column, nine entries plus three labels ran 691px and pushed the slide 64px off
+   the stage — caught by the overflow check. */
+.map-layout { display: block }
+.map-stage { position: relative }
+.world-map { width: 100%; height: auto; max-height: 470px; display: block; margin: 0 auto }
+.map-controls { display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: 0 26px; margin-top: 14px }
+.map-group-block { border-top: 3px solid var(--border) }
+.map-group-block.binding    { border-top-color: color-mix(in srgb, var(--accent) 62%, var(--surface)) }
+.map-group-block.guidance   { border-top-color: color-mix(in srgb, var(--accent) 26%, var(--surface)) }
+.map-group-block.fragmented { border-top-color: color-mix(in srgb, var(--accent-2) 34%, var(--surface)) }
+.map-group {
+  font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--text-3); margin: 8px 0 6px;
+}
+.map-control {
+  display: inline-block; font-size: 17px; font-weight: 600; color: var(--text-1);
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 5px 12px; margin: 0 5px 5px 0; cursor: pointer;
+}
+.map-control::before { content: none }
+/* R3-14: a faint line under the map was not an obvious result. The detail is now
+   a bordered card in the accent colour that only exists once something is
+   selected — its appearance IS the feedback. */
+.map-detail {
+  margin-top: 14px; font-size: 22px; color: var(--text-2); line-height: 1.45;
+  border: 1px solid var(--border); border-left: 5px solid var(--border-strong);
+  border-radius: var(--radius-sm); padding: 16px 22px; min-height: 3.2em;
+}
+.map-detail b { display: block; font-size: 26px; color: var(--text-1); margin-bottom: 4px }
+.map-layout.has-selection .map-detail {
+  border-left-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 6%, var(--surface));
+}
+.map-layout.has-selection .map-detail b { color: var(--accent) }
+.map-prompt { font-size: 21px; color: var(--text-2); margin: 0 0 14px }
+
+/* R3-17: the extraterritorial reach is a takeaway, not a footnote. */
+.eu-takeaway {
+  margin-top: 18px; font-size: 23px; color: var(--text-1);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+  border-left: 5px solid var(--accent); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 16px 24px;
+}
+/* R3-18: a decision record is scanned, not enumerated — it must not animate. */
+.decision-review { margin-top: 18px }
+.decision-review button {
+  font: inherit; font-size: 20px; font-weight: 600; color: var(--accent);
+  background: var(--surface); border: 1px solid var(--accent);
+  border-radius: var(--radius-sm); padding: 10px 20px; cursor: pointer;
+}
+.decision-review .answer { display: none; margin-top: 14px; font-size: 21px; color: var(--text-2) }
+.decision-review.open .answer { display: block }
+.decision-review.open button { display: none }
+
+/* R3-01: per-slide citations became wallpaper. Slides now carry a number; the
+   full references live on a closing slide. */
+/* Slide chrome: the position marker and the source numbers. Both are absolutely
+   positioned so they never enter the grid — a third grid child pushes the body
+   out of its row and the headline stops being pinned. */
+.tpl-course .course-position {
+  position: absolute; right: 80px; top: 67px;
+  font-size: 19px; color: var(--text-3); font-family: var(--font-mono);
+}
+.tpl-course .source-line {
+  position: absolute; left: 80px; bottom: 40px; margin: 0;
+  font-family: var(--font-mono); font-size: 15px; color: var(--text-3);
+  border: none; padding: 0;
+}
+.tpl-course .source-line::before { content: "Sources "; letter-spacing: .04em }
+.ref-list { list-style: none; margin: 0; padding: 0; column-count: 2; column-gap: 56px }
+.ref-list li {
+  break-inside: avoid; display: grid; grid-template-columns: 34px 1fr; gap: 12px;
+  font-size: 17px; line-height: 1.4; color: var(--text-2);
+  padding: 9px 0; border-bottom: 1px solid var(--border);
+}
+.ref-no { font-family: var(--font-mono); font-weight: 700; color: var(--accent) }
+.ref-list a { color: var(--text-2) }
+
+/* keyword emphasis: a tint, not a link */
+.definition mark, .case-quote mark {
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: inherit; text-decoration: none; border-radius: 3px;
+  padding: 0 .12em; box-decoration-break: clone;
+}
+
+/* Stills. With motion paced to speech a screenshot or a PDF page catches a slide
+   part-built, so every capture path must force the finished state. */
+body.stills .stagger > *,
+body.stills .slide.is-active .stagger > * { opacity: 1; transform: none; animation: none }
+body.stills .decision-review .answer { display: block }
+body.stills .decision-review button { display: none }
+@media print {
+  .stagger > *, .slide.is-active .stagger > * { opacity: 1 !important; transform: none !important; animation: none !important }
+  .decision-review .answer { display: block !important }
+  .decision-review button { display: none !important }
+}

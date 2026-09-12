@@ -1,88 +1,131 @@
 #!/usr/bin/env bash
-# html-ppt :: new-course.sh — scaffold a Course for the three-gate workflow
+# html-ppt :: new-course.sh — scaffold a course for the three-gate workflow.
 #
-# Usage:
-#   new-course.sh <name> [series]
+# Usage:  new-course.sh <name> [series]
 #
-# Creates courses/<name>/{course.md,sections/} in the CURRENT WORKING DIRECTORY's
-# repo root — not inside the installed skill. Courses are deliverables; the skill
-# is source. See docs/adr/0001.
+# Creates courses/<name>/ with course.md (narration and sources), slides.py
+# (compositions) and style.css (course-specific CSS only — shared components live
+# in templates/full-decks/course/style.css).
 #
-# Run scripts/assemble-course.sh <course-dir> once sections exist.
-
+# Build with:  ./scripts/build-course.sh courses/<name>
+# Check with:  ./scripts/check-slides.sh courses/<name>
 set -euo pipefail
 
-NAME="${1:-}"
-SERIES="${2:-}"
-if [[ -z "$NAME" ]]; then
-  echo "usage: new-course.sh <name> [series]" >&2
-  exit 1
-fi
-
+NAME="${1:-}"; SERIES="${2:-}"
+[[ -n "$NAME" ]] || { echo "usage: new-course.sh <name> [series]" >&2; exit 1; }
 HERE="$(cd "$(dirname "$0")/.." && pwd)"
 DIR="$HERE/courses/$NAME"
+[[ -e "$DIR" ]] && { echo "error: $DIR already exists" >&2; exit 1; }
+mkdir -p "$DIR"
 
-if [[ -e "$DIR" ]]; then
-  echo "error: $DIR already exists" >&2
-  exit 1
-fi
-mkdir -p "$DIR/sections"
-
-SERIES_LINE=""
-[[ -n "$SERIES" ]] && SERIES_LINE="series: $SERIES"
+SERIES_LINE=""; [[ -n "$SERIES" ]] && SERIES_LINE="series: $SERIES"
 
 cat > "$DIR/course.md" <<MD
 ---
 title: $NAME
 ${SERIES_LINE}
 template: course
-theme: course-warm
-themes: course-warm,academic-paper,minimal-white,tokyo-night,swiss-grid
+theme: corporate-clean
 lang: en
 delivery:          # presenter-led | self-paced | recorded  (gate 1)
-rate:              # words/min — 150 spoken EN, 220 字 spoken CN, 250 silent read
+rate:              # 150 spoken wpm · 250 silent reading
 duration:          # minutes
-accepted_hash:     # set at gate 3; a mismatch means index.html has diverged
+accepted_hash:     # set at gate 3
 ---
 
 # $NAME
 
 ## Audience & outcomes
 
-<!-- gate 1 input. Who is this for, and what can they do afterwards that they
-     could not before? -->
+<!-- Who is this for, and what can they do afterwards that they could not before?
+     State the delivery mode and its consequences back to the human. -->
 
 ## Research Brief
 
-<!-- Findings, each with the quote and URL it came from. A Finding without a
-     traceable source is not a Finding. Claims in Narration must trace here or
-     to supplied material, or be marked illustrative. Quiz answer keys cite. -->
+<!-- One \`### Rnn · Title\` entry per source. Each carries the claim, a direct
+     quote, the URL and the date. A Finding without a traceable source is not a
+     Finding. Every Rnn cited by a slide must appear here, or the build fails. -->
+
+### R00 · Illustrations and teaching synthesis
+
+Hypothetical examples and recommended controls, identified as such and not
+attributed to any decision or regulator.
 
 ## Outline
 
-<!-- Approved at gate 1, together with the Research Brief above.
-     Strategy: concept-first | example-first | problem-first -->
-
-| # | Section | Min | Teaching intent | Findings | Outline | Narration | Slides |
-|---|---------|-----|-----------------|----------|---------|-----------|--------|
-| 1 |         |     |                 |          | pending | pending   | pending |
-
-<!-- Per-Section status is the gate. A gate passes when every Section has passed
-     it. Changing a Section's outline marks that Section's narration and slides
-     stale — and nothing else. -->
+| # | Slide | Min | Teaching intent | Sources | Outline | Narration | Slides |
+|---|-------|-----|-----------------|---------|---------|-----------|--------|
+| 1 |       |     |                 |         | pending | pending   | pending |
 
 ## Narration
 
-<!-- One script for the whole course, organised by Section, written against the
-     minute budgets above. Edit directly; hand-edits are detected by hash. -->
+<!-- One block per slide. The build reads these, so the numbering must match
+     slides.py. Every slide's script opens with a connecting sentence from the
+     previous slide — a narrator must never read the title aloud to bridge. -->
 
-### 1.
+#### 01 · Cover
 
+**Sources:** [R00]
+
+**Narration:**
 MD
+
+cat > "$DIR/slides.py" <<'PY'
+"""Audience-facing slide compositions.
+
+Narration, sources and the outline live in course.md. Shared components live in
+templates/full-decks/course/style.css — read that before inventing a new one.
+Build with scripts/build-course.sh.
+
+Available components: q-list (numbered list), stagger (builds one item at a
+time), concept-box in grid g2/g3, legal-row, lifecycle, case-timeline,
+case-quote, quiz, roadmap, implementation + ul.check, stat-row, world map.
+
+Rules the build and the checker enforce:
+  * no text block over three lines at 1920x1080
+  * a slide may only cite sources its narration block declares
+  * animate what the voice enumerates; leave quizzes and records static
+"""
+
+SECTION_BOUNDS = [99]          # last course-slide number in each section
+
+SOURCE_LABELS = {
+ 'R00': ('Hypothetical example · course teaching synthesis', None),
+}
+
+
+def question(options, cls='legal-quiz'):
+    rows = []
+    for i, (answer, feedback, correct) in enumerate(options):
+        rows.append(f'<button type="button" class="mcq"' + (' data-correct' if correct else '') +
+                    f'><span class="letter">{chr(65+i)}</span><span><b>{answer}</b>'
+                    f'<span class="why">{feedback}</span></span></button>')
+    return f'<div class="quiz {cls}" aria-label="Choose one answer">' + ''.join(rows) + \
+           '<p class="verdict" aria-live="polite"></p></div>'
+
+
+# (course slide, kicker, heading, composition, source IDs)
+SLIDES = [
+(1, '', 'Course title', '''<div class="cover-main">
+  <p class="cover-series">Series · Client</p>
+  <h1 class="cover-title">Course title</h1>
+  <div class="cover-rule"></div>
+  <p class="cover-by">Presenter name</p>
+  <p class="cover-role">Role, organisation</p>
+</div><div class="cover-foot"><span>contact@example.com</span><span>30 minutes · recorded</span></div>''', []),
+]
+PY
+
+cat > "$DIR/style.css" <<'CSS'
+/* Course-specific styles only.
+   Shared components live in templates/full-decks/course/style.css — check there
+   before adding anything here, and promote anything reusable back into it. */
+CSS
 
 echo "✔ created $DIR"
 echo ""
 echo "next:"
-echo "  1. gate 1 — fill audience/outcomes/delivery/duration, research, outline"
-echo "  2. gate 2 — narration + render the representative section"
-echo "  3. $HERE/scripts/assemble-course.sh $DIR"
+echo "  1. gate 1 — audience, outcomes, delivery mode, research, outline"
+echo "  2. gate 2 — narration, then compositions in slides.py"
+echo "  3. $HERE/scripts/build-course.sh courses/$NAME"
+echo "     $HERE/scripts/check-slides.sh courses/$NAME"
