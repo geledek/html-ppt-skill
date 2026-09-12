@@ -44,6 +44,19 @@ document.addEventListener('DOMContentLoaded', function () {
     if (worst > 4) over.push({slide: i + 1, px: Math.round(worst), text: who});
   });
 
+  // Duplicated headings. A generated slide head plus a composition that carries
+  // its own title renders the title twice, and every other check passes.
+  var dupes = [];
+  document.querySelectorAll('.slide').forEach(function (sl, i) {
+    var seen = {};
+    sl.querySelectorAll('h1, h2, .h1, .h2, .cover-title').forEach(function (el) {
+      var t = (el.textContent || '').trim().toLowerCase();
+      if (!t) return;
+      if (seen[t]) dupes.push({slide: i + 1, text: t.slice(0, 45)});
+      seen[t] = 1;
+    });
+  });
+
   var shift = null, q = document.querySelector('.quiz');
   if (q) {
     var opt = q.querySelector('.mcq');
@@ -55,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     shift = {before: before, after: after,
              moved: before[0] !== after[0] || before[1] !== after[1] || before[2] !== after[2]};
   }
-  document.title = JSON.stringify({maxLines: max, long: long, pos: pos, reveal: shift, over: over});
+  document.title = JSON.stringify({maxLines: max, long: long, pos: pos, reveal: shift, over: over, dupes: dupes});
 });
 </script>"""
 open(out, 'w').write(s.replace('</body></html>', probe + '\n</body></html>'))

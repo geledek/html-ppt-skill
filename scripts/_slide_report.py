@@ -22,6 +22,15 @@ if pos:
         for p in pos:
             print("        slide %s: h %s,%s  body %s,%s" % (p['slide'], p['hx'], p['hy'], p['bx'], p['by']))
 
+dup = d.get('dupes') or []
+if dup:
+    fail = 1
+    print("FAIL  heading rendered twice on %d slide(s):" % len(dup))
+    for v in dup:
+        print("        slide %s: %s..." % (v['slide'], v['text']))
+else:
+    print("ok    no duplicated headings")
+
 ov = d.get('over') or []
 if ov:
     fail = 1

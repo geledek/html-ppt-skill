@@ -121,9 +121,11 @@ read. The rule for all of them, including the 95%: establish the primary and wha
 it counted, or leave the number out. A course that opens on a misquoted figure
 has lost the room before the first outcome.
 
-## Research Brief
+## Evidence audit — working notes
 
-<!-- Findings go here as they are established, each with quote and URL. -->
+The long-form audit behind the Research Brief. Source-keyed entries the build
+reads are in `## Research Brief` above; these are the caveats, the arithmetic and
+the discarded figures that must not reach a slide.
 
 ### Anchor document  ✅ researched 2026-09-12
 
