@@ -124,7 +124,17 @@ to a Finding, or is marked illustrative. Quiz answer keys cite. A course teaches
 learners do not fact-check the thing they are learning from, and a wrong answer
 key actively trains the wrong answer.
 
-**Run the Narration through the `no-ai-slop` skill before showing it.** Not a
+**Run two language passes before showing the Narration**, in this order.
+
+1. **`no-ai-slop`** — structural. Removes AI patterns.
+2. **`sg-english`** — locale. Removes the American startup register that survives
+   the first pass, which a slop pass will not catch because it is neither slop
+   nor error. Singapore Standard English is British-based, formal and low-idiom.
+
+Order matters: fixing structure first means the locale pass edits sentences that
+are going to survive.
+
+**On `no-ai-slop`:** Not a
 polish pass — for a self-paced Course the Narration *is* the learner-facing
 content, and the patterns that skill bans are exactly the ones executive material
 attracts: importance puffery, weasel attribution ("experts agree"), colon
