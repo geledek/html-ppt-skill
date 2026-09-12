@@ -1,0 +1,193 @@
+# Deck Quality Evaluation: AI Governance Overview
+
+## 1. Executive summary
+
+**Not release-ready · weighted score 59.1%.** Content accuracy is below the rubric's 50% threshold; incorrect or unsupported interpretations also independently block release. The visual system is consistent, but the deck explains laws and launch decisions before establishing the concept, scope and components of AI governance. Reopen the outline and Gate 2, preserving the useful design and chatbot example.
+
+The three priorities are: introduce governance fundamentals; correct the evidence-to-lesson relationship in cases and quizzes; and replace conversational fragments with explicit learner-facing explanations. The [revision brief](REVISION-BRIEF.md) gives a proposed 30-slide sequence and responds to every slide comment.
+
+## 2. Inputs & method
+
+- Reviewed 12 September 2026: `course.md`, all section fragments, `sample.html` context and the assembled 35-slide `index.html`.
+- Baseline HTML SHA-256: `c23627ed92bafabe97a77d063679f4796bfcf79b56f7cb3a8eee08ed8eb6166d`.
+- Synopsis: audience, outcomes, recorded delivery and 30-minute allocation in `course.md`, supplemented by Ray's clarification that the course must cover AI governance's concept, scope and components with case studies.
+- Rubric: ISCA deck QA, nine dimensions, rubric v1.1. Each criterion receives 0, 0.5 or 1; the five criteria yield a dimension percentage. This is an editorial evaluation, not a learner-outcome measurement.
+- House guidance: repository `CONTEXT.md`, `SKILL.md`, `references/course-workflow.md`; language review using `no-ai-slop`, then `sg-english`. The HTML repository workflow applies; PPTX placeholder checks do not apply.
+- Rendered every slide in Chrome at 1920×1080. Reviewed three contact sheets and full-size examples including the quote and roadmap layouts. No visible clipping was found in the initial slide states. PDF export and a complete interactive before/after-state audit were not performed.
+- Ran the repository's slide checker successfully: selected text blocks within three lines; positions consistent on 29 ordinary slides; its sampled quiz reveal stable; no relative local subresources. This is narrower than checking every element and every quiz state.
+- Primary-source checks covered survey statistics, the EU timeline, Foodinho, HSBC, UK financial regulation, and definition/framework references. MAS pages returned maintenance content; current MAS issuance status and the instrument hierarchy remain verification items. No claim was treated as verified solely because the prior brief marks it researched.
+- Outputs are a review and proposed revision. Existing course approvals and teaching files have not been changed.
+
+## 3. Objective coverage map
+
+| Objective | Teaching slides | Practice/assessment | Status |
+|---|---|---|---|
+| Existing LO1: determine relevant rules | 6, 8–12, 19, 21 | 13 | Covered, but misleading generalisations require correction. |
+| Existing LO2: designate accountability | 19, 21–22, 24–25, 32–33 | 23 | Covered, but the quiz mixes jurisdictions and the role examples need qualifications. |
+| Existing LO3: examine a proposal | 2–3, 24–28 | 18, 29 | Covered; operational evidence is useful, but the return to the opening lacks a completed decision. |
+| Existing LO4: implementation roadmap | 30–33 | 34 | Partially covered; monitoring and review are missing from the roadmap and it is not the final frame. |
+| Clarified scope: define AI and AI governance | 5 purports to define AI | None | Not adequately covered: the definition itself is absent. |
+| Clarified scope: components and lifecycle | Fragments in 24–26, 32–33 | Indirect only | Partially covered, without an organising model. |
+| Clarified scope: learn from cases | 14–17, 30–31 | 18, 34 | Cases exist, but backgrounds and distinct lessons are insufficient. |
+
+The original objectives are measurable. The problem is their narrow scope and inconsistent execution, rather than a complete absence of application material.
+
+## 4. Dimension scores
+
+The criterion vectors below follow the rubric's criterion order and make the percentages reproducible.
+
+| Dimension | Weight | Criterion vector | Score | Weighted contribution |
+|---|---:|---|---:|---:|
+| Learning objectives and alignment | 18% | 0.5, 1, 1, 0.5, 0 | 60% | 10.8 |
+| Content quality and accuracy | 14% | 0, 0.5, 0, 0.5, 0.5 | 30% | 4.2 |
+| Structure and narrative flow | 9% | 0.5, 0.5, 0.5, 0, 0.5 | 40% | 3.6 |
+| Instructional design and engagement | 13% | 0.5, 1, 0.5, 1, 0.5 | 70% | 9.1 |
+| Visual design and readability | 9% | 0.5, 1, 0.5, 0.5, 1 | 70% | 6.3 |
+| Accessibility and inclusivity | 9% | 0.5, 0.5, 0.5, 1, 0.5 | 60% | 5.4 |
+| Assessment and reinforcement | 9% | 1, 1, 0.5, 0.5, 0.5 | 70% | 6.3 |
+| Delivery-readiness and polish | 9% | 1, 0, 1, 0.5, 0.5 | 60% | 5.4 |
+| Composition rhythm and variation | 10% | 1, 0.5, 1, 0.5, 1 | 80% | 8.0 |
+| **Overall** | **100%** | | **59.1%** | **59.1** |
+
+### Alignment
+
+The cover narration describes the original executive outcomes; they are not established clearly in early audience-visible content. Slides 8–13 teach law, while slide 5 does not teach the definition it promises. The extensive procedural-status discussion on slide 15 contributes little to the clarified overview. Slide 32 partly fulfils the implementation outcome, but the course closes with a slogan on 35.
+
+### Content quality and accuracy
+
+**Blockers and corrections:**
+
+1. **Slide 4 overstates its evidence.** A 46% partial-understanding finding is neither a majority nor evidence that firms know nothing about their AI. It also cannot establish that survey respondents would approve the opening chatbot. Use a dated, sector-specific title. Suitable additional figures from the same survey are one-third third-party implementations and 84% reporting an accountable person for the AI framework. These have different denominators from the adoption statistic. [Bank of England/FCA survey, 2024](https://www.bankofengland.co.uk/report/2024/artificial-intelligence-in-uk-financial-services-2024).
+
+2. **Slides 14, 25 and 34 repeat an unsupported common-case conclusion.** The course's own accepted correction says the evidence does not establish contestability as the shared Dutch/Robodebt/rider finding. The 2024 Foodinho decision is a suitable contestability example; identify the company as Foodinho, in the Glovo group, and identify the year. Its €5 million penalty should not be conflated with its separate 2021 €2.6 million decision. [Garante's 2024 Foodinho notice](https://www.garanteprivacy.it/home/docweb/-/docweb-display/print/10074840), [2021 Foodinho notice](https://www.garanteprivacy.it/web/guest/home/docweb/-/docweb-display/docweb/9677377).
+
+3. **Slide 23's feedback mixes national regimes.** An unspecified bank is taught that FEAT, SM&CR and Consumer Duty all attach to it. Name the jurisdiction and use the appropriate basis. The UK parliamentary report describes reliance on existing financial regulation; it does not make those rules global. [Treasury Committee report, paragraphs 5–6 and 10–13](https://publications.parliament.uk/pa/cm5901/cmselect/cmtreasy/684/report.html).
+
+4. **Slide 29's answer makes assumptions the scenario does not establish.** Manual referral does not itself make a tool low-impact. A restricted pilot is only defensible once suitable safeguards, monitoring and rollback exist. Rewrite the choice and feedback to make those conditions explicit.
+
+5. **HSBC chronology and inference drift.** The narration says the credit-card applicant requested information in 2021; the decision describes a 2018 application and a 2020 review application, decided in March 2021. The evaluative-purpose exception supported withholding specified information. The regulator also commented favourably on disclosure. Neither “saved HSBC” in the Research Brief nor “satisfy itself quickly that the organisation was in control” on slide 31 is established by the decision. [HSBC decision, paragraphs 1–4, 17–19](https://www.pdpc.gov.sg/-/media/files/pdpc/pdf-files/commissions-decisions/decision--hsbc-bank-singapore-limited--10032021.pdf).
+
+6. **Universal statements about legal force are unsafe teaching shortcuts.** Slide 8's narration says every system has all three layers simultaneously. Applicability depends on the use, jurisdiction, regulated entity and instrument. Slide 6's “guidance rather than rules” obscures binding existing law. Slide 10's notes say a firm ignoring guidance keeps its licence: remove this unsupported assurance.
+
+**Verified with qualifications:** The EU's revised Annex III date is 2 December 2027, and Annex I product-related high-risk date is 2 August 2028. The deck's main postponement claim is supported by the Commission's July 2026 update; do not replace it with the original 2026/2027 timetable. Label application dates separately from a regulation entering into force. Explain obligations as well as dates and check transitional exceptions. [Commission AI Omnibus update](https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force), [official implementation timeline](https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline).
+
+**Unresolved:** Current status of MAS proposed AI Risk Management Guidelines, current versions of the supervisory examples, and each live procedural outcome on slide 15. These are not declared false; verify before retaining them. A failed source fetch does not establish absence of an issued guideline. The quote in slide 10 is explicitly drawn from a draft, which cannot alone establish an issued requirement.
+
+### Structure and narrative flow
+
+The opening has a useful question, but no functioning reveal in its markup. The next section promises a definition and delivers a history. UK context is split between slides 9 and 20–21; the HSBC background follows its quotation. Slides 24–25 repeat a three-column structure before slide 26 introduces the additional evidence needed to decide. Consolidation makes room for definitions and components without expanding the runtime.
+
+### Instructional design and engagement
+
+There are five formal quizzes at 13, 18, 23, 29 and 34, plus the opening decision prompt. Cases and feedback provide useful practice. However, learners repeatedly receive a conclusion without enough background to derive it themselves, particularly slides 14–17 and 30–31. The recorded narration should introduce each case's use, affected person, failure, outcome and control.
+
+### Visual design and readability
+
+The render confirms a coherent palette, typography and ordinary-slide alignment. It also shows underused space on slides 4 and 7, dense small reference material on 9–10, and lower placement of quote bodies on 16, 20, 27, 30 and 35. No initial-state clipping was observed; the predicted PDF overflow is not confirmed. Slide 16's quote occupies four lines and is excluded from the checker despite the house rule applying to all text blocks. The roadmap uses smaller text than ordinary teaching slides; shortening its labels and expanding its teaching area would help.
+
+### Accessibility and inclusivity
+
+Primary text has strong apparent contrast; muted source text is much less prominent and sometimes small. Formal contrast ratios were not measured. The blue/dark/grey layer borders have explicit category labels on slide 8, but slide 33 reuses those legal-status colours for record fields without that meaning. Static exports need explicit quiz answers and final animation states. Notes give text equivalents for most diagram content; they do not establish accessible interactive semantics.
+
+### Assessment and reinforcement
+
+The original four objectives all have practice opportunities. The added concept/scope objectives do not. The five-field example on slide 33 is a useful transfer aid. Slide 28 should complete the opening decision with evidence, rather than restate questions; the roadmap should become the final frame. Repairing quiz source assumptions is more important than adding further quizzes.
+
+### Delivery-readiness and polish
+
+Notes exist on every slide. They do not consistently match `course.md`: slide 4 adds commentary absent from its corresponding source passage; slide 32 adds a more rigid inventory-first premise; slide 34's notes omit the answer explanation supplied in the source narration. The course reports approximately 26 slides and four quizzes, while the build contains 35 slides and five quizzes plus the opening prompt. Measure timing again after consolidation. The language audit finds unexplained idioms, fragments and source-to-slide interpretation drift throughout slides 4–11, 17, 20–22 and 28–35.
+
+### Composition rhythm and variation
+
+Classified from geometry using the rubric's fixed vocabulary, with tables and two-column arrangements grouped under comparison. This coarse vocabulary does not make every comparison slide equally effective.
+
+- Longest same-family run: **2 slides**.
+- Five-slide windows with fewer than three families: **3/31 (9.7%)**, starting at slides 7, 8 and 9. Each has two families.
+- Full-width takeaway bands: **6/35 (17.1%)**; longest run **2**.
+- Panel headings generally name their subjects. The conditional panel heading “If nobody in your organisation can be named” on slide 22 is an isolated exception; criterion 4 receives partial credit. Repeated subject headings on slides 24–25 occur twice, within the threshold. Vague kickers such as “What he was pointing at” are penalised under narrative clarity rather than counted as panel headings here.
+- Two of six closing bands use contrast as their main syntax (slides 3 and 31), within the one-third threshold. The remaining bands have distinct forms. This mechanical pass does not validate their meanings: the bands on 14 and 17 still need correction.
+
+No separately authored continuation was identified; the evaluated scope is the complete current deck.
+
+## 4b. Style conformance
+
+| House rule / user direction | Observed | Slides | Verdict |
+|---|---|---|---|
+| No text block exceeds three lines | Selected checker elements pass; four-line quote omitted from selector | 16 | Partial; checker blind spot |
+| Ordinary headline and body coordinates fixed | Checker passes on 29 ordinary slides | Ordinary content slides | Pass within tested scope |
+| Nothing moves when an answer reveals | Checker samples one quiz only | 13 sampled | Partial verification |
+| Self-contained deck | No relative local subresources reported | Whole deck | Pass |
+| Narration and slide text receive structural and locale passes | Idioms and incomplete teaching statements remain | 4–11, 17, 20–22, 28, 33 | Fail |
+| Headlines communicate subject or question | Several depend on missing spoken context | 7, 9, 17, 22, 31–33 | Fail |
+| Case studies carry context and a supported lesson | Several reduce cases to fines or isolated quotes | 14–17, 30–31 | Fail against Ray's clarified requirement |
+| One-line cover title | Explicit line break | 1 | Fail against Ray's requested revision |
+| Roadmap is the closing takeaway | Three slides follow it | 32–35 | Fail |
+| Source and built narration remain aligned | Notes contain additions/omissions | 4, 32, 34 | Fail |
+
+## 5. Recommendations
+
+### Blockers
+
+- Correct the factual/interpretive issues above in the Research Brief, narration, slide text and quiz feedback together. This should improve Content Accuracy and Assessment; wording edits alone cannot close the source gaps.
+- Add definitions and a components/lifecycle model before the jurisdiction material. This addresses Alignment and Structure directly.
+- Resolve quiz ambiguity and jurisdiction mixing on 23 and 29; remove unsupported cross-case answer rationales on 25 and 34.
+
+### High-impact
+
+- Use the [30-slide proposal](REVISION-BRIEF.md), merging 24–25, 30–31 and the standalone quotations. This creates time for concepts and proper case backgrounds.
+- Keep general Singapore/EU/UK comparison together, then teach finance as a sector example. Replace the fine-outcome catalogue with a fully explained case.
+- Carry one identified chatbot scenario from the opening to a completed decision, and finish on the roadmap with monitoring and improvement included.
+- Run the structural and Singapore English passes on `course.md` first, then check the projected text separately. Preserve nuance; “simpler” should not mean deleting the actor, condition or consequence.
+
+### Polish
+
+- Use a single-line cover, a map with labelled static fallback, consistently placed short sources and neutral borders where colours have no categorical meaning.
+- Integrate quotations into case or regulatory explanations. Inspect any remaining standalone quote against the same safe area as other slides.
+- Add dated source crops only when they help tell the case; keep legal outcome and interpretation in readable text beside the crop.
+
+Expected benefit is concentrated in Content, Alignment and Structure. No target score is promised before reassessing the revised version.
+
+## 6. Appendix: slide inventory and issue notes
+
+The full slide-specific issue notes and replacement wording are in [REVISION-BRIEF.md](REVISION-BRIEF.md). Counts below include all learner-facing quiz feedback states, exclude speaker notes, and are approximate word counts. “Visual” means a teaching arrangement, chart, table or diagram; ornamental quotation marks do not count. All 35 slides contain notes.
+
+
+| Slide | Current title / identifier | Words | Visual | Notes | Type | Composition |
+|---|---|---:|---|---|---|---|
+| 1 | Cover | 30 | No | Yes | admin | type-only |
+| 2 | The decision | 35 | Yes | Yes | assessment | card-row |
+| 3 | What you are missing | 68 | Yes | Yes | content | 2×2 |
+| 4 | Partial understanding | 47 | Yes | Yes | content | comparison |
+| 5 | The agreement | 24 | Yes | Yes | content | comparison |
+| 6 | The divergence | 49 | Yes | Yes | content | card-row |
+| 7 | The reframe | 22 | No | Yes | content | full-panel |
+| 8 | Three layers, all at once | 31 | Yes | Yes | content | comparison |
+| 9 | Singapore, and the rest | 61 | Yes | Yes | content | comparison |
+| 10 | What guidance costs | 63 | No | Yes | content | full-panel |
+| 11 | Legal force is not severity | 32 | Yes | Yes | content | comparison |
+| 12 | The EU is partially live | 55 | Yes | Yes | content | comparison |
+| 13 | Check your understanding | 141 | Yes | Yes | assessment | full-panel |
+| 14 | What produced real consequences | 58 | Yes | Yes | case/example | card-row |
+| 15 | The headline AI fines | 41 | Yes | Yes | case/example | 2×2 |
+| 16 | A remarkable submission | 34 | No | Yes | case/example | type-only |
+| 17 | No regulator at all | 40 | Yes | Yes | case/example | comparison |
+| 18 | Which change addresses the governance gap | 140 | Yes | Yes | assessment | full-panel |
+| 19 | Sectors add a layer | 46 | Yes | Yes | content | comparison |
+| 20 | Enough regulatory bite | 25 | No | Yes | content | type-only |
+| 21 | Responsibility follows the activity | 31 | Yes | Yes | content | comparison |
+| 22 | What travels beyond finance | 41 | Yes | Yes | content | comparison |
+| 23 | Who must own this before launch | 149 | Yes | Yes | assessment | full-panel |
+| 24 | Three questions | 41 | Yes | Yes | content | card-row |
+| 25 | Where each one comes from | 53 | Yes | Yes | content | card-row |
+| 26 | The question that actually decides | 69 | Yes | Yes | content | 2×2 |
+| 27 | The hard line | 23 | No | Yes | content | type-only |
+| 28 | Back to the chatbot | 45 | Yes | Yes | content | comparison |
+| 29 | Quiz | 136 | Yes | Yes | assessment | full-panel |
+| 30 | What a regulator credited | 28 | No | Yes | case/example | type-only |
+| 31 | Two published documents | 63 | Yes | Yes | case/example | comparison |
+| 32 | Your AI governance roadmap | 110 | Yes | Yes | summary | process |
+| 33 | Write it down as five fields | 73 | Yes | Yes | case/example | comparison |
+| 34 | What comes first | 156 | Yes | Yes | assessment | full-panel |
+| 35 | Start here | 20 | No | Yes | summary | type-only |
+
+Rendered contact sheets: [slides 1–12](contact-1.jpg), [slides 13–24](contact-2.jpg), [slides 25–35](contact-3.jpg).
