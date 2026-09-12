@@ -292,6 +292,41 @@ sentence of a slide's script produces "Your sector adds to it." and "Each comes
 from a case you just saw." Write what the slide argues: "Singapore finance:
 advisory, and still unissued."
 
+### Content and copy rules
+
+**A kicker must not repeat the line beneath it.** If the headline already says
+it, the kicker is noise. Kickers orient; they do not restate. Audit every slide
+for a kicker whose words appear in the next element.
+
+**A list of things gets a list layout.** Not boxes, not prose.
+
+**One slide, one idea.** A slide carrying three unrelated components should be
+split or have its weakest part cut. The symptom is an orphan line that explains
+nothing on its own — if a learner would ask "what is that doing there?", it goes.
+
+**A category list must not contain the thing it categorises.** "AI governance has
+three parts, one of which is governance" is a broken taxonomy, and a learner will
+notice before you do.
+
+**Prefer the most recent and most local evidence.** For a Singapore audience a
+Singapore source outranks a UK one, and a 2026 source outranks a 2024 one. When
+only distant or older evidence exists, say so on the slide rather than letting it
+pass as current.
+
+**Date-stamp jurisdiction slides consistently.** If one carries "as at
+<date>", they all do. A reader treats an undated slide as timeless.
+
+**A diagram must be complete for the claim it makes.** A world map showing
+"jurisdictions" must not omit the largest ones, and every highlighted region must
+be labelled. An unlabelled highlight is a question the learner cannot answer.
+
+### Every slide needs a connecting sentence
+
+In a recorded course the narrator must never have to read the slide title aloud
+to bridge from the previous slide. Each slide's script opens with a sentence that
+carries the learner across from what came before. Without it the recording reads
+as a sequence of captions.
+
 ### Check them, do not remember them
 
 ```bash

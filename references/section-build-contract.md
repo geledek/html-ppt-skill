@@ -71,6 +71,18 @@ No more than half of your slides may be box grids.
 to it." is a fragment. "Singapore finance: advisory, and still unissued." is a
 headline.
 
+## Copy rules
+
+- **A kicker must not repeat the line beneath it.** If the headline says it, drop
+  the kicker.
+- **A list of things gets a list layout**, not boxes.
+- **One slide, one idea.** No orphan lines that explain nothing on their own.
+- **A category list must not contain the thing it categorises.**
+- **Every slide's script opens with a connecting sentence** from the previous
+  slide. The narrator must never need to read the title aloud.
+- **Date-stamp jurisdiction slides consistently** — if one says "as at <date>",
+  they all do.
+
 ## Quiz rules
 
 - The answer key is `data-correct` on ONE option. Nothing else marks it.
