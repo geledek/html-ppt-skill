@@ -501,6 +501,17 @@ credit scores were withholdable as evaluative opinion data.
 > generated data to be relevant in determining whether they formed part of the
 > Applicant's personal data."
 
+**EN-3b · What SAVED HSBC — the most actionable finding in the brief.** The
+Deputy Commissioner credited HSBC's *published* governance:
+> "Even though HSBC was entitled to decline providing access to the Redacted
+> Data, it had acted reasonably by providing information about how it uses data
+> and technology to conduct credit facility assessments. From the perspective of
+> accountability and disclosure of policies and practices, HSBC had acquitted
+> itself."
+HSBC had published a "Principle for the Ethical Use of Big Data and AI" and a
+"Credit Decisioning Policy Statement". Governance documentation is not
+bureaucracy here; it is what a regulator credited. Feeds outcome 4 directly.
+
 **EN-4 · UK ICO record is thin and unresolved.** Clearview AI £7,552,800 —
 **do not say it stands.** FTT overturned it on jurisdiction (17 Oct 2023); Upper
 Tribunal set that aside and remitted (6 Oct 2025); **no 2026 judgment**, verified
@@ -508,6 +519,14 @@ against the National Archives caselaw database. Four years, never adjudicated on
 the merits. Serco Leisure got enforcement notices and **no fine** (23 Feb 2024).
 Snap's "My AI" ended in **no action** after a fifth DPIA satisfied the ICO.
 The ICO has **never** fined an AI recruitment vendor or user.
+
+**EN-4b · The most common outcome is not a fine — the sanction is the
+investigation.** Serco: notice, no fine. Snap "My AI": preliminary notice, five
+DPIA revisions, then **no action**. HSBC Singapore: the bank won. Pieces
+Technologies: disclosure obligations, no penalty. The cost is the investigation,
+the remediation and the public record.
+> Stephen Almond, ICO, on Snap: "Our investigation into 'My AI' should act as a
+> warning shot for industry."
 
 **EN-5 · Where algorithmic enforcement actually stuck — labour and public sector.**
 - Deliveroo Italy **€2.5m** (2 Aug 2021), Foodinho/Glovo **€2.6m** (2021) and
@@ -553,6 +572,22 @@ settlements (Delphia $225k, Global Predictions $175k, 18 Mar 2024); FTC
 Operation AI Comply (25 Sep 2024); FTC v. Rite Aid five-year facial recognition
 ban (19 Dec 2023). Saying it does more than it does is the cheapest case to bring.
 
+**EN-10b · The sharpest sentence any regulator wrote — but it is withdrawn.**
+CFPB Circular, on adverse-action reasons from opaque models:
+> "A creditor's lack of understanding of its own methods is therefore not a
+> cognizable defense against liability"
+⚠️ **Withdrawn 12 May 2025** in a sweep of 67 guidance documents. Quote it as a
+standard a regulator once articulated, never as live guidance. ECOA §1691(d) and
+Reg B §1002.9 still bind regardless of the withdrawal.
+
+**EN-10c · Apple Card / Goldman Sachs — the regulator found NO discrimination.**
+NYDFS reviewed ~400,000 New York applications and found neither disparate
+treatment nor disparate impact. The lesson is reputational, not legal: a viral
+thread triggered a state investigation the bank won and still lost. NYDFS went
+further than its own finding:
+> "even the exclusive consideration of such financial characteristics does not
+> prevent that history of discrimination from affecting credit scores."
+
 **EN-11 · Do NOT use.** Amazon's scrapped recruiting tool is **journalism only**
 (Reuters, 2018, five anonymous sources, no regulator finding) — say "reported",
 never "found". TikTok's £12.7m is not AI enforcement; it concerns under-13s'
@@ -565,6 +600,13 @@ consent with no finding about the recommender.
 - Mobley 2026 procedural history — law-firm reporting.
 - MAS AIRM issuance date — no primary source. **Do not repeat secondary
   speculation**, including a reported Aug 2026 statement that could not be traced.
+- **UnitedHealth "nH Predict" / Cigna "PXDX" claim-denial litigation — NOT
+  researched.** Flagged as likely the most powerful financial-services-adjacent
+  case available. Search budget ran out. Decide whether the course needs it.
+- Robodebt: the settlement was **$112m inclusive of costs**. $1.763bn is debts
+  *withdrawn* and $751m *refunded*. Do not conflate.
+- France/CNIL: recommend dropping entirely — CNIL de-publishes sanctions and no
+  live page backs the Clearview €20m.
 
 ## Outline
 
