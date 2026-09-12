@@ -356,8 +356,13 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
    therefore land on the SAME baseline on every slide, so nothing jumps when the
    recording advances. The body is centred in whatever height is left, which
    keeps short slides from stranding all their whitespace at the bottom. */
-.tpl-course .slide{padding:64px 80px;background:var(--bg);display:grid;grid-template-rows:var(--head-h,175px) 1fr}
-.tpl-course .slide-head{min-height:var(--head-h,175px)}
+/* grid-template-columns is load-bearing. With no explicit column the implicit one
+   is auto-sized to its content and then centred, so each band's left edge tracked
+   its own content width and the headline slid sideways between slides. A single
+   minmax(0,1fr) column fills the slide; justify-items:start then pins both bands
+   to the padding edge. */
+.tpl-course .slide{padding:64px 80px;background:var(--bg);display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:var(--head-h,215px) 1fr;justify-items:start}
+.tpl-course .slide-head{min-height:var(--head-h,215px)}
 /* start, not centre: the body should begin at the same y too, so nothing between
    the headline and the first line of content shifts between slides. Leftover
    space collects at the bottom, where it is predictable. */
@@ -367,12 +372,13 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 .tpl-course .slide.full{grid-template-columns:1fr;display:flex;flex-direction:column;justify-content:center}
 /* Prose at 1760px is unreadable. Cap the measure; tables and the layer stack
    opt out with .wide. */
-/* 1180px is a reading measure, right for prose. Tables and diagrams are not
-   prose: .wide lets a body use the full stage. */
+/* Left-aligned, never centred. Centring each band meant a normal slide's title
+   began at x=370 and a .wide slide's at x=180, so the headline moved sideways
+   between slides. Both bands now start at the padding edge on every slide;
+   .wide only changes how far right the content may run. */
 .tpl-course .main{display:contents}
-.tpl-course .slide-head,.tpl-course .slide-body{max-width:1180px;width:100%;margin-inline:auto}
-.tpl-course .slide-body.wide{max-width:1560px}
-.tpl-course .slide-head.wide{max-width:1560px}
+.tpl-course .slide-head,.tpl-course .slide-body{max-width:1400px;width:100%;margin-inline:0;justify-self:start}
+.tpl-course .slide-body.wide,.tpl-course .slide-head.wide{max-width:100%}
 .tpl-course .main .wide{max-width:none}
 
 /* objectives sidebar */
@@ -388,18 +394,18 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 .tpl-course .obj-list li.current::before{content:"▸";color:var(--accent-2)}
 
 /* type */
-.tpl-course .h1{font-family:var(--font-display);font-size:72px;line-height:1.02;font-weight:800;letter-spacing:-.02em;color:var(--text-1)}
-.tpl-course .h2{font-family:var(--font-display);font-size:48px;line-height:1.1;font-weight:700;letter-spacing:-.015em;color:var(--text-1)}
+.tpl-course .h1{font-family:var(--font-display);font-size:96px;line-height:1.02;font-weight:800;letter-spacing:-.02em;color:var(--text-1)}
+.tpl-course .h2{font-family:var(--font-display);font-size:68px;line-height:1.08;font-weight:700;letter-spacing:-.02em;color:var(--text-1)}
 .tpl-course h3,.tpl-course h4{color:var(--text-1)}
-.tpl-course .kicker{color:var(--accent-2);font-size:12px;font-weight:700;letter-spacing:.14em}
-.tpl-course .lede{font-size:20px;color:var(--text-2);line-height:1.7}
+.tpl-course .kicker{color:var(--accent-2);font-size:17px;font-weight:700;letter-spacing:.14em}
+.tpl-course .lede{font-size:29px;color:var(--text-2);line-height:1.55;max-width:38ch}
 .tpl-course .slide.full .h1{font-size:88px}
 
 /* teaching blocks */
-.tpl-course .callout{font-size:19px;border-left:4px solid var(--accent-2);background:var(--surface-2);padding:24px 30px;border-radius:0 var(--radius) var(--radius) 0;margin-top:24px}
+.tpl-course .callout{font-size:25px;border-left:4px solid var(--accent-2);background:var(--surface-2);padding:24px 30px;border-radius:0 var(--radius) var(--radius) 0;margin-top:24px}
 .tpl-course .callout b{color:var(--accent-2)}
-.tpl-course .concept-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:30px 34px;box-shadow:var(--shadow);font-size:19px}
-.tpl-course .concept-box h4{margin-top:0;color:var(--accent)}
+.tpl-course .concept-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:30px 34px;box-shadow:var(--shadow);font-size:25px}
+.tpl-course .concept-box h4{margin-top:0;color:var(--accent);font-size:28px}
 .tpl-course .exercise{background:color-mix(in srgb,var(--accent-2) 8%,var(--surface));border:1.5px dashed var(--accent-2);border-radius:var(--radius);padding:24px 28px}
 .tpl-course .exercise::before{content:"✎ Exercise";display:block;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--accent-2);margin-bottom:10px;text-transform:uppercase}
 .tpl-course .pill-academic{display:inline-block;padding:4px 12px;border-radius:var(--radius-sm);background:var(--surface-2);border:1px solid var(--border);font-size:12px;color:var(--text-2);font-family:var(--font-mono)}
@@ -414,15 +420,15 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 
 /* quiz — inert until clicked; behaviour in assets/quiz.js */
 .tpl-course .quiz{margin:0}
-.tpl-course .mcq{font-size:19px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start;cursor:pointer;transition:border-color .18s var(--ease),background .18s var(--ease)}
+.tpl-course .mcq{font-size:25px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start;cursor:pointer;transition:border-color .18s var(--ease),background .18s var(--ease)}
 .tpl-course .mcq:hover{border-color:var(--border-strong)}
 .tpl-course .mcq .letter{flex:none;width:28px;height:28px;border-radius:50%;border:2px solid var(--text-3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:var(--text-2);transition:all .18s var(--ease)}
-.tpl-course .mcq .why{display:none;font-size:16px;color:var(--text-2);margin:8px 0 0}
+.tpl-course .mcq .why{display:none;font-size:21px;color:var(--text-2);margin:10px 0 0}
 
 /* revealed states — only ever applied by quiz.js */
 .tpl-course .quiz.revealed .mcq{cursor:default}
 .tpl-course .quiz.revealed .mcq:hover{border-color:var(--border)}
-.tpl-course .quiz.revealed .mcq .why{display:block}
+.tpl-course .quiz.revealed .mcq .why{visibility:visible}
 /* Once revealed the letter becomes a tick or a cross. The green box already says
    which answer is right, so the letter is free to carry the verdict instead. */
 .tpl-course .quiz.revealed .mcq .letter{font-size:0;position:relative}
@@ -437,8 +443,8 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 .tpl-course .quiz.revealed .mcq.correct .letter{border-color:var(--good);background:var(--good);color:var(--surface)}
 .tpl-course .quiz.revealed .mcq.wrong{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 7%,var(--surface))}
 .tpl-course .quiz.revealed .mcq.wrong .letter{border-color:var(--bad);background:var(--bad);color:var(--surface)}
-.tpl-course .quiz .verdict{display:none;margin-top:14px;font-size:14px;font-weight:700}
-.tpl-course .quiz.revealed .verdict{display:block}
+.tpl-course .quiz .verdict{visibility:hidden;margin-top:18px;font-size:21px;font-weight:700;min-height:1.4em}
+.tpl-course .quiz.revealed .verdict{visibility:visible}
 .tpl-course .quiz.revealed .verdict.right{color:var(--good)}
 .tpl-course .quiz.revealed .verdict.miss{color:var(--bad)}
 
@@ -451,9 +457,9 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 .tpl-course .layer{border:1px solid var(--border);border-bottom:none;background:var(--surface);padding:26px 32px;display:flex;gap:24px;align-items:baseline}
 .tpl-course .layer:first-child{border-radius:var(--radius) var(--radius) 0 0}
 .tpl-course .layer:last-child{border-bottom:1px solid var(--border);border-radius:0 0 var(--radius) var(--radius)}
-.tpl-course .layer{font-size:19px}
-.tpl-course .layer .layer-name{flex:none;width:300px;font-weight:700;color:var(--text-1)}
-.tpl-course .layer .layer-note{color:var(--text-2);font-size:19px}
+.tpl-course .layer{font-size:25px}
+.tpl-course .layer .layer-name{flex:none;width:400px;font-weight:700;color:var(--text-1)}
+.tpl-course .layer .layer-note{color:var(--text-2);font-size:25px}
 .tpl-course .layer.is-binding{border-left:4px solid var(--accent)}
 .tpl-course .layer.is-expectation{border-left:4px solid var(--accent-2)}
 .tpl-course .layer.is-voluntary{border-left:4px solid var(--text-3)}

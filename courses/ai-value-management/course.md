@@ -958,6 +958,573 @@ between stages must not carry numbers from different sources as if they compose.
 5. McKinsey 2026's workflow finding as a published statistic (no R², no regression).
 6. McKinsey 2026 Exhibit 11 per-practice percentages — SVG, labels not in page text.
 
+### Controlled trials, and whether gains aggregate  ✅ researched 2026-09-12
+
+**T-13 · The largest office-work RCT: time saved, nothing else changed. The
+aggregation break in miniature, and the best single evidence for outcome 2.**
+> "We present evidence from a field experiment across 66 firms and 7,137
+> knowledge workers. … In the second half of the 6-month experiment, the 80% of
+> treated workers who used this tool spent two fewer hours on email each week and
+> reduced their time working outside of regular hours. Apart from these individual
+> time savings, we do not detect shifts in the quantity or composition of workers'
+> tasks resulting from individual-level AI provision."
+> "treated and control workers replied to the same number of email threads,
+> participated in the same number of Teams meetings, and completed the same number
+> of Word documents."
+> "Although we cannot measure productivity, the changing behaviors we see are
+> consistent with workers independently exploring these new tools and saving time
+> on individual tasks. Further research is needed to assess how co-inventions or
+> team- or firm-level transformations may lead to broader changes"
+Dillon, Jaffe, Immorlica & Stanton, *Shifting Work Patterns with Generative AI*,
+arXiv:2504.11436v4, 13 Nov 2025; NBER WP 33795. Randomised, 66 firms, 7,137
+workers (3,684 treated), 6 months. https://arxiv.org/abs/2504.11436
+Its own measurement limit: "we do not observe the content of any work nor any
+measures of productivity or performance evaluation."
+
+**T-12 · Lab-to-field attenuation, stated by a team overlapping with the lab study
+it deflates. The cleanest such statement available.**
+> "we find that usage of a generative AI code suggestion tool increases software
+> developer productivity by 26.08% (SE: 10.3%). We note that this estimate is
+> substantially smaller than the 58% decrease Peng et al. (2023) find for the time
+> to complete a software engineering task in the lab … Additionally, coding is only
+> part of a software developer's job, so only some of the time saved on coding
+> tasks may be spent on additional coding."
+Cui, Demirer, Jaffe, Musolff, Peng & Salz. Three firm RCTs, n=4,867 developers,
+2–8 months, real work. *Management Science*.
+https://economics.mit.edu/sites/default/files/inline-files/draft_copilot_experiments.pdf
+⚠️ Authors' own honesty: "Though each experiment is noisy"; "standard errors are
+consistently large"; "only the effect on the number of pull requests is
+statistically significant at conventional significance levels." **Outcomes are
+pull requests, commits and builds — activity counts, not value.** A fourth
+Accenture experiment was abandoned after a layoff hit 42% of participants and
+gave "a negative and statistically insignificant point estimate of -39.18%".
+
+**T-10 · ⚠️ THE METR SLOWDOWN IS GONE, AND ITS AUTHORS ABANDONED THE DESIGN.
+Anyone citing the 19% slowdown today is a year out of date.**
+> "Our early 2025 study found the use of AI causes tasks to take 19% longer, with
+> a confidence interval between +2% and +39%. For the subset of the original
+> developers who participated in the later study, we now estimate a speedup of
+> -18% with a confidence interval between -38% and +9%. Among newly-recruited
+> developers the estimated speedup is -4%, with a confidence interval between -15%
+> and +9%."
+> "we believe that the data from our new experiment gives us an unreliable signal
+> of the current productivity effect of AI tools. The primary reason is that we
+> have observed a significant increase in developers choosing not to participate
+> in the study because they do not wish to work without AI"
+> "30% to 50% of developers told us that they were choosing not to submit some
+> tasks because they did not want to do them without AI. This implies we are
+> systematically missing tasks which have high expected uplift from AI."
+> "Wider adoption of AI has made it more difficult to measure task-level
+> productivity"
+METR, *We are Changing our Developer Productivity Experiment Design*, 24 Feb 2026.
+57 developers, 143 repositories, 800+ tasks. https://metr.org/blog/2026-02-24-uplift-update/
+**Both new intervals cross zero. Neither direction is settled — and the reason is
+a measurement problem, which is outcome 3's argument arriving from an unexpected
+direction.**
+
+**T-8 / T-9 · The original METR trial, and its own list of what it does not show.**
+> "16 developers with moderate AI experience complete 246 tasks … Before starting
+> tasks, developers forecast that allowing AI will reduce completion time by 24%.
+> After completing the study, developers estimate that allowing AI reduced
+> completion time by 20%. Surprisingly, we find that allowing AI actually increases
+> completion time by 19%"
+arXiv:2507.09089, 12 Jul 2025. **n=16 developers.** The forecast-versus-outcome gap
+(−24% expected, −20% believed afterwards, +19% measured) is the most useful part
+for an executive audience: **the practitioners were wrong about their own
+productivity in both directions, before and after.**
+METR's Table 2 lists what its evidence does *not* demonstrate, including:
+> "We do not claim that our developers or repositories represent a majority or
+> plurality of software development work"
+> "The slowdown we observe does not imply that current AI tools do not often
+> improve developer's productivity—we find evidence that the high developer
+> familiarity with repositories and the size and maturity of the repositories both
+> contribute to the observed slowdown"
+
+**T-1 / T-2 · The customer-support study: 15% published, not 14%, and it is a
+staggered rollout, not an RCT.**
+> published (QJE 140(2), 2025): "increases worker productivity, as measured by
+> issues resolved per hour, by 15% on average, with substantial heterogeneity
+> across workers."
+> "Less skilled and less experienced workers improve significantly across all
+> productivity measures, including a 30% increase in the number of issues resolved
+> per hour. … In contrast, AI has little effect on the productivity of
+> higher-skilled or more experienced workers. Indeed, we find evidence that AI
+> assistance leads to a small decrease in the quality of conversations conducted by
+> the most skilled agents."
+Design: "We isolate the causal impact of access to AI recommendations using a
+standard difference-in-differences regression". n=5,172 agents, GPT-3-era tool,
+2020–21, single firm, single occupation.
+https://danielle-li.github.io/assets/docs/GenerativeAIatWork.pdf
+The generalisable mechanism, in the authors' words:
+> "The greatest productivity gains may occur not where the AI system is most
+> capable in absolute terms, but where its capabilities most effectively
+> complement or exceed those of human workers."
+
+**T-16 · 2026 RCT of agentic AI in live customer service: faster, and worse on
+exactly the chats the AI handled.**
+> "average chat duration declines by 16.8 percent in AI-eligible chats (p < 0.001)"
+> "For AI-eligible chats … customer ratings decline by 0.412 points relative to
+> those of control workers (p < 0.001). For AI-ineligible chats, by contrast …
+> treated workers receive customer ratings that are 0.091 points higher"
+> "In AI-eligible chats, the deployment of agentic AI substantially accelerates
+> service completion, yet these gains in speed do not translate into a better
+> customer experience."
+Wang, Zhu, Feng, Lu & Jia, arXiv:2605.14830, May 2026. n=647 workers, 680,676
+chats, Taobao, real customers. ⚠️ One author at Alibaba Group. ⚠️ No limitations
+section found in the preprint.
+
+**T-14 · A null average effect that hides active harm to weaker performers.**
+> "We are unable to reject the null hypothesis that generative AI access has no
+> impact … our point estimates suggest that high performers benefited by just over
+> 15% from AI advice, whereas low performers did about 8% worse with AI assistance."
+> "Exploratory analysis of WhatsApp interaction logs shows that both groups sought
+> the AI mentor's advice, but that low performers did worse because they sought
+> help on more challenging business tasks."
+Otis, Clarke, Delecourt, Holtz & Koning. RCT, n=640 Kenyan entrepreneurs, 5
+months, real businesses. *Management Science*.
+
+#### The aggregation question — the chain breaks in four places
+
+**Nobody has established that task-level gains aggregate to firm output. Each
+break is named by a primary source.**
+
+| Break | Evidence |
+|---|---|
+| **Lab → field** | The one team that ran both: field effect roughly half the lab effect (T-12) |
+| **Task → job** | "we do not detect meaningful shifts in workers' tasks" (T-13); "coding is only part of a software developer's job" (T-12); "they may take their time savings as on-the-job leisure, which would increase welfare but not productivity" (T-21) |
+| **Worker → firm** | No study measures both. The best firm-level RCT measures sales and explicitly not profit (T-24) |
+| **Firm → economy** | "we report partial equilibrium short- to medium-run effects" (T-19); BLS does not measure it separately (T-22) |
+
+**T-24 · The best firm-level randomised evidence measures top-line sales and says
+so.**
+> "Over 2023-2024, the platform integrated GenAI into seven business workflows …
+> We find that GenAI adoption increases sales in most workflows, with effects
+> ranging from no detectable impact to 16.3% … the implied annual incremental value
+> is roughly $5 per consumer"
+> "These figures should be interpreted cautiously: they assume that gains from
+> different workflows can be summed without accounting for synergies or overlap …
+> and capture top-line sales gains rather than bottom-line profitability or full
+> return on investment."
+> "our data do not allow us to estimate ROI directly—since we do not observe the
+> full capital, engineering, inference, and organizational costs of GenAI
+> deployment"
+Fang, Yuan, Zhang, Donati & Sarvary, *Generative AI and Sales Productivity: Field
+Experiments in Online Retail*, arXiv:2510.12049v6, 29 Jun 2026. Seven RCTs,
+millions of users. ⚠️ Two authors consulted for, and one was employed by, the
+partner company. ⚠️ v1 was titled "…Firm Productivity"; cite the current title.
+**And the 16.3% is against no service at all, not against a human:**
+> "Using Human Reply as the control … the GenAI Reply treatment shows no
+> statistically significant differences in either sales or conversion, suggesting
+> that the GenAI chatbot matches the quality of human service but does not
+> outperform it."
+
+**T-20 · The only attempt at the whole chain is a model calibration, and it
+produces a small number its own author thinks is too high.**
+> "these macroeconomic effects appear nontrivial but modest—no more than a 0.66%
+> increase in total factor productivity (TFP) over 10 years."
+> "even these estimates could be exaggerated, because early evidence is from
+> easy-to-learn tasks … Consequently, predicted TFP gains over the next 10 years
+> are even more modest and are predicted to be less than 0.53%."
+Acemoglu, *The Simple Macroeconomics of AI*, NBER WP 32487, 2024; *Economic
+Policy* 2025. **A theoretical model calibrated on other people's task-level
+estimates. Not a measurement of aggregate output.**
+
+**T-21 · The best empirical bridge is self-reported time savings, and it yields
+about 1%.**
+> "Workers report generative AI time savings equivalent to 1.6% of all work hours"
+> "This suggests that generative AI may have increased labor productivity by up to
+> 1.3% since the introduction of ChatGPT."
+> "increased productivity by workers in some tasks will not increase measured
+> productivity by as much if workers apply their saved time to less-productive
+> activities"
+> "our estimates will not capture firm-side adjustments to capital or work
+> reorganizations"
+Bick, Blandin & Deming, St. Louis Fed, 13 Nov 2025 (earlier: 27 Feb 2025, 5.4% of
+hours → "a 1.1% increase in aggregate productivity"); survey NBER WP 32966.
+**Nationally representative survey plus arithmetic. Not measurement of output.**
+
+**T-22 · The statistical agency does not measure AI's productivity effect
+separately.**
+> "BLS implicitly captures AI use through its capital measure of software used in
+> production."
+US BLS, *Productivity and Artificial Intelligence*, page dated 8 Jun 2026.
+https://www.bls.gov/productivity/articles-and-research/ai-and-productivity/home.htm
+
+**T-23 · The productivity-paradox literature predicted this gap and names the
+mechanism.**
+> "Systems using artificial intelligence match or surpass human level performance
+> in more and more domains … Yet measured productivity growth has declined by half
+> over the past decade … We describe four potential explanations for this clash of
+> expectations and statistics: false hopes, mismeasurement, redistribution, and
+> implementation lags. While a case can be made for each, we argue that lags have
+> likely been the biggest contributor"
+> "their full effects won't be realized until waves of complementary innovations
+> are developed and implemented. The required adjustment costs, organizational
+> changes, and new skills can be modeled as a kind of intangible capital."
+Brynjolfsson, Rock & Syverson, NBER WP 24001, 2017. **This is the theory behind
+ST-31's "$1 tangible to $10 intangible" and behind C-8's 64%.**
+⚠️ The J-curve paper's empirical findings are for software and computer hardware;
+for AI it says only "the effects are small but growing". **Applying the J-curve to
+generative AI is a prediction, not a finding.**
+
+#### Headlines that are misquoted — a possible standalone section
+
+**M-7 · ⚠️ The most spectacular "AI transforms knowledge work" result of 2024–25
+was withdrawn for fabricated data, and circulated for six months first.** The
+MIT materials-discovery paper claiming AI-assisted scientists found 44% more
+materials. arXiv admin note (arXiv:2412.17866, v2, 20 May 2025):
+> "Withdrawn by arXiv administrators due to concerns about the validity of the
+> data and incomplete Institutional Review Board requirements"
+MIT Department of Economics, Acemoglu & Autor, 16 May 2025:
+> "we want to be clear that we have no confidence in the provenance, reliability
+> or validity of the data and in the veracity of the research."
+> "even in its non-published form, the paper is having an impact on discussions
+> and projections about the effects of AI on science … the findings reported in
+> this paper should not be relied on"
+https://economics.mit.edu/news/assuring-accurate-research-record
+**Candidate for its own slide.** It teaches the executive skill directly: the
+question is not whether a number is impressive, it is who measured it and how.
+
+| # | The claim as it circulates | What was measured |
+|---|---|---|
+| M-1 | "AI makes developers 19% slower" | 16 maintainers, own repos averaging 23k stars, early-2025 tools, CI +2% to +39%. **Superseded by the same authors** (T-10) |
+| M-2 | "AI makes developers 55% faster" | One synthetic HTTP-server exercise, **70 completers**, CI 21–89%, no quality measure, authors employed by the tool's owner. Field figure is 26.08% (SE 10.3%) |
+| M-3 | "14% customer-service gain" | Published figure is **15%**; staggered-rollout DiD, not an RCT; one firm, one occupation, GPT-3 era, 2020–21 |
+| M-4 | "Consultants 19% worse with AI" | 19 **percentage points** (60–70% vs 79%), on one deliberately chosen task, against 18 tasks that showed gains. **The published abstract says "19%", which is where the error starts** |
+| M-5 | "Writers 40% faster, 18% better" | One 27-minute writing task; authors say the design "may inflate our estimates" |
+| M-6 | "GenAI raised sales 16.3%" | Against **no customer service at all**. Against a human: no significant difference |
+| M-7 | "AI-assisted scientists found 44% more materials" | **Withdrawn. Fabricated data. Do not cite except as the cautionary case** |
+
+#### NOT ESTABLISHED — trials and aggregation
+
+1. **That task-level gains aggregate to firm-level output.** No study measures both.
+2. **That they aggregate to economy-level output.** Only a model calibration exists.
+3. **Firm-level ROI from any AI deployment, randomised or otherwise.** The best
+   firm-level RCT says its data cannot estimate ROI.
+4. **Whether low-skill or high-skill workers gain more.** Six studies point one
+   way (support, writing, Copilot, BCG, and a 2026 online experiment closing
+   three-quarters of an education gap); the Kenyan RCT points the other. Nobody
+   reconciles them. ⚠️ The BCG authors note selective adoption may *widen* gaps.
+5. **Whether measured gains persist.** Every study runs weeks to eight months. The
+   longest, at six months, found time savings and no change in work composition.
+   The support-study authors warn of a performance-target ratchet that could erase
+   measured gains with no change in the technology.
+6. **Whether AI shows a J-curve.** A prediction, not a finding.
+7. Author limitations for the Alibaba, Cruces and BIS papers — retrieval blocked
+   or truncated. Do not attribute limitations language to those three.
+8. **BIS: AI adoption raises labour productivity ~4%** (12,000+ EU/US firms, IV on
+   survey data, BIS WP 1325, 23 Jan 2026). ⚠️ **Page truncated to 125 characters on
+   fetch. Re-verify by hand against the PDF before this goes on a slide.**
+
+### Attribution — how value is credibly credited to AI  ✅ researched 2026-09-12
+
+Ray's flag, and outcome 3 stands on it. It did **not** come back empty.
+
+#### The requirement, from outside AI where the problem is older
+
+**A-1 / A-2 · Without a comparison group there is no impact estimate. Full stop.**
+> "Simply put, without a comparison group that yields an accurate estimate of the
+> counterfactual, the true impact of a program cannot be established."
+> "A valid comparison group (1) has the same characteristics, on average, as the
+> treatment group in the absence of the program; (2) remains unaffected by the
+> program; and (3) would react to the program in the same way as the treatment
+> group, if given the program."
+Gertler, Martinez, Premand, Rawlings & Vermeersch, *Impact Evaluation in
+Practice*, 2nd ed., World Bank/IDB, 13 Sep 2016, ch.3 pp.51–52.
+https://openknowledge.worldbank.org/handle/10986/25030
+
+**A-13 · ⚠️ The World Bank calls before/after a "counterfeit" counterfactual.
+This is the line that kills most corporate AI ROI claims.**
+> "it is useful to discuss two common, but highly risky, methods of constructing
+> comparison groups that many times lead to inappropriate ('counterfeit')
+> estimates of the counterfactual: • Before-and-after comparisons …"
+> "for a majority of programs implemented over a series of months or years, this
+> assumption simply does not hold."
+> "the baseline outcome is almost never a good estimate of the counterfactual.
+> That is why we consider it a counterfeit estimate of the counterfactual."
+Same source, ch.3 pp.54–55.
+
+**A-14 · Microsoft's experimentation team, in the exact words an executive will
+use to object.**
+> "The most common question we get as an organization learns about controlled
+> experiments is 'why not measure the metric of interest, ship the feature, and
+> then look at the delta?'"
+> "Our experience is that external variations overwhelm the effects we are trying
+> to detect. In sequential tests, or quasi-experimental designs, we try to control
+> for known confounding factors, but this is extremely hard to get right."
+Kohavi, Deng, Frasca, Walker, Xu & Pohlmann, *Online Controlled Experiments at
+Large Scale*, KDD 2013, §3.1.
+https://exp-platform.com/Documents/2013%20controlledExperimentsAtScale.pdf
+Same paper: "Only one third of the ideas tested at Microsoft improved the
+metric(s) they were designed to improve."
+
+#### The two numbers to build outcome 3 on
+
+**A-32 / A-33 · ⭐ Observational attribution is off by a factor of three against a
+randomised test on the same data. 416% claimed, 77% real.**
+> "the observational methods overestimate ad effectiveness relative to the RCT…
+> The bias can be large: in half of our studies, the estimated percentage increase
+> in purchase outcomes is off by a factor of three across all methods."
+> "the conversion rate among unexposed users was 0.020%, implying an ICR of 0.084%
+> and a lift of 416%. This estimate is more that five times the true lift of 77%"
+> "When we naively compared exposed to unexposed users, we estimated an ad lift of
+> 416%. … suggested a lift of 221%. Matching the groups based on their propensity
+> score, estimated with a rich set of explanatory variables, gave us a lift of
+> 102%. Compared to the starting point, we have gotten much closer to the true RCT
+> lift of 77%."
+Gordon, Zettelmeyer, Bhargava & Chapsky, *A Comparison of Approaches to
+Advertising Measurement: Evidence from Big Field Experiments at Facebook*, MSI WP
+18-113, 2018; *Marketing Science* 38(2), 2019. 15 experiments.
+https://thearf-org-unified-admin.s3.amazonaws.com/MSI_Report_18-113.pdf
+Kellogg white paper v1.2, 14 Jul 2016, for the 416%/77% walk-through.
+**A-34 · Five years, 663 experiments and deep learning later, the gap persists:**
+> "Although DML performs better than SPSM, neither method performs well, even
+> using flexible deep learning models… Overall, despite having access to
+> large-scale experiments and rich user-level data, we are unable to reliably
+> estimate an ad campaign's causal effect."
+arXiv:2201.07055v2, 4 Oct 2022; *Marketing Science* 42(4).
+**This transfers directly: it is the same problem, on better data than any
+enterprise has about its own AI.**
+
+**A-45 · ⭐ The ceiling. To distinguish a 10% ROI difference, the median campaign
+needed to be 62 times larger.**
+> "Twenty-five large field experiments with major U.S. retailers and brokerages…
+> reveal that measuring the returns to advertising is difficult. The median
+> confidence interval on return on investment is over 100 percentage points wide."
+> "The median campaign would have to be nine times larger to reliably distinguish
+> a wildly profitable campaign (+50% ROI) from one that broke even (0% ROI).
+> Achieving more standard tolerances for investment decisions, such as a 10% ROI
+> difference, requires the median campaign to be 62 times larger to possess
+> adequate power—nearly impossible for a campaign of any realistic size."
+Lewis & Rao, *The Unfavorable Economics of Measuring the Returns to Advertising*,
+*QJE* 130(4): 1941–1973, 2015.
+**This is why attribution works at task and workflow level and fails at the
+enterprise P&L. It is a mathematical ceiling, not an execution failure.**
+
+**A-44 · The arithmetic behind it.**
+> "to increase the experiment sensitivity (detectable effect size) by a factor of
+> 10, say from 5% delta to 0.5%, you need 10² = 100 times more users."
+> "those that succeed improve key metrics by 0.1% to 1.0%, once diluted to overall
+> impact."
+Kohavi et al., KDD 2013 and KDD 2014 Rule #2.
+
+#### What it costs when someone actually does it
+
+**A-5 / A-6 / A-7 · A real enterprise holdout: 4,867 developers, 2–8 months, and
+still short of power.**
+> "These field experiments, run by the companies as part of their ordinary course
+> of business, provided a random subset of developers with access to an AI-based
+> coding assistant"
+> "our analysis must confront challenges related to statistical power despite the
+> large number of developers in the experiments."
+Three ways it degraded, all in the same paper: the control group got access
+anyway ("Shortly after a larger fraction of developers in the treatment group
+started using it, the control group was also allowed access"); take-up diluted the
+treatment ("only 44.2% of developers adopted Copilot in the first 29 weeks"); and
+a reorganisation destroyed one arm ("abandoned by the company after Accenture laid
+off 19,000 employees that same month … including 42% of the developers
+participating in this experiment").
+**The cheap end, for contrast (A-8):** METR got a clean answer with 16 developers
+and 246 randomised tasks, at $150/hr with screen recording. It answers one narrow
+question about one workflow.
+
+#### What organisations actually do — mostly, they estimate
+
+**A-27 · ⭐ NO survey in the literature asks whether a control group was used.
+The absence is a first-class finding.** Full published instruments were checked:
+MIT NANDA Appendix 8.3, Census BTOS AI supplement Appendix A Q23–Q35, Deloitte's
+ROI question set, Wharton/GBK QSP2A. **None contains an item about control groups,
+holdouts, randomisation or counterfactuals. The surveys ask *whether* ROI was
+measured, never *how it was identified*.**
+
+**A-17 · Under one in five track KPIs at all.**
+> "less than one in five saying their organizations are tracking KPIs for gen AI
+> solutions."
+> "More than 80 percent of respondents say their organizations aren't seeing a
+> tangible impact on enterprise-level EBIT from their use of gen AI."
+McKinsey, Mar 2025, n=1,491.
+
+**A-22 · BCG: 60% monitor no financial KPI for AI.**
+> "60% of companies are failing to define and monitor any financial KPIs related
+> to AI value creation"
+Chart: "32% Not tracking yet / 28% Operational only / 16% Financial only / 24%
+Operational and financial". BCG, *AI Radar: From Potential to Profit*, Jan 2025,
+n=1,803 C-level. https://web-assets.bcg.com/0b/f6/c2880f9f4472955538567a5bcb6a/ai-radar-2025-slideshow-jan-2025-r.pdf
+BCG on its own data: "We drew insights on AI maturity and value from self-reported
+data provided by the respondents."
+
+**A-23 · IBM: two-thirds of Chief AI Officers start projects they cannot assess.**
+> "72% of CAIOs say their organizations risk falling behind without AI impact
+> measurement. But 68% initiate AI projects even if they can't assess their
+> impact—because the most promising AI opportunities are often the most difficult
+> to measure."
+IBM IBV, *Solving the AI ROI puzzle*, 13 Jul 2025, n=624, 22 countries.
+And from the CEO study (n=2,000, 6 May 2025): "CEOs say only 25% of AI initiatives
+have delivered expected ROI—and only 16% have scaled enterprise-wide."
+
+**A-20 / A-21 · ⚠️ Deloitte's own series contradicts itself across two
+consecutive quarters, and the contradiction is usable evidence.**
+Q3 2024 (n=2,770): "Tracked return on investment 35%" and "41% of organizations
+have struggled to define and measure the exact impacts of their Generative AI
+efforts." Also: "although a majority (54%) of organizations are seeking efficiency
+and productivity improvements, only 38% reported they are tracking changes in
+employee productivity."
+Q4 2025 (n=2,773): "Almost all organizations report measurable ROI, and one-fifth
+(20%) report ROI in excess of 30%." **The question wording is the explanation:**
+> "Q: ROI to date: **Estimate** the ROI to date for this specific initiative."
+
+**A-24 · An executive saying on the record that it cannot be computed, and that
+they proceed anyway.**
+> "'Any technology that's a little over a year old, nobody's going to have a
+> year's worth of data to do a backward-looking ROI,' said one tech company
+> executive we interviewed. 'And with the fundamental and foundational changes
+> Generative AI offers, it's very hard to even offer a forward-looking [total cost
+> of operating] or ROI…'"
+> "many forward-thinking organizations are implementing Generative AI without
+> specific ROI targets as they realize they can't afford to get left behind"
+Deloitte Q2, Apr 2024, p.8. Also: "'When it comes to Generative AI, for now, we
+are doing qualitative assessments,' said the director of AI business development
+and strategy at a technology company."
+
+#### ⭐ The decision rule for outcomes 3 and 4 — four lines, auditable, and not ours
+
+**A-50 · UK government's definition of a real saving. Directly usable as the test
+a leader applies to any AI benefit case.**
+> "Cashable savings are those which lead to a direct reduction (all other things
+> being equal) in a department budget."
+> "The savings are defined as: ● Release of cash that relates to an activity that
+> has already happened ● Not just relocating or deferring costs ● Fairly calculated
+> and clearly positioned ● Captured in year and accrue within period ● Net of any
+> double counting ● Understood and seen as reasonable by an impartial third party."
+Cabinet Office / HM Treasury, *Government efficiency savings technical note*, pp.1, 7.
+https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1064110/government-efficiency-savings-technical-note.pdf
+**Anything failing those lines is an estimate. The surveys show an estimate is
+what almost everyone has.**
+
+**A-51 · The Green Book's additionality test — for benefits the market would have
+delivered anyway.**
+> "Deadweight: Outcomes that would have taken place without any intervention."
+> "Additionality: Outcomes that take place as a result of the intervention. For
+> example, a proposal to achieve growth in a particular industry should consider
+> how it is genuinely raising productivity over and above market trends."
+> "Substitution: The extent to which firms substitute one type of labour for
+> another to benefit from an intervention, without increasing employment or output."
+HM Treasury, *The Green Book 2026*, §4.17, §7.18.
+
+**A-3 · UK Magenta Book adds the condition that usually binds for AI.**
+> "The intervention effect is sufficiently large to be distinguished from expected
+> 'noise' in the data."
+> "To meet these requirements often requires building the evaluation design into
+> the intervention design"
+**A-46 · And the timing, which is the whole of outcome 3:**
+> "baseline data – data collected before the intervention – will need to be
+> collected early … Without appropriate data collection or data access planning an
+> evaluation may be impossible, severely limited, or unnecessarily expensive."
+HM Treasury, *Magenta Book*, Mar 2020, ch.2 p.78 and p.111.
+
+#### Methods table — what each buys and costs
+
+| Method | Requires | Costs | Cannot establish |
+|---|---|---|---|
+| Randomised holdout | Denying the tool to a control group for months | 4,867 devs over 2–8 months, still "noisy" | Survive control-group leakage, low take-up, or a reorg |
+| Task-level A/B | A randomisable task stream, objective timing | 16 people, 246 tasks — the cheap end | Learning effects past the window; volunteer bias |
+| Staggered rollout + DiD | Rollout timing not chosen by outcome; parallel trends | Long pre-period, many units | Parallel trends — "there is no way for us to prove" |
+| Synthetic control | Clean donor units, long pre-window, low volatility | Meta asks 25+ pre-periods over 20+ geo-units | Effects near the size of the outcome's own noise |
+| Geo experiment | Switchable by geography, all else held constant | Power analysis before launch | Anything if other activity moves |
+| **Before/after vs baseline** | Only a baseline | Cheapest of all | **Attribution. "Counterfeit" counterfactual** |
+| Matching / propensity | Rich observables + an untestable assumption | Data-heavy | Validation. 416% → 102% against a true 77% |
+| Mix modelling | Independently varying inputs, enough data points | 156 weekly points for 20+ channels | Causality except "under certain narrow conditions" |
+| Telemetry on the workflow | Logging | Cheap, no counterfactual included | **Productivity.** Measures activity only |
+| Theory-based evaluation | An articulated mechanism | "Time consuming, resource intensive" | **A net effect size or an ROI number** |
+
+**A-15 · Why telemetry is not the answer.**
+> "Myth: Productivity is all about developer activity. This is one of the most
+> common myths… working longer hours may signal developers having to 'brute-force'
+> work to overcome bad systems"
+> "it cannot be measured by a single metric or dimension."
+Forsgren, Storey, Maddila, Zimmermann, Houck & Butler, *The SPACE of Developer
+Productivity*, ACM Queue 19(1), 2021.
+
+#### Sourced traps — each one a candidate quiz item
+
+| Trap | The sourced statement |
+|---|---|
+| Baseline captured after the fact | "the baseline outcome is almost never a good estimate of the counterfactual" |
+| Before/after passed off as attribution | "external variations overwhelm the effects we are trying to detect" |
+| Early adopters volunteer | "treated agents already had higher resolutions per hour prior to AI model deployment (2.0 chats) relative to never-treated agents (1.7)" |
+| Novelty decay | A 4.7% click lift that "were decreasing rapidly day over day" and would have shipped user dissatisfaction. Microsoft, arXiv:2102.12893 |
+| Self-report substituted for measurement | "precise null effects on earnings and recorded hours"; "85% of chatbot users reallocate saved time to other job tasks"; adopters report "savings of about 3% of their work hours" |
+| Believing the self-report over the data | "developers expected AI to speed them up by 24%, and even after experiencing the slowdown, they still believed AI had sped them up by 20%" |
+| Individual gains claimed as enterprise gains | "An important limitation of above research and much of the literature on AI and productivity is the near total focus on individual work." Microsoft, Jul 2024 |
+| Double counting | "avoid double-counting"; "Net of any double counting" |
+| Savings with no spend falling | "Not just relocating or deferring costs" |
+| Market trend banked as benefit | "Deadweight: Outcomes that would have taken place without any intervention" |
+| Peeking and stopping early | "we are exposed to false positives due to multiple testing" |
+| Underpowered null read as "no effect" | "policy makers might close down a program that, in fact, benefits children" |
+
+#### ⚠️ Cross-source correction — Stanford's 1:10 figure
+
+**ST-31 quotes the playbook: "for every $1 of tangible tech investment, companies
+spend up to $10 on intangibles".** The attribution research could not find a
+primary supporting that as a **spend** ratio. Brynjolfsson & Yang's 10:1 is
+**intangible assets to IT assets** — a market-value correlation, not spending.
+> "Analyses of 800 large firms by Brynjolfsson and Yang (1997) suggest that the
+> ratio of intangible assets to information technology assets may be 10 to 1."
+The nearest primary statement on spend is "for every dollar of IT there are
+several dollars of organizational investments". **Use the ERP breakdown instead,
+which is concrete and verified:**
+> "the average spending on computer hardware accounted for less than 4 percent of
+> the typical start-up cost of $20.5 million, while software licenses and
+> development were another 16 percent of total costs. The remaining costs included
+> hiring outside and internal consultants to help design new business processes and
+> to train workers in the use of the system."
+Brynjolfsson & Hitt, *Beyond Computation*, *JEP* 14(4), Fall 2000.
+**So ~80% of an ERP programme was neither hardware nor software. That is the
+same claim the playbook wanted, with a source that holds.**
+
+**A-40 · And the lag, which is why measuring at 12 months understates.**
+> "While short-term benefits were about what would be expected if they had
+> 'normal' returns, long-term benefits were substantially larger: from 2 to 8 times
+> as much as short-term benefits."
+⚠️ Three published values across versions (2–5×, up to 5×, 2–8×). **Pin the
+citation to the version quoted.**
+
+#### Verdict — the answer to Ray's hard question
+
+A credible attribution is buyable, and the literature is explicit about the price:
+a control condition designed in **before** rollout, a baseline recorded **before**
+anyone touches the tool, and a window long enough to outlast novelty. What cannot
+be bought at any price is a credible attribution **after the fact**. So the choice
+is not between a rigorous method and a quick one. It is between a designed
+experiment and a number that is wrong by an unknown multiple in an unknown
+direction.
+
+And the scope is bounded by arithmetic, not diligence: effects worth chasing are
+small against business noise, halving the detectable effect quadruples the sample,
+and Lewis & Rao's 62× says enterprise-level ROI attribution is out of reach for
+almost everyone. **Attribution works at the workflow. It fails at the P&L.** That
+is the honest thing to teach, and it makes outcome 3 a demand for baselines on one
+workflow rather than a demand for an ROI model nobody can build.
+
+#### NOT ESTABLISHED — attribution
+
+1. **Any survey asking firms whether they used a control group, holdout or
+   randomised design.** Four full instruments checked. A genuine hole in the
+   literature, not a retrieval failure.
+2. **Any documented named enterprise running a randomised holdout for a
+   non-coding AI deployment.** All three RCTs found are developer studies, plus the
+   customer-support DiD. Searched finance, legal, marketing, service operations.
+3. A required measurement period in months for a knowledge-work intervention.
+4. A primary sentence stating "$10 organisational per $1 IT" as a spend ratio.
+5. The Solow "computers everywhere except in the productivity statistics" line in
+   its original 1987 source. **Do not attribute a wording to Solow.**
+6. IBM 2026 CEO Study ROI figures — a circulating "72% have clear metrics"
+   conflicts with the 2025 report's 68%. Treat 2026 IBM ROI figures as unverified.
+7. **Figures traceable to no primary, which must not be used:** "84% see ROI but
+   only 20–30% can prove it"; "only 29% can measure ROI confidently"; "average
+   enterprise ROI of 5.9%"; "89% adopted but only 23% can measure ROI"; Meta's
+   circulating "200,000 users per group / 2–4 weeks" holdout thresholds.
+
 ### Worked examples — all anonymised, all with before/after numbers
 
 **ST-17 · Invoice processing · $1B+ US logistics company** (pp.16–18). Fleet of
