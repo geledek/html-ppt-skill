@@ -22,6 +22,13 @@ learning outcomes, and a duration budget. Today it renders to one Deck; it may
 span several Decks in future.
 _Avoid_: curriculum, class, training
 
+**Series**:
+A set of related Courses sharing one audience, one Research Brief, one Theme and
+one Template. Deliberately makes no claim about whether its members are sittings
+of a single Course or Courses in their own right — that is settled once their
+Outlines exist and can be compared, not before.
+_Avoid_: program, track, curriculum
+
 **Section**:
 A teaching unit within a Course — one coherent chunk of instruction. Spans one
 or more Slides. Not a renderer concept; the renderer sees only Slides.

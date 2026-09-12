@@ -1,0 +1,17 @@
+/* theme: course-warm — 教学暖色 (the course-module palette, lifted into a theme) */
+:root{
+  --bg:#fbfaf6;--bg-soft:#f4f1e8;--surface:#ffffff;--surface-2:#f6f3ea;
+  --border:rgba(60,45,20,.12);--border-strong:rgba(60,45,20,.24);
+  --text-1:#2a2418;--text-2:#5a5140;--text-3:#8a7f68;
+  --accent:#2d7d6e;--accent-2:#d88a3a;--accent-3:#c4593f;
+  --good:#2d7d6e;--warn:#d88a3a;--bad:#c4593f;
+  --grad:linear-gradient(135deg,#2d7d6e,#4ea893);
+  --grad-soft:linear-gradient(135deg,#eaf3f0,#f6f3ea);
+  --radius:14px;--radius-sm:8px;--radius-lg:20px;
+  --shadow:0 12px 30px rgba(60,45,20,.07);
+  --shadow-lg:0 24px 60px rgba(60,45,20,.12);
+  --font-sans:'Inter','Noto Sans SC',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+  --font-serif:'Playfair Display','Noto Serif SC',Georgia,serif;
+  --font-display:'Playfair Display','Noto Serif SC',Georgia,serif;
+}
+.kicker{color:var(--accent-2);letter-spacing:.14em}
