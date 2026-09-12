@@ -489,10 +489,150 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
 .tpl-course .rm-beyond li{font-size:19px;color:var(--text-2);padding:12px 0;border-bottom:1px solid var(--border)}
 .tpl-course .rm-beyond li:last-child{border-bottom:none}
 .tpl-course .rm-beyond li b{display:block;color:var(--text-1);font-size:20px;margin-bottom:3px}
+
+/* ---- cover ----------------------------------------------------------------
+   Shared across every course in a series: the series line and the presenter
+   block stay identical, only the course title changes. */
+.tpl-course .slide.cover{grid-template-rows:1fr auto}
+.tpl-course .cover-main{align-self:center;width:100%}
+.tpl-course .cover-series{font-size:20px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 28px}
+.tpl-course .cover-title{font-family:var(--font-display);font-size:104px;line-height:1.02;font-weight:800;letter-spacing:-.025em;color:var(--text-1);margin:0}
+.tpl-course .cover-rule{width:120px;height:5px;background:var(--accent);margin:44px 0 36px}
+.tpl-course .cover-by{font-size:27px;color:var(--text-1);font-weight:600;margin:0}
+.tpl-course .cover-role{font-size:22px;color:var(--text-2);margin:6px 0 0}
+.tpl-course .cover-foot{align-self:end;width:100%;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--border);padding-top:18px;font-size:18px;color:var(--text-3)}
+
+/* ---- quote — one statement, the whole frame ------------------------------- */
+.tpl-course .slide.quote-slide{grid-template-rows:1fr auto}
+.tpl-course .quote-body{align-self:center}
+.tpl-course .quote-mark{font-family:var(--font-display);font-size:120px;line-height:.6;color:var(--accent);opacity:.25;margin:0 0 8px}
+.tpl-course .quote-text{font-family:var(--font-display);font-size:58px;line-height:1.18;font-weight:700;letter-spacing:-.015em;color:var(--text-1);margin:0;max-width:26ch}
+.tpl-course .quote-attr{font-size:22px;color:var(--text-2);margin:34px 0 0}
+.tpl-course .quote-attr b{color:var(--text-1)}
+
+/* ---- stat — one number, the whole frame ----------------------------------- */
+.tpl-course .stat-row{display:flex;gap:96px;align-items:flex-start;margin-top:8px}
+.tpl-course .stat-fig{font-family:var(--font-display);font-size:132px;line-height:1;font-weight:800;letter-spacing:-.04em;color:var(--accent);margin:0}
+.tpl-course .stat-unit{font-size:26px;color:var(--text-2);margin:10px 0 0;max-width:22ch}
 </style>
 </head>
 <body class="tpl-course stage-fixed">
 <div class="deck">
+
+<!-- section: 00-cover.html -->
+  <section class="slide cover" data-section="0" data-title="Cover">
+    <div class="cover-main">
+      <p class="cover-series">AI for Business Leaders &middot; Online Series for ISCA</p>
+      <h1 class="cover-title">Overview for<br>AI Governance</h1>
+      <div class="cover-rule"></div>
+      <p class="cover-by">Ray Han, PhD (Computer Science, NTU)</p>
+      <p class="cover-role">Chief AI Trainer, HGT Consultancy Pte Ltd</p>
+    </div>
+    <div class="cover-foot">
+      <span>30 minutes &middot; recorded</span>
+      <span>Singapore &middot; 2026</span>
+    </div>
+    <div class="notes">Welcome to Overview for AI Governance, part of the AI for Business Leaders online series for ISCA. I am Ray Han, Chief AI Trainer at HGT Consultancy. Over the next thirty minutes we will work out which rules actually apply to the AI your organisation is already running, who owns the risk, what to ask of any new proposal, and what to do about it in the next ninety days.</div>
+  </section>
+
+<!-- section: 01-approve-launch.html -->
+  <section class="slide" data-section="1" data-title="The decision">
+    <header class="slide-head">
+      <p class="kicker">THE DECISION</p>
+      <h2 class="h2 mt-s">You are asked to approve the launch.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="concept-box mt-l">
+        <h4>A Singapore business wants to launch a customer service chatbot.</h4>
+        <p class="dim">The supplier says its product follows Singapore's Model AI Governance Framework.</p>
+      </div>
+      <div class="grid g3 mt-l">
+        <div class="concept-box"><h4>Yes</h4></div>
+        <div class="concept-box"><h4>No</h4></div>
+        <div class="concept-box"><h4>Need more information</h4></div>
+      </div>
+      <div class="notes">A Singapore business wants to launch a customer service chatbot. The supplier says its product follows Singapore's Model AI Governance Framework. You are asked to approve the launch. Is that enough? ( Yes · No · Need more information )</div>
+    </div>
+  </section>
+
+  <section class="slide" data-section="1" data-title="What you are missing">
+    <header class="slide-head">
+      <p class="kicker">WHAT YOU ARE MISSING</p>
+      <h2 class="h2 mt-s">Four things you still do not know.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="grid g2 mt-l">
+        <div class="concept-box"><h4>Data</h4><p class="dim">What data the chatbot collects and what it was trained on</p></div>
+        <div class="concept-box"><h4>Money</h4><p class="dim">What it can tell a customer that costs you money</p></div>
+        <div class="concept-box"><h4>Customers</h4><p class="dim">Where your customers are sitting when they use it</p></div>
+        <div class="concept-box"><h4>Your organisation</h4><p class="dim">Who in your organisation answers for it when it is wrong</p></div>
+      </div>
+      <div class="callout mt-l">The framework is voluntary. <b>The Personal Data Protection Act is not.</b></div>
+      <div class="notes">Need more information is the right answer. "No" is also reasonable. "Yes" is not. IMDA wrote the Model Framework, and says in the framework itself that adopting it "will not absolve organisations from compliance with current laws and regulations." The framework is voluntary. The Personal Data Protection Act is not. Four things you still do not know: what data the chatbot collects and what it was trained on; what it can tell a customer that costs you money; where your customers are sitting when they use it; and who in your organisation answers for it when it is wrong. Those four gaps are the next 28 minutes. None of them is answered by a framework, and all of them are answerable by you. If you picked Yes, you have company. In the Bank of England and FCA survey of UK financial firms, 46% of those using AI reported only partial understanding of the AI they use.</div>
+    </div>
+  </section>
+<section class="slide" data-section="1" data-title="Partial understanding">
+    <header class="slide-head">
+      <p class="kicker">IF YOU PICKED YES, YOU HAVE COMPANY</p>
+      <h2 class="h2 mt-s">Most firms do not know what their AI does.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="stat-row">
+        <div><p class="stat-fig">46%</p><p class="stat-unit">of firms using AI report only <b>partial understanding</b> of the AI they use</p></div>
+        <div><p class="stat-fig">75%</p><p class="stat-unit">of firms are already using AI</p></div>
+      </div>
+      <p class="pill-academic mt-l">Bank of England and FCA survey of UK financial firms</p>
+      <div class="notes">If you picked yes, you have company. In the Bank of England and FCA survey of UK financial firms, seventy-five per cent were already using AI, and forty-six per cent of those using it reported only partial understanding of the AI they use. The gap you just felt is the normal condition, not a personal failing. The rest of this course is the map.</div>
+    </div>
+  </section>
+
+<!-- section: 02-one-definition.html -->
+  <section class="slide" data-section="2" data-title="The agreement">
+    <header class="slide-head">
+      <p class="kicker">FORTY-SEVEN COUNTRIES</p>
+      <h2 class="h2 mt-s">The same definition of an AI system.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="layer-stack mt-l">
+        <div class="layer is-voluntary"><div class="layer-name">OECD, 2019</div><div class="layer-note">wrote it</div></div>
+        <div class="layer is-voluntary"><div class="layer-name">2024</div><div class="layer-note">revised it</div></div>
+        <div class="layer is-binding"><div class="layer-name">EU, Article 3(1)</div><div class="layer-note">almost word for word</div></div>
+      </div>
+      <div class="notes">Forty-seven countries have adhered to the same definition of an AI system. The OECD wrote it in 2019 and revised it in 2024. The EU copied it almost word for word into Article 3(1) of the AI Act. Agreement stops there.</div>
+    </div>
+  </section>
+
+  <section class="slide" data-section="2" data-title="The divergence">
+    <header class="slide-head">
+      <p class="kicker">WHERE AGREEMENT STOPS</p>
+      <h2 class="h2 mt-s">One definition, many rulebooks.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="grid g3 mt-l">
+        <div class="concept-box"><h4>The EU</h4><p class="dim">risk tiers in law</p></div>
+        <div class="concept-box"><h4>Singapore and the UK</h4><p class="dim">guidance rather than rules</p></div>
+        <div class="concept-box"><h4>India</h4><p class="dim">binding rules on labelling synthetic content</p></div>
+        <div class="concept-box"><h4>Korea</h4><p class="dim">a framework act</p></div>
+        <div class="concept-box"><h4>China</h4><p class="dim">binding rules on generative AI and content labelling</p></div>
+        <div class="concept-box"><h4>The United States</h4><p class="dim">litigating against its own states</p></div>
+      </div>
+      <div class="notes">The EU sets risk tiers in law, with fines reaching 7% of worldwide turnover. Singapore and the UK hand the job to the regulators that already exist, and publish guidance rather than rules. India says the same thing about philosophy, but has binding rules on labelling synthetic content in force since February 2026. Korea passed a framework act, in force January 2026. China has no comprehensive AI law, and binding rules on generative AI and content labelling that it already enforces. The United States reversed direction in 2025 and is now litigating against its own states.</div>
+    </div>
+  </section>
+
+  <section class="slide" data-section="2" data-title="The reframe">
+    <header class="slide-head">
+      <p class="kicker">THE QUESTION THAT HAS AN ANSWER</p>
+      <h2 class="h2 mt-s">Ask a better question.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="concept-box mt-l">
+        <h4>&ldquo;Which of my uses, where, judged by whom?&rdquo;</h4>
+        <p class="dim">does have an answer</p>
+      </div>
+      <div class="notes">So "is AI regulated?" has no answer. The word covers a Korean statute, a Chinese labelling rule, a Singapore guideline and an American lawsuit against a state. "Which of my uses, where, judged by whom?" does have an answer, and you can work it out in an afternoon. That question is the shape of everything that follows.</div>
+    </div>
+  </section>
 
 <!-- section: 03-legal-force.html -->
   <section class="slide" data-section="3" data-title="Three layers, all at once">
@@ -600,7 +740,270 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
     </div>
   </section>
 
-<!-- section: 07-roadmap.html -->
+<!-- section: 04-enforcement.html -->
+  <section class="slide" data-section="4" data-title="What produced real consequences">
+    <header class="slide-head">
+      <p class="kicker">WHERE ENFORCEMENT ACTUALLY IS</p>
+      <h2 class="h2 mt-s">What produced real consequences.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="grid g3 mt-l">
+        <div class="concept-box"><h4>Dutch tax authority</h4><p class="dim">2.75 million euros<br>At least 244,273 people were affected.</p></div>
+        <div class="concept-box"><h4>Australia's Robodebt scheme</h4><p class="dim">1.763 billion Australian dollars of debt<br>roughly 433,000 people</p></div>
+        <div class="concept-box"><h4>Italy fined</h4><p class="dim">Deliveroo 2.5 million euro<br>Glovo 5 million</p></div>
+      </div>
+      <div class="callout mt-l">All three turned on <b>whether a person could argue with the decision.</b></div>
+      <div class="notes">The Dutch tax authority used nationality as an indicator in a risk-classification model. The regulator found that unlawful and discriminatory, and fined it 2.75 million euros. At least 244,273 people were affected. More than 43,000 are now recognised as victims, each receiving at least 30,000 euros. The cabinet resigned in January 2021. Australia's Robodebt scheme asserted 1.763 billion Australian dollars of debt against roughly 433,000 people. A judge called it "a massive failure of public administration." Italy fined Deliveroo 2.5 million euro and Glovo 5 million over rider-management algorithms, where a suspended rider "received an automatic message without any possibility of providing explanations or contesting the decision." None of these turned on how accurate the model was. All three turned on whether a person could argue with the decision.</div>
+    </div>
+  </section>
+
+  <section class="slide" data-section="4" data-title="The headline AI fines">
+    <header class="slide-head">
+      <p class="kicker">THE HEADLINE AI FINES</p>
+      <h2 class="h2 mt-s">The headline AI fines mostly did not survive.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="grid g2 mt-l">
+        <div class="concept-box"><h4>OpenAI</h4><p class="dim">Annulled</p></div>
+        <div class="concept-box"><h4>Italy fined Clearview AI</h4><p class="dim">never collected</p></div>
+        <div class="concept-box"><h4>The UK fined Clearview</h4><p class="dim">still unadjudicated on the merits</p></div>
+        <div class="concept-box"><h4>New York City's hiring-audit law</h4><p class="dim">one compliance issue across 32 companies surveyed.</p></div>
+      </div>
+      <div class="notes">Italy fined OpenAI 15 million euro; a Rome court annulled it in March 2026 on jurisdiction, without examining the substance. Italy fined Clearview AI 20 million euro, never collected. The UK fined Clearview 7.55 million pounds in 2022, still unadjudicated on the merits four years later. New York City's hiring-audit law turned up one compliance issue across 32 companies surveyed. Annulled, uncollected, undecided, barely detected. Plan against the pattern in 4.1, not against the headlines.</div>
+    </div>
+  </section>
+
+<section class="slide quote-slide" data-section="4" data-title="A remarkable submission">
+    <div class="quote-body">
+      <p class="quote-mark">&ldquo;</p>
+      <p class="quote-text">Air Canada suggests the chatbot is a separate legal entity that is responsible for its own actions. This is a remarkable submission.</p>
+      <p class="quote-attr">British Columbia Civil Resolution Tribunal &middot; <b>Moffatt v. Air Canada</b>, 2024 BCCRT 149</p>
+    </div>
+    <div class="notes">Air Canada's chatbot gave a passenger the wrong advice on bereavement fares. The airline argued that the chatbot was a separate legal entity, responsible for its own actions. The tribunal called that a remarkable submission. It awarded 812 Canadian dollars. The sum is small. The principle is not.</div>
+  </section>
+
+  <section class="slide" data-section="4" data-title="No regulator at all">
+    <header class="slide-head">
+      <p class="kicker">THE COST WITHOUT A REGULATOR</p>
+      <h2 class="h2 mt-s">Two failures. No regulator involved.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="grid g2 mt-l">
+        <div class="concept-box"><h4>Air Canada</h4><p class="dim">wrong information<br>812 Canadian dollars</p></div>
+        <div class="concept-box"><h4>Zillow</h4><p class="dim">304 million United States dollars in a single quarter<br>cut roughly 25% of its staff.</p></div>
+      </div>
+      <div class="callout mt-l">It is just <b>never the whole question.</b></div>
+      <div class="notes">Air Canada's chatbot gave a passenger the wrong advice on bereavement fares. The airline argued that the chatbot was "a separate legal entity that is responsible for its own actions." The tribunal called that "a remarkable submission." It awarded 812 Canadian dollars. The sum is small. The principle is not. Zillow's home-pricing model was confidently wrong. The company wrote down 304 million United States dollars in a single quarter and cut roughly 25% of its staff. No regulator was involved. Accuracy is not irrelevant. Zillow was a forecasting failure and Air Canada was wrong information. It is just never the whole question.</div>
+    </div>
+  </section>
+
+  <section class="slide" data-section="4" data-title="Which change addresses the governance gap">
+    <header class="slide-head">
+      <p class="kicker">QUIZ</p>
+      <h2 class="h2 mt-s">Which change addresses the governance gap?</h2>
+    </header>
+    <div class="slide-body">
+      <p class="lede mt-m">A rider-management algorithm assigns shifts. An audit shows it is accurate and well calibrated. Suspended riders receive an automated message. They can appeal, and the appeal re-runs the same algorithm.</p>
+      <div class="quiz mt-l">
+        <div class="mcq"><div class="letter">A</div><div><b>Improve the model's accuracy further.</b><p class="why">Accuracy was not the finding in the Italian rider cases. A well-calibrated model that cannot be contested still fails.</p></div></div>
+        <div class="mcq"><div class="letter">B</div><div><b>Publish a fuller explanation of how the algorithm works.</b><p class="why">Explanation helps, and it is not what was missing. The finding turned on the absence of any route to contest. An explanation a rider cannot act on is not a route.</p></div></div>
+        <div class="mcq" data-correct><div class="letter">C</div><div><b>Give a person the authority to overturn the decision.</b><p class="why">Foodinho's riders got &ldquo;an automatic message without any possibility of providing explanations or contesting the decision.&rdquo; An appeal that re-runs the same algorithm is not a review.</p></div></div>
+        <p class="verdict"></p>
+      </div>
+      <div class="notes">A rider-management algorithm assigns shifts. An audit shows it is accurate and well calibrated. Suspended riders receive an automated message. They can appeal, and the appeal re-runs the same algorithm. Which change addresses the governance gap? A. Improve the model's accuracy further. Accuracy was not the finding in the Italian rider cases. A well-calibrated model that cannot be contested still fails. B. Publish a fuller explanation of how the algorithm works. Explanation helps, and it is not what was missing. The finding turned on the absence of any route to contest. An explanation a rider cannot act on is not a route. C. Give a person the authority to overturn the decision. Foodinho's riders got "an automatic message without any possibility of providing explanations or contesting the decision." An appeal that re-runs the same algorithm is not a review.</div>
+    </div>
+  </section>
+
+<!-- section: 05-sector-layer.html -->
+  <section class="slide" data-section="5" data-title="Sectors add a layer">
+    <header class="slide-head">
+      <p class="kicker">THE SECTOR LAYER</p>
+      <h2 class="h2 mt-s">Singapore finance: advisory, and still unissued.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="grid g2 mt-l">
+        <div class="concept-box"><h4>FEAT</h4><p class="dim">MAS published FEAT in 2018: fourteen principles on fairness, ethics, accountability and transparency. It is advisory.</p></div>
+        <div class="concept-box"><h4>Guidelines on AI Risk Management</h4><p class="dim">As at September 2026 they have not been issued, so the transition has not started.</p></div>
+      </div>
+      <div class="notes">Everything so far applies whatever business you are in. Your sector adds to it. In Singapore, MAS published FEAT in 2018: fourteen principles on fairness, ethics, accountability and transparency. It is advisory. MAS files it as an Information Paper, which its own hierarchy does not list as a regulatory instrument at all. MAS consulted on Guidelines on AI Risk Management in November 2025 and proposed a twelve-month transition after issuance. As at September 2026 they have not been issued, so the transition has not started.</div>
+    </div>
+  </section>
+
+<section class="slide quote-slide" data-section="5" data-title="Enough regulatory bite">
+    <div class="quote-body">
+      <p class="quote-mark">&ldquo;</p>
+      <p class="quote-text">Enough regulatory bite that we don&rsquo;t need to write new rules for AI.</p>
+      <p class="quote-attr">FCA Chief Data, Information and Intelligence Officer &middot; <b>Treasury Committee</b>, 20 January 2026</p>
+    </div>
+    <div class="notes">The FCA was asked whether it would write AI rules. It said no. Its Chief Data, Information and Intelligence Officer told the Treasury Committee in January 2026 that the Senior Managers regime and the Consumer Duty together give the regulator enough regulatory bite that they do not need to write new rules for AI.</div>
+  </section>
+
+  <section class="slide" data-section="5" data-title="Responsibility follows the activity">
+    <header class="slide-head">
+      <p class="kicker">THE UK</p>
+      <h2 class="h2 mt-s">Responsibility follows the activity.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="concept-box mt-l">
+        <h4>The FCA</h4>
+        <p class="dim">&ldquo;enough regulatory bite that we don't need to write new rules for AI.&rdquo;</p>
+      </div>
+      <div class="grid g2 mt-l">
+        <div class="concept-box"><h4>technology systems</h4><p class="dim">Chief Operations function</p></div>
+        <div class="concept-box"><h4>risk controls</h4><p class="dim">Chief Risk function</p></div>
+      </div>
+      <div class="notes">The FCA was asked whether it would write AI rules. It said no. Its Chief Data, Information and Intelligence Officer told the Treasury Committee in January 2026 that the Senior Managers regime and the Consumer Duty together give the regulator "enough regulatory bite that we don't need to write new rules for AI." So who owns AI risk in a UK regulated firm? Somebody already does. Responsibility follows the activity, business area or function: technology systems normally sit with the Chief Operations function, risk controls with the Chief Risk function. The FCA considered creating a dedicated AI Senior Manager and decided against it, on the basis that existing governance already reached the problem.</div>
+    </div>
+  </section>
+
+  <section class="slide" data-section="5" data-title="What travels beyond finance">
+    <header class="slide-head">
+      <p class="kicker">WHAT TRAVELS BEYOND FINANCE</p>
+      <h2 class="h2 mt-s">If nobody can be named, that is your finding.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="grid g2 mt-l">
+        <div class="concept-box"><h4>Your sector regulator</h4><p class="dim">probably already has a view</p></div>
+        <div class="concept-box"><h4>If nobody in your organisation can be named</h4><p class="dim">that is a finding about your organisation rather than about the regulation.</p></div>
+      </div>
+      <div class="notes">Your sector regulator probably already has a view, and it probably is not written in a document with "AI" in the title. And the absence of an AI-specific rule does not create an absence of an owner. If nobody in your organisation can be named, that is a finding about your organisation rather than about the regulation.</div>
+    </div>
+  </section>
+
+  <section class="slide" data-section="5" data-title="Who must own this before launch">
+    <header class="slide-head">
+      <p class="kicker">QUIZ</p>
+      <h2 class="h2 mt-s">Who must own this before launch?</h2>
+    </header>
+    <div class="slide-body">
+      <p class="lede mt-m">A bank is launching a credit-decisioning tool built by a vendor. The business sponsor says the vendor is accountable for model performance. The risk function says nobody has asked it to review anything.</p>
+      <div class="quiz mt-l">
+        <div class="mcq"><div class="letter">A</div><div><b>The vendor. It built the model and monitors it.</b><p class="why">FEAT Principle 8: firms are &ldquo;accountable for both internally developed and externally sourced AIDA models.&rdquo; Outsourcing the build does not outsource the accountability.</p></div></div>
+        <div class="mcq" data-correct><div class="letter">B</div><div><b>A named senior manager inside the bank, with the risk function's review done.</b><p class="why">Responsibility follows the activity and the function. The FCA declined to create an AI-specific role precisely because an existing owner already holds it.</p></div></div>
+        <div class="mcq"><div class="letter">C</div><div><b>Nobody yet. No AI-specific rule requires an owner before launch.</b><p class="why">The absence of an AI rule is not an absence of an owner. FEAT, the Senior Managers regime and the Consumer Duty all attach to the firm regardless.</p></div></div>
+        <p class="verdict"></p>
+      </div>
+      <div class="notes">A bank is launching a credit-decisioning tool built by a vendor. The vendor says the model is tested and monitored. The business sponsor says the vendor is accountable for model performance. The risk function says nobody has asked it to review anything. Who must own this before launch? A. The vendor. It built the model and monitors it. FEAT Principle 8: firms are "accountable for both internally developed and externally sourced AIDA models." Outsourcing the build does not outsource the accountability. B. A named senior manager inside the bank, with the risk function's review done. Responsibility follows the activity and the function. The FCA declined to create an AI-specific role precisely because an existing owner already holds it. C. Nobody yet. No AI-specific rule requires an owner before launch. The absence of an AI rule is not an absence of an owner. FEAT, the Senior Managers regime and the Consumer Duty all attach to the firm regardless.</div>
+    </div>
+  </section>
+
+<!-- section: 06-three-questions.html -->
+  <section class="slide" data-section="6" data-title="Three questions">
+    <header class="slide-head">
+      <p class="kicker">THREE QUESTIONS</p>
+      <h2 class="h2 mt-s">Three questions for any AI proposal.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="grid g3 mt-l">
+        <div class="concept-box"><h4>Accountability</h4><p class="dim">Who is accountable when this is wrong, and what is their name?</p></div>
+        <div class="concept-box"><h4>Contestability</h4><p class="dim">How does a person affected by this contest what it decided?</p></div>
+        <div class="concept-box"><h4>Disclosure</h4><p class="dim">What have we told customers this does?</p></div>
+      </div>
+      <div class="notes">Few executives have time to assess every AI proposal properly. Most have time for three questions. Who is accountable when this is wrong, and what is their name? How does a person affected by this contest what it decided? What have we told customers this does?</div>
+    </div>
+  </section>
+
+  <section class="slide" data-section="6" data-title="Where each one comes from">
+    <header class="slide-head">
+      <p class="kicker">WHERE EACH ONE COMES FROM</p>
+      <h2 class="h2 mt-s">Each one comes from a case with consequences.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="grid g3 mt-l">
+        <div class="concept-box"><h4>Accountability</h4><p class="dim">FEAT Principle 8</p><p class="dim">Externally sourced models as well as their own.</p></div>
+        <div class="concept-box"><h4>Contestability</h4><p class="dim">The Dutch, Deliveroo and Foodinho findings</p><p class="dim">Whether a person could argue with a decision.</p></div>
+        <div class="concept-box"><h4>Disclosure</h4><p class="dim">Air Canada</p><p class="dim">The first AI-washing settlements brought by the SEC in 2024.</p></div>
+      </div>
+      <div class="notes">Each comes from a case you just saw. Accountability: FEAT Principle 8 makes firms accountable for externally sourced models as well as their own. A third of AI use cases in UK financial services arrive through third parties. Contestability: the Dutch, Deliveroo and Foodinho findings all turned on whether a person could argue with a decision. Disclosure comes from Air Canada, and from the first AI-washing settlements brought by the SEC in 2024. Two advisers paid 400,000 United States dollars between them for claiming to use AI that they were not using. One caution on the third. A New York regulator reviewed roughly 400,000 Apple Card applications. It found no discrimination by Goldman Sachs or Apple, and both could explain every complainant's decision when asked. The public criticism continued anyway. Being able to explain a decision will protect a firm in a regulator's assessment. On its own, it will not protect its reputation.</div>
+    </div>
+  </section>
+
+  <section class="slide" data-section="6" data-title="The question that actually decides">
+    <header class="slide-head">
+      <p class="kicker">THE QUESTION THAT ACTUALLY DECIDES</p>
+      <h2 class="h2 mt-s">What evidence would justify approving this, restricting it, or stopping it?</h2>
+    </header>
+    <div class="slide-body">
+      <div class="grid g2 mt-l">
+        <div class="concept-box"><h4>Tested</h4><p class="dim">In the setting where it will run.</p></div>
+        <div class="concept-box"><h4>A person can intervene</h4><p class="dim">Has the authority to overrule it.</p></div>
+        <div class="concept-box"><h4>Monitoring</h4><p class="dim">Would show if it had drifted.</p></div>
+        <div class="concept-box"><h4>A stop or rollback exists</h4><p class="dim">Somebody has actually tried.</p></div>
+      </div>
+      <div class="concept-box mt-m">
+        <h4>Singapore's agentic AI framework</h4>
+        <p class="dim">Systems &ldquo;should not allow high stakes or irreversible actions to take place without human review.&rdquo;</p>
+      </div>
+      <div class="notes">A firm can obtain satisfactory answers to all three and still approve a system with no evidence that it works. A fourth question closes that gap. What evidence would justify approving this, restricting it, or stopping it? Four things make up that evidence. It has been tested in the setting where it will run, not on the vendor's benchmark. A person can intervene, and has the authority to overrule it. Monitoring would show if it had drifted. And a stop or rollback exists that somebody has actually tried.</div>
+    </div>
+  </section>
+
+<section class="slide quote-slide" data-section="6" data-title="The hard line">
+    <div class="quote-body">
+      <p class="quote-mark">&ldquo;</p>
+      <p class="quote-text">Systems should not allow high stakes or irreversible actions to take place without human review.</p>
+      <p class="quote-attr">IMDA &middot; <b>Model AI Governance Framework for Agentic AI</b></p>
+    </div>
+    <div class="notes">Singapore's agentic AI framework states the hard line. Systems should not allow high stakes or irreversible actions to take place without human review. It does not prohibit autonomy. It prohibits autonomy where the action cannot be undone.</div>
+  </section>
+
+  <section class="slide" data-section="6" data-title="Back to the chatbot">
+    <header class="slide-head">
+      <p class="kicker">BACK TO THE CHATBOT</p>
+      <h2 class="h2 mt-s">Back to the chatbot.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="grid g2 mt-l">
+        <div class="concept-box"><h4>Whose name is on this?</h4><p class="dim">How does a customer dispute what it told them?</p></div>
+        <div class="concept-box"><h4>What does your marketing claim it can do?</h4><p class="dim">What happens when it is confidently wrong at two in the morning on a Saturday?</p></div>
+      </div>
+      <div class="notes">Return to the decision put to you 25 minutes ago. The supplier follows a voluntary framework. That answers none of the four questions. Ask these instead. Whose name is on this? How does a customer dispute what it told them? What does your marketing claim it can do? And what happens when it is confidently wrong at two in the morning on a Saturday?</div>
+    </div>
+  </section>
+
+  <section class="slide" data-section="6" data-title="Quiz">
+    <header class="slide-head">
+      <p class="kicker">QUIZ</p>
+      <h2 class="h2 mt-s">Approve, restrict, or stop?</h2>
+    </header>
+    <div class="slide-body">
+      <p class="lede mt-m">An AI tool flags insurance claims for manual review. It has a named accountable owner, a published appeals process, and accurate marketing copy.</p>
+      <p class="lede mt-s">It has been tested on the vendor's benchmark dataset. There is no monitoring in production and no rollback plan.</p>
+      <div class="quiz mt-l">
+        <div class="mcq"><div class="letter">A</div><div><b>Approve. Accountability, contestability and disclosure are all in place.</b><p class="why">Those three are necessary and not sufficient. None of them tells you whether it works in your setting.</p></div></div>
+        <div class="mcq" data-correct><div class="letter">B</div><div><b>Restrict. A limited pilot with monitoring and a rollback, then reassess.</b><p class="why">The gap is evidence, not governance paperwork. A bounded pilot produces what a vendor benchmark cannot.</p></div></div>
+        <div class="mcq"><div class="letter">C</div><div><b>Stop. It cannot be deployed without production monitoring.</b><p class="why">Defensible, and disproportionate here. The action is a flag for human review, which is neither high-stakes nor irreversible. Reserve stopping for decisions that are.</p></div></div>
+        <p class="verdict"></p>
+      </div>
+      <div class="notes">An AI tool flags insurance claims for manual review. It has a named accountable owner, a published appeals process, and accurate marketing copy. It has been tested on the vendor's benchmark dataset. There is no monitoring in production and no rollback plan. Approve, restrict, or stop? A. Approve. Accountability, contestability and disclosure are all in place. Those three are necessary and not sufficient. None of them tells you whether it works in your setting. B. Restrict. A limited pilot with monitoring and a rollback, then reassess. The gap is evidence, not governance paperwork. A bounded pilot produces what a vendor benchmark cannot. C. Stop. It cannot be deployed without production monitoring. Defensible, and disproportionate here. The action is a flag for human review, which is neither high-stakes nor irreversible. Reserve stopping for decisions that are.</div>
+    </div>
+  </section>
+
+<!-- section: 07a-hsbc.html -->
+  <section class="slide quote-slide" data-section="7" data-title="What a regulator credited">
+    <div class="quote-body">
+      <p class="quote-mark">&ldquo;</p>
+      <p class="quote-text">From the perspective of accountability and disclosure of policies and practices, HSBC had acquitted itself.</p>
+      <p class="quote-attr">Deputy Commissioner for Personal Data Protection &middot; <b>Re HSBC Bank (Singapore)</b> [2021] SGPDPC 3</p>
+    </div>
+    <div class="notes">One case in this course ended well for the company. In 2021 a rejected credit-card applicant asked HSBC Singapore for the algorithmically generated scores behind the refusal. HSBC declined. Singapore's Deputy Commissioner agreed that the bank was entitled to decline, because the scores were evaluative opinion data. The law settled that. Then he went further than he needed to. He said that HSBC had acted reasonably by providing information about how it uses data and technology to conduct credit facility assessments, and that from the perspective of accountability and disclosure of policies and practices, HSBC had acquitted itself.</div>
+  </section>
+  <section class="slide" data-section="7" data-title="Two published documents">
+    <header class="slide-head">
+      <p class="kicker">WHAT HE WAS POINTING AT</p>
+      <h2 class="h2 mt-s">Two documents, published in advance.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="grid g2">
+        <div class="concept-box"><h4>A Principle for the Ethical Use of Big Data and AI</h4><p class="dim">Published by HSBC before the complaint was made.</p></div>
+        <div class="concept-box"><h4>A Credit Decisioning Policy Statement</h4><p class="dim">How data and technology are used to assess credit.</p></div>
+      </div>
+      <div class="callout mt-l">The publications did not win the case. They let a regulator satisfy itself <b>quickly</b> that the organisation was in control.</div>
+      <div class="notes">He was pointing at two documents that HSBC had published: a Principle for the Ethical Use of Big Data and AI, and a Credit Decisioning Policy Statement. The publications did not win the case. What they did was let a regulator satisfy itself quickly that the organisation was in control. It is the cheapest item on the roadmap that follows, and the only one with a regulator's endorsement attached.</div>
+    </div>
+  </section>
+
+<!-- section: 07b-roadmap.html -->
   <section class="slide" data-section="7" data-title="Your AI governance roadmap">
     <header class="slide-head wide">
       <p class="kicker">YOUR ROADMAP</p>
@@ -636,6 +1039,47 @@ h1.title,h2.title,.h1,.h2{font-weight:700;color:var(--accent)}
       </div>
       <div class="notes">This is the whole roadmap on one page. The inventory is a gate, not the first of four equal items: you cannot designate an owner for a use you have not listed, and you cannot build a route of appeal for a decision you have not found. MAS puts it at section 3.4 of the draft Guidelines. Once you have the inventory, the next three run in parallel. Designate an owner for each consequential use — a person, not a committee, and not the vendor. Build a route by which someone affected can reach a human with the authority to overturn the outcome. And put AI terms into your procurement, because a third of use cases arrive through suppliers and you remain accountable for those. On the right are the things that can wait. Notice they have no dates. Each one is triggered by a condition, because a date on a slide ages badly and a condition stays true. Certification when a contract or a tender scores it. Tooling when tracking by hand stops working. A dedicated function when ad-hoc ownership stops scaling. Screenshot this page. It is the only slide you need to keep.</div>
     </div>
+  </section>
+
+<!-- section: 07c-close.html -->
+  <section class="slide" data-section="7" data-title="Write it down as five fields">
+    <header class="slide-head">
+      <p class="kicker">FOR YOUR HIGHEST-CONSEQUENCE USE</p>
+      <h2 class="h2 mt-s">Five fields. If you cannot fill them, that is the finding.</h2>
+    </header>
+    <div class="slide-body">
+      <div class="layer-stack">
+        <div class="layer is-binding"><div class="layer-name">Use case</div><div class="layer-note">Automated triage of customer complaints</div></div>
+        <div class="layer is-binding"><div class="layer-name">Accountable owner</div><div class="layer-note">Head of Customer Operations, by name. Not the vendor.</div></div>
+        <div class="layer is-expectation"><div class="layer-name">Contest path</div><div class="layer-note">None today. Escalated complaints are never re-read by a person.</div></div>
+        <div class="layer is-expectation"><div class="layer-name">Evidence it works here</div><div class="layer-note">Vendor benchmark only. Never tested on our complaint mix.</div></div>
+        <div class="layer is-voluntary"><div class="layer-name">Next decision, and by when</div><div class="layer-note">Restrict to a pilot, by the end of this month.</div></div>
+      </div>
+      <div class="notes">A list of four good intentions is not a plan. Pick your highest-consequence use and fill in five fields. The use case. The accountable owner, by name. What a person affected can do about it. What evidence says it works here. And the next decision, with a date. Here is one worked through. Automated triage of customer complaints. The owner is the Head of Customer Operations, named, not the vendor. The contest path is none today, because complaints escalated by the tool are never re-read by a person before closure. The evidence is a vendor benchmark only; it has never been tested on our own complaint mix. And the next decision is whether to restrict it to a pilot, by the end of this month. That record took four lines and produced two findings and a deadline. Do it for your top three uses and you have the foundation of your governance programme.</div>
+    </div>
+  </section>
+  <section class="slide" data-section="7" data-title="What comes first">
+    <header class="slide-head">
+      <p class="kicker">CHECK YOUR UNDERSTANDING</p>
+      <h2 class="h2 mt-s">What comes first?</h2>
+    </header>
+    <div class="slide-body">
+      <p class="lede">A firm finished its AI inventory last month: 31 use cases, with named owners for the 6 it considers consequential. Next week it switches on a tool that automatically declines low-value insurance claims. No appeals route has been designed and there is no monitoring. The board has asked about ISO 42001 certification.</p>
+      <div class="quiz mt-l">
+        <div class="mcq"><div class="letter">A</div><div><b>Start ISO 42001 certification. It answers the board and reassures customers.</b><p class="why">Certification is usually secondary to closing a live control gap, and it takes months. The deployment is next week.</p></div></div>
+        <div class="mcq" data-correct><div class="letter">B</div><div><b>Design the appeals route and the monitoring before the tool goes live.</b><p class="why">An automatic decline affecting customers with no route to contest is the pattern behind the Dutch, Deliveroo and Foodinho findings.</p></div></div>
+        <div class="mcq"><div class="letter">C</div><div><b>Extend the inventory to name owners for all 31 use cases.</b><p class="why">Worth doing, and not what is about to go wrong next week. The inventory has already surfaced the thing that needs attention.</p></div></div>
+        <p class="verdict"></p>
+      </div>
+      <div class="notes">Take a moment with this one. A firm finished its AI inventory last month. Thirty-one use cases, with named owners for the six it considers consequential. Next week it plans to switch on a tool that automatically declines low-value insurance claims. No appeals route has been designed and there is no monitoring. The board has asked about ISO 42001 certification. What comes first? Pause the recording and choose.</div>
+    </div>
+  </section>
+  <section class="slide quote-slide" data-section="7" data-title="Start here">
+    <div class="quote-body">
+      <p class="quote-text">Start with the inventory. Everything else depends on knowing what you have.</p>
+      <p class="quote-attr">AI for Business Leaders &middot; <b>Online Series for ISCA</b></p>
+    </div>
+    <div class="notes">Start with the inventory. Everything else on the list depends on knowing what you have. Thank you for your time.</div>
   </section>
 
 </div>

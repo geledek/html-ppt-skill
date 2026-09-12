@@ -161,3 +161,28 @@
 .tpl-course .rm-beyond li{font-size:19px;color:var(--text-2);padding:12px 0;border-bottom:1px solid var(--border)}
 .tpl-course .rm-beyond li:last-child{border-bottom:none}
 .tpl-course .rm-beyond li b{display:block;color:var(--text-1);font-size:20px;margin-bottom:3px}
+
+/* ---- cover ----------------------------------------------------------------
+   Shared across every course in a series: the series line and the presenter
+   block stay identical, only the course title changes. */
+.tpl-course .slide.cover{grid-template-rows:1fr auto}
+.tpl-course .cover-main{align-self:center;width:100%}
+.tpl-course .cover-series{font-size:20px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 28px}
+.tpl-course .cover-title{font-family:var(--font-display);font-size:104px;line-height:1.02;font-weight:800;letter-spacing:-.025em;color:var(--text-1);margin:0}
+.tpl-course .cover-rule{width:120px;height:5px;background:var(--accent);margin:44px 0 36px}
+.tpl-course .cover-by{font-size:27px;color:var(--text-1);font-weight:600;margin:0}
+.tpl-course .cover-role{font-size:22px;color:var(--text-2);margin:6px 0 0}
+.tpl-course .cover-foot{align-self:end;width:100%;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--border);padding-top:18px;font-size:18px;color:var(--text-3)}
+
+/* ---- quote — one statement, the whole frame ------------------------------- */
+.tpl-course .slide.quote-slide{grid-template-rows:1fr auto}
+.tpl-course .quote-body{align-self:center}
+.tpl-course .quote-mark{font-family:var(--font-display);font-size:120px;line-height:.6;color:var(--accent);opacity:.25;margin:0 0 8px}
+.tpl-course .quote-text{font-family:var(--font-display);font-size:58px;line-height:1.18;font-weight:700;letter-spacing:-.015em;color:var(--text-1);margin:0;max-width:26ch}
+.tpl-course .quote-attr{font-size:22px;color:var(--text-2);margin:34px 0 0}
+.tpl-course .quote-attr b{color:var(--text-1)}
+
+/* ---- stat — one number, the whole frame ----------------------------------- */
+.tpl-course .stat-row{display:flex;gap:96px;align-items:flex-start;margin-top:8px}
+.tpl-course .stat-fig{font-family:var(--font-display);font-size:132px;line-height:1;font-weight:800;letter-spacing:-.04em;color:var(--accent);margin:0}
+.tpl-course .stat-unit{font-size:26px;color:var(--text-2);margin:10px 0 0;max-width:22ch}

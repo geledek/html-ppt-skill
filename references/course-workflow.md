@@ -262,6 +262,36 @@ slide down.
 **The stage is fixed at 1920×1080** and scaled to fit (docs/adr/0006), so
 positions are deterministic. Size type for that canvas, not for a browser window.
 
+### Choosing a visual: when NOT to use a box
+
+A component list without this guidance produces a deck where every slide is the
+same grid of boxes. Measured on the first agent-built pass: **17 of 25 slides**
+were a `concept-box` grid, several of them boxing two-word fragments. A box
+around two words adds a border and nothing else.
+
+Before reaching for `grid g2` of `concept-box`, check whether the slide is
+actually one of these:
+
+| The slide is… | Use | Not |
+|---|---|---|
+| one claim that deserves the whole frame | `quote-slide` | a box |
+| one number that carries the point | `stat-row` | a box with a number in it |
+| a named source saying something quotable | `quote-slide` | a box with a quotation in it |
+| several concurrent things | `layer-stack` | columns, which say "pick one" |
+| a chronology or a comparison across two columns | a table | boxes |
+| genuinely 2–4 parallel items of equal weight | `concept-box` grid | — |
+
+**Rough target: no more than half the slides should be box grids.** If a section
+is all boxes, at least one of its slides is really a quote or a statistic.
+
+`layer-stack` means *concurrent layers*. Do not use it for a sequence or a
+timeline; it teaches the wrong shape.
+
+**Headlines are claims, not script fragments.** An agent lifting the first
+sentence of a slide's script produces "Your sector adds to it." and "Each comes
+from a case you just saw." Write what the slide argues: "Singapore finance:
+advisory, and still unissued."
+
 ### Check them, do not remember them
 
 ```bash
