@@ -24,7 +24,7 @@ Course.
 practitioners. Inherited from the Series. They approve AI spend, answer to a
 board, and carry the risk.
 
-**Scope.** Why the value is not landing. The pilot-to-production gap, benefits
+**Scope.** Why the value is not realised. The pilot-to-production gap, benefits
 that never reach the P&L, and measured returns that disappoint. Diagnostic first,
 then what to do about it. **Out of scope:** how to build a business case from
 scratch, vendor selection, and model economics below the level of a budget line.
@@ -58,23 +58,36 @@ because it slows funding, so the Narration has to earn it.
 
 ## Research Plan
 
-<!-- Put to the human at gate 1 BEFORE any agent is dispatched. Not yet approved. -->
+<!-- Put to the human at gate 1 BEFORE any agent is dispatched. Revised once on
+     Ray's direction: open on the 95% figure, and research attribution properly. -->
 
-The Series brief covers regulation and nothing about value, so there is no gap to
-narrow. This is a full research
-pass.
+The Series brief covers regulation and nothing about value, so this is a full
+research pass, not a gap-fill.
+
+**The course opens on "95% of AI pilots fail" and asks why.** That is the
+provocation, so the figure carries more weight than any other number here and
+gets the most exacting treatment: its primary, its sample, what it actually
+counted, and what its authors say the causes were. Quoting what it measured is
+what lets the narration ask "why" rather than repeat a number secondhand.
 
 ### Questions
 
 | # | Question | Why the course needs it |
 |---|---|---|
-| Q1 | What share of AI/GenAI efforts reach production or report measurable financial impact, from sources that publish their sample and method? | The whole premise. Cited wrongly it discredits the course in the first two minutes. |
-| Q2 | Where value *does* land when it lands: which functions, and at what magnitude? | Outcome 1 needs the contrast between stuck and not-stuck to be evidence, not assertion. |
-| Q3 | What do organisations reporting financial impact do differently? | Outcome 2. This is the causal claim the course rests on, so it needs the strongest available evidence and honesty about its limits. |
-| Q4 | How many organisations measure AI benefit at all, and how? | Outcome 3. If measurement is rare, that is the finding. |
-| Q5 | Task-level productivity gains from controlled studies, and whether they aggregate to the firm level. | The honest counterweight. Some trials show gains, at least one shows a slowdown; a course that only cites the flattering trials is training over-confidence. |
-| Q6 | Hard disclosed numbers. A named company quantifying an AI benefit in its own reporting. | One concrete anchor. Executives discount survey percentages and believe filings. |
-| Q7 | The cost side: what the budget line misses. Integration, change management, running cost. | Outcome 3's other half. A benefit case with no cost case is not a case. |
+| Q1 | The 95% claim: what is the primary source, what was the sample and method, and what exactly did it count as failure? | The opening beat. If the figure is softer or narrower than its reputation, the narration says so and the provocation gets sharper, not weaker |
+| Q2 | **Why do they fail?** The stated causes, ranked, separating what companies self-report from what researchers observed | The course's spine. Outcome 1 is a stage diagnosis, and the stages come from here |
+| Q3 | Do other primaries agree? Competing shares for production rate and for reported P&L impact | If credible surveys disagree by 40 points, that disagreement is the Finding and it is more interesting than either number |
+| Q4 | **How is value credibly attributed to an AI implementation?** What methods exist (holdout groups, staged rollout, baseline before/after, task-level A/B), what each costs, and what organisations actually do | Ray's flag, and the hard one. Outcome 3 stands on it |
+| Q5 | Where value is realised when it is realised: which functions, at what magnitude | Outcome 1 needs stuck-vs-working to be evidence, not assertion |
+| Q6 | What organisations reporting financial impact do differently | Outcome 2's causal claim, with its limits stated |
+| Q7 | Task-level productivity gains from controlled trials, and whether they aggregate to the firm | The counterweight. Some trials show gains, at least one shows a slowdown, and a course citing only the flattering ones trains over-confidence |
+| Q8 | A named company quantifying an AI benefit in its own reporting, plus the cost side that benefit cases omit: integration, change management, running cost | Executives discount survey percentages and believe filings. And a benefit case with no cost case is not a case |
+
+**Q4 may come back empty, and that is a result.** If the honest answer is that
+almost nobody attributes value rigorously and most organisations estimate, then
+the Finding is the absence, and outcome 3 gets built on it directly: the reason
+to demand a baseline before funding is that there is no way to reconstruct one
+afterwards. I will not paper over a thin answer here with a tidy framework.
 
 ### Source kinds
 
@@ -82,7 +95,9 @@ pass.
 (MIT Media Lab, McKinsey Global Survey on AI, Deloitte State of Generative AI,
 US Census BTOS). Peer-reviewed papers and working papers with a stated design
 (NBER, arXiv, METR). Company financial disclosures and earnings transcripts.
-Government statistical agencies.
+Government statistical agencies. For Q4, also measurement and evaluation
+methodology from outside AI, where the attribution problem is older and better
+studied.
 
 **Will not use.** Vendor blogs, consultancy marketing pages without a method,
 and journalism restating a figure whose primary I cannot reach. If a widely
@@ -91,14 +106,14 @@ reachable primary.
 
 ### Known trap
 
-The "95% of AI pilots fail" figure is repeated everywhere and is usually detached
-from what its source actually measured. Either the primary and its method get
-established, or the number does not appear in this course. Same discipline for
-every headline percentage in Q1.
+Every headline percentage in Q1 and Q3 is repeated far more often than it is
+read. The rule for all of them, including the 95%: establish the primary and what
+it counted, or leave the number out. A course that opens on a misquoted figure
+has lost the room before the first outcome.
 
 ## Research Brief
 
-<!-- Findings land here as they are established, each with quote and URL. -->
+<!-- Findings go here as they are established, each with quote and URL. -->
 
 _Pending Research Plan approval._
 

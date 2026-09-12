@@ -69,6 +69,7 @@ hears.
 | **owner** | the named person accountable for a use, by name and role | stakeholder, champion |
 | **the board** | whoever the leader answers to | leadership, the business |
 
-<!-- Extend as the Value course's Outline lands. Terms about value — benefit,
-     baseline, realisation — belong here once defined, since a governance
+<!-- Extend once the Value course's Outline exists. Terms about value, such as
+     benefit,
+     baseline and realisation, belong here once defined, since a governance
      sequel would inherit them. -->

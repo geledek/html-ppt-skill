@@ -21,9 +21,10 @@
 (function () {
   'use strict';
 
+  // The tick, the cross and the green box already carry the verdict. These stay
+  // short so they confirm rather than repeat.
   var RIGHT = 'Correct.';
-  var WRONG = 'Not quite — see the highlighted answer.';
-  var SKIPPED = 'Here is the answer.';
+  var WRONG = 'Not quite.';
 
   function reveal(quiz, chosen) {
     if (quiz.classList.contains('revealed')) return;
@@ -40,9 +41,12 @@
 
     var verdict = quiz.querySelector('.verdict');
     if (verdict) {
-      var msg = chosen ? (hit ? RIGHT : WRONG) : SKIPPED;
-      verdict.textContent = verdict.textContent.trim() || msg;
-      verdict.classList.add(chosen && !hit ? 'miss' : 'right');
+      // Nothing chosen means the learner advanced past it. The green box and the
+      // tick already say which answer is right, so say nothing.
+      if (chosen) {
+        verdict.textContent = verdict.textContent.trim() || (hit ? RIGHT : WRONG);
+        verdict.classList.add(hit ? 'right' : 'miss');
+      }
     }
     quiz.classList.add('revealed');
   }
