@@ -12,6 +12,23 @@ are load-bearing.
 browser, you render the contact sheets. Their job is to look, judge, and say yes
 or say what is wrong.
 
+## Two language passes are mandatory
+
+**Every piece of prose this workflow produces goes through both skills, in this
+order, before a human sees it.** Narration, slide text, quiz stems and their
+per-option feedback, the roadmap, and any revision at any gate.
+
+1. **`no-ai-slop`** — structural. Removes AI patterns.
+2. **`sg-english`** — locale. Removes the American startup register, which
+   survives a slop pass because it is neither slop nor error.
+
+Order matters: fixing structure first means the locale pass edits sentences that
+are going to survive.
+
+This applies to **revisions too**. A section rewritten at gate 3 gets both passes
+again — an edited paragraph is new prose, and it is exactly where the register
+creeps back.
+
 ---
 
 ## Layout
@@ -124,17 +141,11 @@ to a Finding, or is marked illustrative. Quiz answer keys cite. A course teaches
 learners do not fact-check the thing they are learning from, and a wrong answer
 key actively trains the wrong answer.
 
-**Run two language passes before showing the Narration**, in this order.
+**Run both language passes** (see "Two language passes are mandatory" above)
+before showing the Narration. For a recorded Course, run them over the script
+*and* over the on-slide text, which are different prose with different jobs.
 
-1. **`no-ai-slop`** — structural. Removes AI patterns.
-2. **`sg-english`** — locale. Removes the American startup register that survives
-   the first pass, which a slop pass will not catch because it is neither slop
-   nor error. Singapore Standard English is British-based, formal and low-idiom.
-
-Order matters: fixing structure first means the locale pass edits sentences that
-are going to survive.
-
-**On `no-ai-slop`:** Not a
+Why `no-ai-slop` matters here specifically: it is not a
 polish pass — for a self-paced Course the Narration *is* the learner-facing
 content, and the patterns that skill bans are exactly the ones executive material
 attracts: importance puffery, weasel attribution ("experts agree"), colon
@@ -163,7 +174,11 @@ offered with its cost stated.
 
 ## Gate 3 — Acceptance
 
-Generate the remaining Sections, one fragment each, then assemble.
+Generate the remaining Sections, one fragment each, then assemble. Run
+`./scripts/check-slides.sh courses/<name>` before review — it fails on anything
+that breaks the layout rules.
+
+**Any Section you rewrite here goes back through both language passes.**
 
 Lead the review with an **inline PNG contact sheet** — the whole course on one
 screen catches overflow, drift and breakage far faster than arrowing through 60

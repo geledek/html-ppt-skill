@@ -81,6 +81,10 @@ Courses are scaffolded with `scripts/new-course.sh` into `courses/<name>/` —
 beside the skill, never inside it — and assembled from per-Section fragments by
 `scripts/assemble-course.sh`. Use `templates/full-decks/course/`, the only
 teaching template that is themeable, and whose quiz actually works.
+`scripts/check-slides.sh` enforces the layout rules.
+
+**Every piece of prose goes through two skills before a human sees it, in this
+order: `no-ai-slop` (structural), then `sg-english` (locale).** Revisions too.
 
 ## Before you author anything — ALWAYS ask or recommend
 
