@@ -643,6 +643,321 @@ it is in the evidence base the whole debate runs on.
 12. **Any primary reporting a *measured* rather than self-reported production or
     financial-impact rate.** Searched; none found.
 
+### Causes of failure  ✅ researched 2026-09-12
+
+Two kinds of evidence, never mixed: what companies **self-report**, and what
+researchers **observed**. Self-reports are what executives believe. Observations
+are what happened.
+
+#### Self-reported causes
+
+**C-1 · 84% of practitioners name business leadership's framing as the root
+cause. The highest single number in the brief, and it points at the audience.**
+> "More than any other type of issue, our interviewees noted that failures driven
+> by the decisions and expectations of the organization's business leadership were
+> far and away the most frequent causes of project failure. Eighty-four percent of
+> our interviewees cited one or more of these root causes as the primary reason
+> that AI projects would fail."
+> "the most common root cause of failure was the business leadership of the
+> organization misunderstanding how to set the project on a pathway to success."
+RAND, *The Root Causes of Failure for Artificial Intelligence Projects and How
+They Can Succeed*, RR-A2680-1, 13 Aug 2024. n=65 semi-structured interviews
+(50 industry, 15 academic), Aug–Dec 2023.
+https://www.rand.org/content/dam/rand/pubs/research_reports/RRA2600/RRA2680-1/RAND_RRA2680-1.pdf
+**RAND's own caveat, which must be said aloud if this is used:**
+> "because the majority of our interviewees were nonmanagerial engineers instead
+> of business executives, the results may disproportionately reflect the
+> perspective of individuals who do not hold leadership positions. Thus, the
+> results may be skewed toward identifying leadership failures."
+
+**C-2 / C-3 · RAND's remaining causes.** Data quality is second: "These two root
+causes were cited spontaneously by more than one-half of the interviewees."
+Then three more, each cited by a quarter to a third: chasing "the latest and
+greatest technology than on solving real problems for its intended users";
+inadequate infrastructure; and "the technology is applied to problems that are too
+difficult for AI to solve."
+
+**C-6 · ⚠️ Deloitte's leading-edge sample names worker skills as the top barrier.**
+> "insufficient worker skills are the biggest barrier to integrating AI into
+> existing workflows."
+> "education—not role or workflow redesign—was the No. 1 way companies adjusted
+> their talent strategies due to AI."
+Deloitte 2026, n=3,235, field Aug–Sep 2025. **Frame is purposive:** "To obtain a
+global view of how AI is being adopted by organizations on the leading edge of
+AI". Not a population estimate.
+
+#### Observed causes — the best evidence in the brief
+
+**C-8 · 64% of AI-using US firms made NO organisational adjustment at all. A
+measured fact, nationally representative, and the course's strongest single
+finding.**
+> "Figure 18 reveals that over half of AI-using businesses (64%) report no
+> institutional adjustments, suggesting a reliance on 'off-the-shelf' AI/GenAI
+> tools or a significant lag in organizational restructuring. The most common
+> adjustments are training staff and developing new workflows – each applicable to
+> about 15% of AI-using firms. Deeper capital-related shifts, such as changes to
+> data management and storage practices and complementary capital investments,
+> take place in a smaller fraction of firms (in the 7-8% range). The least common
+> adjustment is hiring staff trained in AI."
+Bonney, Breaux, Dinlersoz, Foster, Haltiwanger, Pande, *The Microstructure of AI
+Diffusion*, US Census Bureau CES-WP-26-25, April 2026. BTOS 2nd AI supplement,
+reference period Nov 2025–Jan 2026, **>117,000 distinct firms, nationally
+representative, survey-weighted.**
+https://www2.census.gov/library/working-papers/2026/adrm/ces/CES-WP-26-25.pdf
+
+**C-9 · Use stays narrow.**
+> "57% of users integrate AI in three or fewer business functions, most commonly
+> Sales and Marketing (52%), Strategy and Business Development (45%), and IT
+> (41%). … 65% of firms limit use to three or fewer tasks."
+Same source. **Use this for the sales-and-marketing skew, not NANDA's figure,
+which is internally inconsistent (see F-8 / W-11).**
+
+**C-7 · Why firms never start: they think it does not apply to them. Regulation
+is near-last.**
+> "the most common barrier is that AI is not applicable to the business (65% of
+> firms, firm-weighted)"
+> "Lack of knowledge of the capabilities of AI comes at a distant second (22%),
+> followed by concerns about privacy/security (20%). The least common barriers are
+> using vendors or consulting services to implement AI and laws and regulations
+> that prevent or restrict use of AI."
+> "the absence of broad federal regulation as of early 2026 ensures that
+> regulatory friction remains a minor factor in aggregate non-adoption."
+Same source. **⚠️ Do not teach regulation as a leading cause of value failure.
+The representative evidence points the other way.** Note this also sets a boundary
+with the sibling governance course.
+
+**C-10 · Measured null. Adoption is real, reported gains are real, and earnings
+and hours do not move.**
+> "We document rapid currents: most employers in exposed occupations have adopted
+> chatbot initiatives, workers report productivity benefits, and new AI-related
+> tasks are widespread. Yet these currents have not broken the surface: using
+> difference-in-differences, we estimate precise null effects on earnings and
+> recorded hours at both the worker and workplace levels, ruling out effects
+> larger than 2% two years after the launch of ChatGPT."
+> "Workplaces that encourage chatbot use exhibit no differential changes in
+> employment or wage bills, job creation or destruction, or the composition of
+> hires or separations"
+Humlum & Vestergaard, *Still Waters, Rapid Currents*, RFBerlin DP 078/26, 13 Mar
+2026 (prev. NBER WP 33777). ~25,000 Danish worker survey responses per round
+linked to administrative records, difference-in-differences, 11 exposed
+occupations. https://www.rfberlin.com/wp-content/uploads/2026/03/26078.pdf
+⚠️ Imprint: "RFBerlin Discussion Papers often represent preliminary or incomplete
+work and have not been peer-reviewed." **This is the cleanest statement available
+that perceived productivity and measured financial effect are different things.**
+
+**C-11 · Experimentally demonstrated harm outside the frontier.**
+> "for a complex managerial task selected to be outside the frontier, subjects
+> using AI were 19% less likely to produce correct solutions compared with those
+> without AI"
+Dell'Acqua et al., *Navigating the Jagged Technological Frontier*, SSRN 4573321,
+15 Sep 2023, rev. 17 Mar 2026, *Organization Science*. **Pre-registered RCT,
+n=758.** ⚠️ "In collaboration with the global management consulting firm Boston
+Consulting Group", with BCG-affiliated co-authors. Disclose it.
+
+### What the impact-reporting organisations do differently  ✅ researched 2026-09-12
+
+**Every finding in this section is correlational. The narration must not upgrade
+any of it into a promise.**
+
+**W-1 · McKinsey: workflow redesign carries the most weight of 25 attributes
+tested — and the footnote gives the R².**
+> "out of 25 attributes tested for organizations of all sizes, the redesign of
+> workflows has the biggest effect on an organization's ability to see EBIT impact
+> from its use of gen AI. … Twenty-one percent of respondents reporting gen AI use
+> by their organizations say their organizations have fundamentally redesigned at
+> least some workflows."
+Footnote 1, verbatim:
+> "The correlation analyses considered 25 attributes and the reported effect of
+> gen AI use on organizations' EBIT, and using the Johnson's Relative Weights
+> regression analysis yielded an R-squared of 0.20."
+McKinsey, *The state of AI: How organizations are rewiring to capture value*, Mar
+2025. n=1,491, field 16–31 Jul 2024, 101 nations, GDP-weighted.
+**Body text says "biggest effect"; the footnote says correlation. Both variables
+are self-reported by the same respondent, and all 25 attributes together explain
+~20% of variance. The defensible sentence:** among 25 attributes tested, workflow
+redesign carried the most relative weight in a correlation with self-reported EBIT
+impact, in a model explaining about a fifth of the variance.
+
+**W-2 · CEO oversight of AI governance. Quote McKinsey's first sentence, not its
+second.**
+> "a CEO's oversight of AI governance … is one element most correlated with higher
+> self-reported bottom-line impact from an organization's gen AI use."
+The next sentence switches to "the element with the most impact on EBIT" — causal
+language the footnote does not support. Same R²=0.20 model. 28% report CEO
+oversight; 17% board oversight; "On average, respondents report that two leaders
+are in charge."
+
+**W-3 · All 12 adoption practices correlate positively, which weakens any single
+prescription.**
+> "We asked respondents about 12 adoption- and scaling-related practices for gen
+> AI and found that there are positive correlations on EBIT impact from each. The
+> one with the most impact on the bottom line is tracking well-defined KPIs for
+> gen AI solutions"
+> "only 1 percent of company executives describe their gen AI rollouts as 'mature.'"
+Same source. **The KPI result is direct support for outcome 3, and it converges
+with ST-29.**
+
+**W-4 · ⚠️ The 2026 headline figure looks stronger than W-1 and is weaker.**
+> "Nearly three-quarters of high performers report fundamentally redesigning
+> workflows because of their AI use, up from 55 percent last year. By comparison,
+> just one-quarter of other respondents report doing so."
+> "they are twice as likely as others to say that their senior leaders demonstrate
+> commitment to AI initiatives and to report that their organizations have defined
+> processes to measure the impact of those initiatives."
+McKinsey 2026, n=1,719. **The 2026 report publishes no regression, no R², and
+never uses the word "correlated". The 73%-vs-25% is a raw cross-tabulation of two
+self-reports from one respondent.** McKinsey's own framing of the conclusion is
+experiential: "These are all practices that, in our experience, reinforce one
+another." **This is exactly the figure a deck would upgrade into causal advice.**
+
+**W-5 · Census finds the same relationship on 117,000 firms and names both
+confounders. The best slide available for teaching the correlation trap.**
+> "Regression analysis shows a robust positive correlation between firm commercial
+> performance and the breadth of AI integration, including functional deployment,
+> task-level use, and operational investment."
+> "We underscore that these associations are descriptive and do not imply causal
+> relationships. The observed correlations may be driven by unobserved firm-level
+> heterogeneity, such as superior management practices, that simultaneously
+> facilitates AI adoption and enhances performance. Furthermore, reverse causality
+> remains a concern: firms with high performance or sales may simply possess the
+> resources necessary to finance and implement sophisticated AI systems."
+Census CES-WP-26-25, April 2026, >117,000 firms.
+**Reverse causality is the live alternative explanation for W-1, W-2 and W-4:
+profitable firms can afford to redesign workflows and to put a CEO on AI
+governance. Put W-1's footnote and W-5's disclaimer side by side and an audience
+of spend-approvers derives the lesson themselves.**
+
+**W-6 · The practice with the largest association is *encouraging use* — and
+training without encouragement is associated with smaller gains.**
+> "Even in workplaces that neither encourage use nor provide enterprise tools or
+> training, about 40% of workers have used AI chatbots at work … take-up rates
+> almost double in workplaces with active employer initiatives. … adoption and
+> reported benefits peak in workplaces that combine encouraged use with enterprise
+> chatbots and training: 93% of workers in such settings report having used AI
+> chatbots at work, 28% use them daily, and 19% report saving more than one hour
+> per day"
+> "Implemented individually, Encouraged use, Enterprise chatbots, and Training
+> each raise extensive-margin take-up rates to 76%, 57%, and 69%, respectively."
+> "By contrast, training and enterprise tools—when implemented without
+> encouragement—are associated with smaller reported gains. This pattern is
+> consistent with these initiatives being aimed at mitigating misuse rather than
+> enhancing productivity."
+Humlum & Vestergaard, 13 Mar 2026. **Authors' own hedge: "we interpret Equation
+(1) as descriptive". And the same paper's causal half finds financial nulls
+(C-10).** So the best-measured organisational-practice result in the literature is
+descriptive, and it sits inside a paper whose identified estimates find no
+financial effect.
+
+**W-7 · Causal effect, suggestive mechanism. Gains concentrate in novices.**
+> "we study the staggered introduction of a generative AI-based conversational
+> assistant using data from 5,179 customer support agents. Access to the tool
+> increases productivity, as measured by issues resolved per hour, by 14% on
+> average, including a 34% improvement for novice and low-skilled workers but with
+> minimal impact on experienced and highly skilled workers. We provide suggestive
+> evidence that the AI model disseminates the best practices of more able workers"
+Brynjolfsson, Li, Raymond, *Generative AI at Work*, NBER WP 31161, Apr 2023 rev.
+Nov 2023, n=5,179. https://www.nber.org/system/files/working_papers/w31161/w31161.pdf
+Effect is causal; the mechanism is "**suggestive**".
+
+**W-8 · The only causal evidence bearing on a decision a leader makes: which
+tasks you point AI at.**
+> "For each one of a set of 18 realistic knowledge tasks within the frontier of AI
+> capabilities … subjects using AI outperformed those not using AI, completing
+> 12.2% more tasks and completing them 25.1% more quickly on average while also
+> delivering solutions of significantly improved quality. However, for a complex
+> managerial task selected to be outside the frontier, subjects using AI were 19%
+> less likely to produce correct solutions"
+Dell'Acqua et al., pre-registered, n=758. Task-level, single firm, BCG-partnered.
+**Establishes nothing about EBIT.**
+
+**W-9 · ⚠️ Deloitte's governance claim is asserted, not evidenced. It rhymes with
+W-2, so it is tempting as corroboration. It is not corroboration.**
+> "Enterprises where senior leadership actively shapes AI governance achieve
+> significantly greater business value than those delegating the work to technical
+> teams alone."
+Deloitte 2026. **No n, no percentage, no test, no method attached to this
+sentence.** It sits in a leader-FAQ narrative section.
+
+**W-10 · NANDA on the successful 5%, with the best-worded correlation caveat in
+the brief.**
+> "Organizations that successfully cross the GenAI Divide do three things
+> differently: they buy rather than build, empower line managers rather than
+> central labs, and select tools that integrate deeply while adapting over time."
+> "external partnerships with learning-capable, customized tools reached
+> deployment ~67% of the time, compared to ~33% for internally built tools."
+> "**Important Limitation:** These success rate differences may reflect
+> organizational capabilities rather than implementation approach alone. …
+> The correlation between external partnerships and success does not necessarily
+> prove causation."
+**That last sentence is quotable verbatim on a slide.** ⚠️ Also note NANDA is
+promoting an agent-interoperability protocol that the report's own conclusions
+recommend.
+
+**W-11 · ⚠️ Where NANDA says returns actually came from — back office and external
+spend, not headcount.**
+> "some of the most dramatic cost savings we documented came from back-office
+> automation."
+> "these gains came without material workforce reduction. Tools accelerated work,
+> but did not change team structures or budgets. Instead, ROI emerged from reduced
+> external spend, eliminating BPO contracts, cutting agency fees, and replacing
+> expensive consultants with AI-powered internal capabilities."
+Its own caveat: "the sub-category and use-case breakdowns should be treated as
+directional at best. Subcategories reflect synthesized notes and anecdotal
+patterns, rather than precise accounting." **The report says 70% in one place and
+~50% in two others for the same budget allocation. Do not cite that number.**
+The "reduced external spend, not headcount" mechanism converges with ST-21 and
+ST-22 and is worth teaching; the percentages are not.
+
+#### Causation ladder — what each finding may be presented as
+
+| Finding | Safe to present as |
+|---|---|
+| C-10 null earnings/hours (DiD, admin records) | **Causal null** |
+| W-8 +12.2% / −19% (pre-registered RCT) | **Causal**, task level, says nothing about EBIT |
+| W-7 +14% / +34% (staggered rollout) | Effect causal; mechanism suggestive |
+| W-5 performance ↔ AI breadth (117k firms) | Correlation; reverse causality explicitly live |
+| W-1 workflow redesign → EBIT | Correlation, R²=0.20, both variables self-reported |
+| W-2 CEO governance → EBIT | Correlation, same model |
+| W-6 encourage-use → adoption | Correlation, author-disclaimed |
+| W-4 high performers redesign 3× | Raw cross-tab. **Weaker than W-1 despite looking stronger** |
+| W-10 buy > build, 67% vs 33% | Correlation, self-selected n=52 |
+| W-9 Deloitte senior leadership | **Consultancy assertion. Not evidence** |
+
+**The one honest through-line the evidence supports.** Every practice associated
+with financial impact — workflow redesign, senior ownership, measurement, breadth
+of integration — is correlational, and all of it is plausibly downstream of firm
+capability and profitability. The two sources with the best identification (Census,
+and the Danish DiD) both refuse the causal reading, and Census names reverse
+causality outright. The only causal evidence in the field is at task level, and it
+says the decision that pays is **which tasks you point AI at**.
+
+#### Stage model — defensible as structure, not as a funnel
+
+No source follows one cohort through all stages, and no two of these share a
+sampling frame. **A four-stage spine is legitimate teaching structure; the arrows
+between stages must not carry numbers from different sources as if they compose.**
+
+| Stage | Best-sourced datum | Source quality |
+|---|---|---|
+| Never started | 65% of non-adopters say AI is "not applicable to the business" | Census, representative, >117k firms |
+| Piloted, never shipped | median 46% of projects abandoned pre-production; NANDA 20%→5% | S&P (n unpublished); NANDA (self-admittedly "directionally accurate") |
+| Shipped, unadopted | "take-up rates almost double in workplaces with active employer initiatives" | Danish DiD-linked survey + admin records |
+| Adopted, no measured benefit | 37% any EBIT, ~6% high performers; precise nulls on earnings and hours | McKinsey n=1,719; Danish DiD |
+
+#### NOT ESTABLISHED — causes and practices
+
+1. **Any experimental or quasi-experimental evidence that a governance or
+   leadership practice raises AI financial outcomes.** Searched for field
+   experiments on AI governance, CEO oversight and operating models. None found.
+   **W-2 is correlational and must be taught as such.**
+2. A frequency ranking of failure causes on a common representative base. No
+   source provides one; any percentage carries its own frame.
+3. The S&P "42% abandoned most initiatives, up from 17%" figure — primary is
+   behind subscription; n and frame unpublished. Every carrier is journalism.
+4. Gartner AI-failure statistics — issued without published sample or method.
+5. McKinsey 2026's workflow finding as a published statistic (no R², no regression).
+6. McKinsey 2026 Exhibit 11 per-practice percentages — SVG, labels not in page text.
+
 ### Worked examples — all anonymised, all with before/after numbers
 
 **ST-17 · Invoice processing · $1B+ US logistics company** (pp.16–18). Fleet of
