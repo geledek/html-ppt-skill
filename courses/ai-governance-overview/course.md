@@ -196,6 +196,40 @@ directly; the safe formulation is that IMDA's own June 2026 document cites it:
 > "The MGF for Agentic AI builds on the responsible AI practices for
 > organisations set out in MGF (2020)"
 
+**SG-19 · "AI inventory" is MAS's own term — use it, not "registry".** Named
+section heading in the draft Guidelines (P017-2025, 13 Nov 2025):
+> "**AI Inventory** — 3.4 An FI should establish and maintain an accurate and
+> up-to-date **inventory** of AI use cases, systems or models across the FI to
+> support governance and oversight, as well as risk management, throughout the
+> AI lifecycle."
+And it ties the inventory to ownership, which is outcome 2:
+> "3.7 The FI should assign clear roles and responsibilities for the
+> **inventorisation** of AI, including the designation of a control function to
+> be responsible for the AI inventory"
+https://www.mas.gov.sg/publications/consultations/2025/consultation-paper-on-guidelines-on-artificial-intelligence-risk-management
+MAS never uses "register" or "registry" for this.
+
+⚠️ **"Register" is not a synonym, and using it would mislead.** In the EU AI Act
+"registration" means filing a high-risk system in a **public EU database run by
+the Commission** (Arts. 49 and 71) — an external, provider-side obligation. Put
+"AI register" on a Singapore slide and you imply a regulator-facing filing that
+does not exist here. Note also that the AI Act imposes **no general obligation on
+a private-sector deployer** to keep an internal record: Art. 26(6) requires
+retaining automatically generated **logs** for at least six months, and Art. 26(8)
+extends registration only to *public-authority* deployers.
+
+⚠️ **Do NOT attribute "inventory" to ISO/IEC 42001.** Its nearest Annex A control
+is titled **"A.4.2 Resource documentation"**. The standard is paywalled and its
+body text could not be verified from a primary source, so "ISO requires an AI
+inventory" is unverified and should not be said.
+
+**SG-19b · Corroboration outside Singapore.** NIST AI RMF GOVERN 1.6, verified
+from the PDF: "Mechanisms are in place to inventory AI systems and are resourced
+according to organizational risk priorities." The ICO uses "AI inventory" in its
+own internal AI use policy (Aug 2025). IMDA uses neither term anywhere — the
+agentic framework's nearest concept is that agent identities should be
+"catalogued and centrally managed". The FCA has published no term at all.
+
 #### Singapore — open items
 - MAS AI Risk Management Guidelines: **confirmed still at consultation stage as
   at 7 Jul 2026**; whether final Guidelines have since issued is unconfirmed.
