@@ -421,3 +421,17 @@ body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !
 .tpl-course .op-steps .step-no { font-size: 22px; color: var(--emphasis); font-family: var(--font-mono) }
 .tpl-course .op-steps h4 { font-size: 30px; line-height: 1.2; margin: 12px 0 12px }
 .tpl-course .op-steps p { font-size: 24px; line-height: 1.4; color: var(--text-2); margin: 0 }
+
+/* The recall sets get a heading a leader can repeat, and the roadmap becomes a
+   labelled action plan in its own box: three steps in order, no numbers, because
+   the arrows carry the sequence and the digits competed with the numbered recall
+   lists above. */
+.tpl-course .onepager > .block-label { margin: 0 0 20px }
+.tpl-course .op-action-label { margin: 0 0 16px }
+.tpl-course .op-action {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 30px 34px;
+}
+.tpl-course .op-action .op-steps li { border-top: 0; padding-top: 0 }
+.tpl-course .op-action .op-steps li:not(:last-child)::after { top: 2px }
+.tpl-course .op-action .op-steps h4 { margin: 0 0 12px }
