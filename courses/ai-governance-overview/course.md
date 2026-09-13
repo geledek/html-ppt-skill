@@ -577,6 +577,7 @@ They can apply to AI-enabled activities even when written before the technology 
 
 Supervisory statements and guidance require closer reading.
 Some explain how a regulator interprets existing law; others set expectations for firms under its supervision.
+
 An instrument may be non-binding in itself while influencing assessment or corrective action under the regulator's powers.
 The instrument and legal authority determine consequences, including whether a penalty applies.
 
