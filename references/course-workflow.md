@@ -350,6 +350,17 @@ a closing References slide.
 
 ### Content and copy rules
 
+**One accent for emphasis across a deck.** Numbers, highlights, card headings,
+kickers and rules all take the same colour. A second accent used for variety
+reads as a second meaning, and the learner spends attention decoding it. This
+course had two in circulation until they were unified.
+
+**Do not restate a point on a slide where it is not the point.** A caveat that
+belongs to another slide dilutes this one.
+
+**Status labels that repeat their own group heading are noise.** A timeline under
+"when each part applies" does not need every entry labelled APPLICABLE.
+
 **A kicker must not repeat the line beneath it.** If the headline already says
 it, the kicker is noise. Kickers orient; they do not restate. Audit every slide
 for a kicker whose words appear in the next element.

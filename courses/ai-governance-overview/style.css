@@ -8,7 +8,7 @@
 .tpl-course .cover-title{white-space:nowrap;font-size:100px}
 .tpl-course .definition{max-width:1600px;font-size:43px;line-height:1.28;font-weight:600;margin:0 0 24px;color:var(--text-1)}
 .tpl-course .definition-sub{font-size:30px;line-height:1.45;margin:0 0 32px;color:var(--text-2)}
-.tpl-course .definition-tag{font-size:21px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-2);margin:0 0 14px;font-weight:700}
+.tpl-course .definition-tag{font-size:21px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 14px;font-weight:700}
 .tpl-course .example-row{display:grid;grid-template-columns:repeat(3,1fr);gap:38px;border-top:2px solid var(--border-strong);padding-top:27px;margin-top:32px}
 .tpl-course .example-row h4{font-size:31px;margin:0 0 12px}
 .tpl-course .example-row p{font-size:27px;line-height:1.4;margin:0;color:var(--text-2)}
@@ -16,7 +16,7 @@
 .tpl-course .scenario svg{width:78px;height:78px;stroke:var(--accent-2);fill:var(--surface-2);stroke-width:2}
 .tpl-course .scenario h3{font-size:34px;margin:0 0 12px}
 .tpl-course .scenario p{font-size:29px;line-height:1.45;margin:0;color:var(--text-2)}
-.tpl-course .case-id{display:block;font-size:18px;font-weight:700;color:var(--accent-2);letter-spacing:.08em;margin-bottom:12px}
+.tpl-course .case-id{display:block;font-size:18px;font-weight:700;color:var(--accent);letter-spacing:.08em;margin-bottom:12px}
 .tpl-course button.mcq{font-family:inherit;text-align:left;width:100%;color:var(--text-1)}
 .tpl-course .mcq:focus-visible,.tpl-course .map-control:focus-visible{outline:4px solid var(--accent-2);outline-offset:5px}
 .tpl-course .quiz .mcq .why{display:block;visibility:hidden;font-size:23px;line-height:1.4;margin:12px 0 0}
@@ -39,18 +39,18 @@
 .tpl-course .lifecycle{display:grid;grid-template-columns:repeat(5,1fr);gap:28px;margin-top:28px;list-style:none;padding:0}
 .tpl-course .lifecycle li{border-top:3px solid var(--accent);padding-top:22px;position:relative}
 .tpl-course .lifecycle li:not(:last-child)::after{content:'→';position:absolute;right:-23px;top:23px;font-size:30px;color:var(--text-2)}
-.tpl-course .lifecycle .step-no{font-size:22px;color:var(--accent-2);font-family:var(--font-mono)}
+.tpl-course .lifecycle .step-no{font-size:22px;color:var(--accent);font-family:var(--font-mono)}
 .tpl-course .lifecycle h4{font-size:30px;margin:16px 0}
 .tpl-course .lifecycle p{font-size:26px;line-height:1.4;color:var(--text-2);margin:0}
 .tpl-course .oversight-line{border:1px solid var(--border-strong);border-radius:var(--radius);font-size:28px;padding:22px 28px;margin-bottom:32px}
 .tpl-course .review-loop{margin-top:34px;font-size:27px;color:var(--text-2)}
 .tpl-course .component-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 60px;counter-reset:component}
 .tpl-course .component{display:grid;grid-template-columns:50px 1fr;gap:15px;padding:22px 0;border-top:1px solid var(--border-strong);counter-increment:component}
-.tpl-course .component::before{content:counter(component,decimal-leading-zero);font:25px var(--font-mono);color:var(--accent-2);padding-top:4px}
+.tpl-course .component::before{content:counter(component,decimal-leading-zero);font:25px var(--font-mono);color:var(--accent);padding-top:4px}
 .tpl-course .component h4{font-size:29px;margin:0 0 9px}
 .tpl-course .component p{font-size:25px;line-height:1.4;color:var(--text-2);margin:0}
 .tpl-course .roles{width:100%;border-collapse:collapse;font-size:25px;table-layout:fixed}
-.tpl-course .roles th{font-size:22px;text-align:left;color:var(--accent-2);padding:14px 22px;border-bottom:2px solid var(--border-strong)}
+.tpl-course .roles th{font-size:22px;text-align:left;color:var(--accent);padding:14px 22px;border-bottom:2px solid var(--border-strong)}
 .tpl-course .roles td{padding:22px;line-height:1.4;vertical-align:top;border-bottom:1px solid var(--border-strong)}
 .tpl-course .roles th:first-child{width:23%}.tpl-course .roles th:last-child{width:29%}
 .tpl-course .roles td:first-child{font-weight:650}
@@ -73,18 +73,18 @@
 .tpl-course .legal-row{display:grid;grid-template-columns:400px 1fr;gap:35px;border-top:1px solid var(--border-strong);padding:26px 0}
 .tpl-course .legal-row h4{font-size:31px;margin:0}
 .tpl-course .legal-row p{font-size:29px;line-height:1.4;color:var(--text-2);margin:0}
-.tpl-course .legal-row .status{display:block;font-size:20px;color:var(--accent-2);margin-top:12px;font-weight:600}
+.tpl-course .legal-row .status{display:block;font-size:20px;color:var(--accent);margin-top:12px;font-weight:600}
 .tpl-course .jurisdiction-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
 .tpl-course .jurisdiction-panel{border-top:3px solid var(--accent);padding-top:25px}
 .tpl-course .jurisdiction-panel h3{font-size:34px;margin:0 0 20px}
 .tpl-course .jurisdiction-panel p{font-size:29px;line-height:1.45;margin:0 0 23px;color:var(--text-2)}
-.tpl-course .jurisdiction-panel .status{font-size:21px;font-weight:700;color:var(--accent-2);margin-bottom:13px}
+.tpl-course .jurisdiction-panel .status{font-size:21px;font-weight:700;color:var(--accent);margin-bottom:13px}
 .tpl-course .eu-components{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
 .tpl-course .eu-components article{border-top:3px solid var(--accent);padding-top:20px}
 .tpl-course .eu-components h4{font-size:29px;line-height:1.25;margin:0 0 14px}
 .tpl-course .eu-components p{font-size:25px;line-height:1.4;margin:0;color:var(--text-2)}
 .tpl-course .timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:36px;list-style:none;padding:0}
-.tpl-course .timeline li{border:1px solid var(--border-strong);border-top:4px solid var(--accent-2);padding:18px 19px;border-radius:var(--radius-sm);background:var(--surface)}
+.tpl-course .timeline li{border:1px solid var(--border-strong);border-top:4px solid var(--accent);padding:18px 19px;border-radius:var(--radius-sm);background:var(--surface)}
 .tpl-course .timeline li.future{border-top-color:var(--text-3);background:var(--surface-2)}
 .tpl-course .timeline time{display:block;font-size:25px;font-weight:700;margin-bottom:14px}
 .tpl-course .timeline p{font-size:23px;line-height:1.35;margin:0 0 12px}
@@ -97,7 +97,7 @@
 .tpl-course .case-timeline article{border-top:2px solid var(--border-strong);padding-top:22px}
 .tpl-course .case-timeline h4{font-size:33px;margin:0 0 16px}
 .tpl-course .case-timeline p{font-size:28px;line-height:1.4;color:var(--text-2);margin:0 0 14px}
-.tpl-course .case-quote{margin:26px 0 0;border-left:4px solid var(--accent-2);padding:15px 30px;background:var(--surface-2)}
+.tpl-course .case-quote{margin:26px 0 0;border-left:4px solid var(--accent);padding:15px 30px;background:var(--surface-2)}
 .tpl-course .case-quote p{font-size:32px;line-height:1.35;margin:0 0 13px}
 .tpl-course .case-quote cite{font-size:21px;color:var(--text-2);font-style:normal}
 .tpl-course mark{background:color-mix(in srgb,var(--accent) 15%,transparent);color:inherit;font-weight:700;text-decoration:none;border-radius:3px;padding:0 .12em;box-decoration-break:clone}
@@ -105,10 +105,10 @@
 .tpl-course .decision-list li{display:grid;grid-template-columns:55px 300px 1fr;gap:22px;counter-increment:decision;border-top:1px solid var(--border-strong);padding:16px 0;font-size:27px;line-height:1.4}
 .tpl-course .decision-list li::before{content:counter(decision,decimal-leading-zero);color:var(--accent-2);font-family:var(--font-mono)}
 .tpl-course .decision-list span{color:var(--text-2)}
-.tpl-course .decision-result{font-size:28px;line-height:1.4;padding:20px 26px;margin:22px 0 0;background:var(--surface-2);border-left:4px solid var(--accent-2)}
+.tpl-course .decision-result{font-size:28px;line-height:1.4;padding:20px 26px;margin:22px 0 0;background:var(--surface-2);border-left:4px solid var(--accent)}
 .tpl-course .implementation{display:grid;grid-template-columns:1fr 1fr 1fr;gap:42px;margin-top:15px}
 .tpl-course .implementation article{border-top:4px solid var(--accent);padding-top:25px}
-.tpl-course .implementation .phase{font-size:21px;color:var(--accent-2);font-weight:700;letter-spacing:.04em;margin:0 0 20px}
+.tpl-course .implementation .phase{font-size:21px;color:var(--accent);font-weight:700;letter-spacing:.04em;margin:0 0 20px}
 .tpl-course .implementation h3{font-size:34px;line-height:1.25;margin:0 0 25px}
 .tpl-course .implementation p{font-size:27px;line-height:1.4;color:var(--text-2);margin:0 0 23px}
 .tpl-course .implementation-next{margin-top:32px;padding-top:25px;border-top:1px solid var(--border-strong);font-size:26px;line-height:1.4;color:var(--text-2)}
@@ -135,3 +135,80 @@
 .tpl-course .map-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; margin: 0 }
 .tpl-course .map-group-block.fragmented { grid-column: 1 / -1 }
 .tpl-course .map-detail { margin-top: auto }
+
+
+/* ---- round 5 -------------------------------------------------------------- */
+
+/* R5-02/03: bigger list, and the number takes the one accent used everywhere. */
+.tpl-course .q-list li { grid-template-columns: 64px 380px 1fr; padding: 26px 0 }
+.tpl-course .q-list li::before { color: var(--accent); font-size: 22px }
+.tpl-course .q-list b { font-size: 30px }
+.tpl-course .q-list span { font-size: 26px }
+
+/* R5-06/07: card headings in the accent. */
+.tpl-course .named-box h4 { color: var(--accent) }
+
+/* R5-08: numbers first, text turns in on click. */
+.tpl-course .reveal-cards > * { opacity: 1; transform: none }
+.tpl-course .reveal-cards > * > div { perspective: 800px }
+.tpl-course .reveal-cards > *:not(.shown) h4,
+.tpl-course .reveal-cards > *:not(.shown) p { opacity: 0; transform: rotateX(-80deg); transform-origin: top }
+.tpl-course .reveal-cards > *.shown h4,
+.tpl-course .reveal-cards > *.shown p { animation: turn-in .5s var(--ease) forwards }
+.tpl-course .reveal-cards > *.shown p { animation-delay: .1s }
+@keyframes turn-in { from { opacity: 0; transform: rotateX(-80deg) } to { opacity: 1; transform: none } }
+@media (prefers-reduced-motion: reduce) {
+  .tpl-course .reveal-cards > * h4, .tpl-course .reveal-cards > * p { opacity: 1 !important; transform: none !important }
+}
+body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !important; transform: none !important; animation: none !important }
+
+/* R5-09: the jurisdiction detail sits over the map, in the selector's blue. */
+.tpl-course .map-stage { position: relative }
+.tpl-course .map-detail {
+  position: absolute; left: 0; bottom: 0; width: min(560px, 92%);
+  margin: 0; background: var(--surface); border: 1px solid var(--border);
+  border-left: 5px solid var(--border-strong); border-radius: var(--radius-sm);
+  padding: 18px 24px; font-size: 21px; box-shadow: var(--shadow);
+}
+.tpl-course .map-layout.has-selection .map-detail {
+  border-left-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+}
+.tpl-course .map-layout.has-selection .map-detail b { color: var(--accent) }
+
+/* R5-11: bullets in the jurisdiction panels. */
+.tpl-course .panel-list { margin: 0 0 23px; padding-left: 26px }
+.tpl-course .panel-list li { font-size: 27px; line-height: 1.45; color: var(--text-2); margin-bottom: 14px }
+
+/* R5-12: rounded cards on the EU components. */
+.tpl-course .eu-components article {
+  border: 1px solid var(--border); border-top: 4px solid var(--accent);
+  border-radius: var(--radius-sm); padding: 22px 24px; background: var(--surface);
+}
+
+/* R5-14: two plain lines, no numbering, no header. */
+.tpl-course .plain-compare { list-style: none; margin: 0; padding: 0 }
+.tpl-course .plain-compare li {
+  font-size: 28px; line-height: 1.45; color: var(--text-2);
+  padding: 18px 0; border-top: 1px solid var(--border);
+}
+.tpl-course .plain-compare b { color: var(--text-1) }
+
+
+/* R5-16: the one-pager recalls the three frameworks the course taught, above the
+   roadmap. Without them the takeaway page drops everything before slide 28. */
+.tpl-course .op-recall { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; margin-bottom: 26px }
+.tpl-course .op-block { border-top: 2px solid var(--border-strong); padding-top: 14px }
+.tpl-course .op-label {
+  font-size: 16px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent); margin: 0 0 10px;
+}
+.tpl-course .op-mini { margin: 0; padding-left: 24px }
+.tpl-course .op-mini li { font-size: 18px; line-height: 1.4; color: var(--text-2); margin-bottom: 3px }
+.tpl-course .onepager .implementation { margin-top: 0; gap: 34px }
+.tpl-course .onepager .implementation article { border-top-width: 3px; padding-top: 18px }
+.tpl-course .onepager .implementation h3 { font-size: 26px; margin: 0 0 14px }
+.tpl-course .onepager .implementation .phase { font-size: 16px; margin: 0 0 12px }
+.tpl-course .onepager ul.check li { font-size: 17px; padding: 5px 0 5px 28px }
+.tpl-course .onepager ul.check li::before { top: 10px; width: 14px; height: 14px }
+.tpl-course .implementation-next { margin-top: 20px; padding-top: 16px; font-size: 19px }

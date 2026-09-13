@@ -1,6 +1,7 @@
 # AI Value Management — voiceover script
 
-Read aloud. 26 of 30 slides drafted. Slides 23-26 (Klarna) held pending verification.
+Recorded, 30 minutes. 30 slides, 3,282 words, 21.9 minutes of speech at 150 wpm.
+Read aloud. Both language passes applied: no-ai-slop then sg-english.
 
 ---
 
@@ -304,6 +305,70 @@ The correct answer is the third.
 Individual time savings are well evidenced and firm-level financial effects are not.
 The first option overstates the case, because the tools demonstrably save time.
 The second understates it, because a precise null is a finding rather than an absence of research.
+
+
+## S6 · One company, read two ways
+
+### 23 · Klarna published the number itself
+*99 words · about 40 seconds · sources [R22], [R39]*
+
+All of that was general evidence. It helps to watch the problem happen to one company.
+In February 2024 Klarna announced that its AI assistant handled two-thirds of customer service chats.
+It described the assistant as doing the equivalent work of seven hundred full-time agents.
+That figure came from Klarna, not from a critic.
+
+Two details in that release are usually dropped.
+It is an equivalence estimate, not a count of people made redundant.
+And the release stated that customers could still choose to interact with live agents if they preferred.
+Neither point survived into the story that followed.
+
+### 24 · What he said, and what was reported
+*163 words · about 65 seconds · sources [R39]*
+
+Fifteen months later the chief executive gave an interview that became a cautionary tale.
+His actual words were that cost had been too predominant a factor, and that what you end up with is lower quality.
+Read carefully, he is describing how outsourced support had been organised.
+He is not saying the AI assistant produced poor quality work.
+
+The same article described a pilot of two people, and forecast headcount falling further to about two thousand five hundred.
+Within ten days the story had become a reversal, a hiring spree, and an admission that AI had failed.
+One outlet added customer dissatisfaction while citing another outlet rather than the interview.
+He has pushed back five times in ten months, and the company denied it on the record.
+He is careful about what he blames. He says the original article was balanced and he will not blame the journalist.
+His objection is to the headline and to what was built on top of it.
+
+### 25 · The filings never wavered
+*161 words · about 64 seconds · sources [R22], [R39]*
+
+There is a way to test which account is closer to the truth, and it does not involve trusting anyone.
+Look at what the company said in documents signed under securities liability.
+Full-time employees fell from five thousand five hundred to two thousand eight hundred across three years.
+The decline is continuous, with no rebound in any year.
+The filings attribute it to a strategic decision to leverage AI, and state that headcount is expected to keep falling.
+That sentence is unchanged across three successive filings.
+The automation share rose from sixty-nine per cent to eighty per cent over the same period.
+
+One sentence about human agents did appear in a later filing and was absent from an earlier one.
+That is the only textual trace of the pivot anywhere in the filings, and it concedes nothing.
+So both things are true.
+AI handles more of the work each year, and a human tier is being built on top of it.
+
+### 26 · Where a number lives predicts how rigorous it is
+*171 words · about 68 seconds · sources [R22], [R24], [R25], [R39], [R00]*
+
+Now the detail that makes this the most useful case in the session.
+The same audited filing claims about fifty-nine million United States dollars of cost savings from the assistant.
+In the same document, the customer service and operations expense line rose by four million dollars, or two per cent.
+Both statements are in one filing and both are true.
+The saving is measured against a counterfactual. The expense line records what was actually spent.
+The filing explains the gap as operating leverage, because volumes grew thirty-two per cent.
+
+A second company shows how much worse this can get.
+Presto Automation reported an eighty-five per cent non-intervention rate for its drive-through system.
+Non-intervention meant restaurant staff did not intervene. Offsite contractors typed the orders instead.
+There were more contractors than employees. The regulator opened a formal investigation into those disclosures.
+Contrast that with Commonwealth Bank, which publishes a resolve rate and defines its denominator in a footnote.
+One question before we turn to what you can do about any of this.
 
 
 ## S7 · Can value be attributed at all
