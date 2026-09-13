@@ -131,13 +131,25 @@ def build(course_dir, out_name='index.html', only=None, section_bounds=None):
     """Assemble a course. `only` limits the build to a list of course-slide
     numbers, which is how the Gate 2 sample is produced from the same source."""
     course, mod = load_course(course_dir)
-    SLIDES = [s for s in mod.SLIDES if only is None or s[0] in only]
+    # Sort by course-slide number. SLIDES is authored by hand and edits append,
+    # so file order drifts away from numeric order — a deck once played 1-12,
+    # 14, 16, 24, 13 while every slide showed its own correct number, which reads
+    # as a wrong narration rather than as a wrong order.
+    ordered = sorted(mod.SLIDES, key=lambda s: s[0])
+    dupes = sorted({s[0] for s in ordered if [x[0] for x in ordered].count(s[0]) > 1})
+    if dupes:
+        raise ValueError(f'Duplicate course-slide number(s): {dupes}')
+    SLIDES = [s for s in ordered if only is None or s[0] in only]
     LABELS = mod.SOURCE_LABELS
     bounds = section_bounds or getattr(mod, 'SECTION_BOUNDS', [len(mod.SLIDES)])
     order = {}
 
+    # The script may live in its own file. course.md then holds the brief, the
+    # outline and the sources; script.md holds what is read aloud. Both are
+    # searched for narration blocks, so a course can use either.
     source = (course / 'course.md').read_text()
-    notes = narration_blocks(source)
+    script = course / 'script.md'
+    notes = narration_blocks(script.read_text() if script.exists() else source)
     registered = set(re.findall(r'^### (R\d+) ·', source, re.M))
     unknown = set(LABELS) - registered - {'R00'}
     if unknown:
@@ -151,7 +163,7 @@ def build(course_dir, out_name='index.html', only=None, section_bounds=None):
     (course / 'sections').mkdir(exist_ok=True)
     for n, kicker, title, body, refs in SLIDES:
         if n not in notes:
-            raise ValueError(f'Slide {n} has no narration block in course.md')
+            raise ValueError(f'Slide {n} has no narration block')
         if set(refs) - set(notes[n]['sources']):
             raise ValueError(f'Slide {n} cites a source its narration does not declare')
         if '{{WORLD_MAP}}' in body:

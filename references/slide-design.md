@@ -55,6 +55,55 @@ for that canvas, not for a browser window.
 number. A missing number reads as a missing slide, and numbering "around" the
 cover makes every slide read one low. (R4-11)
 
+## Leading with the claim
+
+**A slide leads with what it argues, then shows what supports it.** The claim
+goes in a `lead-box` directly under the headline; the evidence — columns, rows,
+a timeline — follows. Three case slides had the finding underneath their
+background, and one had the teaching claim at the very bottom in a callout, where
+it arrived too late to change how the slide was read.
+
+**Three elements, at most.** Headline, lead box, one supporting block. A fourth
+element is almost always a note that belongs somewhere else.
+
+**A caveat goes inside the element it qualifies, in that element's own type.**
+Not in a note under everything. "The enforcement covered several data-protection
+issues" belongs in the penalty column as "across several issues"; "the filing
+cited pricing unpredictability rather than a defective algorithm" belongs in the
+Zillow column. A guard set in small type under a slide is a guard the learner
+does not read, and cutting it because it looks like clutter then changes what the
+slide claims.
+
+**Teaching content belongs in the voice.** A "recommended control" line or a
+"lesson" line on the slide is narration that escaped. Check the script before
+deleting one: if it is already spoken, the slide loses nothing.
+
+**A closing qualifier must not be on screen before what it qualifies.** A trailing
+line that annotates a list — an asterisk note, a "reassess whenever…" line — is
+its own last build step, not a static element visible from the start.
+
+**A status or qualifier gets its own label, not an appended heading.** "FEAT
+principles · advisory, first published 2018" wraps a heading across three lines
+and buries the status. Two lines: the name, then the status in the emphasis
+colour, which is where the slide's point lives when the point is legal effect.
+
+### Highlight the term being taught
+
+**A highlight marks the term the slide is teaching, not the clause that sounds
+important.** A whole sentence in `<mark>` or `<b>` emphasises nothing. On a slide
+about recourse, mark "contest the decision" — not the sentence it sits in.
+
+**One emphasis mechanism.** `<mark>` for the taught term. Do not mix `<b>` and
+`<mark>` across slides doing the same job.
+
+### Same job, same component
+
+Two slides doing the same thing must use the same component, and the difference
+must be *measured*, not eyeballed: two case slides reached the same job from a
+`callout` at 28px and a `blockquote` at 32px with different padding, which read
+as two designs. Read the computed styles back from the built deck and compare
+them.
+
 ## Choosing a visual
 
 A component list without this guidance produces a deck where every slide is the
@@ -133,6 +182,13 @@ R3-18)
 something the learner has to hunt for, the interaction has failed. Selection is
 drawn in the emphasis colour, the detail appears where the eye already is, and a
 connector line ties it to what was clicked. (R2-10, R3-14, R5-09)
+
+**Nothing may resize on interaction, not only the quiz.** Reserve the taller
+state: the quiz verdict needs 1.75em against the 1.4em the template reserved, and
+the map's detail box needs a min-height that fits a selected jurisdiction as well
+as the prompt. The reveal check only watches `.quiz`, so everything else here is
+measured by hand — read the neighbouring element's top coordinate before and
+after the interaction.
 
 **Set the stage scale before first paint.** The engine emits a blocking head
 script that sets `--stage-scale` and a `booting` class suppressing transitions
@@ -218,6 +274,21 @@ means every hard rule holds.
 | Lower frame left empty | **warning** — a quote slide is legitimately sparse, so this is a list to walk at gate 3 |
 
 Everything else on this page is judgement, and is checked by reading the deck.
+
+## Authoring traps
+
+**Kickers and titles are HTML-escaped.** `&middot;` and `&rsquo;` render as
+literal text in a kicker or a headline — the deck showed "CASE STUDY &MIDDOT;"
+and "HSBC&rsquo;s". Use real characters there; entities are for the composition
+body only.
+
+**`SLIDES` is not in numeric order and a tuple is one line.** The engine sorts by
+course-slide number when it builds, so the file drifts. Two consequences for
+scripted edits: a slide's extent runs to the next tuple in *file* order, whatever
+number it carries, and dropping the line terminator silently joins two slides
+into one. Both mistakes deleted a slide here. After any scripted edit, load the
+module and assert the numbers run 1..N — the build's slide count is the last line
+of defence, not the first.
 
 ## Adding to this page
 
