@@ -5,7 +5,7 @@ learning outcomes, a duration budget and a delivery mode; it is built through
 three points where generation stops and a human approves a named artifact.
 
 Design rules are in [slide-design.md](./slide-design.md) — read it before
-composing slides. Vocabulary is in [../CONTEXT.md](../CONTEXT.md). Use those words exactly — the
+composing slides; the review rubric is in [course-qa.md](./course-qa.md). Vocabulary is in [../CONTEXT.md](../CONTEXT.md). Use those words exactly — the
 distinctions between Section and Slide, and between Narration and Speaker Notes,
 are load-bearing.
 
@@ -223,6 +223,11 @@ Two `render.sh` traps, both upstream and both left unpatched:
 - **A custom out-dir is never created**, and `render_one` echoes `✔`
   unconditionally with Chrome's stderr discarded — so it reports success for
   files that do not exist. **`mkdir -p` it first**, then check the files landed.
+
+**Score it before showing it.** [course-qa.md](./course-qa.md) is the review
+rubric: a mechanical Gate 0 that must pass before anything is scored, eight
+weighted dimensions, and a short list of release blockers that decide acceptance
+regardless of the total. An independent reviewer beats a self-review.
 
 **Gate: the human accepts the exact full-course HTML.** Record its content hash
 in `course.md` as `accepted_hash`. A later mismatch means the Course has diverged
