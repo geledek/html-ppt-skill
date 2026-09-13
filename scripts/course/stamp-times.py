@@ -1,14 +1,26 @@
 """Insert a per-slide time allowance into course.md, measured from the narration.
 
-Recorded delivery is ~150 wpm (references/course-workflow.md, gate 1 table), so a
-slide's time is its narration word count / 150, plus any pause the Delivery line
-asks for. Rewrites in place and prints a per-section summary.
+A slide's time is its narration word count divided by the speaking rate, plus any
+pause the Delivery line asks for. Rewrites in place and prints a per-slide table.
+
+The rate comes from `rate:` in the course's own frontmatter, not from a constant
+here: 150 wpm is the workflow's default for recorded English, but a rate is a
+property of the person doing the recording. Ray reads at 130. Pass --wpm to
+override without editing the course.
+
+    python3 scripts/course/stamp-times.py courses/<name>/course.md [--wpm N]
 """
 import io, re, sys
 
-WPM = 150
 path = sys.argv[1]
 s = io.open(path, encoding='utf-8').read()
+
+WPM = 150
+m = re.search(r'^rate:\s*(\d+)', s, re.M)
+if m:
+    WPM = int(m.group(1))
+if '--wpm' in sys.argv:
+    WPM = int(sys.argv[sys.argv.index('--wpm') + 1])
 head, narr = s.split('## Narration\n', 1)
 
 block = re.compile(r'(^#### (\d+) · [^\n]+\n)(.*?)(\*\*Narration:\*\*\n)(.*?)(?=^#### |^### S\d|^## [^#]|\Z)',

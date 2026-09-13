@@ -7,7 +7,7 @@ theme: corporate-clean
 themes: corporate-clean,minimal-white,swiss-grid,academic-paper,course-warm
 lang: en
 delivery: recorded     # presenter-led | self-paced | recorded  (gate 1)
-rate: 150          # spoken words per minute; estimated timing is recorded below
+rate: 130          # spoken words per minute, measured for this narrator; timings below follow it
 duration: 30       # minutes
 accepted_hash:     # set at gate 3; a mismatch means index.html has diverged
 ---
@@ -397,7 +397,7 @@ passages, not independently rewritten.
 #### 01 · AI Governance Overview
 
 **Sources:** [R00]
-**Time:** 0:20  ·  50 words at 150 wpm
+**Time:** 0:23  ·  50 words at 130 wpm
 
 **Narration:**
 Welcome to AI Governance Overview. I am Ray Han, Chief AI Trainer at HGT Consultancy.
@@ -408,7 +408,7 @@ The final roadmap sets out implementation actions.
 #### 02 · Would you approve the launch?
 
 **Sources:** [R00], [R04]
-**Time:** 1:04  ·  110 words at 150 wpm + 20s pause
+**Time:** 1:11  ·  110 words at 130 wpm + 20s pause
 **Delivery:** Allow 20 seconds to choose; reveal the answer before advancing.
 
 **Narration:**
@@ -427,7 +427,7 @@ We will revisit this retailer.
 #### 03 · At least four more things you need to know
 
 **Sources:** [R00], [R04], [R05]
-**Time:** 0:55  ·  137 words at 150 wpm
+**Time:** 1:03  ·  137 words at 130 wpm
 
 **Narration:**
 First, what personal data will the chatbot collect or use?
@@ -447,7 +447,7 @@ Following a framework is one input to an assessment, rather than a complete appr
 #### 04 · What is an AI system?
 
 **Sources:** [R01], [R00]
-**Time:** 0:53  ·  133 words at 150 wpm
+**Time:** 1:01  ·  133 words at 130 wpm
 
 **Narration:**
 An AI system is a machine-based system that infers from inputs how to produce outputs.
@@ -463,7 +463,7 @@ A supplier's model description therefore needs to be connected to the workflow, 
 #### 05 · What is AI governance?
 
 **Sources:** [R02], [R03], [R00]
-**Time:** 0:54  ·  136 words at 150 wpm
+**Time:** 1:03  ·  136 words at 130 wpm
 
 **Narration:**
 In this course, AI governance means the responsibilities, policies, decision processes and controls through which an organisation oversees AI.
@@ -482,7 +482,7 @@ It continues after the supplier completes installation.
 #### 06 · Governance covers the AI lifecycle
 
 **Sources:** [R02], [R03], [R00]
-**Time:** 0:56  ·  140 words at 150 wpm
+**Time:** 1:05  ·  140 words at 130 wpm
 
 **Narration:**
 Governance starts when a business identifies a proposed AI use.
@@ -501,7 +501,7 @@ Policies and management oversight apply across these activities. The diagram is 
 #### 07 · Six components of organisational AI governance
 
 **Sources:** [R02], [R03], [R04], [R00]
-**Time:** 0:59  ·  148 words at 150 wpm
+**Time:** 1:08  ·  148 words at 130 wpm
 
 **Narration:**
 We will organise the course around six components. This is a teaching synthesis, not a universal six-part legal standard.
@@ -520,7 +520,7 @@ For a low-impact internal use, the evidence may be brief. More consequential use
 #### 08 · Who reviews an AI proposal before launch?
 
 **Sources:** [R02], [R03], [R00]
-**Time:** 0:58  ·  144 words at 150 wpm
+**Time:** 1:06  ·  144 words at 130 wpm
 
 **Narration:**
 A business owner defines the intended use, expected benefit and acceptable outcomes.
@@ -542,7 +542,7 @@ The same responsibilities continue when the system changes or a significant inci
 #### 09 · AI governance across jurisdictions
 
 **Sources:** [R04], [R05], [R07], [R08], [R09], [R24], [R25]
-**Time:** 1:31  ·  228 words at 150 wpm
+**Time:** 1:45  ·  228 words at 130 wpm
 **Delivery:** Select each jurisdiction as it is named. Allow the map to settle before moving on.
 
 **Narration:**
@@ -568,7 +568,7 @@ One service can require you to consider more than one jurisdiction at the same t
 #### 10 · Different instruments have different legal effects
 
 **Sources:** [R04], [R05], [R08], [R09], [R10]
-**Time:** 0:49  ·  123 words at 150 wpm
+**Time:** 0:57  ·  123 words at 130 wpm
 
 **Narration:**
 Start with the legal form of the instrument.
@@ -586,7 +586,7 @@ These categories can overlap for a single use. They are not three risk levels, a
 #### 11 · AI Governance in Singapore
 
 **Sources:** [R04], [R05], [R10]
-**Time:** 0:53  ·  133 words at 150 wpm
+**Time:** 1:01  ·  133 words at 130 wpm
 
 **Narration:**
 For a Singapore organisation, begin with the obligations attached to its activity and data.
@@ -605,7 +605,7 @@ Document the source, scope and status of each instrument, including whether a ci
 #### 12 · EU AI Act
 
 **Sources:** [R07], [R08], [R00]
-**Time:** 1:42  ·  181 words at 150 wpm + 30s pause
+**Time:** 1:54  ·  181 words at 130 wpm + 30s pause
 **Delivery:** Allow 30 seconds to read the timeline after explaining the four components.
 
 **Narration:**
@@ -628,7 +628,7 @@ Check its provider or deployer role and the relevant scope provisions before con
 #### 13 · AI Governance in the United Kingdom
 
 **Sources:** [R09], [R11], [R12]
-**Time:** 0:51  ·  128 words at 150 wpm
+**Time:** 0:59  ·  128 words at 130 wpm
 
 **Narration:**
 The UK approach uses existing regulators and legal frameworks to address AI in context.
@@ -646,7 +646,7 @@ Identify decisions requiring review, the necessary evidence and how people can s
 #### 14 · Assess applicable obligations and potential harm
 
 **Sources:** [R00], [R02], [R05]
-**Time:** 0:49  ·  122 words at 150 wpm
+**Time:** 0:56  ·  122 words at 130 wpm
 
 **Narration:**
 Legal applicability and potential harm answer different questions.
@@ -664,7 +664,7 @@ A voluntary framework label alone does not tell the approver which use presents 
 #### 15 · Does following a framework resolve the data issue?
 
 **Sources:** [R00], [R04], [R05]
-**Time:** 1:15  ·  113 words at 150 wpm + 30s pause
+**Time:** 1:22  ·  113 words at 130 wpm + 30s pause
 **Delivery:** Allow 30 seconds to choose; reveal all option explanations before advancing.
 
 **Narration:**
@@ -683,7 +683,7 @@ Option C says an AI label alone provides the required explanation. It does not e
 #### 16 · Failure pattern: regulatory action
 
 **Sources:** [R13], [R00]
-**Time:** 0:57  ·  142 words at 150 wpm
+**Time:** 1:06  ·  142 words at 130 wpm
 
 **Narration:**
 Foodinho, a company in the Glovo group, used a digital platform to manage delivery riders in Italy.
@@ -701,7 +701,7 @@ Test whether customers or employees can actually find and use it.
 #### 17 · Case study: HSBC's credit-assessment disclosures
 
 **Sources:** [R14], [R00]
-**Time:** 1:00  ·  149 words at 150 wpm
+**Time:** 1:09  ·  149 words at 130 wpm
 
 **Narration:**
 In 2018, an unsuccessful credit-card applicant asked HSBC Singapore for its internal evaluation report.
@@ -720,7 +720,7 @@ This was not certification of HSBC's entire AI governance programme.
 #### 18 · Failure pattern: customer claims and business losses
 
 **Sources:** [R15], [R16], [R00]
-**Time:** 1:00  ·  151 words at 150 wpm
+**Time:** 1:10  ·  151 words at 130 wpm
 
 **Narration:**
 Two other examples show why the consequence of poor deployment is broader than a regulatory fine.
@@ -741,7 +741,7 @@ A governance review should consider both legal exposure and the organisation's a
 #### 19 · Financial Sector in Singapore
 
 **Sources:** [R10], [R17], [R18]
-**Time:** 0:56  ·  139 words at 150 wpm
+**Time:** 1:04  ·  139 words at 130 wpm
 
 **Narration:**
 MAS's FEAT principles address Fairness, Ethics, Accountability and Transparency in the use of AI and data analytics.
@@ -759,7 +759,7 @@ The review should distinguish binding requirements, advisory principles and prop
 #### 20 · Financial Sector in the United Kingdom
 
 **Sources:** [R11], [R12], [R00]
-**Time:** 0:54  ·  136 words at 150 wpm
+**Time:** 1:03  ·  136 words at 130 wpm
 
 **Narration:**
 The FCA explains that its existing frameworks apply to firms' use of AI.
@@ -776,7 +776,7 @@ Supplier testing can contribute evidence. It does not remove the firm's responsi
 #### 21 · Apply these governance practices in your sector
 
 **Sources:** [R00], [R02], [R03]
-**Time:** 0:48  ·  120 words at 150 wpm
+**Time:** 0:55  ·  120 words at 130 wpm
 
 **Narration:**
 The transferable practices are to map obligations, assign responsibility and retain evidence.
@@ -793,7 +793,7 @@ The useful lesson is how a regulated organisation connects its obligations to ow
 #### 22 · Who must own this before launch?
 
 **Sources:** [R00], [R11], [R12]
-**Time:** 1:18  ·  120 words at 150 wpm + 30s pause
+**Time:** 1:25  ·  120 words at 130 wpm + 30s pause
 **Delivery:** Allow 30 seconds to choose; reveal before advancing.
 
 **Narration:**
@@ -812,7 +812,7 @@ The bank should document both its own responsibilities and what evidence or supp
 #### 23 · Three questions and the evidence to request
 
 **Sources:** [R00], [R13], [R14], [R11]
-**Time:** 0:44  ·  110 words at 150 wpm
+**Time:** 0:51  ·  110 words at 130 wpm
 
 **Narration:**
 Three questions help a business leader examine a proposal.
@@ -827,7 +827,7 @@ The questions address responsibility, recourse and communication. The approval d
 #### 24 · What evidence is needed before approval?
 
 **Sources:** [R00], [R02], [R03], [R19]
-**Time:** 0:47  ·  117 words at 150 wpm
+**Time:** 0:54  ·  117 words at 130 wpm
 
 **Narration:**
 Ask for testing in the intended setting, including relevant users and foreseeable failure conditions.
@@ -843,7 +843,7 @@ An approval record should identify the evidence reviewed, unresolved limitations
 #### 25 · Would you approve the chatbot now?
 
 **Sources:** [R00], [R02], [R05]
-**Time:** 0:52  ·  131 words at 150 wpm
+**Time:** 1:00  ·  131 words at 130 wpm
 
 **Narration:**
 Return to the retailer introduced at the start. In this hypothetical continuation, the team now supplies four items of evidence.
@@ -860,7 +860,7 @@ The decision is now connected to evidence and restrictions, with the owner respo
 #### 26 · Approve, restrict or pause?
 
 **Sources:** [R00], [R02], [R03]
-**Time:** 1:18  ·  120 words at 150 wpm + 30s pause
+**Time:** 1:25  ·  120 words at 130 wpm + 30s pause
 **Delivery:** Allow 30 seconds to choose; reveal all feedback.
 
 **Narration:**
@@ -879,7 +879,7 @@ Assess the actual workflow before deciding how much control is needed.
 #### 27 · Record the next decision for each priority AI use
 
 **Sources:** [R00], [R02], [R03]
-**Time:** 0:44  ·  111 words at 150 wpm
+**Time:** 0:51  ·  111 words at 130 wpm
 
 **Narration:**
 A short decision record makes the next action explicit.
@@ -895,7 +895,7 @@ This gives management a specific issue to review and a way to follow up.
 #### 28 · Which action should come first?
 
 **Sources:** [R00], [R02], [R03]
-**Time:** 1:02  ·  104 words at 150 wpm + 20s pause
+**Time:** 1:08  ·  104 words at 130 wpm + 20s pause
 **Delivery:** Allow 20 seconds to choose; reveal before the roadmap.
 
 **Narration:**
@@ -911,7 +911,7 @@ Certification may provide useful assurance, but it is separate from deciding whe
 #### 29 · AI Governance implementation roadmap
 
 **Sources:** [R00], [R02], [R03], [R04], [R18]
-**Time:** 0:53  ·  132 words at 150 wpm
+**Time:** 1:01  ·  132 words at 130 wpm
 **Delivery:** Hold the final roadmap for 20 seconds so learners can read or capture it.
 
 **Narration:**
