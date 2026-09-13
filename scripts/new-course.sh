@@ -77,9 +77,13 @@ Narration, sources and the outline live in course.md. Shared components live in
 templates/full-decks/course/style.css — read that before inventing a new one.
 Build with scripts/build-course.sh.
 
-Available components: q-list (numbered list), stagger (builds one item at a
-time), concept-box in grid g2/g3, legal-row, lifecycle, case-timeline,
-case-quote, quiz, roadmap, implementation + ul.check, stat-row, world map.
+Shared components (templates/full-decks/course/style.css): q-list (numbered
+list), stagger (builds one item at a time), concept-box in grid g2/g3,
+case-quote, quiz, roadmap, stat-row, ul.check, world map.
+
+courses/ai-governance-overview/style.css adds legal-row, lifecycle,
+case-timeline and implementation. Those are that course's own. Copy one in and
+promote it to the template if a second course needs it.
 
 Rules the build and the checker enforce:
   * no text block over three lines at 1920x1080

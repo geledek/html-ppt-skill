@@ -80,8 +80,8 @@ where generation stops and a human approves a named artifact:
 3. **Acceptance** — the full course, reviewed from a contact sheet, hash recorded.
 
 Courses are scaffolded with `scripts/new-course.sh` into `courses/<name>/` —
-beside the skill, never inside it — and assembled from per-Section fragments by
-`scripts/assemble-course.sh`. Use `templates/full-decks/course/`, the only
+beside the skill, never inside it — and built from `course.md` + `slides.py` by
+`scripts/build-course.sh`. Use `templates/full-decks/course/`, the only
 teaching template that is themeable, and whose quiz actually works.
 `scripts/check-slides.sh` enforces the layout rules.
 

@@ -7,8 +7,16 @@
 # are measured rather than remembered:
 #   1. No text block runs more than 3 lines.
 #   2. Headline and body start at the same x and y on every slide.
-#   3. Nothing moves when a quiz answer is revealed.
-#   4. No local subresources — a linked build renders unstyled in Safari.
+#   3. No heading is rendered twice on a slide.
+#   4. Nothing runs off the bottom of the 1080px stage.
+#   5. No kicker repeats the line beneath it.
+#   6. Every slide carries its number.
+#   7. Nothing moves when a quiz answer is revealed.
+#   8. No local subresources — a linked build renders unstyled in Safari.
+# Plus one warning, which does not fail the build: a slide leaving its lower
+# frame empty. A quote slide is legitimately sparse, so that one is judgement.
+#
+# The rules themselves are in references/slide-design.md.
 # Exit 0 if all pass, 1 otherwise. Run before every gate 3 review.
 
 set -uo pipefail

@@ -39,7 +39,8 @@ courses/
 ├── <series>.md              # optional — shared audience, Research Brief, Theme
 ├── <course-name>/
 │   ├── course.md            # frontmatter + brief + outline + narration
-│   ├── sections/NN-*.html   # one fragment per Section
+│   ├── slides.py            # slide compositions
+│   ├── sections/NN.html     # GENERATED — one fragment per slide
 │   └── index.html           # GENERATED — never hand-edit
 ```
 
@@ -50,7 +51,7 @@ resolves unchanged. Don't nest courses under a series directory; it breaks that.
 ./scripts/new-course.sh <name> [series]                        # scaffold
 ./scripts/build-course.sh courses/<name>                       # full deck -> index.html
 ./scripts/build-course.sh courses/<name> --sample 1,5,10       # layout proof -> sample.html
-./scripts/check-slides.sh courses/<name>                       # five rules, exit 1 on any failure
+./scripts/check-slides.sh courses/<name>                       # eight checks, exit 1 on any failure
 ```
 
 A course is three files plus generated output:
@@ -113,10 +114,12 @@ consequences of the mode back to them rather than storing it silently:
 |---|---|---|---|
 | presenter-led | `<div class="notes">`, shown by `S` | ~150 wpm EN · ~220 字/分 | reveal is a presenter beat |
 | self-paced | **on-slide prose** | ~250 wpm silent reading | learner must be able to answer |
-| recorded | voiceover script, not in the deck | ~150 wpm | as presenter-led |
+| recorded | hidden `<div class="notes">`, as presenter-led — the narrator reads it, the slide never prints it | ~150 wpm | as presenter-led |
 
-Getting this wrong is a silent, total failure: a self-paced course whose teaching
-content sits in hidden `.notes` looks perfect in review and teaches nothing.
+The engine writes narration into `.notes` on every slide whatever the mode; what
+the mode decides is whether the teaching content *also* has to be on the slide.
+Getting it wrong is a silent, total failure: a self-paced course whose teaching
+content sits only in hidden `.notes` looks perfect in review and teaches nothing.
 
 **Then research.** Put the **Research Plan** to the human *before dispatching
 anything* — the questions you intend to answer and the kinds of sources. That is
@@ -215,7 +218,8 @@ Two `render.sh` traps, both upstream and both left unpatched:
 
 - **`all` undercounts.** It greps `class="slide"` with a closing quote, so every
   `class="slide full"` is skipped — on the course template that drops the cover
-  and the summary. **Pass the explicit count** that `assemble-course.sh` printed.
+  and the summary. **Pass the explicit count** that `build-course.sh` printed
+  (`index.html: 31 slides, 26 references -> …`).
 - **A custom out-dir is never created**, and `render_one` echoes `✔`
   unconditionally with Chrome's stderr discarded — so it reports success for
   files that do not exist. **`mkdir -p` it first**, then check the files landed.
@@ -244,9 +248,15 @@ is a grouping change over fragments that already exist.
 
 ## Slides
 
-Compose from `templates/full-decks/course/index.html` — sidebar with ticking
-objectives, concept box, worked example, exercise, quiz, summary. Every color
-comes from a token, so any theme reskins it.
+Compose against `templates/full-decks/course/style.css`, which holds the shared
+components — `q-list`, `concept-box` in a `g2`/`g3` grid, `stagger`, `quiz`,
+`roadmap`, `stat-row`, `case-quote` and the world map. Every colour comes from a
+token, so any theme reskins it.
+
+`templates/full-decks/course/index.html` beside it is a **demo page, not the
+composition source**. It still carries an objectives sidebar that the engine
+never emits and that no course has used since the governance deck dropped it.
+Read the stylesheet for what exists; read a built course for how it is used.
 
 Quiz markup — the answer key is `data-correct`, and nothing reveals until a
 click:
