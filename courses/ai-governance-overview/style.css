@@ -338,3 +338,23 @@ body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !
   color: #b42318;
 }
 .tpl-course .review-flag::before { content: "\25B2  "; }
+
+/* Slide 12. The four "what the Act regulates" cards carry the substance of the
+   slide, so they are on screen when it opens rather than built one at a time.
+   The dates below are a sequence, so they read as a timeline with arrows — the
+   same shape as the lifecycle on slide 6 — instead of five boxes that look like
+   five more categories. Everything appears at once: this is progress to scan,
+   not a list the narrator enumerates. */
+.tpl-course .timeline { grid-template-columns: repeat(5, 1fr); gap: 38px; margin-top: 40px }
+.tpl-course .timeline li {
+  position: relative; background: none; border: 0; border-radius: 0;
+  border-top: 3px solid var(--emphasis); padding: 22px 0 0;
+}
+.tpl-course .timeline li:not(:last-child)::after {
+  content: "\2192"; position: absolute; right: -29px; top: 16px;
+  font-size: 30px; color: var(--text-3);
+}
+.tpl-course .timeline li.future { border-top: 3px dashed var(--text-3); background: none }
+.tpl-course .timeline li.future time, .tpl-course .timeline li.future p { color: var(--text-2) }
+.tpl-course .timeline time { display: block; font-size: 27px; font-weight: 700; margin-bottom: 12px }
+.tpl-course .timeline p { font-size: 24px; line-height: 1.35; margin: 0 }
