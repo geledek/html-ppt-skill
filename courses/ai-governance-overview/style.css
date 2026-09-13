@@ -366,3 +366,14 @@ body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !
 .tpl-course .eu-takeaway { margin: 0 0 34px }
 .tpl-course .eu-schedule { margin-top: 36px }
 .tpl-course .eu-schedule .block-label { margin-top: 0 }
+
+/* Slide 15. Three elements only: headline, the authority's finding, then the two
+   columns that give it context. The caveat and the recommended control that used
+   to sit under them in note type are both in the script, spoken. */
+.tpl-course .case-lead { margin: 0 0 40px }
+.tpl-course .case-lead + .case-timeline { margin-top: 0 }
+.tpl-course .case-lead { font-size: 28px }
+/* With the note gone, the two columns carry the lower half on their own. */
+.tpl-course .case-timeline article { padding-top: 34px }
+.tpl-course .case-timeline h4 { font-size: 38px; margin-bottom: 22px }
+.tpl-course .case-timeline p { font-size: 32px }
