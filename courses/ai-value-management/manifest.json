@@ -1,8 +1,25 @@
 {
-  "course_source_sha256": "4614f77049ea98c8c03caf85a647c681fa073475805d2322d7701c64bf0913c6",
-  "output": "sample.html",
-  "output_sha256": "ac94716ec33089ce262820c5b106fd07d1284c4eaca7f7942de08c983ce2ab10",
+  "course_source_sha256": "8d50157933950d66d9f9836dcf70ef8690d1edfa9315faf0310b15329566052a",
+  "output": "index.html",
+  "output_sha256": "43e57667be786b68b748385636b93e7f9cbe7af737a9b8f3bd82926437dd6aae",
   "slides": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
     18,
     19,
     20,
@@ -14,8 +31,12 @@
     26,
     27,
     28,
-    29
+    29,
+    30,
+    31,
+    32,
+    33
   ],
-  "slide_count": 13,
-  "references": 10
+  "slide_count": 34,
+  "references": 27
 }

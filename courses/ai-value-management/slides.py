@@ -3,8 +3,8 @@
 Narration, sources and the outline live in course.md. Shared components live in
 templates/full-decks/course/style.css. Build with scripts/build-course.sh.
 
-Gate 2: only the representative sections are composed, S5 (slides 18-23) and
-S6 (slides 24-29). The remaining slides are composed at gate 3.
+S5 (slides 18-23) and S6 (24-29) were the gate 2 representative sections and set
+the layout conventions the other sections follow.
 """
 
 SECTION_BOUNDS = [4, 7, 12, 17, 23, 29, 31, 33]
@@ -72,15 +72,168 @@ def stats(*items, cls=''):
         for fig, unit in items) + '</div>'
 
 
-def steps(*items, build=True):
+def steps(*items, build=True, cls=''):
     """A list the narrator walks through: (name, detail). Builds on input."""
-    cls = 'q-list roomy' + (' stagger' if build else '')
+    cls = f'q-list roomy {cls}' + (' stagger' if build else '')
     return f'<ol class="{cls}">' + ''.join(
         f'<li><b>{name}</b><span>{detail}</span></li>' for name, detail in items) + '</ol>'
 
 
+def quote(text, attribution):
+    return (f'<div class="quote-body"><p class="quote-mark">“</p><p class="quote-text">{text}</p>'
+            f'<p class="quote-attr">{attribution}</p></div>')
+
+
+def callout(text):
+    return f'<p class="callout mt-l">{text}</p>'
+
+
+def stem(text):
+    return f'<p class="lede quiz-stem">{text}</p>'
+
+
 # Each tuple: course slide, kicker, heading, composition, source IDs.
 SLIDES = [
+
+# ---- S1 · The number everyone quotes -----------------------------------------
+
+(1, '', 'AI Value Management',
+ '<div class="cover-main"><p class="cover-series">AI for Business Leaders · Online Series for ISCA</p>'
+ '<h1 class="cover-title">AI Value Management</h1><div class="cover-rule"></div>'
+ '<p class="cover-by">Ray Han, PhD (Computer Science, NTU)</p>'
+ '<p class="cover-role">Chief AI Trainer, HGT Consultancy Pte Ltd</p></div>'
+ '<div class="cover-foot"><span>ray.han@hgtconsultancy.com</span><span>30 minutes · recorded</span></div>',
+ []),
+
+(2, 'MIT NANDA · JULY 2025', 'Everyone quotes ‘95 per cent of AI pilots fail’.',
+ stem('This is the most quoted statistic in enterprise AI. What does the 95 per cent in the report count?') +
+ question([
+   ('AI pilots that failed to reach production',
+    'The report’s own funnel gives a different figure for pilots.', False),
+   ('Organisations getting zero return on their investment',
+    'The report’s words: “95% of organizations are getting zero return.”', True),
+   ('AI projects abandoned before they were deployed',
+    'Abandonment is a different measure, reported by other surveys.', False),
+ ]),
+ ['R01']),
+
+(3, 'THE REPORT’S OWN FUNNEL', 'It counts organisations, not pilots.',
+ stats(('60%', 'of organisations evaluated task-specific tools'),
+       ('20%', 'reached a pilot'),
+       ('5%', 'reached production')) +
+ callout('On the report’s own numbers, 5 of every 20 pilots reached production. That is a 75 per cent failure rate.'),
+ ['R01']),
+
+(4, 'READ THE DOCUMENT', 'The report relabelled its own finding.',
+ steps(('Success', 'What users or executives remarked upon, not what was measured'),
+       ('Definitions', 'An appendix gives a stricter one, and the two do not agree'),
+       ('Sample', '52 organisations interviewed and 153 leaders surveyed at four conferences'),
+       ('Status', 'Preliminary findings. The original MIT link no longer serves the file'),
+       cls='short'),
+ ['R01', 'R02']),
+
+# ---- S2 · What the evidence agrees on instead ---------------------------------
+
+(5, 'FOUR OTHER SOURCES', 'Four studies, four different questions.',
+ '<table class="data-table"><thead><tr><th>Source</th><th>Sample</th><th>What it counted</th></tr></thead><tbody>'
+ '<tr><td>McKinsey, 2026</td><td>1,719 respondents</td><td>EBIT impact</td></tr>'
+ '<tr><td>Deloitte, 2026</td><td>3,235 leaders</td><td>Benefits achieved today</td></tr>'
+ '<tr><td>S&amp;P Global, 2025</td><td>1,006 firms</td><td>Projects abandoned</td></tr>'
+ '<tr><td>US Census Bureau</td><td>About 1.2 million businesses</td><td>Whether AI is used</td></tr>'
+ '</tbody></table>' +
+ callout('Organisations, respondents, projects and businesses are not interchangeable.'),
+ ['R03', 'R05', 'R06', 'R07']),
+
+(6, 'THE COMMON ANSWER', 'Few organisations can show material impact.',
+ stats(('37%', 'of McKinsey respondents report any EBIT impact'),
+       ('6%', 'attribute 5 per cent or more of EBIT to AI'),
+       ('20%', 'of Deloitte’s leaders already grow revenue from AI')) +
+ callout('Both McKinsey figures are flat against the previous year.'),
+ ['R03', 'R05']),
+
+(7, 'THE EVIDENCE BASE', 'Every figure here is a self-report.',
+ stats(('60%', 'of firms in one survey monitor no financial measure for AI'),
+       ('68%', 'of chief AI officers start projects they cannot assess'), cls='big') +
+ callout('No study located for this session audits financial statements or deployment records.'),
+ ['R33', 'R34']),
+
+# ---- S3 · The value was never stuck in the model ------------------------------
+
+(8, 'STANFORD DIGITAL ECONOMY LAB', 'Same technology, very different outcomes.',
+ quote('The difference was never the AI model. It was always the organization.',
+       '<b>The Enterprise AI Playbook</b> · 51 enterprise deployments · April 2026'),
+ ['R09']),
+
+(9, 'WHAT GOT IN THE WAY', 'Technology was the easiest part.',
+ stats(('77%', 'of the hardest challenges were change, data and process, not technology'), cls='big') +
+ callout('“All the hard work is in process documentation and data architecture.” <b>Executive, telecom company</b>'),
+ ['R09']),
+
+(10, 'US CENSUS BUREAU · 117,000 FIRMS', 'Two-thirds of firms changed nothing else.',
+ stats(('64%', 'of AI-using firms made no institutional adjustments'),
+       ('15%', 'trained staff, and a similar share developed new workflows'), cls='big') +
+ callout('Changes to data practices reached only 7 to 8 per cent of these firms.'),
+ ['R08']),
+
+(11, 'ROOT CAUSES', 'The symptoms are not the causes.',
+ '<table class="data-table figures ranked"><thead><tr><th>Root cause of failure</th><th>Share of cases</th></tr></thead><tbody>'
+ '<tr><td>The organisation was not ready to adopt</td><td>35%</td></tr>'
+ '<tr><td>Critical knowledge was never captured</td><td>27%</td></tr>'
+ '<tr><td>Legal or compliance blocked the project</td><td>18%</td></tr>'
+ '<tr><td>The technology was not mature enough</td><td>16%</td></tr>'
+ '</tbody></table>' +
+ callout('RAND: 84 per cent of practitioners named leadership’s framing of the problem as a root cause.'),
+ ['R09', 'R10']),
+
+(12, 'CHECK YOUR UNDERSTANDING', 'Why did this pilot stall?',
+ stem('A promising AI pilot has not reached production after a year. On the evidence, which cause is most likely?') +
+ question([
+   ('The model was not accurate enough',
+    'Immature technology accounted for 16 per cent of failures in the Stanford cases.', False),
+   ('The organisation was not ready to adopt it',
+    'The leading cause at 35 per cent, and consistent with the Census finding.', True),
+   ('The team could not prove its return',
+    'The study treats that as a consequence of other failures, not a cause.', False),
+ ]),
+ ['R08', 'R09']),
+
+# ---- S4 · Which stage are you stuck at ----------------------------------------
+
+(13, 'A DIAGNOSIS FOR YOUR PORTFOLIO', 'Four stages, four different failures.',
+ steps(('Never started', 'The use was never thought relevant'),
+       ('Piloted, never shipped', 'The pilot stopped before production'),
+       ('Shipped, not adopted', 'Delivered, but people do not use it'),
+       ('Adopted, no benefit shown', 'In use, with no financial effect demonstrated')),
+ ['R00']),
+
+(14, 'STAGE ONE', 'Most firms that never started think AI does not apply.',
+ stats(('65%', 'of non-adopting firms say AI is not applicable to their business'), cls='big') +
+ callout('Laws and regulations ranked among the least common barriers to adoption.'),
+ ['R08']),
+
+(15, 'STAGE TWO', 'Nearly half of projects stop before adoption.',
+ stats(('46%', 'of projects abandoned between proof of concept and adoption, on average'),
+       ('42%', 'of companies abandoned most initiatives, up from 17 per cent a year earlier'), cls='big') +
+ callout('The direction is consistent across sources. The precision is not.'),
+ ['R06']),
+
+(16, 'STAGE THREE', 'Use is highest where employers encourage it.',
+ stats(('40%', 'used chatbots at work with no employer encouragement'),
+       ('93%', 'used them where encouragement, tools and training combined'), cls='big') +
+ callout('Tools and training without encouragement were linked to smaller reported gains.'),
+ ['R12']),
+
+(17, 'STAGE FOUR', 'Which stage is this organisation in?',
+ stem('Staff use an AI assistant every day and report saving time. Finance cannot show any change in cost or revenue.') +
+ question([
+   ('Stage two: piloted, never shipped',
+    'The tool has shipped and is in daily use.', False),
+   ('Stage three: shipped, not adopted',
+    'Stage three would mean people are not using it. Here they are.', False),
+   ('Stage four: adopted, no benefit shown',
+    'The tool is in use and the financial benefit is unevidenced.', True),
+ ]),
+ ['R03', 'R12']),
 
 # ---- S5 · Why a working model does not move the accounts --------------------
 
@@ -168,8 +321,8 @@ SLIDES = [
  '<div class="grid g2">'
  '<article class="named-box"><h4>Presto Automation</h4><p class="box-fig">85%</p><p>‘Non-intervention’ excluded the offsite agents '
  'who entered the orders. The US regulator opened an investigation.</p></article>'
- '<article class="named-box"><h4>Commonwealth Bank of Australia</h4><p class="box-fig">86%</p><p>A resolve rate with its denominator defined '
- 'in a footnote: chats resolved without a human.</p></article>'
+ '<article class="named-box"><h4>Commonwealth Bank of Australia</h4><p class="box-fig">86%</p><p>A resolve rate whose footnote defines the '
+ 'denominator as chats resolved without a human.</p></article>'
  '</div>'
  '<p class="callout mt-l">For any rate, ask what the denominator is and who it leaves out.</p>',
  ['R24', 'R25']),
@@ -186,4 +339,51 @@ SLIDES = [
     'Read together, they show costs growing more slowly than volumes, not costs falling.', True),
  ]),
  ['R22', 'R23', 'R39']),
+
+# ---- S7 · Can value be attributed at all --------------------------------------
+
+(30, 'THE SAME DATA, THREE METHODS', 'Observational methods were off by a factor of three.',
+ stats(('416%', 'lift from a naive comparison of exposed and unexposed users'),
+       ('77%', 'lift measured by the randomised experiment'), cls='big') +
+ callout('Careful matching narrowed it to 102 per cent. The World Bank calls a before-and-after comparison a counterfeit estimate.'),
+ ['R28', 'R27']),
+
+(31, 'THE LIMIT OF MEASUREMENT', 'Attribution works at the workflow, not the accounts.',
+ stats(('62×', 'larger campaign needed, at the median, to detect a 10 per cent difference in return'), cls='big') +
+ callout('Record a baseline on one process before anyone touches the tool. It cannot be reconstructed afterwards.'),
+ ['R29', 'R32']),
+
+# ---- S8 · The next ninety days ------------------------------------------------
+
+(32, 'UK TREASURY GUIDANCE', 'Four conditions separate a saving from an estimate.',
+ steps(('Already happened', 'The cash relates to an activity that has taken place'),
+       ('Not moved or deferred', 'Costs are not merely relocated or deferred'),
+       ('Net of double counting', 'No benefit is claimed twice'),
+       ('Reasonable to a third party', 'An impartial reviewer would accept it'), cls='tight') +
+ callout('<b>Deadweight</b> Outcomes that would have occurred without any intervention are not a benefit.'),
+ ['R30', 'R31']),
+
+(33, 'TAKEAWAYS', 'What to do, and what to stop.',
+ '<div class="takeaways">'
+ '<section class="tk-recall">'
+ '<div class="tk-block"><p class="tk-label">Where value stalls</p><ol class="tk-mini">'
+ '<li>Never started</li><li>Piloted, never shipped</li><li>Shipped, not adopted</li><li>Adopted, no benefit shown</li></ol></div>'
+ '<div class="tk-block"><p class="tk-label">Where the chain breaks</p><ol class="tk-mini">'
+ '<li>Laboratory to field</li><li>Task to job</li><li>Worker to firm</li><li>Firm to economy</li></ol></div>'
+ '<div class="tk-block"><p class="tk-label">A cashable saving</p><ol class="tk-mini">'
+ '<li>Already happened</li><li>Not moved or deferred</li><li>Net of double counting</li><li>Reasonable to a third party</li></ol></div>'
+ '</section>'
+ '<section class="tk-act">'
+ '<div class="tk-block"><p class="tk-label">Next 90 days</p><ul class="tk-do">'
+ '<li>Choose one workflow where the benefit shows in a budget line</li>'
+ '<li>Record the baseline before anyone uses the tool</li>'
+ '<li>Hold back a comparison group, even a small one</li>'
+ '<li>Run it for at least a quarter</li>'
+ '<li>Name one person accountable for the benefit</li></ul></div>'
+ '<div class="tk-block"><p class="tk-label">Stop</p><ul class="tk-stop">'
+ '<li>Funding tools without the process work</li>'
+ '<li>Accepting self-reported productivity as financial return</li>'
+ '<li>Asking for enterprise-level return on investment</li></ul></div>'
+ '</section></div>',
+ ['R30', 'R00']),
 ]
