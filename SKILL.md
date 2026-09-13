@@ -190,6 +190,7 @@ Chinese + English deck, and how to export.
 - [references/presenter-mode.md](references/presenter-mode.md) — **演讲者模式 + 逐字稿编写指南（技术分享/演讲必看）**.
 - [references/course-workflow.md](references/course-workflow.md) — **教学课程三道人工关卡（做课程/教程必看）**.
 - [references/slide-design.md](references/slide-design.md) — **课程幻灯片设计规范（累积的评审反馈，做课程必看）**.
+- [references/course-qa.md](references/course-qa.md) — **课程评审评分表（验收前打分/QA）**.
 - [references/authoring-guide.md](references/authoring-guide.md) — full workflow.
 
 ## File structure
