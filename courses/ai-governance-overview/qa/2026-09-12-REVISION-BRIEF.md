@@ -1,5 +1,10 @@
 # AI Governance Overview: proposed revision
 
+> **Superseded.** This evaluated the 35-slide deck at baseline `c23627ed`, before
+> the rebuild. The deck is now 28 slides and the score below does not describe
+> it. Kept as the record of what the review found and why the rebuild happened.
+> The rubric it used has been replaced by [course-qa.md](../../../references/course-qa.md).
+
 12 September 2026 · Discussion draft for Ray and Claude Code
 
 ## Recommendation

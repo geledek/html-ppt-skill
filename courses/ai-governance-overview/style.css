@@ -113,17 +113,7 @@
 .tpl-course .implementation p{font-size:27px;line-height:1.4;color:var(--text-2);margin:0 0 23px}
 .tpl-course .implementation-next{margin-top:32px;padding-top:25px;border-top:1px solid var(--border-strong);font-size:26px;line-height:1.4;color:var(--text-2)}
 @media(prefers-reduced-motion:reduce){.tpl-course .country,.tpl-course .map-pin{animation:none!important}.tpl-course .slide{transition:none!important}}
-@media print{
- @page{size:1920px 1080px;margin:0}
- html,body.tpl-course.stage-fixed{margin:0!important;width:1920px!important;height:auto!important;overflow:visible!important;background:var(--bg)!important}
- .tpl-course.stage-fixed .deck{position:static!important;width:1920px!important;height:auto!important;transform:none!important;overflow:visible!important}
- .tpl-course.stage-fixed .slide{position:relative!important;width:1920px!important;height:1080px!important;opacity:1!important;transform:none!important;break-after:page;page-break-after:always;overflow:hidden!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}
- .tpl-course .slide:last-child{break-after:auto;page-break-after:auto}
- .progress-bar,.notes-overlay,.overview{display:none!important}
- .tpl-course .quiz .mcq .why,.tpl-course .quiz .verdict{visibility:visible!important}
- .tpl-course .country,.tpl-course .map-pin{animation:none!important;opacity:1!important}
- .tpl-course .world-map[data-focus] .country.selected{opacity:1!important}
-}
+
 
 
 /* Map: two columns, so the legend sits beside the map instead of leaving a band
@@ -132,9 +122,18 @@
 .tpl-course .world-map { width: 100%; height: auto; max-height: none }
 .tpl-course .map-side { display: flex; flex-direction: column; height: 100% }
 .tpl-course .map-prompt { font-size: 21px; color: var(--text-2); margin: 0 0 18px }
+/* The prompt is the instruction for the whole slide, so it reads under the
+   headline and across the full width, above the box it is instructing. */
+.tpl-course .map-layout > .map-prompt { grid-column: 1 / -1; font-size: 27px; line-height: 1.35; margin: 0 0 22px }
 .tpl-course .map-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; margin: 0 }
-.tpl-course .map-group-block.fragmented { grid-column: 1 / -1 }
-.tpl-course .map-detail { margin-top: auto }
+/* The fragmented group used to span both columns on its own row, which added a
+   full block of height below the longer guidance column. It now sits in the left
+   column directly under China, and guidance spans both rows, so the legend is as
+   tall as its longest column instead of longest + one. */
+.tpl-course .map-controls { grid-auto-rows: min-content; align-items: start }
+.tpl-course .map-group-block.binding { grid-column: 1; grid-row: 1 }
+.tpl-course .map-group-block.guidance { grid-column: 2; grid-row: 1 / span 2 }
+.tpl-course .map-group-block.fragmented { grid-column: 1; grid-row: 2; margin-top: 26px }
 
 
 /* ---- round 5 -------------------------------------------------------------- */
@@ -148,28 +147,38 @@
 /* R5-06/07: card headings in the accent. */
 .tpl-course .named-box h4 { color: var(--accent) }
 
-/* R5-08: numbers first, text turns in on click. */
+/* R5-08: numbers first, text arrives on click. The text used to turn in on
+   rotateX(-80deg); at that angle the glyphs foreshorten into a dark smear before
+   they resolve, which reads as a flaw rather than as motion, and it was the only
+   3D move in the deck. It now uses the same fade-and-rise as every other build,
+   so the six cards behave like the rest of the course. */
 .tpl-course .reveal-cards > * { opacity: 1; transform: none }
-.tpl-course .reveal-cards > * > div { perspective: 800px }
 .tpl-course .reveal-cards > *:not(.shown) h4,
-.tpl-course .reveal-cards > *:not(.shown) p { opacity: 0; transform: rotateX(-80deg); transform-origin: top }
+.tpl-course .reveal-cards > *:not(.shown) p { opacity: 0; transform: translateY(10px) }
 .tpl-course .reveal-cards > *.shown h4,
-.tpl-course .reveal-cards > *.shown p { animation: turn-in .5s var(--ease) forwards }
-.tpl-course .reveal-cards > *.shown p { animation-delay: .1s }
-@keyframes turn-in { from { opacity: 0; transform: rotateX(-80deg) } to { opacity: 1; transform: none } }
+.tpl-course .reveal-cards > *.shown p { animation: rise .45s var(--ease) forwards }
+.tpl-course .reveal-cards > *.shown p { animation-delay: .08s }
 @media (prefers-reduced-motion: reduce) {
   .tpl-course .reveal-cards > * h4, .tpl-course .reveal-cards > * p { opacity: 1 !important; transform: none !important }
 }
 body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !important; transform: none !important; animation: none !important }
 
-/* R5-09: the jurisdiction detail sits over the map, in the selector's blue. */
+/* The jurisdiction detail sits above the map, below the headline and on the same
+   left edge, so the prompt is read before the map rather than found on top of it.
+   It spans both columns and holds its height whether it is showing the prompt or
+   a selected jurisdiction, so selecting one never moves the map. */
 .tpl-course .map-stage { position: relative }
 .tpl-course .map-detail {
-  position: absolute; left: 0; bottom: 0; width: min(560px, 92%);
-  margin: 0; background: var(--surface); border: 1px solid var(--border);
+  grid-column: 1 / -1; margin: 0 0 26px; width: 100%; min-height: 80px;
+  box-sizing: border-box;
+  background: var(--surface); border: 1px solid var(--border);
   border-left: 5px solid var(--border-strong); border-radius: var(--radius-sm);
-  padding: 18px 24px; font-size: 21px; box-shadow: var(--shadow);
+  padding: 26px 24px; font-size: 23px; line-height: 1.2; box-shadow: var(--shadow);
 }
+/* The template stacks the jurisdiction name above its description, which suited
+   the narrow card that used to sit on the map. In a full-width band it wastes the
+   line and changes the box height between states, so the name runs inline. */
+.tpl-course .map-detail b { display: inline; font-size: inherit; margin: 0 }
 .tpl-course .map-layout.has-selection .map-detail {
   border-left-color: var(--accent);
   background: color-mix(in srgb, var(--accent) 8%, var(--surface));
@@ -259,3 +268,143 @@ body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !
 .tpl-course ul.check li::before { border-color: var(--emphasis) }
 .tpl-course .map-layout.has-selection .map-detail { border-left-color: var(--emphasis) }
 .tpl-course .map-layout.has-selection .map-detail b { color: var(--emphasis) }
+
+/* Fill the lower frame. Centring .slide-body was tried first and rejected: it
+   moved the hole from below the content to between the headline and the
+   content, which reads worse. The content itself has to be bigger. Sizes below
+   are ~20% up on the families that measured sparse, and the checker's line-count
+   and overflow rules bound how far this can go. */
+.tpl-course .legal-row { padding: 42px 0 }
+.tpl-course .legal-row h4 { font-size: 38px }
+.tpl-course .legal-row p { font-size: 35px }
+.tpl-course .lifecycle { gap: 34px }
+.tpl-course .lifecycle li { padding-top: 34px }
+.tpl-course .lifecycle h4 { font-size: 36px; margin: 20px 0 }
+.tpl-course .lifecycle p { font-size: 31px }
+.tpl-course .lifecycle .step-no { font-size: 25px }
+.tpl-course .component { padding: 34px 0 }
+.tpl-course .component h4 { font-size: 34px }
+.tpl-course .component p { font-size: 29px }
+.tpl-course .roles { font-size: 29px }
+.tpl-course .roles td { padding: 30px 22px }
+.tpl-course .roles th { font-size: 25px; padding: 18px 22px }
+.tpl-course .jurisdiction-panel h3 { font-size: 38px }
+.tpl-course .jurisdiction-panel p { font-size: 33px; margin-bottom: 28px }
+
+
+/* Second fill pass: the families that were still short after the first one.
+   Slides 4, 5, 6, 7, 12, 19, 20 and 23. Same bounds — the line-count and
+   overflow checks decide how far each can go. */
+.tpl-course .definition { font-size: 50px; margin-bottom: 32px }
+.tpl-course .definition-sub { font-size: 34px; margin-bottom: 40px }
+.tpl-course .named-box { padding: 34px 32px }
+.tpl-course .named-box h4 { font-size: 34px }
+.tpl-course .named-box p { font-size: 29px }
+.tpl-course .stat-row { margin-top: 64px }
+.tpl-course .stat-fig { font-size: 158px }
+.tpl-course .stat-unit { font-size: 34px }
+.tpl-course .stat-base { font-size: 25px; margin-top: 30px }
+.tpl-course .lifecycle li { padding-top: 44px }
+.tpl-course .lifecycle h4 { font-size: 38px }
+.tpl-course .lifecycle p { font-size: 33px }
+.tpl-course .jurisdiction-grid { gap: 64px }
+.tpl-course .jurisdiction-panel { padding-top: 34px }
+.tpl-course .jurisdiction-panel h3 { font-size: 42px }
+.tpl-course .jurisdiction-panel p { font-size: 35px }
+.tpl-course .concept-box { padding: 40px 42px; font-size: 30px }
+.tpl-course .concept-box h4 { font-size: 34px }
+.tpl-course .quiz-stem { font-size: 33px; margin-bottom: 34px }
+.tpl-course .legal-quiz .mcq { padding: 26px 30px; font-size: 30px }
+.tpl-course .legal-quiz .mcq .why { font-size: 26px }
+
+/* Review labels. Absolutely positioned so an open question never changes the
+   layout it is asking about, and so clearing one changes nothing else. */
+.tpl-course .review-flag {
+  position: absolute; top: 96px; right: 80px; max-width: 760px; margin: 0;
+  text-align: right; font-size: 19px; line-height: 1.35; font-weight: 600;
+  color: #b42318;
+}
+.tpl-course .review-flag::before { content: "\25B2  "; }
+
+/* Slide 12. The four "what the Act regulates" cards carry the substance of the
+   slide, so they are on screen when it opens rather than built one at a time.
+   The dates below are a sequence, so they read as a timeline with arrows — the
+   same shape as the lifecycle on slide 6 — instead of five boxes that look like
+   five more categories. Everything appears at once: this is progress to scan,
+   not a list the narrator enumerates. */
+.tpl-course .timeline { grid-template-columns: repeat(5, 1fr); gap: 38px; margin-top: 40px }
+.tpl-course .timeline li {
+  position: relative; background: none; border: 0; border-radius: 0;
+  border-top: 3px solid var(--emphasis); padding: 22px 0 0;
+}
+.tpl-course .timeline li:not(:last-child)::after {
+  content: "\2192"; position: absolute; right: -29px; top: 16px;
+  font-size: 30px; color: var(--text-3);
+}
+.tpl-course .timeline li.future { border-top: 3px dashed var(--text-3); background: none }
+.tpl-course .timeline li.future time, .tpl-course .timeline li.future p { color: var(--text-2) }
+.tpl-course .timeline time { display: block; font-size: 27px; font-weight: 700; margin-bottom: 12px }
+.tpl-course .timeline p { font-size: 24px; line-height: 1.35; margin: 0 }
+
+/* The scope point is a condition on everything else on the slide, so it reads
+   under the headline before the categories rather than as a footnote after the
+   dates. The schedule is one build step: its label and its timeline arrive
+   together, because a heading revealed without its content says nothing. */
+.tpl-course .eu-takeaway { margin: 0 0 34px }
+.tpl-course .eu-schedule { margin-top: 36px }
+.tpl-course .eu-schedule .block-label { margin-top: 0 }
+
+/* Slide 15. Three elements only: headline, the authority's finding, then the two
+   columns that give it context. The caveat and the recommended control that used
+   to sit under them in note type are both in the script, spoken. */
+.tpl-course .lead-box { margin: 0 0 40px }
+.tpl-course .lead-box + .case-timeline,
+.tpl-course .lead-box + .legal-stack { margin-top: 0 }
+/* With the note gone, the two columns carry the lower half on their own. */
+.tpl-course .case-timeline article { padding-top: 34px }
+.tpl-course .case-timeline h4 { font-size: 38px; margin-bottom: 22px }
+.tpl-course .case-timeline p { font-size: 32px }
+
+/* Takeaways one-pager. The three recall sets are what a leader takes away, so
+   they get the top two thirds and readable type; the roadmap underneath is three
+   steps in order, not three checklists. The columns are deliberately uneven —
+   the six components need twice the width of five one-word lifecycle steps, and
+   forcing all three into equal thirds wasted space in two of them. */
+.tpl-course .op-recall {
+  grid-template-columns: 0.95fr 1.65fr 1.4fr; gap: 44px; margin-bottom: 44px;
+}
+.tpl-course .op-block { border-top: 3px solid var(--emphasis); padding-top: 18px }
+.tpl-course .op-label { font-size: 20px }
+.tpl-course .op-mini { padding-left: 28px }
+.tpl-course .op-mini li { font-size: 24px; line-height: 1.35; margin-bottom: 8px }
+.tpl-course .op-two { columns: 2; column-gap: 34px }
+.tpl-course .op-two li { break-inside: avoid }
+
+/* The roadmap: what to do first, second, third. Arrows carry the order, which is
+   the part a leader needs; the per-phase checklists are in the script. */
+.tpl-course .op-steps {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 52px;
+  list-style: none; margin: 0; padding: 0;
+}
+.tpl-course .op-steps li { position: relative; border-top: 3px solid var(--emphasis); padding-top: 20px }
+.tpl-course .op-steps li:not(:last-child)::after {
+  content: "\2192"; position: absolute; right: -38px; top: 16px;
+  font-size: 30px; color: var(--text-3);
+}
+.tpl-course .op-steps .step-no { font-size: 22px; color: var(--emphasis); font-family: var(--font-mono) }
+.tpl-course .op-steps h4 { font-size: 30px; line-height: 1.2; margin: 12px 0 12px }
+.tpl-course .op-steps p { font-size: 24px; line-height: 1.4; color: var(--text-2); margin: 0 }
+
+/* The recall sets get a heading a leader can repeat, and the roadmap becomes a
+   labelled action plan in its own box: three steps in order, no numbers, because
+   the arrows carry the sequence and the digits competed with the numbered recall
+   lists above. */
+.tpl-course .onepager > .block-label { margin: 0 0 20px }
+.tpl-course .op-action-label { margin: 0 0 16px }
+.tpl-course .op-action {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 30px 34px;
+}
+.tpl-course .op-action .op-steps li { border-top: 0; padding-top: 0 }
+.tpl-course .op-action .op-steps li:not(:last-child)::after { top: 2px }
+.tpl-course .op-action .op-steps h4 { margin: 0 0 12px }
