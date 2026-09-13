@@ -1,0 +1,78 @@
+/* AI Value Management — course-specific styles only.
+   Shared components live in templates/full-decks/course/style.css.
+
+   PROMOTION CANDIDATES for main, flagged at gate 2 (13 September 2026):
+   1. --emphasis. slide-design.md makes the blue emphasis a deck-wide rule, but
+      the token is only defined in ai-governance-overview/style.css. The shared
+      template still colours card titles, list numbers and figures navy, so
+      every new course starts out of line with the guide.
+   2. .data-table. The guide says a chronology or a comparison gets a table;
+      the template has no table styling at all.
+   3. Quiz buttons. The template hides .why with display:none and reveal only
+      toggles visibility, so per-option feedback NEVER appears; buttons also
+      shrink-wrap in the browser default font. ai-governance-overview fixes both
+      in its own style.css. The "nothing moves on reveal" check passes the
+      broken template precisely because nothing is ever revealed. */
+
+/* one emphasis colour, and it is the blue (R5-03, R5-06, R5-13) */
+.tpl-course { --emphasis: var(--accent-2); }
+.tpl-course .stat-fig,
+.tpl-course .named-box h4,
+.tpl-course .callout b,
+.tpl-course .ref-no { color: var(--emphasis) }
+.tpl-course .named-box { border-top-color: var(--emphasis) }
+.tpl-course .callout { border-left-color: var(--emphasis) }
+.tpl-course .cover-rule { background: var(--emphasis) }
+.q-list li::before { color: var(--emphasis) }
+
+/* fill the lower frame: fewer, larger items (R4-10, R5-02) */
+.tpl-course .stat-row { gap: 130px; margin-top: 70px }
+.tpl-course .stat-fig { font-size: 200px }
+.tpl-course .stat-unit { font-size: 38px; max-width: 24ch; line-height: 1.3; margin-top: 18px }
+
+.tpl-course .named-box { padding: 38px 42px }
+.tpl-course .named-box h4 { font-size: 40px; margin-bottom: 14px }
+.tpl-course .named-box p { font-size: 34px; line-height: 1.38 }
+
+.tpl-course .callout { font-size: 36px; line-height: 1.38; padding: 30px 38px }
+.tpl-course .stat-row.big .stat-fig { font-size: 250px }
+.tpl-course .stat-row.big { margin-top: 40px }
+.tpl-course .grid.g2 .named-box h4 { font-size: 44px }
+.tpl-course .grid.g2 .named-box p { font-size: 37px }
+
+.q-list.roomy li { grid-template-columns: 84px 640px 1fr; padding: 46px 0 }
+.q-list.roomy li::before { font-size: 30px }
+.q-list.roomy b { font-size: 44px }
+.q-list.roomy span { font-size: 34px; line-height: 1.3 }
+
+/* a comparison or a chronology gets a table */
+.tpl-course .data-table { width: 100%; border-collapse: collapse; table-layout: fixed }
+.tpl-course .data-table th {
+  text-align: left; font-size: 22px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--text-3);
+  padding: 0 28px 16px 0; border-bottom: 2px solid var(--border-strong);
+}
+.tpl-course .data-table td {
+  font-size: 40px; line-height: 1.3; color: var(--text-1);
+  padding: 40px 32px 40px 0; border-bottom: 1px solid var(--border); vertical-align: top;
+}
+.tpl-course .data-table.compare td:last-child { color: var(--emphasis); font-weight: 600 }
+.tpl-course .data-table.figures td:last-child { font-family: var(--font-display); font-weight: 700 }
+
+.tpl-course .filing-grid { grid-template-columns: 1fr 1fr; gap: 120px; align-items: start }
+.tpl-course .filing-grid .stat-row { margin-top: 20px }
+
+/* quiz: full-width options in the theme font, and feedback that actually shows.
+   .why keeps its space while hidden, so revealing it moves nothing (R3). */
+.tpl-course .quiz-stem { margin: 0 0 30px; font-size: 36px; line-height: 1.35; color: var(--text-1) }
+.tpl-course button.mcq { font-family: inherit; text-align: left; width: 100%; color: var(--text-1);
+  font-size: 34px; padding: 26px 32px; margin-bottom: 16px }
+.tpl-course .mcq .letter { width: 40px; height: 40px; font-size: 18px; margin-top: 3px }
+.tpl-course .quiz .mcq .why { display: block; visibility: hidden; font-size: 26px; line-height: 1.35; margin: 8px 0 0 }
+.tpl-course .quiz.revealed .mcq .why { visibility: visible }
+.tpl-course .mcq:focus-visible { outline: 4px solid var(--emphasis); outline-offset: 5px }
+@media print { .tpl-course .quiz .mcq .why, .tpl-course .quiz .verdict { visibility: visible !important } }
+
+/* two near-identical rates, side by side: the figure is the hook, the note is the point */
+.tpl-course .grid .named-box p.box-fig { font-family: var(--font-display); font-size: 120px; line-height: 1;
+  font-weight: 800; letter-spacing: -.03em; color: var(--emphasis); margin: 6px 0 18px }

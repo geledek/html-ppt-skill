@@ -1,7 +1,7 @@
 # AI Value Management — voiceover script
 
-Recorded, 30 minutes. 30 slides, 3,282 words, 21.9 minutes of speech at 150 wpm.
-Read aloud. Both language passes applied: no-ai-slop then sg-english.
+Recorded, 30 minutes. 33 slides, 3,512 words, 23.4 minutes of speech at 150 wpm.
+Both language passes applied: no-ai-slop then sg-english.
 
 ---
 
@@ -280,36 +280,45 @@ Precise null is a specific claim and worth stating carefully.
 It does not mean nothing happened. It means any effect was too small to be distinguished from zero.
 Note also that this paper has not been peer-reviewed.
 
-### 21 · The saved time went into oversight
-*144 words · about 58 seconds · sources [R12], [R13], [R18], [R19], [R20]*
+### 21 · Most of the new work was supervising the tool
+*79 words · about 32 seconds · sources [R12]*
 
-So where did the time go. The same Danish data offers the most direct answer available.
-Of the new tasks created by AI, only forty-one per cent involve productive use of it.
+The same Danish data shows where much of the saved time went.
+Of the new tasks that AI created, only forty-one per cent involve using it productively.
 The remaining fifty-nine per cent are implementation and oversight.
-That is quality review, integration work, and ethics and compliance.
-About a quarter of workers spend more time on the very tasks they initially saved time on.
+That covers quality review, integration work, and ethics and compliance.
+About a quarter of users spend more time on the very tasks they initially saved time on.
+Adopting the tool created work of its own, and most of that new work is supervision.
 
-The chain from a task gain to an accounting gain breaks in four identifiable places.
-One team that ran both a laboratory test and field trials found the field effect roughly half the size.
-Time saved on a task is not output gained, because most work is not that task.
-No study measures both worker gains and firm profit, so the third link is untested.
-And the statistical agencies do not measure AI separately at all.
+### 22 · A faster task breaks down four times before the accounts
+*139 words · about 56 seconds · sources [R13], [R19], [R20], [R18], [R00]*
 
-### 22 · Check your understanding
-*71 words · about 28 seconds · sources [R11], [R12]*
+That pattern repeats at every level between a single task and the accounts.
+The chain from a faster task to a better financial result breaks in four identifiable places.
+First, laboratory to field. One team ran both, and the field gain was substantially smaller than the laboratory gain.
+Second, task to job. Time saved on one task is not output gained, because most jobs contain many other tasks.
+Third, worker to firm. No study located for this session measures both worker gains and firm profit.
+Fourth, firm to economy. The United States Bureau of Labor Statistics does not measure AI's contribution separately.
+
+The one model that estimates the whole chain projects very little.
+It adds no more than two-thirds of one per cent to productivity over ten years.
+Its author argues that even this figure could be too high.
+
+### 23 · Check your understanding
+*75 words · about 30 seconds · sources [R11], [R12]*
 
 That is a lot of evidence pointing one way, so test what it does and does not show.
 Choose the statement the research supports.
 
 The correct answer is the third.
 Individual time savings are well evidenced and firm-level financial effects are not.
-The first option overstates the case, because the tools demonstrably save time.
-The second understates it, because a precise null is a finding rather than an absence of research.
+The first option is contradicted by the trial, because the tools demonstrably save time.
+The second understates what is known, because a precise null is a finding rather than an absence of research.
 
 
 ## S6 · One company, read two ways
 
-### 23 · Klarna published the number itself
+### 24 · Klarna published the number itself
 *99 words · about 40 seconds · sources [R22], [R39]*
 
 All of that was general evidence. It helps to watch the problem happen to one company.
@@ -322,7 +331,7 @@ It is an equivalence estimate, not a count of people made redundant.
 And the release stated that customers could still choose to interact with live agents if they preferred.
 Neither point survived into the story that followed.
 
-### 24 · What he said, and what was reported
+### 25 · What he said, and what was reported
 *163 words · about 65 seconds · sources [R39]*
 
 Fifteen months later the chief executive gave an interview that became a cautionary tale.
@@ -337,8 +346,8 @@ He has pushed back five times in ten months, and the company denied it on the re
 He is careful about what he blames. He says the original article was balanced and he will not blame the journalist.
 His objection is to the headline and to what was built on top of it.
 
-### 25 · The filings never wavered
-*161 words · about 64 seconds · sources [R22], [R39]*
+### 26 · The filings never wavered
+*172 words · about 69 seconds · sources [R22], [R39]*
 
 There is a way to test which account is closer to the truth, and it does not involve trusting anyone.
 Look at what the company said in documents signed under securities liability.
@@ -346,34 +355,55 @@ Full-time employees fell from five thousand five hundred to two thousand eight h
 The decline is continuous, with no rebound in any year.
 The filings attribute it to a strategic decision to leverage AI, and state that headcount is expected to keep falling.
 That sentence is unchanged across three successive filings.
-The automation share rose from sixty-nine per cent to eighty per cent over the same period.
+The share of chats handled by AI also rose, from sixty-nine to eighty per cent.
+That rise runs from the listing prospectus to the next annual report.
 
 One sentence about human agents did appear in a later filing and was absent from an earlier one.
 That is the only textual trace of the pivot anywhere in the filings, and it concedes nothing.
 So both things are true.
 AI handles more of the work each year, and a human tier is being built on top of it.
 
-### 26 · Where a number lives predicts how rigorous it is
-*171 words · about 68 seconds · sources [R22], [R24], [R25], [R39], [R00]*
+### 27 · A claimed saving and a smaller bill are different things
+*116 words · about 46 seconds · sources [R22], [R39], [R00]*
 
-Now the detail that makes this the most useful case in the session.
-The same audited filing claims about fifty-nine million United States dollars of cost savings from the assistant.
-In the same document, the customer service and operations expense line rose by four million dollars, or two per cent.
-Both statements are in one filing and both are true.
+The filings settle the headcount question. They also contain the detail that makes this the most useful case in the session.
+The same annual filing claims about fifty-nine million United States dollars of cost savings from the assistant.
+In the same document, the customer service and operations expense line rose by four million United States dollars, or two per cent.
+Both statements appear in one filing, and both are true.
 The saving is measured against a counterfactual. The expense line records what was actually spent.
 The filing explains the gap as operating leverage, because volumes grew thirty-two per cent.
+A claimed saving and a smaller bill are different things. Ask which one you are being shown.
 
-A second company shows how much worse this can get.
-Presto Automation reported an eighty-five per cent non-intervention rate for its drive-through system.
-Non-intervention meant restaurant staff did not intervene. Offsite contractors typed the orders instead.
-There were more contractors than employees. The regulator opened a formal investigation into those disclosures.
-Contrast that with Commonwealth Bank, which publishes a resolve rate and defines its denominator in a footnote.
-One question before we turn to what you can do about any of this.
+### 28 · A rate is only as honest as its denominator
+*113 words · about 45 seconds · sources [R24], [R25], [R00]*
+
+A second company shows how far a figure can drift from the facts behind it.
+Presto Automation reported an eighty-five per cent non-intervention rate for its drive-through ordering system.
+Non-intervention meant that restaurant staff did not intervene.
+Offsite human agents entered, reviewed and corrected the orders instead.
+At the time, the company had more contractors than full-time employees.
+The United States Securities and Exchange Commission opened a formal investigation into its disclosures about the technology.
+
+Commonwealth Bank of Australia shows the alternative.
+It publishes an eighty-six per cent resolve rate, and defines the denominator in a footnote.
+For any rate you are shown, ask what the denominator is and who it leaves out.
+
+### 29 · Check your understanding
+*89 words · about 36 seconds · sources [R22], [R23], [R39]*
+
+One question to test the Klarna case before we turn to attribution.
+Read the situation on screen and choose.
+
+The answer is the third.
+The fifty-nine million figure is a saving measured against what costs would otherwise have been.
+The eight hundred and fifty-three jobs figure is an equivalence estimate from an earnings call, with no stated baseline.
+Only the expense line records what was spent, and the growth in volumes explains why it rose.
+Read together, they show costs growing more slowly than the business, not costs falling.
 
 
 ## S7 · Can value be attributed at all
 
-### 27 · Off by a factor of three
+### 30 · Off by a factor of three
 *143 words · about 57 seconds · sources [R27], [R28], [R35]*
 
 That brings us to the question underneath all of this. Can the value be attributed properly.
@@ -389,8 +419,8 @@ A baseline measured before an intervention is almost never a good estimate of th
 They call before-and-after comparison a counterfeit estimate.
 Microsoft's experimentation team says the same in industrial terms. External variation overwhelms the effect being sought.
 
-### 28 · It works at the workflow, not the accounts
-*132 words · about 53 seconds · sources [R29], [R32], [R00]*
+### 31 · It works at the workflow, not the accounts
+*126 words · about 50 seconds · sources [R29], [R32], [R00]*
 
 There is also a limit that no amount of diligence can overcome, and leaders should know it.
 Across twenty-five large field experiments, the median confidence interval on return was over one hundred percentage points wide.
@@ -402,12 +432,11 @@ Attribution is achievable at the level of one workflow.
 It is not achievable at the level of the enterprise accounts.
 So the right demand is a baseline on one process, recorded before anyone touches the tool.
 The guidance is explicit that this must be designed in before the intervention starts.
-One question to close this section.
 
 
 ## S8 · The next ninety days
 
-### 29 · Four lines that separate a saving from an estimate
+### 32 · Four lines that separate a saving from an estimate
 *117 words · about 47 seconds · sources [R30], [R31]*
 
 Everything so far leads to a test you can apply without any technical knowledge.
@@ -422,7 +451,7 @@ Deadweight describes outcomes that would have occurred without any intervention.
 A benefit the market would have delivered anyway is not a benefit of your project.
 Anything that fails these tests is an estimate. The surveys suggest an estimate is what most organisations hold.
 
-### 30 · What to do, and what to stop
+### 33 · What to do, and what to stop
 *127 words · about 51 seconds · sources [R00], [R30], [R32], [R04], [R09]*
 
 So here is what the evidence supports doing in the next ninety days.
