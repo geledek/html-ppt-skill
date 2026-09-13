@@ -358,3 +358,11 @@ body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !
 .tpl-course .timeline li.future time, .tpl-course .timeline li.future p { color: var(--text-2) }
 .tpl-course .timeline time { display: block; font-size: 27px; font-weight: 700; margin-bottom: 12px }
 .tpl-course .timeline p { font-size: 24px; line-height: 1.35; margin: 0 }
+
+/* The scope point is a condition on everything else on the slide, so it reads
+   under the headline before the categories rather than as a footnote after the
+   dates. The schedule is one build step: its label and its timeline arrive
+   together, because a heading revealed without its content says nothing. */
+.tpl-course .eu-takeaway { margin: 0 0 34px }
+.tpl-course .eu-schedule { margin-top: 36px }
+.tpl-course .eu-schedule .block-label { margin-top: 0 }
