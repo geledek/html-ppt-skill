@@ -373,6 +373,9 @@ body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !
 .tpl-course .case-lead { margin: 0 0 40px }
 .tpl-course .case-lead + .case-timeline { margin-top: 0 }
 .tpl-course .case-lead { font-size: 28px }
+/* A quote can be the lead element too: same position, same gap to the columns. */
+.tpl-course blockquote.case-lead { margin: 0 0 40px }
+.tpl-course .case-lead + .case-timeline { margin-top: 0 }
 /* With the note gone, the two columns carry the lower half on their own. */
 .tpl-course .case-timeline article { padding-top: 34px }
 .tpl-course .case-timeline h4 { font-size: 38px; margin-bottom: 22px }
