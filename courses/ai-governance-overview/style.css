@@ -148,15 +148,17 @@
 /* R5-06/07: card headings in the accent. */
 .tpl-course .named-box h4 { color: var(--accent) }
 
-/* R5-08: numbers first, text turns in on click. */
+/* R5-08: numbers first, text arrives on click. The text used to turn in on
+   rotateX(-80deg); at that angle the glyphs foreshorten into a dark smear before
+   they resolve, which reads as a flaw rather than as motion, and it was the only
+   3D move in the deck. It now uses the same fade-and-rise as every other build,
+   so the six cards behave like the rest of the course. */
 .tpl-course .reveal-cards > * { opacity: 1; transform: none }
-.tpl-course .reveal-cards > * > div { perspective: 800px }
 .tpl-course .reveal-cards > *:not(.shown) h4,
-.tpl-course .reveal-cards > *:not(.shown) p { opacity: 0; transform: rotateX(-80deg); transform-origin: top }
+.tpl-course .reveal-cards > *:not(.shown) p { opacity: 0; transform: translateY(10px) }
 .tpl-course .reveal-cards > *.shown h4,
-.tpl-course .reveal-cards > *.shown p { animation: turn-in .5s var(--ease) forwards }
-.tpl-course .reveal-cards > *.shown p { animation-delay: .1s }
-@keyframes turn-in { from { opacity: 0; transform: rotateX(-80deg) } to { opacity: 1; transform: none } }
+.tpl-course .reveal-cards > *.shown p { animation: rise .45s var(--ease) forwards }
+.tpl-course .reveal-cards > *.shown p { animation-delay: .08s }
 @media (prefers-reduced-motion: reduce) {
   .tpl-course .reveal-cards > * h4, .tpl-course .reveal-cards > * p { opacity: 1 !important; transform: none !important }
 }
