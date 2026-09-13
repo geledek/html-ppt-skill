@@ -79,6 +79,30 @@
         });}
         window.addEventListener('beforeprint',revealForPrint);
         if(new URLSearchParams(location.search).has('answers'))revealForPrint();
+    // Stepped builds. Capture phase so this runs before runtime.js navigates:
+    // the first presses reveal the group, the press after that moves on.
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== ' ' && e.key !== 'ArrowRight' && e.key !== 'PageDown') return;
+      if (e.target && e.target.closest && e.target.closest('.mcq, button')) return;
+      var slide = document.querySelector('.slide.is-active');
+      if (!slide || document.body.classList.contains('stills')) return;
+      var next = slide.querySelector('.stagger > *:not(.shown)');
+      if (!next) return;
+      next.classList.add('shown');
+      e.preventDefault();
+      e.stopPropagation();
+    }, true);
+
+    // Leaving a slide resets its build so it replays correctly on return.
+    new MutationObserver(function (recs) {
+      recs.forEach(function (r) {
+        var el = r.target;
+        if (el.classList && el.classList.contains('slide') && !el.classList.contains('is-active')) {
+          el.querySelectorAll('.stagger > .shown').forEach(function (c) { c.classList.remove('shown'); });
+        }
+      });
+    }).observe(document.querySelector('.deck') || document.body,
+               {subtree: true, attributes: true, attributeFilter: ['class']});
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();

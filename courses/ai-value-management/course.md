@@ -7,7 +7,7 @@ theme: corporate-clean
 themes: corporate-clean,minimal-white,swiss-grid,academic-paper,course-warm
 lang: en
 delivery: recorded     # presenter-led | self-paced | recorded  (gate 1)
-rate: 135          # EFFECTIVE wpm. Raw spoken EN is ~150, but a recorded module spends real time on diagram beats and quiz pauses that carry no words. 30 x 135 = ~4,050. Budget 4,000.
+rate: 110          # EFFECTIVE wpm, measured from the gate-2 narration: 3,282 words / 30 min. Raw speech is 21.9 min at 150 wpm; the balance is quiz pauses and visual beats. Raw spoken EN is ~150, but a recorded module spends real time on diagram beats and quiz pauses that carry no words. 30 x 135 = ~4,050. Budget 4,000.
 duration: 30       # minutes
 accepted_hash:     # set at gate 3; a mismatch means index.html has diverged
 ---
@@ -120,6 +120,620 @@ Every headline percentage in Q1 and Q3 is repeated far more often than it is
 read. The rule for all of them, including the 95%: establish the primary and what
 it counted, or leave the number out. A course that opens on a misquoted figure
 has lost the room before the first outcome.
+
+## Research Brief
+
+One `### Rnn` entry per source, each with the claim, a direct quote, the URL and
+the date. **A slide may only cite source IDs its narration block declares.**
+Caveats, discarded figures and arithmetic are in `## Evidence audit` below; read
+the audit entry before citing any Rnn on a slide.
+
+### R00 · Illustrations and teaching synthesis
+
+The four-stage diagnosis in S4 and the decision rule in S8. Built from R08, R06,
+R12 and R03, and identified on the slide as the course's own structure. **No
+source stages the whole funnel** — see the audit. Not attributed to any
+researcher.
+
+### R01 · MIT NANDA — the 95% figure
+
+*The GenAI Divide: State of AI in Business 2025.* Challapally, Pease, Raskar,
+Chari. July 2025. Research period January to June 2025.
+> "Despite $30–40 billion in enterprise investment into GenAI, this report
+> uncovers a surprising result in that 95% of organizations are getting zero
+> return."
+> "Sixty percent of organizations evaluated such tools, but only 20 percent
+> reached pilot stage and just 5 percent reached production."
+> "The 95% failure rate for enterprise AI solutions represents the clearest
+> manifestation of the GenAI Divide."
+http://web.archive.org/web/20250818145714if_/https://nanda.media.mit.edu/ai_report_2025.pdf
+⚠️ The canonical MIT URL now redirects to a sponsorship page. Cite the archive.
+
+### R02 · MIT NANDA — method and its own limits
+
+Same document.
+> "structured interviews with representatives from 52 organizations, and survey
+> responses from 153 senior leaders collected across four major industry
+> conferences."
+> "We define successfully implemented for task-specific GenAI tools as ones users
+> or executives have remarked as causing a marked and sustained productivity
+> and/or P&L impact"
+> "These figures are directionally accurate based on individual interviews rather
+> than official company reporting."
+> "Preliminary Findings from AI Implementation Research from Project NANDA"
+> "The views expressed in this report are solely those of the authors and reviewers
+> and do not reflect the positions of any affiliated employers."
+
+### R03 · McKinsey — state of AI 2026
+
+25 August 2026. Field 4 May to 8 June 2026. n=1,719 in 97 nations, GDP-weighted.
+> "Thirty-seven percent of respondents attribute at least some EBIT impact to AI
+> use (about the same share as last year). And the proportion of AI high
+> performers … has remained flat at about 6 percent of all respondents."
+> "At the individual level, AI is clearly a boon: 80 percent of survey respondents
+> say it has improved their productivity and half say it helps them make better
+> decisions. Yet, only 37 percent of organizations report any positive EBIT
+> contribution, essentially flat compared with last year."
+> "One in five respondents says their organization is limiting AI use because of
+> operating costs"
+> "Just 14 percent of respondents from organizations using AI report that AI
+> contributed to an overall decline in workforce size in the past year—less than
+> half the 32 percent who, in last year's survey, expected workforce reductions"
+https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
+
+### R04 · McKinsey — workflow redesign and its R²
+
+*The state of AI: How organizations are rewiring to capture value*, March 2025.
+n=1,491, field 16 to 31 July 2024.
+> "out of 25 attributes tested for organizations of all sizes, the redesign of
+> workflows has the biggest effect on an organization's ability to see EBIT impact
+> from its use of gen AI."
+> Footnote 1: "The correlation analyses considered 25 attributes and the reported
+> effect of gen AI use on organizations' EBIT, and using the Johnson's Relative
+> Weights regression analysis yielded an R-squared of 0.20."
+> "less than one in five saying their organizations are tracking KPIs for gen AI
+> solutions."
+**Correlation, not causation. Both variables self-reported by one respondent.**
+
+### R05 · Deloitte — benefits achieved against benefits hoped for
+
+*State of AI in the Enterprise: The Untapped Edge*, January 2026. Field August to
+September 2025. n=3,235, director to C-suite, 24 countries.
+> "revenue growth largely remains an aspiration, with 74% of organizations hoping
+> to grow revenue through their AI initiatives in the future compared to just 20%
+> that are already doing so"
+Achieving today against hope to achieve: efficiency and productivity 66/60;
+reduce costs 40/65; **increase revenue 20/74**.
+⚠️ Frame is purposive: "organizations on the leading edge of AI". Not a
+population estimate.
+
+### R06 · S&P Global / 451 Research — abandonment
+
+*Voice of the Enterprise: AI & Machine Learning, Use Cases 2025*, 30 May 2025.
+n=1,006, North America and Europe.
+> "The percentage of companies abandoning the majority of their AI initiatives
+> before they reach production has surged from 17% to 42% year over year, with
+> organizations on average reporting that 46% of projects are scrapped between
+> proof of concept and broad adoption."
+⚠️ Field dates and question wording not published. The 46% is the only
+project-level figure in the brief.
+
+### R07 · US Census BTOS — adoption, with a real sampling frame
+
+*Large Firms With at Least 20 Employees Biggest AI Users*, 26 May 2026.
+~1.2 million businesses sampled annually from the 2023 Business Register.
+> "As of May 3, 2026, the AI use rates in the Information (39.7%) and Finance and
+> Insurance (33.9%) sectors were both higher than the national rate (19.8%)"
+> "Less than 20% of firms with four or fewer employees reported using AI."
+https://www.census.gov/library/stories/2026/05/ai-use-businesses.html
+⚠️ Filed under Experimental Data Products. A November 2025 question change breaks
+the series.
+
+### R08 · US Census — the complementary work is not being done
+
+Bonney, Breaux, Dinlersoz, Foster, Haltiwanger & Pande, *The Microstructure of AI
+Diffusion*, CES-WP-26-25, April 2026. **>117,000 distinct firms, nationally
+representative, survey-weighted.** The strongest sample in the brief.
+> "over half of AI-using businesses (64%) report no institutional adjustments …
+> The most common adjustments are training staff and developing new workflows –
+> each applicable to about 15% of AI-using firms."
+> "the most common barrier is that AI is not applicable to the business (65% of
+> firms, firm-weighted)"
+> "57% of users integrate AI in three or fewer business functions, most commonly
+> Sales and Marketing (52%)"
+> "Most users (66%) rely on AI solely to augment tasks, while AI-related
+> employment decreases are rare, occurring in only 2% of firms."
+> "We underscore that these associations are descriptive and do not imply causal
+> relationships … reverse causality remains a concern"
+https://www2.census.gov/library/working-papers/2026/adrm/ces/CES-WP-26-25.pdf
+
+### R09 · Stanford Digital Economy Lab — the Enterprise AI Playbook
+
+*The Enterprise AI Playbook: Lessons from 51 Successful Deployments.* Pereira,
+Graylin, Brynjolfsson. April 2026. 51 cases, 41 organisations, interview-based.
+> "Same technology, same use cases, vastly different outcomes. The difference was
+> never the AI model. It was always the organization." (p.2)
+> "77% of the hardest challenges practitioners faced were invisible costs: change
+> management, data quality, and process redesign, not technical issues. Technology
+> was consistently described as the easiest part." (p.13)
+> "Common symptoms like 'projects stuck in pilot' or 'inability to prove ROI'
+> appeared frequently, but these are consequences, not causes." (p.110)
+> Six root causes: organisation not ready to adopt 35%; knowledge never captured
+> 27%; legal or compliance blocked 18%; technology not mature 16%; wrong problem
+> 14%; talent or sponsorship gap 12%. (p.111)
+> "61% had a failed AI project before their current success" (p.15)
+> "Fix the process before applying AI. AI amplifies whatever process it is applied
+> to. If the process is broken, AI makes it worse faster." (p.27)
+> "We want to be transparent that this does carry a known limitation: selection
+> bias toward positive outcomes … we don't claim to provide representative data on
+> how common success is across the broader economy." (p.6)
+https://digitaleconomy.stanford.edu/app/uploads/2026/03/EnterpriseAIPlaybook_PereiraGraylinBrynjolfsson.pdf
+⚠️ **Every percentage has a denominator of successes.** Every company anonymised.
+⚠️ **Disclose (Ray's instruction):** Brynjolfsson "puts his academic insights to
+practical use via Workhelix, a company he co-founded to identify and measure the
+benefits of AI" (p.3).
+
+### R10 · RAND — root causes of AI project failure
+
+RR-A2680-1, 13 August 2024. 65 semi-structured interviews, 50 industry and 15
+academic, August to December 2023.
+> "Eighty-four percent of our interviewees cited one or more of these root causes
+> as the primary reason that AI projects would fail."
+> "the most common root cause of failure was the business leadership of the
+> organization misunderstanding how to set the project on a pathway to success."
+> "because the majority of our interviewees were nonmanagerial engineers instead
+> of business executives, the results may disproportionately reflect the
+> perspective of individuals who do not hold leadership positions. Thus, the
+> results may be skewed toward identifying leadership failures."
+https://www.rand.org/content/dam/rand/pubs/research_reports/RRA2600/RRA2680-1/RAND_RRA2680-1.pdf
+⚠️ **RAND's own "80% of AI projects fail" line is a citation to journalism, not a
+RAND finding. The course must not repeat it.**
+
+### R11 · Dillon, Jaffe, Immorlica & Stanton — time saved, nothing else moved
+
+*Shifting Work Patterns with Generative AI*, arXiv:2504.11436v4, 13 November
+2025; NBER WP 33795. Randomised, **66 firms, 7,137 knowledge workers, 6 months.**
+> "the 80% of treated workers who used this tool spent two fewer hours on email
+> each week and reduced their time working outside of regular hours. Apart from
+> these individual time savings, we do not detect shifts in the quantity or
+> composition of workers' tasks resulting from individual-level AI provision."
+> "treated and control workers replied to the same number of email threads,
+> participated in the same number of Teams meetings, and completed the same number
+> of Word documents."
+> "we do not observe the content of any work nor any measures of productivity or
+> performance evaluation."
+https://arxiv.org/abs/2504.11436
+
+### R12 · Humlum & Vestergaard — a measured null, and where the work goes
+
+*Still Waters, Rapid Currents*, RFBerlin DP 078/26, 13 March 2026; NBER WP 33777.
+~25,000 Danish worker responses per round linked to administrative records,
+difference-in-differences, 11 exposed occupations.
+> "most employers in exposed occupations have adopted chatbot initiatives, workers
+> report productivity benefits, and new AI-related tasks are widespread. Yet these
+> currents have not broken the surface: using difference-in-differences, we
+> estimate precise null effects on earnings and recorded hours at both the worker
+> and workplace levels, ruling out effects larger than 2% two years after the
+> launch of ChatGPT."
+> "only 41% of new tasks focus on 'productive AI use' … while the remaining 59%
+> relate to 'AI implementation and oversight'"
+> "about 25% spend more time on the same tasks they initially saved time on."
+> "take-up rates almost double in workplaces with active employer initiatives."
+> adopters "report savings of about 3% of their work hours"; "the large majority
+> (85%) of chatbot users reallocate saved time to other job tasks."
+https://www.rfberlin.com/wp-content/uploads/2026/03/26078.pdf
+⚠️ "RFBerlin Discussion Papers … have not been peer-reviewed."
+
+### R13 · Cui et al. — lab to field attenuation
+
+Three firm RCTs at Microsoft, Accenture and a Fortune 100 company. n=4,867
+developers, 2 to 8 months. *Management Science*.
+> "a 26.08% increase (SE: 10.3%) in completed tasks among developers using the AI
+> tool"
+> "this estimate is substantially smaller than the 58% decrease Peng et al. (2023)
+> find for the time to complete a software engineering task in the lab …
+> Additionally, coding is only part of a software developer's job, so only some of
+> the time saved on coding tasks may be spent on additional coding."
+> "Though each experiment is noisy"; "only the effect on the number of pull
+> requests is statistically significant at conventional significance levels."
+https://economics.mit.edu/sites/default/files/inline-files/draft_copilot_experiments.pdf
+⚠️ Outcomes are pull requests, commits and builds. Activity counts, not value.
+
+### R14 · METR 2025 — the forecast, the belief and the measurement
+
+arXiv:2507.09089, 12 July 2025. Task-randomised. **n=16 developers, 246 tasks** in
+repositories they maintain.
+> "Before starting tasks, developers forecast that allowing AI will reduce
+> completion time by 24%. After completing the study, developers estimate that
+> allowing AI reduced completion time by 20%. Surprisingly, we find that allowing
+> AI actually increases completion time by 19%"
+> "We do not claim that our developers or repositories represent a majority or
+> plurality of software development work"
+https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/
+⚠️ Confidence interval +2% to +39%. **Superseded by R15.**
+
+### R15 · METR 2026 — the slowdown is gone, and the design abandoned
+
+*We are Changing our Developer Productivity Experiment Design*, 24 February 2026.
+57 developers, 143 repositories, 800+ tasks.
+> "we now estimate a speedup of -18% with a confidence interval between -38% and
+> +9%. Among newly-recruited developers the estimated speedup is -4%, with a
+> confidence interval between -15% and +9%."
+> "30% to 50% of developers told us that they were choosing not to submit some
+> tasks because they did not want to do them without AI. This implies we are
+> systematically missing tasks which have high expected uplift from AI."
+> "Wider adoption of AI has made it more difficult to measure task-level
+> productivity"
+> "it is likely a bad proxy for the real productivity impact of AI tools"
+https://metr.org/blog/2026-02-24-uplift-update/
+**Both new intervals cross zero. Anyone citing the 19% slowdown today is a year
+out of date.**
+
+### R16 · Brynjolfsson, Li & Raymond — gains concentrate in novices
+
+*Generative AI at Work*, *Quarterly Journal of Economics* 140(2), 2025. Staggered
+rollout, difference-in-differences, n=5,172 customer-support agents, GPT-3 era.
+> "increases worker productivity, as measured by issues resolved per hour, by 15%
+> on average, with substantial heterogeneity across workers."
+> "a 30% increase in the number of issues resolved per hour" for less skilled
+> workers; "we find evidence that AI assistance leads to a small decrease in the
+> quality of conversations conducted by the most skilled agents."
+https://danielle-li.github.io/assets/docs/GenerativeAIatWork.pdf
+⚠️ **Published figure is 15%, not the 14% usually quoted. A staggered rollout, not
+an RCT.**
+
+### R17 · Dell'Acqua et al. — the jagged frontier
+
+SSRN 4573321, revised 17 March 2026; *Organization Science*. **Pre-registered
+RCT, n=758.**
+> "subjects using AI outperformed those not using AI, completing 12.2% more tasks
+> and completing them 25.1% more quickly on average"
+> "for a complex managerial task selected to be outside the frontier, subjects
+> using AI were 19% less likely to produce correct solutions"
+⚠️ **The paper's body says 19 percentage points; the abstract says 19%. Use
+percentage points.** Conducted with Boston Consulting Group, with BCG-affiliated
+co-authors. Disclose.
+
+### R18 · Acemoglu — the only attempt at the whole chain
+
+*The Simple Macroeconomics of AI*, NBER WP 32487, 2024; *Economic Policy* 2025.
+> "these macroeconomic effects appear nontrivial but modest—no more than a 0.66%
+> increase in total factor productivity (TFP) over 10 years."
+> "even these estimates could be exaggerated … predicted TFP gains over the next
+> 10 years are even more modest and are predicted to be less than 0.53%."
+**A model calibrated on other people's task-level estimates. Not a measurement.**
+
+### R19 · Bick, Blandin & Deming — the self-reported bridge
+
+St. Louis Fed, 13 November 2025; survey NBER WP 32966.
+> "Workers report generative AI time savings equivalent to 1.6% of all work hours"
+> "This suggests that generative AI may have increased labor productivity by up to
+> 1.3% since the introduction of ChatGPT."
+> "increased productivity by workers in some tasks will not increase measured
+> productivity by as much if workers apply their saved time to less-productive
+> activities"
+
+### R20 · US Bureau of Labor Statistics — AI is not measured separately
+
+*Productivity and Artificial Intelligence*, page dated 8 June 2026.
+> "BLS implicitly captures AI use through its capital measure of software used in
+> production."
+https://www.bls.gov/productivity/articles-and-research/ai-and-productivity/home.htm
+
+### R21 · Brynjolfsson, Rock & Syverson — the paradox and its mechanism
+
+NBER WP 24001, November 2017.
+> "We describe four potential explanations for this clash of expectations and
+> statistics: false hopes, mismeasurement, redistribution, and implementation
+> lags. While a case can be made for each, we argue that lags have likely been the
+> biggest contributor to the paradox."
+> "their full effects won't be realized until waves of complementary innovations
+> are developed and implemented. The required adjustment costs, organizational
+> changes, and new skills can be modeled as a kind of intangible capital."
+
+### R22 · Klarna Form 20-F FY2025 — the audited record
+
+> "Our AI assistant has handled 80% of customer service chats in the year ended
+> December 31, 2025 (according to our service chat log data), with no drop in
+> consumer satisfaction levels since its introduction (according to internal
+> consumer satisfaction surveys)."
+> "Customer service and operations expenses for the year ended December 31, 2025
+> increased by $4 million, or 2%, compared to the year ended December 31, 2024.
+> Cost increased at a slower pace than volumes, with volumes up 32% year-over-year
+> and transactions up 25% year-over-year, indicating continued operating leverage."
+> Prior year decrease: "primarily driven by a decrease in customer service costs
+> as we continued to make significant efforts to optimize and manage such costs."
+> "dual-track approach of combining broad and continuing implementation of scalable
+> AI in customer service with high-quality human support."
+Audited line: 2023 US$240m; 2024 US$203m; 2025 US$207m.
+https://www.sec.gov/Archives/edgar/data/2003292/000200329226000007/klar-20251231.htm
+
+### R23 · Klarna Q3 2025 earnings call — the unaudited claim
+
+Sebastian Siemiatkowski, 18 November 2025.
+> "it used to do about 700 full-time jobs. Now it is doing about 853 full-time jobs
+> of a saving of $60 million."
+**No baseline, no definition of a full-time job, no derivation.**
+
+### R24 · Presto Automation — a denominator that excluded the work
+
+10-K FY2023, 11 October 2023:
+> "Presto Voice currently achieves an 85% non-intervention rate on average,
+> meaning that restaurant staff does not need to intervene in 85% of the orders
+> placed"
+> "Our systems currently use a human agent (located offsite of the restaurant) to
+> enter, review, validate and correct orders received by Presto Voice"
+> "we had 137 full-time employees … and 149 contractors, consisting primarily of
+> human agents supporting our HITL approach"
+10-Q, 21 February 2024:
+> "locations that use our AI technology currently use human agent intervention,
+> including entering the order, in all instances."
+> "the SEC had commenced a formal investigation into disclosures that the Company
+> had made regarding certain aspects of its AI technology."
+https://www.sec.gov/Archives/edgar/data/1822145/000155837023016336/prst-20230630x10k.htm
+
+### R25 · Commonwealth Bank of Australia — a defined metric
+
+FY2026 Full Year Results Presentation, year ended 30 June 2026.
+> "Agentic messaging resolve rate¹ … 86% … FY26
+> ¹ Percentage of customer conversations initiated through the agentic chatbot
+> channel that are successfully resolved without a human assisted servicing
+> pathway."
+https://www.commbank.com.au/content/dam/commbank-assets/investors/2026/CBA-2026-Full-Year-Results-Presentation.pdf
+**Use as the counter-example: a defined denominator in an investor document.**
+
+### R26 · IBM — a self-reported gain, and a figure that changes shape
+
+Q4 2025 earnings call, 28 January 2026.
+> "We have more than 20,000 IBMers that are using Project Bob, reporting
+> productivity gains averaging 45%"
+Annual Report: "approximately $4.5 billion in productivity savings since the
+beginning of 2023." Same quarter's call: "exiting 2025 with $4.5 billion of
+annual run rate savings."
+FY2025 10-K: "IBM's drive for greater agility, productivity, flexibility and cost
+savings by continuously transforming with the use of AI may not yield intended
+gains."
+**Cumulative and annual run-rate are different quantities. The 10-K carries the
+figure nowhere.**
+
+### R27 · World Bank — the counterfactual requirement
+
+Gertler, Martinez, Premand, Rawlings & Vermeersch, *Impact Evaluation in
+Practice*, 2nd ed., World Bank and IDB, 13 September 2016.
+> "without a comparison group that yields an accurate estimate of the
+> counterfactual, the true impact of a program cannot be established."
+> "the baseline outcome is almost never a good estimate of the counterfactual.
+> That is why we consider it a counterfeit estimate of the counterfactual."
+https://openknowledge.worldbank.org/handle/10986/25030
+
+### R28 · Gordon et al. — 416% claimed, 77% real
+
+*A Comparison of Approaches to Advertising Measurement: Evidence from Big Field
+Experiments at Facebook*, MSI WP 18-113, 2018; *Marketing Science* 38(2), 2019.
+15 experiments.
+> "the observational methods overestimate ad effectiveness relative to the RCT…
+> The bias can be large: in half of our studies, the estimated percentage increase
+> in purchase outcomes is off by a factor of three across all methods."
+> "When we naively compared exposed to unexposed users, we estimated an ad lift of
+> 416%. … Matching the groups based on their propensity score … gave us a lift of
+> 102%. Compared to the starting point, we have gotten much closer to the true RCT
+> lift of 77%."
+https://thearf-org-unified-admin.s3.amazonaws.com/MSI_Report_18-113.pdf
+
+### R29 · Lewis & Rao — the arithmetic ceiling
+
+*The Unfavorable Economics of Measuring the Returns to Advertising*, *Quarterly
+Journal of Economics* 130(4), 2015. 25 large field experiments.
+> "The median confidence interval on return on investment is over 100 percentage
+> points wide."
+> "Achieving more standard tolerances for investment decisions, such as a 10% ROI
+> difference, requires the median campaign to be 62 times larger to possess
+> adequate power—nearly impossible for a campaign of any realistic size."
+
+### R30 · UK cashable savings — the four-line test
+
+Cabinet Office and HM Treasury, *Government efficiency savings technical note*.
+> "Cashable savings are those which lead to a direct reduction (all other things
+> being equal) in a department budget."
+> "The savings are defined as: ● Release of cash that relates to an activity that
+> has already happened ● Not just relocating or deferring costs ● Fairly calculated
+> and clearly positioned ● Captured in year and accrue within period ● Net of any
+> double counting ● Understood and seen as reasonable by an impartial third party."
+https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1064110/government-efficiency-savings-technical-note.pdf
+
+### R31 · HM Treasury Green Book — additionality
+
+*The Green Book: UK Government Guidance on Appraisal 2026.*
+> "Deadweight: Outcomes that would have taken place without any intervention."
+> "Additionality: Outcomes that take place as a result of the intervention."
+
+### R32 · HM Treasury Magenta Book — baseline timing
+
+*Central Government guidance on evaluation*, March 2020.
+> "The intervention effect is sufficiently large to be distinguished from expected
+> 'noise' in the data."
+> "baseline data – data collected before the intervention – will need to be
+> collected early … Without appropriate data collection or data access planning an
+> evaluation may be impossible, severely limited, or unnecessarily expensive."
+
+### R33 · BCG — most firms track no financial KPI
+
+*AI Radar: From Potential to Profit*, January 2025. n=1,803 C-level.
+> "60% of companies are failing to define and monitor any financial KPIs related
+> to AI value creation"
+> "We drew insights on AI maturity and value from self-reported data provided by
+> the respondents."
+
+### R34 · IBM Institute for Business Value — starting what cannot be assessed
+
+*Solving the AI ROI puzzle*, 13 July 2025. n=624, 22 countries.
+> "72% of CAIOs say their organizations risk falling behind without AI impact
+> measurement. But 68% initiate AI projects even if they can't assess their
+> impact—because the most promising AI opportunities are often the most difficult
+> to measure."
+2025 CEO Study, n=2,000: "CEOs say only 25% of AI initiatives have delivered
+expected ROI—and only 16% have scaled enterprise-wide."
+
+### R35 · Kohavi et al. — why before-and-after fails in industry
+
+*Online Controlled Experiments at Large Scale*, KDD 2013.
+> "The most common question we get as an organization learns about controlled
+> experiments is 'why not measure the metric of interest, ship the feature, and
+> then look at the delta?'"
+> "Our experience is that external variations overwhelm the effects we are trying
+> to detect."
+> "Only one third of the ideas tested at Microsoft improved the metric(s) they were
+> designed to improve."
+
+### R36 · Sculley et al. — the model is a small part of the system
+
+*Hidden Technical Debt in Machine Learning Systems*, NeurIPS 2015.
+> "only a tiny fraction of the code in many ML systems is actually devoted to
+> learning or prediction … much of the remainder may be described as 'plumbing'."
+> "developing and deploying ML systems is relatively fast and cheap, but
+> maintaining them over time is difficult and expensive."
+⚠️ The 5%/95% figure is an estimate, not a measurement. Quote as expert testimony.
+
+### R37 · MIT — a withdrawn result, disavowed
+
+arXiv:2412.17866, administrative note on v2, 20 May 2025:
+> "Withdrawn by arXiv administrators due to concerns about the validity of the
+> data and incomplete Institutional Review Board requirements"
+Acemoglu & Autor, MIT Department of Economics, 16 May 2025:
+> "we want to be clear that we have no confidence in the provenance, reliability
+> or validity of the data and in the veracity of the research."
+> "the findings reported in this paper should not be relied on"
+https://economics.mit.edu/news/assuring-accurate-research-record
+
+### R38 · Brynjolfsson & Hitt — what an IT programme actually costs
+
+*Beyond Computation*, *Journal of Economic Perspectives* 14(4), Fall 2000.
+> "the average spending on computer hardware accounted for less than 4 percent of
+> the typical start-up cost of $20.5 million, while software licenses and
+> development were another 16 percent of total costs. The remaining costs included
+> hiring outside and internal consultants to help design new business processes and
+> to train workers in the use of the system."
+**Use this, not the playbook's 1:10 claim. See the audit.**
+
+### R39 · Klarna — the balance point  ✅ verified 13 September 2026
+
+Ray's catch was right, and the answer is narrower than either narrative.
+
+**The Diary of a CEO appearance is real but he was not a booked guest.** He
+appears inside the Karen Hao episode of 26 March 2026, first as a direct message
+Bartlett reads aloud with permission, then as a live phone call. Hao had said on
+the same episode: "the Klarna CEO who laid off a bunch of people thinking that he
+would replace everyone with AI, and then it didn't actually work and he had to ask
+some people to come back." https://www.youtube.com/watch?v=Cn8HBj8QAbk at 01:22:13
+
+**His direct message, read aloud at 01:22:41:**
+> "I think sometimes people struggle with two things can be true at the same time.
+> … this is the media misinterpreting my tweet. We are doubling down on AI more
+> than ever."
+
+**On the call at 01:35:22, asked directly whether he reversed:**
+> "we believed in a world where AI is cheap and available, the value of human
+> interaction will be regarded as higher. So the future of customer service VIP is
+> a human. We have then hence doubled down on providing more of that. But at the
+> same time the efficiency gains within the company has continued."
+> "you can clearly see that AI has allowed us to do more with less people, but we
+> have avoided layoffs and instead relied on natural attrition"
+
+**⚠️ He does NOT claim he was misquoted. He twice exonerates the Bloomberg text.**
+Big Technology Podcast, 16 May 2025:
+> "if you read the original Bloomberg article it's quite balanced and describing
+> quite accurately what what I said and what happened, but then what tends to
+> happen in classic media is that they take just the headline"
+20VC, 16 February 2026: "it's like very hard in the Bloomberg article. I'm not
+going to blame the journalist."
+> "the headline is like they're rolling AI back, and then the whole media circus go
+> on like oh Klarna has just announced that they're rolling it back. It's like no,
+> that's not at all."
+
+**What he actually said to Bloomberg, 8 May 2025:**
+> "As cost unfortunately seems to have been a too predominant evaluation factor
+> when organising this, what you end up having is lower quality"
+The subject is the cost-led organisation of outsourced support. **The sentence does
+not say the AI assistant produced lower quality.** Bloomberg's lede went further
+than his quote: "has gone too far … a sign the Swedish fintech's commitment to AI
+has its limits."
+
+**⭐ The same Bloomberg article described a two-person pilot and forecast further
+shrinkage.** This is the most load-bearing fact against the reversal story.
+> "The pilot has started small, with two of the new breed of customer-service
+> agents live now"
+> "In a year's time he expects the natural attrition rate of 20% to continue,
+> taking the workforce down to about 2,500 from the current level of 3,000."
+
+**The mutation, each step adding something the source does not contain.** Fortune,
+9 May, inverted the causality. Gizmodo, 11 May, invented "700 really bad agents"
+and a "human hiring spree". Forbes, 18 May, added "declining service quality and
+customer dissatisfaction" while citing Gizmodo rather than Bloomberg. Futurism,
+4 September, added a panic: "Then Panics … as the AI Fails".
+
+**Klarna denied it on the record, in the same Forbes piece that carried the story:**
+> "Klarna is not reversing on AI. … Klarna never eliminated human support. We still
+> work with several thousand outsourced agents. The current pilot involves just two
+> new agents in a flexible, remote setup. It's an addition, not a rehire or
+> reversal. Sebastian Siemiatkowski acknowledged that an overemphasis on cost—not
+> AI itself—led to lower quality."
+
+**The 700 figure is Klarna's own, and it is an equivalence estimate.** Press
+release, 27 February 2024: "It is doing the equivalent work of 700 full-time
+agents". The same release: "Additionally, customers can still choose to interact
+with live agents if they'd prefer."
+https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/
+
+**⭐ The filings never wavered. Headcount is monotonic, with no rebound.**
+> "As of December 31, 2025, 2024, and 2023, we had approximately 2,831, 3,422, and
+> 4,352 full-time employees, respectively." (20-F FY2025)
+> 5,527 at 31 December 2022 (424B4, 10 September 2025).
+> "The reduction … resulted from our strategic decision to reduce our overall
+> headcount and drive operational efficiency by leveraging AI … We expect the
+> number of employees to continue to decrease in future periods." **Unchanged
+> across the F-1, the 424B4 and the 20-F.**
+Automation share 69% → 80%. Agent-equivalents "over 700" → "over 850". Savings
+US$39m → US$59m. Every figure moves the same way.
+
+**⚠️ CORRECTION to R22 as first recorded.** The FY2025 20-F **does** quantify a
+saving:
+> "Our AI assistant handled 80% of customer service chats in the year ended
+> December 31, 2025 … doing the work equivalent of over 850 full-time agents … and
+> in 2025 delivered approximately $59 million in cost savings."
+So the audited filing carries **both** the US$59m saving claim and the US$4m
+expense increase. **They are in the same document.** That is a stronger teaching
+point than the call-versus-filing contrast I first recorded, and S6 must use the
+corrected version.
+
+**The only textual trace of the pivot in any filing is the dual-track sentence,
+and it concedes nothing.**
+> "appreciating that certain consumers may nevertheless prefer to interact with
+> human representatives, we continue to offer all of our customers that option."
+**Verified absent** from the F-1 of 14 March 2025; present by 10 September 2025.
+The AI risk factor is hypothetical throughout: "no assurance can be provided",
+"may be", "may inadvertently". **No realised event is disclosed.**
+
+**⚠️ His spoken headcount figures do not reconcile with the filings.** Peak stated
+as 6,000, 7,000 and 7,400 on different occasions; the filed figure is 5,527.
+**No source explains the gap. Present it as unresolved, do not resolve it.**
+
+#### The four readings, kept separate
+
+| Reading | Established? |
+|---|---|
+| (a) He was misquoted | **No.** He exonerates the Bloomberg text twice |
+| (b) Quoted correctly, conclusion drawn was wrong | **Yes. This is his actual claim, and the record supports it** |
+| (c) He changed his mind | **Yes, on a narrower point, and he admits it.** "too much focus on cost … [We] have to rethink this". On timing: "You could definitely place me in the Elon Musk box … I'm guilty as charge on that one" |
+| (d) He is managing a reputational problem | **Partly, and observably.** But the pushback began within five days, is consistent across five occasions over ten months, and matches the filings |
+
+**The line that carries the case:** the reversal exists in spoken interviews and
+nowhere in the securities filings. In documents signed under SEC liability, the
+direction of travel never changes.
+
+⚠️ **Podcast quotes were extracted from auto-generated captions.** Before any of
+this reaches a slide, a human should listen to the cited timestamp and confirm the
+wording. The Bloomberg article is paywalled; its full text was read from The Star's
+syndication.
 
 ## Evidence audit — working notes
 
@@ -1972,33 +2586,28 @@ a live risk here, because the audience already has the problem.
 **Minutes are an estimate and stay one until Narration exists (gate 2).**
 Budget: 30 min × 135 effective wpm ≈ 4,050 words.
 
-### Outline A — evidence ladder  ⬅ RECOMMENDED
+### Outline A — evidence ladder  ⬅ APPROVED 13 September 2026
 
-| # | Section | Min | Words | Teaching intent | Findings | Outline | Narration | Slides |
-|---|---------|-----|-------|-----------------|----------|---------|-----------|--------|
-| 1 | "95% of AI pilots fail" — is it? · **quiz** | 3 | 405 | Open on the provocation, then dismantle it honestly. Earn the right to the next 27 minutes | F-1/2/3/4/5/5b/6/7/9 | pending | pending | pending |
-| 2 | What four primaries agree on instead · **quiz** | 3 | 405 | Replace one weak number with a convergence. Plant the self-report problem | F-10/11/12/13/15/16, F-NM | pending | pending | pending |
-| 3 | Why: the value was never stuck in the model · **quiz** | 5 | 675 | The thesis. Organisation, not technology | ST-1/4/35/36/38, C-8, C-1/2/3, ST-17 | pending | pending | pending |
-| 4 | Which of four stages are you stuck at? · **quiz** | 5 | 675 | **Outcome 1.** A diagnosis they can run on their own portfolio | C-7, C-12/13, W-6, F-10, C-10 | pending | pending | pending |
-| 5 | Why a working model doesn't move the P&L · **quiz** | 5 | 675 | **Outcome 2.** The measured mechanism, and the four breaks in the chain | T-13, C-10, K-12, T-12, T-24, T-20, T-21 | pending | pending | pending |
-| 6 | Klarna: $60m or +$4m? · **quiz** | 4 | 540 | The anchor case. Where a number lives predicts its rigour | D-1/2/3/4, D-5, D-9/10, D-17, the cost/benefit table | pending | pending | pending |
-| 7 | Can value be attributed at all? · **quiz** | 3 | 405 | **Outcome 3.** Yes — at the workflow. No — at the P&L | A-13/14, A-32/33/34, A-45, A-27, A-22/23 | pending | pending | pending |
-| 8 | The next 90 days · **quiz** | 2 | 270 | **Outcome 4.** A prioritisation decision and a four-line test | A-50, A-51, A-46, W-3, ST-29/30 | pending | pending | pending |
-| | **Total** | **30** | **4,050** | | | | | |
+**30 slides / 30 minutes / 8 sections.** Five assessment moments.
 
-**Why this shape.** Sections 1–2 spend six minutes buying credibility, which is
-expensive but recoverable: an audience that has heard the 95% quoted at them all
-year will discount everything after it unless the number is dealt with first.
-Sections 3–5 are the diagnosis, ordered so the measured evidence (Census 64%,
-Dillon's 66 firms, the Danish nulls) carries the weight and the survey evidence
-only corroborates. Section 6 is where an executive audience actually wakes up,
-because it is one company's own filings contradicting its own earnings call.
-Sections 7–8 convert all of it into a test they can apply on Monday.
+| Section | Slides | Min | Teaching intent | Sources | Narration | Slides |
+|---|---|---:|---|---|---|---|
+| S1 · The number everyone quotes | 1–4 | 3 | Open on the provocation and take it apart honestly | R01, R02 | drafted | pending |
+| S2 · What the evidence agrees on instead | 5–7 | 3 | Replace one weak figure with a convergence; plant the self-report problem | R03, R05, R06, R07, R33, R34 | drafted | pending |
+| S3 · The value was never stuck in the model | 8–12 | 5 | The thesis: organisation, not technology | R08, R09, R10 | drafted | pending |
+| S4 · Which stage are you stuck at | 13–17 | 5 | **Outcome 1.** A diagnosis they can run on their own portfolio | R00, R06, R08, R12 | drafted | pending |
+| S5 · Why a working model does not move the accounts | 18–22 | 5 | **Outcome 2.** The measured mechanism and the four breaks | R11, R12, R13, R18, R19, R20 | drafted | pending |
+| S6 · One company, read two ways | 23–26 | 4 | The anchor case, balanced; where a number lives predicts its rigour | R22, R24, R25, R39 | drafted | pending |
+| S7 · Can value be attributed at all | 27–28 | 3 | **Outcome 3.** Yes at the workflow, no at the accounts | R27, R28, R29, R32, R35 | drafted | pending |
+| S8 · The next ninety days | 29–30 | 2 | **Outcome 4.** A prioritisation decision and a four-line test | R30, R31, R04, R09 | drafted | pending |
 
-**The risk to name.** Eight sections in 30 minutes is tight, and S4 and S5 both
-run 5 minutes on adjacent material. If gate 2's word count overruns, S2 merges
-into S1 and S4 absorbs the stage table, giving six sections. Better to discover
-that against measured narration than to guess now.
+**All 30 slides drafted: 3,282 words.** Average 109 words per slide, against a
+135-word allocation. No section over budget.
+
+At a raw 150 wpm the script runs **21.9 minutes** of speech. Five quiz pauses and
+the visual beats should carry it to roughly 26 to 28 minutes. **That is inside 30
+and I am not going to pad it.** The measured effective rate is 3,282 words over 30
+minutes, or about 110 wpm, so `rate` is corrected from 135 to 110.
 
 ### Outline B — Klarna as the running case
 
@@ -2035,4 +2644,495 @@ If the worry is layout rather than argument, S6 is the better sample. Say which.
 
 ## Narration
 
-_Pending gate 1 approval._
+One block per slide. The build reads these, so the numbering must match
+`slides.py`. Every block opens with a connecting sentence from the previous slide.
+A narrator must never read a title aloud to bridge.
+
+**Both language passes applied:** `no-ai-slop` then `sg-english`. Recorded
+delivery, so sentences run 15 to 20 words with one clause of subordination at
+most. No parenthetical asides and no dashes, because neither can be heard.
+
+### S1 · The number everyone quotes
+
+#### 01 · AI Value Management
+
+**Sources:** [R00]
+
+**Narration:**
+Welcome to AI Value Management, a thirty-minute session for business leaders.
+This is not a course about how AI works.
+It is about why the value you were promised has not reached your accounts.
+We will start with the most quoted statistic in enterprise AI, and take it apart.
+
+#### 02 · Ninety-five per cent of AI pilots fail
+
+**Sources:** [R01], [R00]
+
+**Narration:**
+You have almost certainly heard this figure quoted at you in the past year.
+It comes from a July 2025 report by MIT's Project NANDA.
+The headline travelled further than the report did.
+Before we ask why AI value is not realised, we should establish whether this number says what people think.
+So consider the question on screen, and choose an answer.
+Take a moment.
+
+The figure counts organisations, not pilots.
+Hold that distinction, because it changes the size of the problem considerably.
+
+#### 03 · It counts organisations, not pilots
+
+**Sources:** [R01]
+
+**Narration:**
+Here is what the report actually measured.
+Ninety-five per cent of organisations were getting zero return on their investment.
+That is a statement about companies, not about projects.
+The report also published its own funnel for task-specific tools.
+Sixty per cent of organisations evaluated such tools.
+Twenty per cent reached a pilot.
+Five per cent reached production.
+
+Five out of the twenty that piloted therefore made it through.
+On the report's own numbers, the pilot failure rate is seventy-five per cent.
+That is still poor. It is twenty percentage points better than the figure in circulation.
+
+#### 04 · The report relabelled its own finding
+
+**Sources:** [R01], [R02]
+
+**Narration:**
+The slip did not begin with the press. It began inside the document.
+One paragraph after that funnel, the report describes a ninety-five per cent failure rate.
+Its own measure was organisations reporting no return, which is a different claim.
+
+Three further things belong on the record.
+The report defines success as something users or executives remarked upon, not something measured.
+Its appendix gives a second, stricter definition based on measurable indicators. The two do not agree.
+The sample was fifty-two organisations interviewed and a hundred and fifty-three leaders surveyed at four conferences.
+The document calls itself preliminary findings and disclaims the positions of any affiliated employers.
+The original link at MIT no longer serves the file.
+
+### S2 · What the evidence agrees on instead
+
+#### 05 · Four studies, four different questions
+
+**Sources:** [R01], [R03], [R05], [R06], [R07]
+
+**Narration:**
+If that number is unreliable, the sensible response is to look at what else has been measured.
+Four other sources ask adjacent questions, and each counts something different.
+McKinsey surveyed one thousand seven hundred and nineteen respondents and asked about EBIT.
+Deloitte surveyed three thousand two hundred and thirty-five leaders and asked which benefits they achieve today.
+S&P Global asked one thousand and six firms what share of projects they abandoned.
+The United States Census Bureau samples about 1.2 million businesses and asks simply whether AI is used.
+
+Note the units. Organisations, respondents, projects and businesses are not interchangeable.
+Most apparent disagreement between these figures is unit substitution rather than measurement error.
+
+#### 06 · Where they converge
+
+**Sources:** [R03], [R05], [R06]
+
+**Narration:**
+The units differ, so we should look for the question they answer in common.
+All four bear on whether material financial impact can be evidenced.
+McKinsey finds thirty-seven per cent report any EBIT impact, and about six per cent attribute five per cent or more.
+Both figures are flat against the previous year.
+Deloitte finds twenty per cent already growing revenue, against seventy-four per cent who hope to.
+S&P finds forty-six per cent reporting no strong positive impact on any objective.
+
+Different methods, different populations, and the same answer.
+Only a small minority of organisations can evidence material bottom-line impact.
+That share has not moved in a year. This is a firmer foundation than the headline it replaces.
+
+#### 07 · Every figure here is a self-report
+
+**Sources:** [R03], [R07], [R08], [R33], [R34]
+
+**Narration:**
+There is one property these sources share, and it matters more than any of their numbers.
+Every figure is something a respondent said, including the government statistics.
+No study located for this session audits financial statements or deployment records.
+Sixty per cent of firms in one survey monitor no financial indicator for AI at all.
+In another, sixty-eight per cent of chief AI officers begin projects they cannot assess.
+
+So the measurement problem is not only inside companies.
+It runs through the evidence base on which the entire debate rests.
+Keep that in mind. We return to it as the session's central practical point.
+
+### S3 · The value was never stuck in the model
+
+#### 08 · The difference was never the model
+
+**Sources:** [R09]
+
+**Narration:**
+That is the state of the evidence. The more useful question is why.
+Stanford's Digital Economy Lab examined fifty-one enterprise deployments across forty-one organisations.
+Their conclusion is on screen, in their words.
+The same technology and the same uses produced results measured in weeks for some and years for others.
+The difference was the organisation, not the model.
+
+One caution about this source, stated plainly.
+The cases were selected because they succeeded, and the authors disclaim any claim to representativeness.
+Its percentages describe successful deployments. They are not base rates for the economy.
+We should also note that one author co-founded a company that sells AI benefit measurement.
+
+#### 09 · Technology was the easiest part
+
+**Sources:** [R09]
+
+**Narration:**
+If the organisation is the constraint, we should ask what specifically got in the way.
+Across those fifty-one cases, seventy-seven per cent of the hardest challenges were not technical.
+They were change management, data quality and process redesign.
+Technology was described consistently as the easiest part.
+
+An executive quoted in that study put it more bluntly.
+All the hard work sits in process documentation and data architecture.
+Do those two things, and the rest becomes straightforward.
+This is a claim about where to spend management attention, not about where to spend money.
+
+#### 10 · Sixty-four per cent changed nothing else
+
+**Sources:** [R08]
+
+**Narration:**
+That was interview evidence from companies that succeeded. Now consider a measurement.
+The United States Census Bureau surveyed more than one hundred and seventeen thousand firms.
+The sample is nationally representative and weighted, which makes it the strongest evidence in this session.
+Sixty-four per cent of firms using AI reported no institutional adjustments of any kind.
+Training staff and developing new workflows each applied to about fifteen per cent.
+Changes to data practices ran at seven to eight per cent.
+
+Two-thirds of AI-using firms bought the tool and changed nothing around it.
+That is not a survey opinion about causes. It is a measured description of what happened.
+
+#### 11 · The symptoms are not the causes
+
+**Sources:** [R09], [R10]
+
+**Narration:**
+So the surrounding work is often skipped. The Stanford study ranked why that proves fatal.
+Read their preface to the table carefully.
+Projects stuck in pilot, and an inability to prove return, appeared frequently.
+Both are consequences rather than causes.
+The leading cause was that the organisation was not ready to adopt, at thirty-five per cent.
+Knowledge never captured follows at twenty-seven per cent, then legal or compliance blocks at eighteen.
+Immature technology accounts for sixteen per cent.
+
+RAND interviewed sixty-five practitioners and reached a sharper version of the same point.
+Eighty-four per cent named business leadership's framing of the problem as a root cause.
+RAND also discloses that most interviewees were engineers rather than executives.
+The result may therefore be skewed towards identifying leadership failures. That caution is theirs.
+
+#### 12 · Check your understanding
+
+**Sources:** [R08], [R09]
+
+**Narration:**
+Before we turn that into a diagnosis, one question to test the distinction.
+Consider the option on screen and choose.
+
+The answer is the organisational one.
+Immature technology accounts for sixteen per cent of failures in that study, and it is rarely the binding constraint.
+The measured Census finding points the same way.
+
+### S4 · Which stage are you stuck at
+
+#### 13 · Four stages, four different failures
+
+**Sources:** [R00], [R08], [R06], [R12], [R03]
+
+**Narration:**
+We can now put that evidence to work as a diagnosis you can run on your own portfolio.
+Four stages sit between an idea and a benefit in the accounts.
+Never started. Piloted but never shipped. Shipped but not adopted. Adopted with no measured benefit.
+
+One qualification, and it is important.
+This structure is ours, assembled from four sources with different samples.
+No single study follows one set of projects through all four stages.
+So treat the stages as a diagnostic frame. Do not read the gaps between them as a funnel.
+
+#### 14 · Stage one: it was never thought relevant
+
+**Sources:** [R08], [R07]
+
+**Narration:**
+Start with the firms that never began, because the reason is not the one usually assumed.
+Asked why they were not adopting, sixty-five per cent of firms said AI was not applicable to their business.
+Lack of knowledge came second at twenty-two per cent, then privacy and security at twenty per cent.
+Laws and regulations ranked among the least common barriers.
+
+That last point is worth stating clearly for this audience.
+On nationally representative evidence, regulation is not what is holding adoption back.
+Your governance obligations still bind, and the companion session covers them.
+They are not the explanation for absent value.
+
+#### 15 · Stage two: the pilot that never shipped
+
+**Sources:** [R06], [R01]
+
+**Narration:**
+The second stage is the one most executives picture when they hear that AI is failing.
+S&P Global reports that firms abandoned, on average, forty-six per cent of projects between proof of concept and adoption.
+The share of companies abandoning most of their initiatives rose from seventeen to forty-two per cent in a year.
+NANDA's funnel showed a comparable drop from pilot to production.
+
+Two cautions. S&P has not published its field dates or question wording.
+And a rising abandonment rate partly reflects a larger stock of projects available to abandon.
+The direction is consistent across sources. The precision is not.
+
+#### 16 · Stage three: shipped, and quietly ignored
+
+**Sources:** [R12]
+
+**Narration:**
+The third stage is the least visible, because the project reports as delivered.
+Danish researchers linked surveys of about twenty-five thousand workers to administrative records.
+In workplaces that neither encouraged use nor provided tools, about forty per cent of workers used chatbots anyway.
+Take-up roughly doubled where the employer actively encouraged use.
+Where encouragement, enterprise tools and training combined, ninety-three per cent had used them.
+
+There is a counter-intuitive detail in that paper.
+Training and tools provided without encouragement were associated with smaller reported gains.
+The authors describe this as consistent with mitigating misuse rather than improving productivity.
+They also state that this part of their analysis is descriptive.
+
+#### 17 · Stage four, and a question
+
+**Sources:** [R03], [R12], [R00]
+
+**Narration:**
+The fourth stage is where most organisations that get this far now sit.
+The tool is adopted, people report benefits, and no financial effect can be demonstrated.
+Thirty-seven per cent report any EBIT impact, and about six per cent attribute five per cent or more.
+The Danish study found precise null effects on earnings and recorded hours.
+
+That combination is the heart of this session, so test it now.
+Read the situation on screen and choose the stage.
+
+The answer is stage four. The tool is in use and the benefit is unevidenced.
+Stage three would mean people are not using it. Here they are.
+
+### S5 · Why a working model does not move the accounts
+
+#### 18 · Two hours a week, measured
+
+**Sources:** [R11]
+
+**Narration:**
+Stage four deserves a proper explanation, because it is the least intuitive.
+The clearest evidence comes from a randomised experiment across sixty-six firms.
+Seven thousand one hundred and thirty-seven knowledge workers took part over six months.
+Among treated workers who used the tool, the saving was two fewer hours on email each week.
+They also reduced time worked outside regular hours.
+
+That is a genuine, measured, individual benefit.
+Nobody disputes that generative AI saves time on tasks.
+The question is what happened next, and the same study answers it.
+
+#### 19 · And nothing downstream changed
+
+**Sources:** [R11]
+
+**Narration:**
+Here is the second half of that result, and it is the part rarely quoted.
+Treated and control workers replied to the same number of email threads.
+They attended the same number of meetings.
+They completed the same number of documents.
+The authors detected no shift in the quantity or composition of anyone's tasks.
+
+Two hours a week were released and no measurable output changed.
+The authors are careful to say they could not observe productivity or performance directly.
+What they could observe did not move.
+
+#### 20 · A measured null on pay and hours
+
+**Sources:** [R12]
+
+**Narration:**
+A second study tested the same question against national administrative records rather than telemetry.
+The Danish work covered eleven occupations most exposed to chatbots.
+Employers had adopted, workers reported benefits, and new AI-related tasks were widespread.
+Using difference-in-differences, the authors estimate precise null effects on earnings and recorded hours.
+They rule out effects larger than two per cent, two years after ChatGPT's launch.
+
+Precise null is a specific claim and worth stating carefully.
+It does not mean nothing happened. It means any effect was too small to be distinguished from zero.
+Note also that this paper has not been peer-reviewed.
+
+#### 21 · The saved time went into oversight
+
+**Sources:** [R12], [R13], [R18], [R19], [R20]
+
+**Narration:**
+So where did the time go. The same Danish data offers the most direct answer available.
+Of the new tasks created by AI, only forty-one per cent involve productive use of it.
+The remaining fifty-nine per cent are implementation and oversight.
+That is quality review, integration work, and ethics and compliance.
+About a quarter of workers spend more time on the very tasks they initially saved time on.
+
+The chain from a task gain to an accounting gain breaks in four identifiable places.
+One team that ran both a laboratory test and field trials found the field effect roughly half the size.
+Time saved on a task is not output gained, because most work is not that task.
+No study measures both worker gains and firm profit, so the third link is untested.
+And the statistical agencies do not measure AI separately at all.
+
+#### 22 · Check your understanding
+
+**Sources:** [R11], [R12]
+
+**Narration:**
+That is a lot of evidence pointing one way, so test what it does and does not show.
+Choose the statement the research supports.
+
+The correct answer is the third.
+Individual time savings are well evidenced and firm-level financial effects are not.
+The first option overstates the case, because the tools demonstrably save time.
+The second understates it, because a precise null is a finding rather than an absence of research.
+
+### S6 · One company, read two ways
+
+#### 23 · Klarna published the number itself
+
+**Sources:** [R22], [R39]
+
+**Narration:**
+All of that was general evidence. It helps to watch the problem happen to one company.
+In February 2024 Klarna announced that its AI assistant handled two-thirds of customer service chats.
+It described the assistant as doing the equivalent work of seven hundred full-time agents.
+That figure came from Klarna, not from a critic.
+
+Two details in that release are usually dropped.
+It is an equivalence estimate, not a count of people made redundant.
+And the release stated that customers could still choose to interact with live agents if they preferred.
+Neither point survived into the story that followed.
+
+#### 24 · What he said, and what was reported
+
+**Sources:** [R39]
+
+**Narration:**
+Fifteen months later the chief executive gave an interview that became a cautionary tale.
+His actual words were that cost had been too predominant a factor, and that what you end up with is lower quality.
+Read carefully, he is describing how outsourced support had been organised.
+He is not saying the AI assistant produced poor quality work.
+
+The same article described a pilot of two people, and forecast headcount falling further to about two thousand five hundred.
+Within ten days the story had become a reversal, a hiring spree, and an admission that AI had failed.
+One outlet added customer dissatisfaction while citing another outlet rather than the interview.
+He has pushed back five times in ten months, and the company denied it on the record.
+He is careful about what he blames. He says the original article was balanced and he will not blame the journalist.
+His objection is to the headline and to what was built on top of it.
+
+#### 25 · The filings never wavered
+
+**Sources:** [R22], [R39]
+
+**Narration:**
+There is a way to test which account is closer to the truth, and it does not involve trusting anyone.
+Look at what the company said in documents signed under securities liability.
+Full-time employees fell from five thousand five hundred to two thousand eight hundred across three years.
+The decline is continuous, with no rebound in any year.
+The filings attribute it to a strategic decision to leverage AI, and state that headcount is expected to keep falling.
+That sentence is unchanged across three successive filings.
+The automation share rose from sixty-nine per cent to eighty per cent over the same period.
+
+One sentence about human agents did appear in a later filing and was absent from an earlier one.
+That is the only textual trace of the pivot anywhere in the filings, and it concedes nothing.
+So both things are true.
+AI handles more of the work each year, and a human tier is being built on top of it.
+
+#### 26 · Where a number lives predicts how rigorous it is
+
+**Sources:** [R22], [R24], [R25], [R39], [R00]
+
+**Narration:**
+Now the detail that makes this the most useful case in the session.
+The same audited filing claims about fifty-nine million United States dollars of cost savings from the assistant.
+In the same document, the customer service and operations expense line rose by four million dollars, or two per cent.
+Both statements are in one filing and both are true.
+The saving is measured against a counterfactual. The expense line records what was actually spent.
+The filing explains the gap as operating leverage, because volumes grew thirty-two per cent.
+
+A second company shows how much worse this can get.
+Presto Automation reported an eighty-five per cent non-intervention rate for its drive-through system.
+Non-intervention meant restaurant staff did not intervene. Offsite contractors typed the orders instead.
+There were more contractors than employees. The regulator opened a formal investigation into those disclosures.
+Contrast that with Commonwealth Bank, which publishes a resolve rate and defines its denominator in a footnote.
+One question before we turn to what you can do about any of this.
+
+### S7 · Can value be attributed at all
+
+#### 27 · Off by a factor of three
+
+**Sources:** [R27], [R28], [R35]
+
+**Narration:**
+That brings us to the question underneath all of this. Can the value be attributed properly.
+The discipline that has argued about this longest is advertising measurement.
+Researchers ran fifteen large experiments at Facebook and compared methods on identical data.
+Observational methods overestimated effectiveness, and in half the studies they were off by a factor of three.
+A naive comparison of exposed against unexposed users suggested a lift of four hundred and sixteen per cent.
+Careful statistical matching brought that down to one hundred and two per cent.
+The randomised answer was seventy-seven per cent.
+
+The World Bank's evaluation handbook names the underlying problem directly.
+A baseline measured before an intervention is almost never a good estimate of the counterfactual.
+They call before-and-after comparison a counterfeit estimate.
+Microsoft's experimentation team says the same in industrial terms. External variation overwhelms the effect being sought.
+
+#### 28 · It works at the workflow, not the accounts
+
+**Sources:** [R29], [R32], [R00]
+
+**Narration:**
+There is also a limit that no amount of diligence can overcome, and leaders should know it.
+Across twenty-five large field experiments, the median confidence interval on return was over one hundred percentage points wide.
+To distinguish a ten per cent difference in return reliably, the median campaign needed to be sixty-two times larger.
+Halving the effect you wish to detect quadruples the sample required.
+
+The conclusion is narrower and more useful than it first appears.
+Attribution is achievable at the level of one workflow.
+It is not achievable at the level of the enterprise accounts.
+So the right demand is a baseline on one process, recorded before anyone touches the tool.
+The guidance is explicit that this must be designed in before the intervention starts.
+One question to close this section.
+
+### S8 · The next ninety days
+
+#### 29 · Four lines that separate a saving from an estimate
+
+**Sources:** [R30], [R31]
+
+**Narration:**
+Everything so far leads to a test you can apply without any technical knowledge.
+The British government's definition of a cashable saving is four lines long.
+The cash must relate to an activity that has already happened.
+Costs must not merely be relocated or deferred.
+The saving must be net of any double counting.
+And it must be reasonable to an impartial third party.
+
+Add one more test from the same source, on additionality.
+Deadweight describes outcomes that would have occurred without any intervention.
+A benefit the market would have delivered anyway is not a benefit of your project.
+Anything that fails these tests is an estimate. The surveys suggest an estimate is what most organisations hold.
+
+#### 30 · What to do, and what to stop
+
+**Sources:** [R00], [R30], [R32], [R04], [R09]
+
+**Narration:**
+So here is what the evidence supports doing in the next ninety days.
+Choose one workflow where the benefit would be visible in a budget line.
+Record the baseline before anyone uses the tool, because it cannot be reconstructed afterwards.
+Hold back a comparison group, even a small one.
+Run it for at least a quarter, so that novelty has passed.
+Name one person accountable for the benefit, not for the deployment.
+
+And here is what to stop.
+Stop funding tools without the surrounding process work, because two-thirds of firms do exactly that.
+Stop accepting self-reported productivity as evidence of financial return.
+Stop asking for enterprise-level return on investment, because that number cannot be produced honestly.
+Ask instead which workflow you can measure properly, and start there.

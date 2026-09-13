@@ -1,0 +1,374 @@
+# AI Value Management — voiceover script
+
+Read aloud. 26 of 30 slides drafted. Slides 23-26 (Klarna) held pending verification.
+
+---
+
+
+## S1 · The number everyone quotes
+
+### 01 · AI Value Management
+*49 words · about 20 seconds · sources [R00]*
+
+Welcome to AI Value Management, a thirty-minute session for business leaders.
+This is not a course about how AI works.
+It is about why the value you were promised has not reached your accounts.
+We will start with the most quoted statistic in enterprise AI, and take it apart.
+
+### 02 · Ninety-five per cent of AI pilots fail
+*83 words · about 33 seconds · sources [R01], [R00]*
+
+You have almost certainly heard this figure quoted at you in the past year.
+It comes from a July 2025 report by MIT's Project NANDA.
+The headline travelled further than the report did.
+Before we ask why AI value is not realised, we should establish whether this number says what people think.
+So consider the question on screen, and choose an answer.
+Take a moment.
+
+The figure counts organisations, not pilots.
+Hold that distinction, because it changes the size of the problem considerably.
+
+### 03 · It counts organisations, not pilots
+*96 words · about 38 seconds · sources [R01]*
+
+Here is what the report actually measured.
+Ninety-five per cent of organisations were getting zero return on their investment.
+That is a statement about companies, not about projects.
+The report also published its own funnel for task-specific tools.
+Sixty per cent of organisations evaluated such tools.
+Twenty per cent reached a pilot.
+Five per cent reached production.
+
+Five out of the twenty that piloted therefore made it through.
+On the report's own numbers, the pilot failure rate is seventy-five per cent.
+That is still poor. It is twenty percentage points better than the figure in circulation.
+
+### 04 · The report relabelled its own finding
+*117 words · about 47 seconds · sources [R01], [R02]*
+
+The slip did not begin with the press. It began inside the document.
+One paragraph after that funnel, the report describes a ninety-five per cent failure rate.
+Its own measure was organisations reporting no return, which is a different claim.
+
+Three further things belong on the record.
+The report defines success as something users or executives remarked upon, not something measured.
+Its appendix gives a second, stricter definition based on measurable indicators. The two do not agree.
+The sample was fifty-two organisations interviewed and a hundred and fifty-three leaders surveyed at four conferences.
+The document calls itself preliminary findings and disclaims the positions of any affiliated employers.
+The original link at MIT no longer serves the file.
+
+
+## S2 · What the evidence agrees on instead
+
+### 05 · Four studies, four different questions
+*112 words · about 45 seconds · sources [R01], [R03], [R05], [R06], [R07]*
+
+If that number is unreliable, the sensible response is to look at what else has been measured.
+Four other sources ask adjacent questions, and each counts something different.
+McKinsey surveyed one thousand seven hundred and nineteen respondents and asked about EBIT.
+Deloitte surveyed three thousand two hundred and thirty-five leaders and asked which benefits they achieve today.
+S&P Global asked one thousand and six firms what share of projects they abandoned.
+The United States Census Bureau samples about 1.2 million businesses and asks simply whether AI is used.
+
+Note the units. Organisations, respondents, projects and businesses are not interchangeable.
+Most apparent disagreement between these figures is unit substitution rather than measurement error.
+
+### 06 · Where they converge
+*118 words · about 47 seconds · sources [R03], [R05], [R06]*
+
+The units differ, so we should look for the question they answer in common.
+All four bear on whether material financial impact can be evidenced.
+McKinsey finds thirty-seven per cent report any EBIT impact, and about six per cent attribute five per cent or more.
+Both figures are flat against the previous year.
+Deloitte finds twenty per cent already growing revenue, against seventy-four per cent who hope to.
+S&P finds forty-six per cent reporting no strong positive impact on any objective.
+
+Different methods, different populations, and the same answer.
+Only a small minority of organisations can evidence material bottom-line impact.
+That share has not moved in a year. This is a firmer foundation than the headline it replaces.
+
+### 07 · Every figure here is a self-report
+*104 words · about 42 seconds · sources [R03], [R07], [R08], [R33], [R34]*
+
+There is one property these sources share, and it matters more than any of their numbers.
+Every figure is something a respondent said, including the government statistics.
+No study located for this session audits financial statements or deployment records.
+Sixty per cent of firms in one survey monitor no financial indicator for AI at all.
+In another, sixty-eight per cent of chief AI officers begin projects they cannot assess.
+
+So the measurement problem is not only inside companies.
+It runs through the evidence base on which the entire debate rests.
+Keep that in mind. We return to it as the session's central practical point.
+
+
+## S3 · The value was never stuck in the model
+
+### 08 · The difference was never the model
+*108 words · about 43 seconds · sources [R09]*
+
+That is the state of the evidence. The more useful question is why.
+Stanford's Digital Economy Lab examined fifty-one enterprise deployments across forty-one organisations.
+Their conclusion is on screen, in their words.
+The same technology and the same uses produced results measured in weeks for some and years for others.
+The difference was the organisation, not the model.
+
+One caution about this source, stated plainly.
+The cases were selected because they succeeded, and the authors disclaim any claim to representativeness.
+Its percentages describe successful deployments. They are not base rates for the economy.
+We should also note that one author co-founded a company that sells AI benefit measurement.
+
+### 09 · Technology was the easiest part
+*92 words · about 37 seconds · sources [R09]*
+
+If the organisation is the constraint, we should ask what specifically got in the way.
+Across those fifty-one cases, seventy-seven per cent of the hardest challenges were not technical.
+They were change management, data quality and process redesign.
+Technology was described consistently as the easiest part.
+
+An executive quoted in that study put it more bluntly.
+All the hard work sits in process documentation and data architecture.
+Do those two things, and the rest becomes straightforward.
+This is a claim about where to spend management attention, not about where to spend money.
+
+### 10 · Sixty-four per cent changed nothing else
+*108 words · about 43 seconds · sources [R08]*
+
+That was interview evidence from companies that succeeded. Now consider a measurement.
+The United States Census Bureau surveyed more than one hundred and seventeen thousand firms.
+The sample is nationally representative and weighted, which makes it the strongest evidence in this session.
+Sixty-four per cent of firms using AI reported no institutional adjustments of any kind.
+Training staff and developing new workflows each applied to about fifteen per cent.
+Changes to data practices ran at seven to eight per cent.
+
+Two-thirds of AI-using firms bought the tool and changed nothing around it.
+That is not a survey opinion about causes. It is a measured description of what happened.
+
+### 11 · The symptoms are not the causes
+*130 words · about 52 seconds · sources [R09], [R10]*
+
+So the surrounding work is often skipped. The Stanford study ranked why that proves fatal.
+Read their preface to the table carefully.
+Projects stuck in pilot, and an inability to prove return, appeared frequently.
+Both are consequences rather than causes.
+The leading cause was that the organisation was not ready to adopt, at thirty-five per cent.
+Knowledge never captured follows at twenty-seven per cent, then legal or compliance blocks at eighteen.
+Immature technology accounts for sixteen per cent.
+
+RAND interviewed sixty-five practitioners and reached a sharper version of the same point.
+Eighty-four per cent named business leadership's framing of the problem as a root cause.
+RAND also discloses that most interviewees were engineers rather than executives.
+The result may therefore be skewed towards identifying leadership failures. That caution is theirs.
+
+### 12 · Check your understanding
+*53 words · about 21 seconds · sources [R08], [R09]*
+
+Before we turn that into a diagnosis, one question to test the distinction.
+Consider the option on screen and choose.
+
+The answer is the organisational one.
+Immature technology accounts for sixteen per cent of failures in that study, and it is rarely the binding constraint.
+The measured Census finding points the same way.
+
+
+## S4 · Which stage are you stuck at
+
+### 13 · Four stages, four different failures
+*92 words · about 37 seconds · sources [R00], [R08], [R06], [R12], [R03]*
+
+We can now put that evidence to work as a diagnosis you can run on your own portfolio.
+Four stages sit between an idea and a benefit in the accounts.
+Never started. Piloted but never shipped. Shipped but not adopted. Adopted with no measured benefit.
+
+One qualification, and it is important.
+This structure is ours, assembled from four sources with different samples.
+No single study follows one set of projects through all four stages.
+So treat the stages as a diagnostic frame. Do not read the gaps between them as a funnel.
+
+### 14 · Stage one: it was never thought relevant
+*102 words · about 41 seconds · sources [R08], [R07]*
+
+Start with the firms that never began, because the reason is not the one usually assumed.
+Asked why they were not adopting, sixty-five per cent of firms said AI was not applicable to their business.
+Lack of knowledge came second at twenty-two per cent, then privacy and security at twenty per cent.
+Laws and regulations ranked among the least common barriers.
+
+That last point is worth stating clearly for this audience.
+On nationally representative evidence, regulation is not what is holding adoption back.
+Your governance obligations still bind, and the companion session covers them.
+They are not the explanation for absent value.
+
+### 15 · Stage two: the pilot that never shipped
+*101 words · about 40 seconds · sources [R06], [R01]*
+
+The second stage is the one most executives picture when they hear that AI is failing.
+S&P Global reports that firms abandoned, on average, forty-six per cent of projects between proof of concept and adoption.
+The share of companies abandoning most of their initiatives rose from seventeen to forty-two per cent in a year.
+NANDA's funnel showed a comparable drop from pilot to production.
+
+Two cautions. S&P has not published its field dates or question wording.
+And a rising abandonment rate partly reflects a larger stock of projects available to abandon.
+The direction is consistent across sources. The precision is not.
+
+### 16 · Stage three: shipped, and quietly ignored
+*109 words · about 44 seconds · sources [R12]*
+
+The third stage is the least visible, because the project reports as delivered.
+Danish researchers linked surveys of about twenty-five thousand workers to administrative records.
+In workplaces that neither encouraged use nor provided tools, about forty per cent of workers used chatbots anyway.
+Take-up roughly doubled where the employer actively encouraged use.
+Where encouragement, enterprise tools and training combined, ninety-three per cent had used them.
+
+There is a counter-intuitive detail in that paper.
+Training and tools provided without encouragement were associated with smaller reported gains.
+The authors describe this as consistent with mitigating misuse rather than improving productivity.
+They also state that this part of their analysis is descriptive.
+
+### 17 · Stage four, and a question
+*105 words · about 42 seconds · sources [R03], [R12], [R00]*
+
+The fourth stage is where most organisations that get this far now sit.
+The tool is adopted, people report benefits, and no financial effect can be demonstrated.
+Thirty-seven per cent report any EBIT impact, and about six per cent attribute five per cent or more.
+The Danish study found precise null effects on earnings and recorded hours.
+
+That combination is the heart of this session, so test it now.
+Read the situation on screen and choose the stage.
+
+The answer is stage four. The tool is in use and the benefit is unevidenced.
+Stage three would mean people are not using it. Here they are.
+
+
+## S5 · Why a working model does not move the accounts
+
+### 18 · Two hours a week, measured
+*89 words · about 36 seconds · sources [R11]*
+
+Stage four deserves a proper explanation, because it is the least intuitive.
+The clearest evidence comes from a randomised experiment across sixty-six firms.
+Seven thousand one hundred and thirty-seven knowledge workers took part over six months.
+Among treated workers who used the tool, the saving was two fewer hours on email each week.
+They also reduced time worked outside regular hours.
+
+That is a genuine, measured, individual benefit.
+Nobody disputes that generative AI saves time on tasks.
+The question is what happened next, and the same study answers it.
+
+### 19 · And nothing downstream changed
+*86 words · about 34 seconds · sources [R11]*
+
+Here is the second half of that result, and it is the part rarely quoted.
+Treated and control workers replied to the same number of email threads.
+They attended the same number of meetings.
+They completed the same number of documents.
+The authors detected no shift in the quantity or composition of anyone's tasks.
+
+Two hours a week were released and no measurable output changed.
+The authors are careful to say they could not observe productivity or performance directly.
+What they could observe did not move.
+
+### 20 · A measured null on pay and hours
+*100 words · about 40 seconds · sources [R12]*
+
+A second study tested the same question against national administrative records rather than telemetry.
+The Danish work covered eleven occupations most exposed to chatbots.
+Employers had adopted, workers reported benefits, and new AI-related tasks were widespread.
+Using difference-in-differences, the authors estimate precise null effects on earnings and recorded hours.
+They rule out effects larger than two per cent, two years after ChatGPT's launch.
+
+Precise null is a specific claim and worth stating carefully.
+It does not mean nothing happened. It means any effect was too small to be distinguished from zero.
+Note also that this paper has not been peer-reviewed.
+
+### 21 · The saved time went into oversight
+*144 words · about 58 seconds · sources [R12], [R13], [R18], [R19], [R20]*
+
+So where did the time go. The same Danish data offers the most direct answer available.
+Of the new tasks created by AI, only forty-one per cent involve productive use of it.
+The remaining fifty-nine per cent are implementation and oversight.
+That is quality review, integration work, and ethics and compliance.
+About a quarter of workers spend more time on the very tasks they initially saved time on.
+
+The chain from a task gain to an accounting gain breaks in four identifiable places.
+One team that ran both a laboratory test and field trials found the field effect roughly half the size.
+Time saved on a task is not output gained, because most work is not that task.
+No study measures both worker gains and firm profit, so the third link is untested.
+And the statistical agencies do not measure AI separately at all.
+
+### 22 · Check your understanding
+*71 words · about 28 seconds · sources [R11], [R12]*
+
+That is a lot of evidence pointing one way, so test what it does and does not show.
+Choose the statement the research supports.
+
+The correct answer is the third.
+Individual time savings are well evidenced and firm-level financial effects are not.
+The first option overstates the case, because the tools demonstrably save time.
+The second understates it, because a precise null is a finding rather than an absence of research.
+
+
+## S7 · Can value be attributed at all
+
+### 27 · Off by a factor of three
+*143 words · about 57 seconds · sources [R27], [R28], [R35]*
+
+That brings us to the question underneath all of this. Can the value be attributed properly.
+The discipline that has argued about this longest is advertising measurement.
+Researchers ran fifteen large experiments at Facebook and compared methods on identical data.
+Observational methods overestimated effectiveness, and in half the studies they were off by a factor of three.
+A naive comparison of exposed against unexposed users suggested a lift of four hundred and sixteen per cent.
+Careful statistical matching brought that down to one hundred and two per cent.
+The randomised answer was seventy-seven per cent.
+
+The World Bank's evaluation handbook names the underlying problem directly.
+A baseline measured before an intervention is almost never a good estimate of the counterfactual.
+They call before-and-after comparison a counterfeit estimate.
+Microsoft's experimentation team says the same in industrial terms. External variation overwhelms the effect being sought.
+
+### 28 · It works at the workflow, not the accounts
+*132 words · about 53 seconds · sources [R29], [R32], [R00]*
+
+There is also a limit that no amount of diligence can overcome, and leaders should know it.
+Across twenty-five large field experiments, the median confidence interval on return was over one hundred percentage points wide.
+To distinguish a ten per cent difference in return reliably, the median campaign needed to be sixty-two times larger.
+Halving the effect you wish to detect quadruples the sample required.
+
+The conclusion is narrower and more useful than it first appears.
+Attribution is achievable at the level of one workflow.
+It is not achievable at the level of the enterprise accounts.
+So the right demand is a baseline on one process, recorded before anyone touches the tool.
+The guidance is explicit that this must be designed in before the intervention starts.
+One question to close this section.
+
+
+## S8 · The next ninety days
+
+### 29 · Four lines that separate a saving from an estimate
+*117 words · about 47 seconds · sources [R30], [R31]*
+
+Everything so far leads to a test you can apply without any technical knowledge.
+The British government's definition of a cashable saving is four lines long.
+The cash must relate to an activity that has already happened.
+Costs must not merely be relocated or deferred.
+The saving must be net of any double counting.
+And it must be reasonable to an impartial third party.
+
+Add one more test from the same source, on additionality.
+Deadweight describes outcomes that would have occurred without any intervention.
+A benefit the market would have delivered anyway is not a benefit of your project.
+Anything that fails these tests is an estimate. The surveys suggest an estimate is what most organisations hold.
+
+### 30 · What to do, and what to stop
+*127 words · about 51 seconds · sources [R00], [R30], [R32], [R04], [R09]*
+
+So here is what the evidence supports doing in the next ninety days.
+Choose one workflow where the benefit would be visible in a budget line.
+Record the baseline before anyone uses the tool, because it cannot be reconstructed afterwards.
+Hold back a comparison group, even a small one.
+Run it for at least a quarter, so that novelty has passed.
+Name one person accountable for the benefit, not for the deployment.
+
+And here is what to stop.
+Stop funding tools without the surrounding process work, because two-thirds of firms do exactly that.
+Stop accepting self-reported productivity as evidence of financial return.
+Stop asking for enterprise-level return on investment, because that number cannot be produced honestly.
+Ask instead which workflow you can measure properly, and start there.

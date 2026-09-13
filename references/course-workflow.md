@@ -319,6 +319,17 @@ advisory, and still unissued."
 
 ### Motion rules
 
+**Builds step on the learner's input, never on a timer.** Space or the forward
+key reveals the next item in a `.stagger` group; once the group is complete the
+next press advances the slide. A timed build forces the narrator's pace on
+someone reading faster or slower, and cannot be re-watched in step. Leaving a
+slide resets its build so it replays correctly on return.
+
+**Set the stage scale before first paint.** `scripts/course/engine.py` emits a
+blocking head script that sets `--stage-scale` and a `booting` class that
+suppresses transitions for the first frame. Without it the deck paints once at
+1920×1080 and then snaps, which reads as a shake on every slide.
+
 **Pace motion to the voice, not the eye.** In a recorded course a narrator needs
 roughly 2.5 seconds an item at 150 wpm. A stagger that finishes in 1.3 seconds is
 decoration; the learner has read the whole list before the voice reaches item two.

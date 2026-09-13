@@ -195,22 +195,17 @@
 /* ---- round-2 feedback -----------------------------------------------------
    Ray, 13 Sep 2026. Stagger, list layouts and a checklist. */
 
-/* stagger: build a group one item at a time on slide entry. Recorded delivery,
-   so this runs on its own rather than needing a click. */
-.slide .stagger > * { opacity: 0; transform: translateY(10px); }
-.slide.is-active .stagger > * { animation: rise .7s var(--ease, cubic-bezier(.4,0,.2,1)) forwards; }
-/* Paced to the voice. At ~150 wpm a narrator needs roughly 2.5s per item, so an
-   animation that finished in 1.3s was decoration rather than teaching. */
-.slide.is-active .stagger > *:nth-child(1) { animation-delay: .2s }
-.slide.is-active .stagger > *:nth-child(2) { animation-delay: 2.7s }
-.slide.is-active .stagger > *:nth-child(3) { animation-delay: 5.2s }
-.slide.is-active .stagger > *:nth-child(4) { animation-delay: 7.7s }
-.slide.is-active .stagger > *:nth-child(5) { animation-delay: 10.2s }
-.slide.is-active .stagger > *:nth-child(6) { animation-delay: 12.7s }
+/* Builds step on the learner's input, not on a timer (R4-01). A timed stagger
+   forces the narrator's pace on someone reading faster or slower, and cannot be
+   re-watched in step. Space or the forward key reveals the next item; once the
+   group is complete the next press advances the slide. */
+.slide .stagger > * { opacity: 0; transform: translateY(10px) }
+.slide .stagger > *.shown { animation: rise .45s var(--ease, cubic-bezier(.4,0,.2,1)) forwards }
 @keyframes rise { to { opacity: 1; transform: none } }
 @media (prefers-reduced-motion: reduce) {
-  .slide .stagger > *, .slide.is-active .stagger > * { opacity: 1; transform: none; animation: none }
+  .slide .stagger > * { opacity: 1; transform: none; animation: none }
 }
+
 
 /* a list of things gets a list layout */
 .q-list { list-style: none; margin: 0; padding: 0; counter-reset: q }
@@ -391,6 +386,7 @@ ul.check li::before {
    part-built, so every capture path must force the finished state. */
 body.stills .stagger > *,
 body.stills .slide.is-active .stagger > * { opacity: 1; transform: none; animation: none }
+@media print { .stagger > * { opacity: 1 !important; transform: none !important } }
 body.stills .decision-review .answer { display: block }
 body.stills .decision-review button { display: none }
 @media print {
@@ -398,3 +394,11 @@ body.stills .decision-review button { display: none }
   .decision-review .answer { display: block !important }
   .decision-review button { display: none !important }
 }
+
+/* A bordered box whose name is the emphasis (R4-06/07). */
+.tpl-course .named-box {
+  border: 1px solid var(--border); border-top: 3px solid var(--accent);
+  border-radius: var(--radius-sm); padding: 22px 24px; background: var(--surface);
+}
+.tpl-course .named-box h4 { margin: 0 0 8px; font-size: 25px; color: var(--accent) }
+.tpl-course .named-box p { margin: 0; font-size: 21px; color: var(--text-2) }

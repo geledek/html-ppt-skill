@@ -100,7 +100,7 @@
 .tpl-course .case-quote{margin:26px 0 0;border-left:4px solid var(--accent-2);padding:15px 30px;background:var(--surface-2)}
 .tpl-course .case-quote p{font-size:32px;line-height:1.35;margin:0 0 13px}
 .tpl-course .case-quote cite{font-size:21px;color:var(--text-2);font-style:normal}
-.tpl-course mark{background:transparent;color:var(--accent-2);font-weight:700;text-decoration:underline;text-underline-offset:6px}
+.tpl-course mark{background:color-mix(in srgb,var(--accent) 15%,transparent);color:inherit;font-weight:700;text-decoration:none;border-radius:3px;padding:0 .12em;box-decoration-break:clone}
 .tpl-course .decision-list{list-style:none;counter-reset:decision;padding:0;margin:18px 0;display:grid;grid-template-columns:1fr;gap:0}
 .tpl-course .decision-list li{display:grid;grid-template-columns:55px 300px 1fr;gap:22px;counter-increment:decision;border-top:1px solid var(--border-strong);padding:16px 0;font-size:27px;line-height:1.4}
 .tpl-course .decision-list li::before{content:counter(decision,decimal-leading-zero);color:var(--accent-2);font-family:var(--font-mono)}
@@ -125,3 +125,13 @@
  .tpl-course .world-map[data-focus] .country.selected{opacity:1!important}
 }
 
+
+/* Map: two columns, so the legend sits beside the map instead of leaving a band
+   of dead space beneath it (R4-10). */
+.tpl-course .map-layout { display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: start }
+.tpl-course .world-map { width: 100%; height: auto; max-height: none }
+.tpl-course .map-side { display: flex; flex-direction: column; height: 100% }
+.tpl-course .map-prompt { font-size: 21px; color: var(--text-2); margin: 0 0 18px }
+.tpl-course .map-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; margin: 0 }
+.tpl-course .map-group-block.fragmented { grid-column: 1 / -1 }
+.tpl-course .map-detail { margin-top: auto }
