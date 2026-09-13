@@ -104,3 +104,21 @@ SLIDES = [
   </div>
 </div><p class="implementation-next">Add assurance tools, dedicated resources or certification when risk, scale or contractual needs justify them.</p>''',['R02','R03','R04','R18']),
 ]
+
+
+# Slides waiting on Ray. The label is drawn on the slide, top right under the
+# number, so a review pass can be done from the deck rather than from a list.
+# Clear an entry when the item is settled; the label disappears with it.
+# PROMOTE: if a second course wants this, it belongs in engine.py.
+REVIEW = {
+ 12: 'Layout &middot; lower frame still empty',
+ 13: 'R5-12 &middot; confirm what &ldquo;completely round&rdquo; should apply to',
+ 14: 'UK AI Risk Management Toolkit (R23) is in the script but on no slide',
+ 19: 'Air Canada primary source unverified (R15) &middot; lower frame still empty',
+ 20: 'MAS guidelines issuance status unverified (R18) &middot; lower frame empty',
+ 23: 'Layout &middot; lower frame still empty',
+ 30: 'MAS guidelines issuance status unverified (R18)',
+}
+
+SLIDES = [(n, k, t, ('<p class="review-flag">Review &middot; ' + REVIEW[n] + '</p>' + b) if n in REVIEW else b, r)
+          for n, k, t, b, r in SLIDES]

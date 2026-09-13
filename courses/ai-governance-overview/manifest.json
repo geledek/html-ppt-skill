@@ -1,7 +1,7 @@
 {
-  "course_source_sha256": "9e2255fbe02f78f27f660653af666133d26daabba37fce1159e9d99fe5b741e3",
+  "course_source_sha256": "9b8a72a499eccf5c7e04be314cb6c2306ec1228453dd4810ec364e68a6eef4df",
   "output": "index.html",
-  "output_sha256": "d23f1917c8cc46cc8a34c2fe3f20a3644ccff78f28f52cae4f88227092968518",
+  "output_sha256": "30e31d394c5b8171fc448c21595bd264280b8b1bd55690b4a7c69809e1f65ef7",
   "slides": [
     1,
     2,
