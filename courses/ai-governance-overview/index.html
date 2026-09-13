@@ -938,6 +938,53 @@ body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !
 .tpl-course .onepager ul.check li { font-size: 17px; padding: 5px 0 5px 28px }
 .tpl-course .onepager ul.check li::before { top: 10px; width: 14px; height: 14px }
 .tpl-course .implementation-next { margin-top: 20px; padding-top: 16px; font-size: 19px }
+
+
+/* ---- emphasis colour ------------------------------------------------------
+   In corporate-clean, --accent is navy (#0a2540) and --accent-2 is the blue
+   (#1d4ed8). A previous pass "unified emphasis on the accent" and unified it
+   onto the navy, which removed the blue rather than standardising it.
+   One semantic token now carries emphasis, so a theme change moves it in one
+   place and nothing drifts back to navy. */
+.tpl-course { --emphasis: var(--accent-2); }
+
+.tpl-course mark {
+  background: color-mix(in srgb, var(--emphasis) 16%, transparent);
+  color: inherit; font-weight: 700; text-decoration: none;
+  border-radius: 3px; padding: 0 .12em; box-decoration-break: clone;
+}
+.tpl-course .named-box h4,
+.tpl-course .q-list li::before,
+.tpl-course .op-label,
+.tpl-course .definition-tag,
+.tpl-course .case-id,
+.tpl-course .lifecycle .step-no,
+.tpl-course .roles th,
+.tpl-course .implementation .phase,
+.tpl-course .jurisdiction-panel .status,
+.tpl-course .legal-row .status,
+.tpl-course .block-label,
+.tpl-course .map-group,
+.tpl-course .ref-no,
+.tpl-course .concept-box h4 { color: var(--emphasis) }
+
+.tpl-course .component::before { color: var(--emphasis) }
+
+/* structural accents follow the same colour so the deck reads as one system */
+.tpl-course .named-box,
+.tpl-course .eu-components article,
+.tpl-course .timeline li,
+.tpl-course .lifecycle li,
+.tpl-course .implementation article,
+.tpl-course .jurisdiction-panel { border-top-color: var(--emphasis) }
+.tpl-course .case-quote,
+.tpl-course .decision-result,
+.tpl-course .eu-takeaway,
+.tpl-course .callout { border-left-color: var(--emphasis) }
+.tpl-course .cover-rule { background: var(--emphasis) }
+.tpl-course ul.check li::before { border-color: var(--emphasis) }
+.tpl-course .map-layout.has-selection .map-detail { border-left-color: var(--emphasis) }
+.tpl-course .map-layout.has-selection .map-detail b { color: var(--emphasis) }
 </style></head><body class="tpl-course stage-fixed"><div class="deck"><section class="slide cover" data-section="1" data-course-slide="1" data-title="AI Governance Overview"><span class="course-position" aria-label="Slide 1 of 31">01 / 31</span><div class="cover-main"><p class="cover-series">AI for Business Leaders · Online Series for ISCA</p><h1 class="cover-title">AI Governance Overview</h1><div class="cover-rule"></div><p class="cover-by">Ray Han, PhD (Computer Science, NTU)</p><p class="cover-role">Chief AI Trainer, HGT Consultancy Pte Ltd</p></div><div class="cover-foot"><span>ray.han@hgtconsultancy.com</span><span>30 minutes · recorded</span></div><div class="notes"><p>Welcome to AI Governance Overview. I am Ray Han, Chief AI Trainer at HGT Consultancy. We will define AI governance, examine its scope and components, and compare selected regulatory approaches. We will then use cases to connect governance responsibilities to decisions at work. The final roadmap sets out implementation actions.</p></div></section>
 <section class="slide" data-section="1" data-course-slide="2" data-title="Would you approve the launch?"><header class="slide-head"><p class="kicker">THE LAUNCH DECISION</p><h2 class="h2 mt-s">Would you approve the launch?</h2></header><span class="course-position" aria-label="Slide 2 of 31">02 / 31</span><div class="slide-body"><div class="scenario"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M12 13h56v42H36L20 68V55h-8z"/><path d="M24 28h32M24 39h23" fill="none"/></svg><div><span class="case-id">HYPOTHETICAL EXAMPLE</span><h3>A Singapore retailer's customer-service chatbot</h3><p>The supplier says its product follows Singapore’s Model AI Governance Framework.</p></div></div><div class="quiz decision-quiz" aria-label="Choose one answer"><button type="button" class="mcq"><span class="letter">A</span><span><b>Approve the launch</b><span class="why">Supplier alignment alone does not establish readiness.</span></span></button><button type="button" class="mcq"><span class="letter">B</span><span><b>Reject the proposal</b><span class="why">The available facts do not justify permanent rejection.</span></span></button><button type="button" class="mcq" data-correct><span class="letter">C</span><span><b>Request more information</b><span class="why">Withhold approval and obtain evidence about this deployment.</span></span></button><p class="verdict" aria-live="polite"></p></div><div class="notes"><p>Consider this hypothetical proposal. A Singapore retailer wants to launch a customer-service chatbot. The supplier says its product follows Singapore&#x27;s Model AI Governance Framework. The chatbot will answer customers&#x27; questions about products, orders and returns. Would you approve the launch, reject it, or request more information? Pause here and choose an answer.</p><p>Requesting more information is the best next step. The supplier&#x27;s statement does not establish whether this deployment is ready. Approval requires evidence about the proposed use and the controls around it. Rejecting the proposal permanently also goes beyond the information available. For now, withhold launch approval and identify what needs to be checked. We will revisit this retailer.</p></div></div></section>
 <section class="slide" data-section="1" data-course-slide="3" data-title="Questions to consider first"><header class="slide-head"><p class="kicker">BEFORE APPROVAL</p><h2 class="h2 mt-s">Questions to consider first</h2></header><span class="course-position" aria-label="Slide 3 of 31">03 / 31</span><div class="slide-body"><ol class="q-list stagger"><li><b>Data*</b><span>What personal data will the chatbot collect or use?</span></li><li><b>Customer commitments</b><span>What commitments can it make to customers?</span></li><li><b>Jurisdictions</b><span>Which jurisdictions will it serve?</span></li><li><b>Accountability</b><span>Who will be accountable for its operation?</span></li></ol><p class="minor-note">*Direct PDPA relevance where personal data is involved. Other questions may also raise data-protection obligations.</p><div class="notes"><p>First, what personal data will the chatbot collect or use? The retailer needs to understand customer inputs, retained conversations and access to order records. Training-data provenance is another question for the supplier; it is distinct from the retailer&#x27;s use of customer data.</p><p>Second, what commitments can the chatbot make to customers? An incorrect statement about refunds may affect the business financially. Third, which jurisdictions will it serve? The retailer&#x27;s location alone does not settle every applicable obligation. Fourth, who will be accountable for its operation, including complaints and errors?</p><p>The asterisk identifies the question with direct personal-data relevance. Other questions may also involve data protection. Singapore&#x27;s Model AI Governance Framework is voluntary. Applicable obligations under the Personal Data Protection Act remain binding. Following a framework is one input to an assessment, rather than a complete approval record.</p></div></div></section>

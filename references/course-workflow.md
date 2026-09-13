@@ -287,6 +287,28 @@ slide down.
 **The stage is fixed at 1920×1080** and scaled to fit (docs/adr/0006), so
 positions are deterministic. Size type for that canvas, not for a browser window.
 
+### Emphasis colour: name the token, do not "unify"
+
+A theme carries two accents, and they are not interchangeable. In
+`corporate-clean`, `--accent` is the navy `#0a2540` used for headlines and rules,
+and `--accent-2` is the blue `#1d4ed8` used for emphasis — card headings,
+kickers, list numbers, highlight fills. A round-5 pass that "unified emphasis on
+the accent" pointed every emphasis rule at the navy, which removed the blue from
+the deck rather than standardising it. The deck went flat and nobody could say
+which rule caused it.
+
+Define one course-level token and route every emphasis rule through it:
+
+```css
+.tpl-course { --emphasis: var(--accent-2); }
+.tpl-course .named-box h4, .tpl-course .op-label, ... { color: var(--emphasis) }
+```
+
+Then a change of emphasis colour is one line, and "make these blue" is a
+question about which token, not about which twenty selectors. Verify by
+measurement, not by eye — read `getComputedStyle(el).color` back from the built
+deck and check it against the token's value.
+
 ### Choosing a visual: when NOT to use a box
 
 A component list without this guidance produces a deck where every slide is the

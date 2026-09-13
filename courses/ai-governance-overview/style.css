@@ -212,3 +212,50 @@ body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !
 .tpl-course .onepager ul.check li { font-size: 17px; padding: 5px 0 5px 28px }
 .tpl-course .onepager ul.check li::before { top: 10px; width: 14px; height: 14px }
 .tpl-course .implementation-next { margin-top: 20px; padding-top: 16px; font-size: 19px }
+
+
+/* ---- emphasis colour ------------------------------------------------------
+   In corporate-clean, --accent is navy (#0a2540) and --accent-2 is the blue
+   (#1d4ed8). A previous pass "unified emphasis on the accent" and unified it
+   onto the navy, which removed the blue rather than standardising it.
+   One semantic token now carries emphasis, so a theme change moves it in one
+   place and nothing drifts back to navy. */
+.tpl-course { --emphasis: var(--accent-2); }
+
+.tpl-course mark {
+  background: color-mix(in srgb, var(--emphasis) 16%, transparent);
+  color: inherit; font-weight: 700; text-decoration: none;
+  border-radius: 3px; padding: 0 .12em; box-decoration-break: clone;
+}
+.tpl-course .named-box h4,
+.tpl-course .q-list li::before,
+.tpl-course .op-label,
+.tpl-course .definition-tag,
+.tpl-course .case-id,
+.tpl-course .lifecycle .step-no,
+.tpl-course .roles th,
+.tpl-course .implementation .phase,
+.tpl-course .jurisdiction-panel .status,
+.tpl-course .legal-row .status,
+.tpl-course .block-label,
+.tpl-course .map-group,
+.tpl-course .ref-no,
+.tpl-course .concept-box h4 { color: var(--emphasis) }
+
+.tpl-course .component::before { color: var(--emphasis) }
+
+/* structural accents follow the same colour so the deck reads as one system */
+.tpl-course .named-box,
+.tpl-course .eu-components article,
+.tpl-course .timeline li,
+.tpl-course .lifecycle li,
+.tpl-course .implementation article,
+.tpl-course .jurisdiction-panel { border-top-color: var(--emphasis) }
+.tpl-course .case-quote,
+.tpl-course .decision-result,
+.tpl-course .eu-takeaway,
+.tpl-course .callout { border-left-color: var(--emphasis) }
+.tpl-course .cover-rule { background: var(--emphasis) }
+.tpl-course ul.check li::before { border-color: var(--emphasis) }
+.tpl-course .map-layout.has-selection .map-detail { border-left-color: var(--emphasis) }
+.tpl-course .map-layout.has-selection .map-detail b { color: var(--emphasis) }
