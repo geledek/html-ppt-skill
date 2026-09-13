@@ -32,3 +32,9 @@ inlining. Webfonts stay remote; every token stack declares a local fallback.
   (`../../../assets/`) and `examples/*`. Left alone: upstream-tracked, and
   authors open those in place. Worth knowing when someone reports an unstyled
   template.
+
+**Superseded implementation, 13 September 2026.** `scripts/course/engine.py`
+inlines the CSS and JS now (`engine.py:212-234`) and `assemble-course.sh` is
+deleted. The decision stands; only the script that implemented it is gone. Its
+`--linked` escape hatch went with it — nothing had used it, and a linked build is
+precisely what renders unstyled in Safari.
