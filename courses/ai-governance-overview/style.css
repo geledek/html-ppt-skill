@@ -113,17 +113,7 @@
 .tpl-course .implementation p{font-size:27px;line-height:1.4;color:var(--text-2);margin:0 0 23px}
 .tpl-course .implementation-next{margin-top:32px;padding-top:25px;border-top:1px solid var(--border-strong);font-size:26px;line-height:1.4;color:var(--text-2)}
 @media(prefers-reduced-motion:reduce){.tpl-course .country,.tpl-course .map-pin{animation:none!important}.tpl-course .slide{transition:none!important}}
-@media print{
- @page{size:1920px 1080px;margin:0}
- html,body.tpl-course.stage-fixed{margin:0!important;width:1920px!important;height:auto!important;overflow:visible!important;background:var(--bg)!important}
- .tpl-course.stage-fixed .deck{position:static!important;width:1920px!important;height:auto!important;transform:none!important;overflow:visible!important}
- .tpl-course.stage-fixed .slide{position:relative!important;width:1920px!important;height:1080px!important;opacity:1!important;transform:none!important;break-after:page;page-break-after:always;overflow:hidden!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}
- .tpl-course .slide:last-child{break-after:auto;page-break-after:auto}
- .progress-bar,.notes-overlay,.overview{display:none!important}
- .tpl-course .quiz .mcq .why,.tpl-course .quiz .verdict{visibility:visible!important}
- .tpl-course .country,.tpl-course .map-pin{animation:none!important;opacity:1!important}
- .tpl-course .world-map[data-focus] .country.selected{opacity:1!important}
-}
+
 
 
 /* Map: two columns, so the legend sits beside the map instead of leaving a band
@@ -301,9 +291,6 @@ body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !
 .tpl-course .jurisdiction-panel h3 { font-size: 38px }
 .tpl-course .jurisdiction-panel p { font-size: 33px; margin-bottom: 28px }
 
-/* The template reserves 1.4em for the verdict, but the revealed bold text needs
-   37px against 33px reserved. PROMOTE: this one belongs in the template. */
-.tpl-course .quiz .verdict { min-height: 1.75em }
 
 /* Second fill pass: the families that were still short after the first one.
    Slides 4, 5, 6, 7, 12, 19, 20 and 23. Same bounds — the line-count and
@@ -371,20 +358,6 @@ body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !
    columns that give it context. The caveat and the recommended control that used
    to sit under them in note type are both in the script, spoken. */
 .tpl-course .lead-box { margin: 0 0 40px }
-.tpl-course .lead-box + .case-timeline,
-.tpl-course .lead-box + .legal-stack { margin-top: 0 }
-/* One lead box wherever a slide leads with its claim. A callout and a blockquote arrived at the
-   same job from different components — 28px against 32px, different padding,
-   <b> against <mark> — so the two cases looked like two designs. This is the box;
-   the only emphasis inside it is <mark>, on the term the slide is teaching. */
-.tpl-course .lead-box {
-  font-size: 30px; line-height: 1.4; margin: 0 0 40px; padding: 26px 32px;
-  background: var(--surface-2); border: 0; border-left: 5px solid var(--emphasis);
-  border-radius: 0 var(--radius) var(--radius) 0;
-}
-.tpl-course .lead-box p { font-size: inherit; line-height: inherit; margin: 0 0 12px }
-.tpl-course .lead-box p:last-child { margin-bottom: 0 }
-.tpl-course .lead-box cite { display: block; font-size: 22px; color: var(--text-2); font-style: normal }
 .tpl-course .lead-box + .case-timeline,
 .tpl-course .lead-box + .legal-stack { margin-top: 0 }
 /* With the note gone, the two columns carry the lower half on their own. */
