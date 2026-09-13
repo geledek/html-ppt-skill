@@ -116,6 +116,17 @@ consequences of the mode back to them rather than storing it silently:
 | self-paced | **on-slide prose** | ~250 wpm silent reading | learner must be able to answer |
 | recorded | hidden `<div class="notes">`, as presenter-led — the narrator reads it, the slide never prints it | ~150 wpm | as presenter-led |
 
+**The rate in that column is a default, not a measurement.** A speaking rate
+belongs to the narrator: ~150 wpm is typical for recorded English, and this
+repo's first narrator reads at 130, which is 13% more runtime for the same
+script. Record it as `rate:` in the course frontmatter at gate 1 and let
+`scripts/course/stamp-times.py` read it, so the per-slide allowances and the
+budget are measured against the person who will actually read them.
+
+```bash
+python3 scripts/course/stamp-times.py courses/<name>/course.md [--wpm N]
+```
+
 The engine writes narration into `.notes` on every slide whatever the mode; what
 the mode decides is whether the teaching content *also* has to be on the slide.
 Getting it wrong is a silent, total failure: a self-paced course whose teaching
