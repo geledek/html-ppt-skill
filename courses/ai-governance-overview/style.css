@@ -170,11 +170,15 @@ body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !
 .tpl-course .map-stage { position: relative }
 .tpl-course .map-detail {
   grid-column: 1 / -1; margin: 0 0 26px; width: 100%; min-height: 80px;
-  display: flex; align-items: center; box-sizing: border-box;
+  box-sizing: border-box;
   background: var(--surface); border: 1px solid var(--border);
   border-left: 5px solid var(--border-strong); border-radius: var(--radius-sm);
-  padding: 18px 24px; font-size: 23px; box-shadow: var(--shadow);
+  padding: 26px 24px; font-size: 23px; line-height: 1.2; box-shadow: var(--shadow);
 }
+/* The template stacks the jurisdiction name above its description, which suited
+   the narrow card that used to sit on the map. In a full-width band it wastes the
+   line and changes the box height between states, so the name runs inline. */
+.tpl-course .map-detail b { display: inline; font-size: inherit; margin: 0 }
 .tpl-course .map-layout.has-selection .map-detail {
   border-left-color: var(--accent);
   background: color-mix(in srgb, var(--accent) 8%, var(--surface));
