@@ -326,13 +326,13 @@ interpret laws and cases. The full draft and sample remain subject to review.
 |---|---|---:|---|---|---|---|
 | S1 · The launch decision | 1–3 | 2 | Ask the decision, and reveal the evidence it needs | revised for review | revised for review | stale |
 | S2 · What AI governance covers | 4–8 | 5 | Define AI and governance; explain scope, components and roles | revised for review | revised for review | stale |
-| S3 · How rules apply | 9–15 | 7 | Compare Singapore, EU and UK; distinguish legal force from harm; apply the distinction | revised for review | revised for review | stale |
-| S4 · Cases and their lessons | 16–18 | 4 | Connect contestability, disclosure, customer liability and business loss to controls | revised for review | revised for review | stale |
-| S5 · What sectors add | 19–22 | 4 | Explain finance as a worked example and transfer practices to other sectors | revised for review | revised for review | stale |
-| S6 · Apply the controls | 23–26 | 4 | Combine questions with evidence and resolve the opening decision | revised for review | revised for review | stale |
-| S7 · Implementation | 27–29 | 3 | Complete a record, prioritise a control gap and finish on the roadmap | revised for review | revised for review | stale |
+| S3 · How rules apply | 9–14 | 6 | Compare Singapore and the EU; distinguish legal force from harm; apply the distinction | revised for review | revised for review | stale |
+| S4 · Cases and their lessons | 15–17 | 4 | Connect contestability, disclosure, customer liability and business loss to controls | revised for review | revised for review | stale |
+| S5 · What sectors add | 18–21 | 4 | Explain finance as a worked example and transfer practices to other sectors | revised for review | revised for review | stale |
+| S6 · Apply the controls | 22–25 | 4 | Combine questions with evidence and resolve the opening decision | revised for review | revised for review | stale |
+| S7 · Implementation | 26–28 | 3 | Complete a record, prioritise a control gap and finish on the roadmap | revised for review | revised for review | stale |
 
-**Total: 29 slides / 29 minutes.** Slide ranges and time allocations follow the
+**Total: 28 slides / 28 minutes.** Slide ranges and time allocations follow the
 revision brief. Five assessment moments include the opening question. The former
 35-slide `index.html` and its `sections/` remain the committed baseline until the
 full rebuild after sample review; they are stale relative to this source.
@@ -351,23 +351,22 @@ full rebuild after sample review; they are stale relative to this source.
 10. Different instruments have different legal effects
 11. AI Governance in Singapore
 12. EU AI Act
-13. AI Governance in the United Kingdom
-14. Assess applicable obligations and potential harm
-15. Does following a framework resolve the data issue?
-16. Failure pattern: regulatory action
-17. Case study: HSBC's credit-assessment disclosures
-18. Failure pattern: customer claims and business losses
-19. Financial Sector in Singapore
-20. Financial Sector in the United Kingdom
-21. Apply these governance practices in your sector
-22. Who must own this before launch?
-23. Three questions and the evidence to request
-24. What evidence is needed before approval?
-25. Would you approve the chatbot now?
-26. Approve, restrict or pause?
-27. Record the next decision for each priority AI use
-28. Which action should come first?
-29. AI Governance implementation roadmap
+13. Assess applicable obligations and potential harm
+14. Does following a framework resolve the data issue?
+15. Failure pattern: regulatory action
+16. Case study: HSBC's credit-assessment disclosures
+17. Failure pattern: customer claims and business losses
+18. Financial Sector in Singapore
+19. Financial Sector in the United Kingdom
+20. Apply these governance practices in your sector
+21. Who must own this before launch?
+22. Three questions and the evidence to request
+23. What evidence is needed before approval?
+24. Would you approve the chatbot now?
+25. Approve, restrict or pause?
+26. Record the next decision for each priority AI use
+27. Which action should come first?
+28. AI Governance implementation roadmap
 
 ### Gate 2 sample
 
@@ -408,7 +407,7 @@ The final roadmap sets out implementation actions.
 #### 02 · Would you approve the launch?
 
 **Sources:** [R00], [R04]
-**Time:** 1:11  ·  110 words at 130 wpm + 20s pause
+**Time:** 1:13  ·  114 words at 130 wpm + 20s pause
 **Delivery:** Allow 20 seconds to choose; reveal the answer before advancing.
 
 **Narration:**
@@ -626,25 +625,7 @@ Future dates are labelled explicitly on the timeline.
 A non-EU organisation can also be within scope, including certain cases where system outputs are used in the Union.
 Check its provider or deployer role and the relevant scope provisions before concluding that the Act does or does not apply.
 
-#### 13 · AI Governance in the United Kingdom
-
-**Sources:** [R09], [R11], [R12]
-**Time:** 0:59  ·  128 words at 130 wpm
-
-**Narration:**
-The UK approach uses existing regulators and legal frameworks to address AI in context.
-For an organisation, the review begins with the activity, affected people and applicable requirements.
-Data protection, equality and sector regulation may all be relevant.
-The absence of one comprehensive AI checklist does not remove these duties.
-
-The 2023 policy framework identifies five principles: safety, security and robustness; appropriate transparency and explainability; fairness; accountability and governance; and contestability and redress.
-Present these as policy principles, rather than five new statutory duties imposed on every firm.
-
-The Information Commissioner's Office addresses data protection. Financial regulators oversee financial services.
-A firm therefore needs to translate existing requirements into controls for its particular AI use.
-Identify decisions requiring review, the necessary evidence and how people can seek help.
-
-#### 14 · Assess applicable obligations and potential harm
+#### 13 · Assess applicable obligations and potential harm
 
 **Sources:** [R00], [R02], [R05]
 **Time:** 0:56  ·  122 words at 130 wpm
@@ -662,7 +643,7 @@ Both can involve personal data, but their effects and operating safeguards diffe
 The second use can directly affect customers and requires closer examination of the decision and review arrangements.
 A voluntary framework label alone does not tell the approver which use presents the greater risk.
 
-#### 15 · Does following a framework resolve the data issue?
+#### 14 · Does following a framework resolve the data issue?
 
 **Sources:** [R00], [R04], [R05]
 **Time:** 1:22  ·  113 words at 130 wpm + 30s pause
@@ -681,7 +662,7 @@ Option C says an AI label alone provides the required explanation. It does not e
 
 ### S4 · Cases and their lessons
 
-#### 16 · Failure pattern: regulatory action
+#### 15 · Failure pattern: regulatory action
 
 **Sources:** [R13], [R00]
 **Time:** 1:06  ·  142 words at 130 wpm
@@ -699,7 +680,7 @@ The enforcement covered multiple data-protection issues; the penalty should not 
 For a business implementing consequential decisions, our recommended control is a documented review route with an authorised human reviewer.
 Test whether customers or employees can actually find and use it.
 
-#### 17 · Case study: HSBC's credit-assessment disclosures
+#### 16 · Case study: HSBC's credit-assessment disclosures
 
 **Sources:** [R14], [R00]
 **Time:** 1:09  ·  149 words at 130 wpm
@@ -718,7 +699,7 @@ The legal exception supported withholding the specified data. The disclosure doc
 Our governance lesson is to prepare accurate explanations of data use and decision processes, while applying the relevant access rights and exceptions.
 This was not certification of HSBC's entire AI governance programme.
 
-#### 18 · Failure pattern: customer claims and business losses
+#### 17 · Failure pattern: customer claims and business losses
 
 **Sources:** [R15], [R16], [R00]
 **Time:** 1:10  ·  151 words at 130 wpm
@@ -739,7 +720,7 @@ A governance review should consider both legal exposure and the organisation's a
 
 ### S5 · What sectors add
 
-#### 19 · Financial Sector in Singapore
+#### 18 · Financial Sector in Singapore
 
 **Sources:** [R10], [R17], [R18]
 **Time:** 1:04  ·  139 words at 130 wpm
@@ -757,7 +738,7 @@ An organisation using a consultation proposal should check the current issued re
 For a financial institution, the practical task is to connect AI controls to its existing governance, risk and compliance arrangements.
 The review should distinguish binding requirements, advisory principles and proposals, rather than treat every MAS publication as having the same legal effect.
 
-#### 20 · Financial Sector in the United Kingdom
+#### 19 · Financial Sector in the United Kingdom
 
 **Sources:** [R11], [R12], [R00]
 **Time:** 1:03  ·  136 words at 130 wpm
@@ -774,7 +755,7 @@ Avoid assigning all AI risk automatically to the chief technology officer or cre
 For a credit-decisioning tool, the firm should establish who owns the lending use, who challenges the risk assessment and who authorises deployment.
 Supplier testing can contribute evidence. It does not remove the firm's responsibility for how the tool is used.
 
-#### 21 · Apply these governance practices in your sector
+#### 20 · Apply these governance practices in your sector
 
 **Sources:** [R00], [R02], [R03]
 **Time:** 0:55  ·  120 words at 130 wpm
@@ -791,7 +772,7 @@ These are examples of questions to investigate, not a statement that identical d
 Financial-services regulation does not automatically apply to another sector.
 The useful lesson is how a regulated organisation connects its obligations to owners, controls and evidence.
 
-#### 22 · Who must own this before launch?
+#### 21 · Who must own this before launch?
 
 **Sources:** [R00], [R11], [R12]
 **Time:** 1:25  ·  120 words at 130 wpm + 30s pause
@@ -810,7 +791,7 @@ The bank should document both its own responsibilities and what evidence or supp
 
 ### S6 · Apply the controls
 
-#### 23 · Three questions and the evidence to request
+#### 22 · Three questions and the evidence to request
 
 **Sources:** [R00], [R13], [R14], [R11]
 **Time:** 0:51  ·  110 words at 130 wpm
@@ -825,7 +806,7 @@ Foodinho illustrates the importance of a usable challenge route. HSBC illustrate
 These cases support different lessons, rather than one universal explainability requirement.
 The questions address responsibility, recourse and communication. The approval decision also needs evidence about performance and operating controls.
 
-#### 24 · What evidence is needed before approval?
+#### 23 · What evidence is needed before approval?
 
 **Sources:** [R00], [R02], [R03], [R19]
 **Time:** 0:54  ·  117 words at 130 wpm
@@ -841,7 +822,7 @@ This is voluntary guidance; it should not be described as a general statutory pr
 For any proposed use, connect oversight to the consequence of an error and the permissions the system holds.
 An approval record should identify the evidence reviewed, unresolved limitations, deployment conditions and the next review trigger.
 
-#### 25 · Would you approve the chatbot now?
+#### 24 · Would you approve the chatbot now?
 
 **Sources:** [R00], [R02], [R05]
 **Time:** 1:00  ·  131 words at 130 wpm
@@ -858,7 +839,7 @@ Keep refund decisions with staff until testing and controls justify expanding th
 Monitoring, access limits and a tested stop process must operate during the pilot.
 The decision is now connected to evidence and restrictions, with the owner responsible for reassessment.
 
-#### 26 · Approve, restrict or pause?
+#### 25 · Approve, restrict or pause?
 
 **Sources:** [R00], [R02], [R03]
 **Time:** 1:25  ·  120 words at 130 wpm + 30s pause
@@ -877,7 +858,7 @@ Assess the actual workflow before deciding how much control is needed.
 
 ### S7 · Implementation
 
-#### 27 · Record the next decision for each priority AI use
+#### 26 · Record the next decision for each priority AI use
 
 **Sources:** [R00], [R02], [R03]
 **Time:** 0:51  ·  111 words at 130 wpm
@@ -893,7 +874,7 @@ Link the record to the relevant inventory entry and assessment.
 When a field is incomplete, record the action, responsible person and deadline for resolving it.
 This gives management a specific issue to review and a way to follow up.
 
-#### 28 · Which action should come first?
+#### 27 · Which action should come first?
 
 **Sources:** [R00], [R02], [R03]
 **Time:** 1:08  ·  104 words at 130 wpm + 20s pause
@@ -909,7 +890,7 @@ Starting certification does not resolve next week's control gap. Expanding the i
 The organisation can pursue those activities alongside the urgent work, with clear ownership and priorities.
 Certification may provide useful assurance, but it is separate from deciding whether this particular system is ready to operate.
 
-#### 29 · AI Governance implementation roadmap
+#### 28 · AI Governance implementation roadmap
 
 **Sources:** [R00], [R02], [R03], [R04], [R18]
 **Time:** 1:01  ·  132 words at 130 wpm
