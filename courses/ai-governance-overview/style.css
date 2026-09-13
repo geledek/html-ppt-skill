@@ -259,3 +259,54 @@ body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !
 .tpl-course ul.check li::before { border-color: var(--emphasis) }
 .tpl-course .map-layout.has-selection .map-detail { border-left-color: var(--emphasis) }
 .tpl-course .map-layout.has-selection .map-detail b { color: var(--emphasis) }
+
+/* Fill the lower frame. Centring .slide-body was tried first and rejected: it
+   moved the hole from below the content to between the headline and the
+   content, which reads worse. The content itself has to be bigger. Sizes below
+   are ~20% up on the families that measured sparse, and the checker's line-count
+   and overflow rules bound how far this can go. */
+.tpl-course .legal-row { padding: 42px 0 }
+.tpl-course .legal-row h4 { font-size: 38px }
+.tpl-course .legal-row p { font-size: 35px }
+.tpl-course .lifecycle { gap: 34px }
+.tpl-course .lifecycle li { padding-top: 34px }
+.tpl-course .lifecycle h4 { font-size: 36px; margin: 20px 0 }
+.tpl-course .lifecycle p { font-size: 31px }
+.tpl-course .lifecycle .step-no { font-size: 25px }
+.tpl-course .component { padding: 34px 0 }
+.tpl-course .component h4 { font-size: 34px }
+.tpl-course .component p { font-size: 29px }
+.tpl-course .roles { font-size: 29px }
+.tpl-course .roles td { padding: 30px 22px }
+.tpl-course .roles th { font-size: 25px; padding: 18px 22px }
+.tpl-course .jurisdiction-panel h3 { font-size: 38px }
+.tpl-course .jurisdiction-panel p { font-size: 33px; margin-bottom: 28px }
+
+/* The template reserves 1.4em for the verdict, but the revealed bold text needs
+   37px against 33px reserved. PROMOTE: this one belongs in the template. */
+.tpl-course .quiz .verdict { min-height: 1.75em }
+
+/* Second fill pass: the families that were still short after the first one.
+   Slides 4, 5, 6, 7, 12, 19, 20 and 23. Same bounds — the line-count and
+   overflow checks decide how far each can go. */
+.tpl-course .definition { font-size: 50px; margin-bottom: 32px }
+.tpl-course .definition-sub { font-size: 34px; margin-bottom: 40px }
+.tpl-course .named-box { padding: 34px 32px }
+.tpl-course .named-box h4 { font-size: 34px }
+.tpl-course .named-box p { font-size: 29px }
+.tpl-course .stat-row { margin-top: 64px }
+.tpl-course .stat-fig { font-size: 158px }
+.tpl-course .stat-unit { font-size: 34px }
+.tpl-course .stat-base { font-size: 25px; margin-top: 30px }
+.tpl-course .lifecycle li { padding-top: 44px }
+.tpl-course .lifecycle h4 { font-size: 38px }
+.tpl-course .lifecycle p { font-size: 33px }
+.tpl-course .jurisdiction-grid { gap: 64px }
+.tpl-course .jurisdiction-panel { padding-top: 34px }
+.tpl-course .jurisdiction-panel h3 { font-size: 42px }
+.tpl-course .jurisdiction-panel p { font-size: 35px }
+.tpl-course .concept-box { padding: 40px 42px; font-size: 30px }
+.tpl-course .concept-box h4 { font-size: 34px }
+.tpl-course .quiz-stem { font-size: 33px; margin-bottom: 34px }
+.tpl-course .legal-quiz .mcq { padding: 26px 30px; font-size: 30px }
+.tpl-course .legal-quiz .mcq .why { font-size: 26px }

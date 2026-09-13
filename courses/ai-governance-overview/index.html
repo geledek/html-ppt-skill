@@ -985,6 +985,57 @@ body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !
 .tpl-course ul.check li::before { border-color: var(--emphasis) }
 .tpl-course .map-layout.has-selection .map-detail { border-left-color: var(--emphasis) }
 .tpl-course .map-layout.has-selection .map-detail b { color: var(--emphasis) }
+
+/* Fill the lower frame. Centring .slide-body was tried first and rejected: it
+   moved the hole from below the content to between the headline and the
+   content, which reads worse. The content itself has to be bigger. Sizes below
+   are ~20% up on the families that measured sparse, and the checker's line-count
+   and overflow rules bound how far this can go. */
+.tpl-course .legal-row { padding: 42px 0 }
+.tpl-course .legal-row h4 { font-size: 38px }
+.tpl-course .legal-row p { font-size: 35px }
+.tpl-course .lifecycle { gap: 34px }
+.tpl-course .lifecycle li { padding-top: 34px }
+.tpl-course .lifecycle h4 { font-size: 36px; margin: 20px 0 }
+.tpl-course .lifecycle p { font-size: 31px }
+.tpl-course .lifecycle .step-no { font-size: 25px }
+.tpl-course .component { padding: 34px 0 }
+.tpl-course .component h4 { font-size: 34px }
+.tpl-course .component p { font-size: 29px }
+.tpl-course .roles { font-size: 29px }
+.tpl-course .roles td { padding: 30px 22px }
+.tpl-course .roles th { font-size: 25px; padding: 18px 22px }
+.tpl-course .jurisdiction-panel h3 { font-size: 38px }
+.tpl-course .jurisdiction-panel p { font-size: 33px; margin-bottom: 28px }
+
+/* The template reserves 1.4em for the verdict, but the revealed bold text needs
+   37px against 33px reserved. PROMOTE: this one belongs in the template. */
+.tpl-course .quiz .verdict { min-height: 1.75em }
+
+/* Second fill pass: the families that were still short after the first one.
+   Slides 4, 5, 6, 7, 12, 19, 20 and 23. Same bounds — the line-count and
+   overflow checks decide how far each can go. */
+.tpl-course .definition { font-size: 50px; margin-bottom: 32px }
+.tpl-course .definition-sub { font-size: 34px; margin-bottom: 40px }
+.tpl-course .named-box { padding: 34px 32px }
+.tpl-course .named-box h4 { font-size: 34px }
+.tpl-course .named-box p { font-size: 29px }
+.tpl-course .stat-row { margin-top: 64px }
+.tpl-course .stat-fig { font-size: 158px }
+.tpl-course .stat-unit { font-size: 34px }
+.tpl-course .stat-base { font-size: 25px; margin-top: 30px }
+.tpl-course .lifecycle li { padding-top: 44px }
+.tpl-course .lifecycle h4 { font-size: 38px }
+.tpl-course .lifecycle p { font-size: 33px }
+.tpl-course .jurisdiction-grid { gap: 64px }
+.tpl-course .jurisdiction-panel { padding-top: 34px }
+.tpl-course .jurisdiction-panel h3 { font-size: 42px }
+.tpl-course .jurisdiction-panel p { font-size: 35px }
+.tpl-course .concept-box { padding: 40px 42px; font-size: 30px }
+.tpl-course .concept-box h4 { font-size: 34px }
+.tpl-course .quiz-stem { font-size: 33px; margin-bottom: 34px }
+.tpl-course .legal-quiz .mcq { padding: 26px 30px; font-size: 30px }
+.tpl-course .legal-quiz .mcq .why { font-size: 26px }
 </style></head><body class="tpl-course stage-fixed"><div class="deck"><section class="slide cover" data-section="1" data-course-slide="1" data-title="AI Governance Overview"><span class="course-position" aria-label="Slide 1 of 31">01 / 31</span><div class="cover-main"><p class="cover-series">AI for Business Leaders · Online Series for ISCA</p><h1 class="cover-title">AI Governance Overview</h1><div class="cover-rule"></div><p class="cover-by">Ray Han, PhD (Computer Science, NTU)</p><p class="cover-role">Chief AI Trainer, HGT Consultancy Pte Ltd</p></div><div class="cover-foot"><span>ray.han@hgtconsultancy.com</span><span>30 minutes · recorded</span></div><div class="notes"><p>Welcome to AI Governance Overview. I am Ray Han, Chief AI Trainer at HGT Consultancy. We will define AI governance, examine its scope and components, and compare selected regulatory approaches. We will then use cases to connect governance responsibilities to decisions at work. The final roadmap sets out implementation actions.</p></div></section>
 <section class="slide" data-section="1" data-course-slide="2" data-title="Would you approve the launch?"><header class="slide-head"><p class="kicker">THE LAUNCH DECISION</p><h2 class="h2 mt-s">Would you approve the launch?</h2></header><span class="course-position" aria-label="Slide 2 of 31">02 / 31</span><div class="slide-body"><div class="scenario"><svg viewBox="0 0 80 80" aria-hidden="true"><path d="M12 13h56v42H36L20 68V55h-8z"/><path d="M24 28h32M24 39h23" fill="none"/></svg><div><span class="case-id">HYPOTHETICAL EXAMPLE</span><h3>A Singapore retailer's customer-service chatbot</h3><p>The supplier says its product follows Singapore’s Model AI Governance Framework.</p></div></div><div class="quiz decision-quiz" aria-label="Choose one answer"><button type="button" class="mcq"><span class="letter">A</span><span><b>Approve the launch</b><span class="why">Supplier alignment alone does not establish readiness.</span></span></button><button type="button" class="mcq"><span class="letter">B</span><span><b>Reject the proposal</b><span class="why">The available facts do not justify permanent rejection.</span></span></button><button type="button" class="mcq" data-correct><span class="letter">C</span><span><b>Request more information</b><span class="why">Withhold approval and obtain evidence about this deployment.</span></span></button><p class="verdict" aria-live="polite"></p></div><div class="notes"><p>Consider this hypothetical proposal. A Singapore retailer wants to launch a customer-service chatbot. The supplier says its product follows Singapore&#x27;s Model AI Governance Framework. The chatbot will answer customers&#x27; questions about products, orders and returns. Would you approve the launch, reject it, or request more information? Pause here and choose an answer.</p><p>Requesting more information is the best next step. The supplier&#x27;s statement does not establish whether this deployment is ready. Approval requires evidence about the proposed use and the controls around it. Rejecting the proposal permanently also goes beyond the information available. For now, withhold launch approval and identify what needs to be checked. We will revisit this retailer.</p></div></div></section>
 <section class="slide" data-section="1" data-course-slide="3" data-title="Questions to consider first"><header class="slide-head"><p class="kicker">BEFORE APPROVAL</p><h2 class="h2 mt-s">Questions to consider first</h2></header><span class="course-position" aria-label="Slide 3 of 31">03 / 31</span><div class="slide-body"><ol class="q-list stagger"><li><b>Data*</b><span>What personal data will the chatbot collect or use?</span></li><li><b>Customer commitments</b><span>What commitments can it make to customers?</span></li><li><b>Jurisdictions</b><span>Which jurisdictions will it serve?</span></li><li><b>Accountability</b><span>Who will be accountable for its operation?</span></li></ol><p class="minor-note">*Direct PDPA relevance where personal data is involved. Other questions may also raise data-protection obligations.</p><div class="notes"><p>First, what personal data will the chatbot collect or use? The retailer needs to understand customer inputs, retained conversations and access to order records. Training-data provenance is another question for the supplier; it is distinct from the retailer&#x27;s use of customer data.</p><p>Second, what commitments can the chatbot make to customers? An incorrect statement about refunds may affect the business financially. Third, which jurisdictions will it serve? The retailer&#x27;s location alone does not settle every applicable obligation. Fourth, who will be accountable for its operation, including complaints and errors?</p><p>The asterisk identifies the question with direct personal-data relevance. Other questions may also involve data protection. Singapore&#x27;s Model AI Governance Framework is voluntary. Applicable obligations under the Personal Data Protection Act remain binding. Following a framework is one input to an assessment, rather than a complete approval record.</p></div></div></section>
