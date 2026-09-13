@@ -422,7 +422,7 @@ Requesting more information is the best next step. The supplier's statement does
 Approval requires evidence about the proposed use and the controls around it.
 Rejecting the proposal permanently also goes beyond the information available.
 For now, withhold launch approval and identify what needs to be checked.
-We will revisit this retailer.
+We will revisit this retailer through out the course.
 
 #### 03 · At least four more things you need to know
 

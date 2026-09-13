@@ -134,7 +134,6 @@
 .tpl-course .map-prompt { font-size: 21px; color: var(--text-2); margin: 0 0 18px }
 .tpl-course .map-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; margin: 0 }
 .tpl-course .map-group-block.fragmented { grid-column: 1 / -1 }
-.tpl-course .map-detail { margin-top: auto }
 
 
 /* ---- round 5 -------------------------------------------------------------- */
@@ -164,13 +163,17 @@
 }
 body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !important; transform: none !important; animation: none !important }
 
-/* R5-09: the jurisdiction detail sits over the map, in the selector's blue. */
+/* The jurisdiction detail sits above the map, below the headline and on the same
+   left edge, so the prompt is read before the map rather than found on top of it.
+   It spans both columns and holds its height whether it is showing the prompt or
+   a selected jurisdiction, so selecting one never moves the map. */
 .tpl-course .map-stage { position: relative }
 .tpl-course .map-detail {
-  position: absolute; left: 0; bottom: 0; width: min(560px, 92%);
-  margin: 0; background: var(--surface); border: 1px solid var(--border);
+  grid-column: 1 / -1; margin: 0 0 26px; width: 100%; min-height: 80px;
+  display: flex; align-items: center; box-sizing: border-box;
+  background: var(--surface); border: 1px solid var(--border);
   border-left: 5px solid var(--border-strong); border-radius: var(--radius-sm);
-  padding: 18px 24px; font-size: 21px; box-shadow: var(--shadow);
+  padding: 18px 24px; font-size: 23px; box-shadow: var(--shadow);
 }
 .tpl-course .map-layout.has-selection .map-detail {
   border-left-color: var(--accent);
