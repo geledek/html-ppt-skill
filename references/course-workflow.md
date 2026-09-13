@@ -4,7 +4,8 @@ For teaching material, not decks. A **Course** is defined by an audience,
 learning outcomes, a duration budget and a delivery mode; it is built through
 three points where generation stops and a human approves a named artifact.
 
-Vocabulary is in [../CONTEXT.md](../CONTEXT.md). Use those words exactly — the
+Design rules are in [slide-design.md](./slide-design.md) — read it before
+composing slides. Vocabulary is in [../CONTEXT.md](../CONTEXT.md). Use those words exactly — the
 distinctions between Section and Slide, and between Narration and Speaker Notes,
 are load-bearing.
 
@@ -263,190 +264,32 @@ click:
 Put `data-section="N"` on every `<section class="slide">` so the Section→Slide
 map stays true. Set `data-title` for the overview grid.
 
-## Slide layout rules
+## Slide design
 
-**No text block exceeds three lines.** Not the headline, not a callout, not a
-quiz option, not a cell. If it runs to four, cut words — do not shrink the type.
-Audit it rather than eyeballing it: measure each block's height against its
-computed `line-height` and fail the build in review if anything exceeds three.
-
-**Use the full width.** Bodies are full width by default, and a wide measure with
-a three-line ceiling means *fewer* lines, not a longer read. The line count is
-the constraint; the width is what buys it.
-
-**Both bands are pinned.** Every slide is a grid with one `minmax(0,1fr)` column
-and `justify-items:start`, so the kicker, headline and body start at the same x
-and y on every slide. Without the explicit column the implicit one is auto-sized
-to its content and centred, and the headline slides sideways between slides.
-
-**Nothing may move on reveal.** Quiz explanations and the verdict use
-`visibility`, not `display`, so they occupy their space from the start. With
-`display:none` every option grows when the answer is revealed and pushes the
-slide down.
-
-**The stage is fixed at 1920×1080** and scaled to fit (docs/adr/0006), so
-positions are deterministic. Size type for that canvas, not for a browser window.
-
-### Emphasis colour: name the token, do not "unify"
-
-A theme carries two accents, and they are not interchangeable. In
-`corporate-clean`, `--accent` is the navy `#0a2540` used for headlines and rules,
-and `--accent-2` is the blue `#1d4ed8` used for emphasis — card headings,
-kickers, list numbers, highlight fills. A round-5 pass that "unified emphasis on
-the accent" pointed every emphasis rule at the navy, which removed the blue from
-the deck rather than standardising it. The deck went flat and nobody could say
-which rule caused it.
-
-Define one course-level token and route every emphasis rule through it:
-
-```css
-.tpl-course { --emphasis: var(--accent-2); }
-.tpl-course .named-box h4, .tpl-course .op-label, ... { color: var(--emphasis) }
-```
-
-Then a change of emphasis colour is one line, and "make these blue" is a
-question about which token, not about which twenty selectors. Verify by
-measurement, not by eye — read `getComputedStyle(el).color` back from the built
-deck and check it against the token's value.
-
-### Choosing a visual: when NOT to use a box
-
-A component list without this guidance produces a deck where every slide is the
-same grid of boxes. Measured on the first agent-built pass: **17 of 25 slides**
-were a `concept-box` grid, several of them boxing two-word fragments. A box
-around two words adds a border and nothing else.
-
-Before reaching for `grid g2` of `concept-box`, check whether the slide is
-actually one of these:
-
-| The slide is… | Use | Not |
-|---|---|---|
-| one claim that deserves the whole frame | `quote-slide` | a box |
-| one number that carries the point | `stat-row` | a box with a number in it |
-| a named source saying something quotable | `quote-slide` | a box with a quotation in it |
-| several concurrent things | `layer-stack` | columns, which say "pick one" |
-| a chronology or a comparison across two columns | a table | boxes |
-| genuinely 2–4 parallel items of equal weight | `concept-box` grid | — |
-
-**Rough target: no more than half the slides should be box grids.** If a section
-is all boxes, at least one of its slides is really a quote or a statistic.
-
-`layer-stack` means *concurrent layers*. Do not use it for a sequence or a
-timeline; it teaches the wrong shape.
-
-**Headlines are claims, not script fragments.** An agent lifting the first
-sentence of a slide's script produces "Your sector adds to it." and "Each comes
-from a case you just saw." Write what the slide argues: "Singapore finance:
-advisory, and still unissued."
-
-### Motion rules
-
-**Builds step on the learner's input, never on a timer.** Space or the forward
-key reveals the next item in a `.stagger` group; once the group is complete the
-next press advances the slide. A timed build forces the narrator's pace on
-someone reading faster or slower, and cannot be re-watched in step. Leaving a
-slide resets its build so it replays correctly on return.
-
-**Set the stage scale before first paint.** `scripts/course/engine.py` emits a
-blocking head script that sets `--stage-scale` and a `booting` class that
-suppresses transitions for the first frame. Without it the deck paints once at
-1920×1080 and then snaps, which reads as a shake on every slide.
-
-**Pace motion to the voice, not the eye.** In a recorded course a narrator needs
-roughly 2.5 seconds an item at 150 wpm. A stagger that finishes in 1.3 seconds is
-decoration; the learner has read the whole list before the voice reaches item two.
-
-**Animate what the voice enumerates. Leave static what the learner reads at
-once.** A list the narrator walks through should build. A definition, a quotation,
-a decision record, a quiz's options and a reference block should not — a learner
-choosing a quiz answer needs to see every option at the same time.
-
-**Every capture path must force the finished state.** With speech-paced motion a
-screenshot or a PDF page catches a slide part-built. The deck carries a `stills`
-body class, applied by `?stills`, by `beforeprint`, and available to any renderer.
-Forgetting it produces contact sheets of half-drawn slides.
-
-**Repeated per-slide citations belong at the back.** A reference block on every
-slide stops being read. Keep a source marker on the slide and put the full list on
-a closing References slide.
-
-### Content and copy rules
-
-**One accent for emphasis across a deck.** Numbers, highlights, card headings,
-kickers and rules all take the same colour. A second accent used for variety
-reads as a second meaning, and the learner spends attention decoding it. This
-course had two in circulation until they were unified.
-
-**Do not restate a point on a slide where it is not the point.** A caveat that
-belongs to another slide dilutes this one.
-
-**Status labels that repeat their own group heading are noise.** A timeline under
-"when each part applies" does not need every entry labelled APPLICABLE.
-
-**A kicker must not repeat the line beneath it.** If the headline already says
-it, the kicker is noise. Kickers orient; they do not restate. Audit every slide
-for a kicker whose words appear in the next element.
-
-**A list of things gets a list layout.** Not boxes, not prose.
-
-**One slide, one idea.** A slide carrying three unrelated components should be
-split or have its weakest part cut. The symptom is an orphan line that explains
-nothing on its own — if a learner would ask "what is that doing there?", it goes.
-
-**A category list must not contain the thing it categorises.** "AI governance has
-three parts, one of which is governance" is a broken taxonomy, and a learner will
-notice before you do.
-
-**Prefer the most recent and most local evidence.** For a Singapore audience a
-Singapore source outranks a UK one, and a 2026 source outranks a 2024 one. When
-only distant or older evidence exists, say so on the slide rather than letting it
-pass as current.
-
-**Date-stamp jurisdiction slides consistently.** If one carries "as at
-<date>", they all do. A reader treats an undated slide as timeless.
-
-**A diagram must be complete for the claim it makes.** A world map showing
-"jurisdictions" must not omit the largest ones, and every highlighted region must
-be labelled. An unlabelled highlight is a question the learner cannot answer.
-
-### Every slide needs a connecting sentence
-
-In a recorded course the narrator must never have to read the slide title aloud
-to bridge from the previous slide. Each slide's script opens with a sentence that
-carries the learner across from what came before. Without it the recording reads
-as a sequence of captions.
-
-### Check them, do not remember them
+**The design rules live in [slide-design.md](./slide-design.md).** Read that page
+before composing any slide. It consolidates five rounds of review feedback into
+what a slide should look like, which visual fits which content shape, how motion
+and interaction behave, and which rules are enforced by a check rather than by
+memory.
 
 ```bash
-./scripts/check-slides.sh courses/<name>     # exit 0 = all rules hold
+./scripts/check-slides.sh courses/<name>     # exit 0 = every hard rule holds
 ```
 
-It measures rather than eyeballs: every text block's line count, the headline and
-body coordinates on every slide, **whether anything runs off the bottom of the
-1080px stage**, whether anything moves when a quiz is revealed, and whether any
-local subresource would leave the build unstyled in Safari.
+Eight hard checks and one warning. It measures rather than eyeballs: every text
+block's line count, the headline and body coordinates on every slide, whether
+anything runs off the bottom of the 1080px stage, whether a kicker repeats the
+line beneath it, whether every slide carries its number, whether anything moves
+when a quiz is revealed, and whether any local subresource would leave the build
+unstyled in Safari.
 
 The overflow check exists because a nine-item legend beside a map ran 691px tall
 and pushed a slide 64px off the stage, while the line-count and position checks
-both passed it. A slide can satisfy every rule about its parts and still not
-fit.
+both passed it. A slide can satisfy every rule about its parts and still not fit.
 
-**Run it before every gate 3 review.** A twenty-six slide deck reviewed by eye at
-2am is exactly where these rules quietly degrade.
+**Run it before every gate 3 review.** A thirty-slide deck reviewed by eye at 2am
+is exactly where these rules quietly degrade.
 
-## Capturing feedback into the skill
-
-When the human gives design or layout feedback at gate 2, **write the rule down
-before applying it**, in this order:
-
-1. Add it to "Slide layout rules" above, in one sentence, with the reason.
-2. If it can be measured, add it to `scripts/check-slides.sh`.
-3. **Prove the check fails.** Break the rule deliberately in a copy of the deck
-   and confirm a non-zero exit. A check that only ever passes is worthless — the
-   line-count check shipped broken because an inline element's bounding rect is
-   its glyph box rather than lines × line-height, and only a deliberate failure
-   exposed it.
-4. Then fix the deck.
-
-Applying feedback without recording it means relearning it on the next course.
+**When the human gives design feedback, record the rule in slide-design.md before
+applying it**, and add a check that is proven to fail. Applying feedback without
+recording it means relearning it on the next course.

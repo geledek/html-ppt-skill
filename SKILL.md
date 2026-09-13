@@ -65,7 +65,9 @@ Keyboard in audience window: `S` open presenter · `T` cycle theme · `← →` 
 If the user asks for a **course, curriculum, lesson, module, workshop or 教程** —
 teaching material rather than a one-off deck — **read
 [references/course-workflow.md](references/course-workflow.md) and follow it
-instead of the authoring flow below.**
+instead of the authoring flow below**, with
+[references/slide-design.md](references/slide-design.md) open beside it — that is
+where the accumulated slide design feedback lives.
 
 A Course is not a Deck. It is defined by an audience, learning outcomes, a
 duration budget and a **delivery mode**, and it is built through three gates
@@ -187,6 +189,7 @@ Chinese + English deck, and how to export.
 - [references/full-decks.md](references/full-decks.md) — all 15 full-deck templates.
 - [references/presenter-mode.md](references/presenter-mode.md) — **演讲者模式 + 逐字稿编写指南（技术分享/演讲必看）**.
 - [references/course-workflow.md](references/course-workflow.md) — **教学课程三道人工关卡（做课程/教程必看）**.
+- [references/slide-design.md](references/slide-design.md) — **课程幻灯片设计规范（累积的评审反馈，做课程必看）**.
 - [references/authoring-guide.md](references/authoring-guide.md) — full workflow.
 
 ## File structure

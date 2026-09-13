@@ -57,6 +57,58 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // A kicker that repeats the line beneath it. Feedback R2-01: the kicker read
+  // "RETAILER CHATBOT" directly above a headline that said the same thing, so it
+  // carried no orientation the slide did not already give.
+  var echo = [];
+  var norm = function (t) { return (t || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); };
+  document.querySelectorAll('.slide').forEach(function (sl, i) {
+    var k = sl.querySelector('.kicker');
+    if (!k) return;
+    var kt = norm(k.textContent);
+    if (!kt || kt.split(' ').length > 6) return;
+    var below = [sl.querySelector('.h2')];
+    var body = sl.querySelector('.slide-body');
+    if (body) below.push(body.querySelector('p, li, h3, h4, b, .lede'));
+    below.forEach(function (el) {
+      if (!el) return;
+      var bt = norm(el.textContent);
+      if (!bt) return;
+      if (bt.indexOf(kt) !== -1 || (kt.indexOf(bt) !== -1 && bt.split(' ').length > 1)) {
+        echo.push({slide: i + 1, kicker: k.textContent.trim().slice(0, 30),
+                   below: el.textContent.trim().slice(0, 40)});
+      }
+    });
+  });
+
+  // Every slide carries its number. Feedback R4-11: numbers went missing on the
+  // generated slides, and a missing number reads as a missing slide.
+  var unnumbered = [];
+  document.querySelectorAll('.slide').forEach(function (sl, i) {
+    var p = sl.querySelector('.course-position');
+    if (!p || !(p.textContent || '').trim()) unnumbered.push(i + 1);
+  });
+
+  // Unused lower frame. Feedback R4-10 ("too much white space") and the empty
+  // half under the map. Advisory, not a failure: a quote slide and a cover are
+  // legitimately sparse, so this is a list to walk at gate 3, not a build break.
+  var sparse = [];
+  document.querySelectorAll('.slide').forEach(function (sl, i) {
+    if (sl.classList.contains('cover') || sl.querySelector('.quote-slide, .quote-body')) return;
+    var body = sl.querySelector('.slide-body');
+    if (!body) return;
+    var lim = sl.getBoundingClientRect().bottom, low = body.getBoundingClientRect().top;
+    body.querySelectorAll('*').forEach(function (el) {
+      if (!el.getClientRects().length) return;
+      var cs = getComputedStyle(el);
+      if (cs.visibility === 'hidden' || cs.opacity === '0') return;
+      var b = el.getBoundingClientRect().bottom;
+      if (b > low) low = b;
+    });
+    var gap = Math.round(lim - low);
+    if (gap > 320) sparse.push({slide: i + 1, px: gap});
+  });
+
   var shift = null, q = document.querySelector('.quiz');
   if (q) {
     var opt = q.querySelector('.mcq');
@@ -68,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
     shift = {before: before, after: after,
              moved: before[0] !== after[0] || before[1] !== after[1] || before[2] !== after[2]};
   }
-  document.title = JSON.stringify({maxLines: max, long: long, pos: pos, reveal: shift, over: over, dupes: dupes});
+  document.title = JSON.stringify({maxLines: max, long: long, pos: pos, reveal: shift, over: over, dupes: dupes, echo: echo, unnumbered: unnumbered, sparse: sparse});
 });
 </script>"""
 open(out, 'w').write(s.replace('</body></html>', probe + '\n</body></html>'))

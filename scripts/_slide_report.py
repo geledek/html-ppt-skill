@@ -40,6 +40,23 @@ if ov:
 else:
     print("ok    nothing overflows the stage")
 
+echo = d.get('echo') or []
+if echo:
+    fail = 1
+    print("FAIL  kicker repeats the line beneath it (%d):" % len(echo))
+    for v in echo:
+        print("        slide %s: %r over %r..." % (v['slide'], v['kicker'], v['below']))
+else:
+    print("ok    no kicker repeats the line beneath it")
+
+un = d.get('unnumbered') or []
+if un:
+    fail = 1
+    print("FAIL  %d slide(s) carry no number: %s" % (len(un), ', '.join(str(n) for n in un)))
+else:
+    print("ok    every slide carries its number")
+
+
 r = d['reveal']
 if r is None:
     print("skip  no quiz on this deck")
@@ -55,5 +72,13 @@ if linked:
     print("FAIL  %d local subresource reference(s) - unstyled in Safari" % linked)
 else:
     print("ok    self-contained, no local subresources")
+
+sparse = d.get('sparse') or []
+if sparse:
+    # Advisory. A quote slide is legitimately sparse, so an empty lower frame is
+    # a list to walk at gate 3 rather than a build break.
+    print("warn  %d slide(s) leave the lower frame empty:" % len(sparse))
+    for v in sparse:
+        print("        slide %s: %spx unused below the last element" % (v['slide'], v['px']))
 
 sys.exit(fail)
