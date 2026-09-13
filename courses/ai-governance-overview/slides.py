@@ -110,7 +110,6 @@ SLIDES = [
 # Clear an entry when the item is settled; the label disappears with it.
 # PROMOTE: if a second course wants this, it belongs in engine.py.
 REVIEW = {
- 12: 'R5-12 &middot; confirm what &ldquo;completely round&rdquo; should apply to',
  13: 'UK AI Risk Management Toolkit (R23) is in the script but on no slide',
  18: 'Air Canada primary source unverified (R15) &middot; lower frame still empty',
  19: 'MAS guidelines issuance status unverified (R18) &middot; lower frame empty',
