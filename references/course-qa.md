@@ -105,20 +105,28 @@ layout check can see.
 2. No kicker repeats the line beneath it. *(mechanical — check 5)*
 3. No label names the artefact instead of the content: "PLAIN-LANGUAGE
    PARAPHRASE", "Teaching synthesis", "Illustrative responsibilities".
-4. No hedge written for the reviewer rather than the learner.
-5. British spelling, SG register, no Americanism or sports metaphor, no
+4. No hedge written for the reviewer rather than the learner — and no caveat in
+   note type under a slide. A caveat that matters sits inside the element it
+   qualifies, in that element's own type; one that is already spoken is cut.
+5. Highlights mark the term the slide teaches, through one mechanism. A
+   highlighted sentence is a highlighted nothing.
+6. British spelling, SG register, no Americanism or sports metaphor, no
    rhetorical question to the reader, and none of the named tics.
+
+   *(Six criteria here; score it out of 6.)*
 
 ## 5 · Visual fit and density — 12%
 
 1. The visual matches the content shape — list to list, chronology to table, one
    claim to the whole frame. *(the table in slide-design.md)*
-2. No more than half the slides are card grids.
+2. Every slide leads with its claim and carries at most three elements —
+   headline, lead box, one supporting block.
 3. No text block over three lines. *(mechanical — check 1)*
 4. The lower frame is used. *(mechanical — the sparse warning; a quote or cover
    slide is a legitimate exception, a card row is not)*
-5. One emphasis colour, routed through one token, verified by reading computed
-   styles rather than by eye.
+5. Slides doing the same job use the same component, verified by reading computed
+   styles back rather than by eye — and no more than half the slides are card
+   grids.
 
 ## 6 · Deck furniture — 10%
 
@@ -136,8 +144,9 @@ layout check can see.
    quiz or reference block does not.
 4. Every interaction shows its result unmistakably, in the emphasis colour,
    where the eye already is.
-5. Nothing moves on reveal *(mechanical — check 7)*, and every capture path
-   forces the finished state.
+5. Nothing moves on interaction — not only the quiz *(mechanical for quizzes,
+   check 7; measured by hand elsewhere)* — and every capture path forces the
+   finished state.
 
 ## 8 · Timing — 8%
 
@@ -160,6 +169,8 @@ Independent of the total. Any one of these means **not release-ready**:
 - A review label still on a slide.
 - A slide that traces to no outcome.
 - Dimension 1 below 50%.
+- A slide whose narration is not its own, which is what a deck built out of
+  order looks like from the review seat.
 
 ## Bands
 
@@ -174,7 +185,8 @@ A percentage is a summary, not a verdict — the blockers decide release.
 
 ## How to run a review
 
-1. Run Gate 0. Stop if it fails.
+1. Run Gate 0. Stop if it fails. Read the build's own slide count: it is the
+   line that catches a scripted edit having deleted a slide.
 2. Render every slide with `?stills` and read them. A rubric applied to source
    is a rubric applied to a deck nobody has seen.
 3. Read `course.md` end to end as a script, aloud where the sentence is long.
