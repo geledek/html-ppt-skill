@@ -862,7 +862,14 @@ body.stills .decision-review button { display: none }
    headline and across the full width, above the box it is instructing. */
 .tpl-course .map-layout > .map-prompt { grid-column: 1 / -1; font-size: 27px; line-height: 1.35; margin: 0 0 22px }
 .tpl-course .map-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; margin: 0 }
-.tpl-course .map-group-block.fragmented { grid-column: 1 / -1 }
+/* The fragmented group used to span both columns on its own row, which added a
+   full block of height below the longer guidance column. It now sits in the left
+   column directly under China, and guidance spans both rows, so the legend is as
+   tall as its longest column instead of longest + one. */
+.tpl-course .map-controls { grid-auto-rows: min-content; align-items: start }
+.tpl-course .map-group-block.binding { grid-column: 1; grid-row: 1 }
+.tpl-course .map-group-block.guidance { grid-column: 2; grid-row: 1 / span 2 }
+.tpl-course .map-group-block.fragmented { grid-column: 1; grid-row: 2; margin-top: 26px }
 
 
 /* ---- round 5 -------------------------------------------------------------- */
