@@ -89,18 +89,7 @@ SLIDES = [
 ('Begin ISO certification.','Certification may provide assurance, and it does not resolve next week&rsquo;s control gap.',False),
 ('Pause the launch and establish the missing controls.','The known exposure is the automatic decline with no appeals route or monitoring.',True),
 ('Extend the inventory to every remaining use.','Worth doing, and it does not address this known exposure.',False)]),['R00','R02','R03']),
-(28,'TAKEAWAYS','AI Governance implementation roadmap','''<div class="onepager">
-  <section class="op-recall">
-    <div class="op-block"><p class="op-label">Lifecycle · 5 steps</p><ol class="op-mini"><li>Define</li><li>Develop or procure</li><li>Test and approve</li><li>Operate and review</li><li>Retire or replace</li></ol></div>
-    <div class="op-block"><p class="op-label">Components · 6</p><ol class="op-mini"><li>Accountability and oversight</li><li>Inventory and impact assessment</li><li>Data and supplier governance</li><li>Testing and human oversight</li><li>Transparency and recourse</li><li>Monitoring and improvement</li></ol></div>
-    <div class="op-block"><p class="op-label">Ask of any proposal · 3</p><ol class="op-mini"><li>Who is accountable for this use?</li><li>How can an affected person challenge an outcome?</li><li>What have we told people about the system?</li></ol></div>
-  </section>
-  <div class="implementation">
-    <article><p class="phase">01 · FOUNDATION</p><h3>Create an AI inventory</h3><ul class="check"><li>Record purpose, owner, users, data, supplier and deployment status</li><li>Assign responsibility for keeping it current</li><li>Address urgent known risks while the inventory is completed</li></ul></article>
-    <article><p class="phase">02 · ASSESS AND ESTABLISH CONTROLS</p><h3>Assess uses and establish controls</h3><ul class="check"><li>Identify applicable obligations and the approval authority</li><li>Test performance and human review</li><li>Establish disclosures and supplier requirements</li></ul></article>
-    <article><p class="phase">03 · OPERATE AND IMPROVE</p><h3>Monitor and improve</h3><ul class="check"><li>Monitor outcomes, complaints and incidents</li><li>Review material changes and management decisions</li><li>Test rollback or retirement arrangements</li></ul></article>
-  </div>
-</div><p class="implementation-next">Add assurance tools, dedicated resources or certification when risk, scale or contractual needs justify them.</p>''',['R02','R03','R04','R18']),
+(28,'TAKEAWAYS','AI Governance implementation roadmap','''<div class="onepager"><section class="op-recall"><div class="op-block"><p class="op-label">Lifecycle &middot; 5 steps</p><ol class="op-mini"><li>Define</li><li>Develop or procure</li><li>Test and approve</li><li>Operate and review</li><li>Retire or replace</li></ol></div><div class="op-block op-span"><p class="op-label">Components &middot; 6</p><ol class="op-mini op-two"><li>Accountability and oversight</li><li>Inventory and impact assessment</li><li>Data and supplier governance</li><li>Testing and human oversight</li><li>Transparency and recourse</li><li>Monitoring and improvement</li></ol></div><div class="op-block"><p class="op-label">Ask of any proposal &middot; 3</p><ol class="op-mini"><li>Who is accountable for this use?</li><li>How can an affected person challenge an outcome?</li><li>What have we told people about the system?</li></ol></div></section><ol class="op-steps"><li><span class="step-no">01</span><h4>Create an AI inventory</h4><p>Start here. Purpose, owner, users, data, supplier and status for every use.</p></li><li><span class="step-no">02</span><h4>Assess uses, establish controls</h4><p>Obligations, approval authority, testing, human review, disclosures.</p></li><li><span class="step-no">03</span><h4>Operate and improve</h4><p>Outcomes, incidents, change review and a tested way to stop.</p></li></ol></div>''',['R02','R03','R04','R18']),
 ]
 
 

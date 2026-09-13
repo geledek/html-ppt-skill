@@ -391,3 +391,33 @@ body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !
 .tpl-course .case-timeline article { padding-top: 34px }
 .tpl-course .case-timeline h4 { font-size: 38px; margin-bottom: 22px }
 .tpl-course .case-timeline p { font-size: 32px }
+
+/* Takeaways one-pager. The three recall sets are what a leader takes away, so
+   they get the top two thirds and readable type; the roadmap underneath is three
+   steps in order, not three checklists. The columns are deliberately uneven —
+   the six components need twice the width of five one-word lifecycle steps, and
+   forcing all three into equal thirds wasted space in two of them. */
+.tpl-course .op-recall {
+  grid-template-columns: 0.95fr 1.65fr 1.4fr; gap: 44px; margin-bottom: 44px;
+}
+.tpl-course .op-block { border-top: 3px solid var(--emphasis); padding-top: 18px }
+.tpl-course .op-label { font-size: 20px }
+.tpl-course .op-mini { padding-left: 28px }
+.tpl-course .op-mini li { font-size: 24px; line-height: 1.35; margin-bottom: 8px }
+.tpl-course .op-two { columns: 2; column-gap: 34px }
+.tpl-course .op-two li { break-inside: avoid }
+
+/* The roadmap: what to do first, second, third. Arrows carry the order, which is
+   the part a leader needs; the per-phase checklists are in the script. */
+.tpl-course .op-steps {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 52px;
+  list-style: none; margin: 0; padding: 0;
+}
+.tpl-course .op-steps li { position: relative; border-top: 3px solid var(--emphasis); padding-top: 20px }
+.tpl-course .op-steps li:not(:last-child)::after {
+  content: "\2192"; position: absolute; right: -38px; top: 16px;
+  font-size: 30px; color: var(--text-3);
+}
+.tpl-course .op-steps .step-no { font-size: 22px; color: var(--emphasis); font-family: var(--font-mono) }
+.tpl-course .op-steps h4 { font-size: 30px; line-height: 1.2; margin: 12px 0 12px }
+.tpl-course .op-steps p { font-size: 24px; line-height: 1.4; color: var(--text-2); margin: 0 }
