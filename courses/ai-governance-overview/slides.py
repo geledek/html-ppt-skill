@@ -110,9 +110,7 @@ SLIDES = [
 # PROMOTE: if a second course wants this, it belongs in engine.py.
 REVIEW = {
  17: 'Air Canada primary source unverified (R15) &middot; lower frame still empty',
- 18: 'MAS guidelines issuance status unverified (R18) &middot; lower frame empty',
- 21: 'Layout &middot; lower frame still empty',
- 28: 'MAS guidelines issuance status unverified (R18)',
+ 18: 'MAS guidelines issuance status unverified (R18)',
 }
 
 SLIDES = [(n, k, t, ('<p class="review-flag">Review &middot; ' + REVIEW[n] + '</p>' + b) if n in REVIEW else b, r)
