@@ -370,21 +370,23 @@ body.stills .reveal-cards > * h4, body.stills .reveal-cards > * p { opacity: 1 !
 /* Slide 15. Three elements only: headline, the authority's finding, then the two
    columns that give it context. The caveat and the recommended control that used
    to sit under them in note type are both in the script, spoken. */
-.tpl-course .case-lead { margin: 0 0 40px }
-.tpl-course .case-lead + .case-timeline { margin-top: 0 }
-/* One lead box for both case slides. A callout and a blockquote arrived at the
+.tpl-course .lead-box { margin: 0 0 40px }
+.tpl-course .lead-box + .case-timeline,
+.tpl-course .lead-box + .legal-stack { margin-top: 0 }
+/* One lead box wherever a slide leads with its claim. A callout and a blockquote arrived at the
    same job from different components — 28px against 32px, different padding,
    <b> against <mark> — so the two cases looked like two designs. This is the box;
    the only emphasis inside it is <mark>, on the term the slide is teaching. */
-.tpl-course .case-lead {
+.tpl-course .lead-box {
   font-size: 30px; line-height: 1.4; margin: 0 0 40px; padding: 26px 32px;
   background: var(--surface-2); border: 0; border-left: 5px solid var(--emphasis);
   border-radius: 0 var(--radius) var(--radius) 0;
 }
-.tpl-course .case-lead p { font-size: inherit; line-height: inherit; margin: 0 0 12px }
-.tpl-course .case-lead p:last-child { margin-bottom: 0 }
-.tpl-course .case-lead cite { display: block; font-size: 22px; color: var(--text-2); font-style: normal }
-.tpl-course .case-lead + .case-timeline { margin-top: 0 }
+.tpl-course .lead-box p { font-size: inherit; line-height: inherit; margin: 0 0 12px }
+.tpl-course .lead-box p:last-child { margin-bottom: 0 }
+.tpl-course .lead-box cite { display: block; font-size: 22px; color: var(--text-2); font-style: normal }
+.tpl-course .lead-box + .case-timeline,
+.tpl-course .lead-box + .legal-stack { margin-top: 0 }
 /* With the note gone, the two columns carry the lower half on their own. */
 .tpl-course .case-timeline article { padding-top: 34px }
 .tpl-course .case-timeline h4 { font-size: 38px; margin-bottom: 22px }
