@@ -5,7 +5,7 @@ learning outcomes, a duration budget and a delivery mode; it is built through
 three points where generation stops and a human approves a named artifact.
 
 Design rules are in [slide-design.md](./slide-design.md) — read it before
-composing slides. Vocabulary is in [../CONTEXT.md](../CONTEXT.md). Use those words exactly — the
+composing slides; the review rubric is in [course-qa.md](./course-qa.md). Vocabulary is in [../CONTEXT.md](../CONTEXT.md). Use those words exactly — the
 distinctions between Section and Slide, and between Narration and Speaker Notes,
 are load-bearing.
 
@@ -23,6 +23,9 @@ per-option feedback, the roadmap, and any revision at any gate.
 2. **`sg-english`** — locale. Removes the American startup register, which
    survives a slop pass because it is neither slop nor error.
 
+Both live in this repository at `.claude/skills/`, so they are available to any
+clone rather than to one machine.
+
 Order matters: fixing structure first means the locale pass edits sentences that
 are going to survive.
 
@@ -38,7 +41,8 @@ creeps back.
 courses/
 ├── <series>.md              # optional — shared audience, Research Brief, Theme
 ├── <course-name>/
-│   ├── course.md            # frontmatter + brief + outline + narration
+│   ├── course.md            # frontmatter + brief + outline
+│   ├── script.md            # optional — the narration, when it outgrows course.md
 │   ├── slides.py            # slide compositions
 │   ├── sections/NN.html     # GENERATED — one fragment per slide
 │   └── index.html           # GENERATED — never hand-edit
@@ -58,7 +62,8 @@ A course is three files plus generated output:
 
 | File | Holds | Edited by |
 |---|---|---|
-| `course.md` | narration, per-slide sources, research brief, outline | the human and you |
+| `course.md` | research brief, outline, frontmatter | the human and you |
+| `script.md` | the narration, if it has been split out | the human and you |
 | `slides.py` | audience-facing compositions, source labels | you |
 | `style.css` | course-specific CSS only | you |
 | `index.html`, `sample.html`, `sections/` | **generated — never edit** | the build |
@@ -73,6 +78,17 @@ promote it there so the next course inherits it.
 course-slide numbers; nothing is authored twice. The sample exists to prove
 layouts and motion, so keep it to one slide per layout family — once it grows
 into a draft deck it has stopped doing its job.
+
+**Slides build in course-slide order, not file order.** `SLIDES` is authored by
+hand and edits append to it, so the two drift apart; the engine sorts by number
+and refuses duplicates. Before it did, a deck played 1–12, then 14, 16, 24, 13 —
+with every slide showing its own correct number, so it read as narration attached
+to the wrong slide rather than as slides in the wrong order.
+
+**The narration may live in `script.md`.** The engine reads it from there when the
+file exists and from `course.md` otherwise. Split it once the script is longer
+than the brief and outline it is buried in — a course.md that is 80% narration is
+hard to review as either document.
 
 Two build guards are deliberate. A slide may not cite a source its narration
 block does not declare, and every cited source must have a label. Both exist so a
@@ -115,6 +131,17 @@ consequences of the mode back to them rather than storing it silently:
 | presenter-led | `<div class="notes">`, shown by `S` | ~150 wpm EN · ~220 字/分 | reveal is a presenter beat |
 | self-paced | **on-slide prose** | ~250 wpm silent reading | learner must be able to answer |
 | recorded | hidden `<div class="notes">`, as presenter-led — the narrator reads it, the slide never prints it | ~150 wpm | as presenter-led |
+
+**The rate in that column is a default, not a measurement.** A speaking rate
+belongs to the narrator: ~150 wpm is typical for recorded English, and this
+repo's first narrator reads at 130, which is 13% more runtime for the same
+script. Record it as `rate:` in the course frontmatter at gate 1 and let
+`scripts/course/stamp-times.py` read it, so the per-slide allowances and the
+budget are measured against the person who will actually read them.
+
+```bash
+python3 scripts/course/stamp-times.py courses/<name>/course.md [--wpm N]
+```
 
 The engine writes narration into `.notes` on every slide whatever the mode; what
 the mode decides is whether the teaching content *also* has to be on the slide.
@@ -223,6 +250,11 @@ Two `render.sh` traps, both upstream and both left unpatched:
 - **A custom out-dir is never created**, and `render_one` echoes `✔`
   unconditionally with Chrome's stderr discarded — so it reports success for
   files that do not exist. **`mkdir -p` it first**, then check the files landed.
+
+**Score it before showing it.** [course-qa.md](./course-qa.md) is the review
+rubric: a mechanical Gate 0 that must pass before anything is scored, eight
+weighted dimensions, and a short list of release blockers that decide acceptance
+regardless of the total. An independent reviewer beats a self-review.
 
 **Gate: the human accepts the exact full-course HTML.** Record its content hash
 in `course.md` as `accepted_hash`. A later mismatch means the Course has diverged
