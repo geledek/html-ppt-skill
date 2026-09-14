@@ -180,8 +180,8 @@ SLIDES = [
  callout('“All the hard work is in process documentation and data architecture.” <b>Executive, telecom company</b>'),
  ['R09']),
 
-(10, 'US CENSUS BUREAU · 117,000 FIRMS', 'Two-thirds of firms changed nothing else.',
- stats(('64%', 'of AI-using firms made no institutional adjustments'),
+(10, 'US CENSUS BUREAU · 117,000 FIRMS', 'Most firms changed nothing else.',
+ stats(('64%', 'of AI-using firms made no institutional adjustments', ('Bought the tool, nothing more', 'down')),
        ('15%', 'trained staff, and a similar share developed new workflows'), cls='big') +
  callout('Changes to data practices reached only 7 to 8 per cent of these firms.'),
  ['R08']),
@@ -229,7 +229,7 @@ SLIDES = [
  ['R06']),
 
 (16, 'STAGE THREE', 'Use is highest where employers encourage it.',
- stats(('40%', 'used chatbots at work with no employer encouragement'),
+ stats(('40%', 'used chatbots at work with no employer encouragement', 'Encouragement more than doubles it'),
        ('93%', 'used them where encouragement, tools and training combined'), cls='big') +
  callout('Tools and training without encouragement were linked to smaller reported gains.'),
  ['R12']),
