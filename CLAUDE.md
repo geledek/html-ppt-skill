@@ -30,6 +30,23 @@ course branch — that is how the next course inherits them.
 
 **Commit when asked, and offer a commit at a gate. Never push unprompted.**
 
+## The language skills live in this repository
+
+`.claude/skills/no-ai-slop/` and `.claude/skills/sg-english/` are versioned here,
+not in `~/.claude/skills/`. The workflow makes both passes mandatory and the QA
+rubric scores them, so a clone that cannot run them fails the rule it is given.
+Working inside this repository, they are found automatically.
+
+To make them available everywhere on a new Mac, link them once:
+
+```bash
+ln -s "$PWD/.claude/skills/no-ai-slop"  ~/.claude/skills/no-ai-slop
+ln -s "$PWD/.claude/skills/sg-english"  ~/.claude/skills/sg-english
+```
+
+Edit them here and commit. A machine-local copy that drifts from this one is how
+two machines end up writing in two registers.
+
 ## Building a course
 
 Read [references/course-workflow.md](references/course-workflow.md) for the three
