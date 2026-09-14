@@ -68,14 +68,18 @@ def question(options, cls=''):
 def stats(*items, cls=''):
     """One or more headline figures: (figure, unit) or (figure, unit, trend).
     The optional trend is a small line under the unit — a prior-year comparison
-    the figure can be checked against."""
+    the figure can be checked against. A trend may be a string (neutral, blue) or
+    a (text, 'down') tuple to mark an unfavourable direction in the negative
+    colour."""
     cells = []
     for it in items:
         fig, unit = it[0], it[1]
         trend = it[2] if len(it) > 2 else None
         cell = f'<p class="stat-fig">{fig}</p><p class="stat-unit">{unit}</p>'
         if trend:
-            cell += f'<p class="stat-trend">{trend}</p>'
+            text, tcls = trend if isinstance(trend, tuple) else (trend, '')
+            cls_attr = f'stat-trend {tcls}'.strip()
+            cell += f'<p class="{cls_attr}">{text}</p>'
         cells.append(f'<div>{cell}</div>')
     return f'<div class="stat-row {cls}">' + ''.join(cells) + '</div>'
 
@@ -153,9 +157,9 @@ SLIDES = [
  ['R03', 'R05', 'R06', 'R07']),
 
 (6, 'THE COMMON ANSWER', 'Few organisations can show material impact.',
- stats(('37%', 'of McKinsey respondents report any EBIT impact', 'Down from 39% in 2025'),
+ stats(('37%', 'of McKinsey respondents report any EBIT impact', ('Down from 39% in 2025', 'down')),
        ('6%', 'attribute 5 per cent or more of EBIT to AI', 'Flat, about 6% in 2025'),
-       ('20%', 'of Deloitte’s leaders already grow revenue from AI', 'Against 74% who hope to')),
+       ('20%', 'of Deloitte’s leaders already grow revenue from AI', ('Against 74% who hope to', 'down'))),
  ['R03', 'R05']),
 
 (7, 'THE EVIDENCE BASE', 'Every figure here is a self-report.',
