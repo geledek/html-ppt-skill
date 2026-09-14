@@ -63,6 +63,9 @@ if r is None:
 elif r['moved']:
     fail = 1
     print("FAIL  layout moved on quiz reveal: %s -> %s" % (r['before'], r['after']))
+elif r.get('hasWhy') and not r.get('whyShown'):
+    fail = 1
+    print("FAIL  quiz feedback stays hidden on reveal (.why not visible)")
 else:
     print("ok    nothing moves when a quiz answer is revealed")
 

@@ -20,6 +20,12 @@
    assets/themes/course-warm.css. See docs/adr/0003. */
 .tpl-course{font-family:var(--font-sans)}
 
+/* One emphasis colour across the deck, named as a token (slide-design.md,
+   R5-03/06/13). A theme carries two accents: --accent is the headline/rule
+   colour, --accent-2 the emphasis. Route every emphasis rule through --emphasis
+   so changing the emphasis colour is one line. A course may still override it. */
+.tpl-course{--emphasis:var(--accent-2)}
+
 /* layout */
 /* Single column by default. The objectives sidebar repeats the same four items
    on every slide and costs 260px of every one; opt in per-slide with
@@ -97,7 +103,12 @@
 .tpl-course .mcq{font-size:25px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start;cursor:pointer;transition:border-color .18s var(--ease),background .18s var(--ease)}
 .tpl-course .mcq:hover{border-color:var(--border-strong)}
 .tpl-course .mcq .letter{flex:none;width:28px;height:28px;border-radius:50%;border:2px solid var(--text-3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:var(--text-2);transition:all .18s var(--ease)}
-.tpl-course .mcq .why{display:none;font-size:21px;color:var(--text-2);margin:10px 0 0}
+/* .why holds its space while hidden (visibility, not display), so revealing it
+   shows the feedback without moving anything — the "nothing moves on reveal"
+   rule. display:none here was a bug: it reserved no space, so quiz.js setting
+   visibility:visible revealed nothing, and the reveal check passed precisely
+   because nothing ever appeared. */
+.tpl-course .mcq .why{display:block;visibility:hidden;font-size:21px;color:var(--text-2);margin:10px 0 0}
 
 /* revealed states — only ever applied by quiz.js */
 .tpl-course .quiz.revealed .mcq{cursor:default}
@@ -121,6 +132,18 @@
 .tpl-course .quiz.revealed .verdict{visibility:visible}
 .tpl-course .quiz.revealed .verdict.right{color:var(--good)}
 .tpl-course .quiz.revealed .verdict.miss{color:var(--bad)}
+
+/* data table — a chronology or a two-column comparison gets a table, not boxes
+   (slide-design.md, "Choosing a visual"). Structure and tokens only; a course
+   sets its own type scale. Modifiers: .compare emphasises the last column,
+   .figures sets it in the display face, .ranked treats the last column as a
+   share the eye goes to. */
+.tpl-course .data-table{width:100%;border-collapse:collapse;table-layout:fixed}
+.tpl-course .data-table th{text-align:left;font-size:22px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);padding:0 28px 16px 0;border-bottom:2px solid var(--border-strong)}
+.tpl-course .data-table td{font-size:40px;line-height:1.3;color:var(--text-1);padding:40px 32px 40px 0;border-bottom:1px solid var(--border);vertical-align:top}
+.tpl-course .data-table.compare td:last-child{color:var(--emphasis);font-weight:600}
+.tpl-course .data-table.figures td:last-child{font-family:var(--font-display);font-weight:700}
+.tpl-course .data-table.ranked td:last-child{color:var(--emphasis);width:22%}
 
 /* layer stack — concurrent layers, not parallel columns. Full-width bands that
    share borders so they read as a stack applying at once, with a spine tying
