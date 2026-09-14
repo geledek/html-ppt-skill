@@ -91,6 +91,25 @@ def steps(*items, build=True, cls=''):
         f'<li><b>{name}</b><span>{detail}</span></li>' for name, detail in items) + '</ol>'
 
 
+def bars(*rows, cls=''):
+    """Horizontal bars, one per row: (label, value, display, cls).
+    value is the number the bar length is scaled to (against the largest row);
+    display is what the eye reads at the bar end (e.g. '416%'); cls tags a bar
+    ('down' for the unfavourable/inflated one, else blank). A bar chart carries a
+    comparison or a funnel better than a row of detached figures."""
+    top = max(r[1] for r in rows) or 1
+    out = []
+    for label, value, display, bcls in rows:
+        pct = max(value / top * 100, 1.5)   # a floor so a tiny bar is still visible
+        out.append(
+            f'<div class="bar-row {bcls}">'
+            f'<span class="bar-label">{label}</span>'
+            f'<span class="bar-track"><span class="bar-fill" style="width:{pct:.1f}%"></span>'
+            f'<span class="bar-val">{display}</span></span>'
+            f'</div>')
+    return f'<div class="bars {cls}">' + ''.join(out) + '</div>'
+
+
 def quote(text, attribution):
     return (f'<div class="quote-body"><p class="quote-mark">“</p><p class="quote-text">{text}</p>'
             f'<p class="quote-attr">{attribution}</p></div>')
@@ -130,9 +149,9 @@ SLIDES = [
  ['R01']),
 
 (3, 'THE REPORT’S OWN FUNNEL', 'It counts organisations, not pilots.',
- stats(('60%', 'of organisations evaluated task-specific tools'),
-       ('20%', 'reached a pilot'),
-       ('5%', 'reached production')),
+ bars(('Evaluated a tool', 60, '60%', ''),
+      ('Reached a pilot', 20, '20%', ''),
+      ('Reached production', 5, '5%', '')),
  ['R01']),
 
 (4, 'READ THE DOCUMENT', 'The report relabelled its own finding.',
@@ -229,8 +248,8 @@ SLIDES = [
  ['R06']),
 
 (16, 'STAGE THREE', 'Use is highest where employers encourage it.',
- stats(('40%', 'used chatbots at work with no employer encouragement', 'Encouragement more than doubles it'),
-       ('93%', 'used them where encouragement, tools and training combined'), cls='big') +
+ bars(('No employer encouragement', 40, '40%', ''),
+      ('Encouragement, tools and training', 93, '93%', '')) +
  callout('Tools and training without encouragement were linked to smaller reported gains.'),
  ['R12']),
 
@@ -354,9 +373,10 @@ SLIDES = [
 # ---- S7 · Can value be attributed at all --------------------------------------
 
 (30, 'THE SAME DATA, THREE METHODS', 'Observational methods were off by a factor of three.',
- stats(('416%', 'lift from a naive comparison of exposed and unexposed users'),
-       ('77%', 'lift measured by the randomised experiment'), cls='big') +
- callout('Careful matching narrowed it to 102 per cent. The World Bank calls a before-and-after comparison a counterfeit estimate.'),
+ bars(('Naive before-and-after', 416, '416%', 'down'),
+      ('Matched comparison', 102, '102%', ''),
+      ('Randomised experiment', 77, '77%', '')) +
+ callout('Only the randomised experiment is trustworthy. The World Bank calls a before-and-after comparison a counterfeit estimate.'),
  ['R28', 'R27']),
 
 (31, 'THE LIMIT OF MEASUREMENT', 'Attribution works at the workflow, not the accounts.',

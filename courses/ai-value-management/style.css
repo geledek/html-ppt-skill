@@ -46,6 +46,18 @@
    modifiers are all in the template; this course keeps only the tighter row
    padding on ranked tables. */
 
+/* horizontal bars: a comparison or a funnel, carried by length rather than a row
+   of detached figures. Blue by default; .down marks the unfavourable or inflated
+   bar in the negative colour, matching the stat trend lines. */
+.tpl-course .bars { margin-top: 70px; display: grid; gap: 40px }
+.tpl-course .bar-row { display: grid; grid-template-columns: 340px 1fr; align-items: center; gap: 40px }
+.tpl-course .bar-label { font-size: 32px; line-height: 1.25; color: var(--text-2) }
+.tpl-course .bar-track { position: relative; display: flex; align-items: center }
+.tpl-course .bar-fill { height: 60px; background: var(--emphasis); border-radius: 6px; min-width: 4px }
+.tpl-course .bar-row.down .bar-fill { background: var(--bad) }
+.tpl-course .bar-val { font-family: var(--font-display); font-size: 54px; font-weight: 800;
+  letter-spacing: -.02em; color: var(--text-1); margin-left: 28px; white-space: nowrap }
+
 .tpl-course .filing-grid { grid-template-columns: 1fr 1fr; gap: 120px; align-items: start }
 .tpl-course .filing-grid .stat-row { margin-top: 20px }
 
