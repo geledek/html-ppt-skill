@@ -66,10 +66,18 @@ def question(options, cls=''):
 
 
 def stats(*items, cls=''):
-    """One or more headline figures: (figure, unit)."""
-    return f'<div class="stat-row {cls}">' + ''.join(
-        f'<div><p class="stat-fig">{fig}</p><p class="stat-unit">{unit}</p></div>'
-        for fig, unit in items) + '</div>'
+    """One or more headline figures: (figure, unit) or (figure, unit, trend).
+    The optional trend is a small line under the unit — a prior-year comparison
+    the figure can be checked against."""
+    cells = []
+    for it in items:
+        fig, unit = it[0], it[1]
+        trend = it[2] if len(it) > 2 else None
+        cell = f'<p class="stat-fig">{fig}</p><p class="stat-unit">{unit}</p>'
+        if trend:
+            cell += f'<p class="stat-trend">{trend}</p>'
+        cells.append(f'<div>{cell}</div>')
+    return f'<div class="stat-row {cls}">' + ''.join(cells) + '</div>'
 
 
 def steps(*items, build=True, cls=''):
@@ -145,10 +153,9 @@ SLIDES = [
  ['R03', 'R05', 'R06', 'R07']),
 
 (6, 'THE COMMON ANSWER', 'Few organisations can show material impact.',
- stats(('37%', 'of McKinsey respondents report any EBIT impact'),
-       ('6%', 'attribute 5 per cent or more of EBIT to AI'),
-       ('20%', 'of Deloitte’s leaders already grow revenue from AI')) +
- callout('Both McKinsey figures are flat against the previous year.'),
+ stats(('37%', 'of McKinsey respondents report any EBIT impact', 'Down from 39% in 2025'),
+       ('6%', 'attribute 5 per cent or more of EBIT to AI', 'Flat, about 6% in 2025'),
+       ('20%', 'of Deloitte’s leaders already grow revenue from AI', 'Against 74% who hope to')),
  ['R03', 'R05']),
 
 (7, 'THE EVIDENCE BASE', 'Every figure here is a self-report.',

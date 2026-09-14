@@ -2738,13 +2738,14 @@ Most apparent disagreement between these figures is unit substitution rather tha
 #### 06 · Where they converge
 
 **Sources:** [R03], [R05], [R06]
-**Time:** 0:57  ·  111 words at 117 wpm
+**Time:** 1:03  ·  122 words at 117 wpm
 
 **Narration:**
 The units differ, so we should look for the question they answer in common.
 All four bear on whether material financial impact can be evidenced.
 McKinsey finds thirty-seven per cent report any EBIT impact, and about six per cent attribute five per cent or more.
-Both figures are flat against the previous year.
+The any-impact figure fell from thirty-nine per cent to thirty-seven.
+The high-performer share stayed at about six per cent.
 Deloitte finds twenty per cent already growing revenue, against seventy-four per cent who hope to.
 S&P finds forty-six per cent reporting no strong positive impact on any objective.
 
