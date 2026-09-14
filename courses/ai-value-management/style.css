@@ -71,6 +71,10 @@
 .tpl-course .quote-mark { font-size: 200px; opacity: .3; color: var(--emphasis) }
 .tpl-course .quote-text { font-size: 88px; line-height: 1.12; max-width: none }
 .tpl-course .quote-attr { font-size: 34px; margin-top: 44px }
+/* the contrast the quote teaches, in two colours: the dismissed cause reads in
+   the negative colour, the real answer in the emphasis blue. A tint, not a link. */
+.tpl-course .quote-text mark { background: none; text-decoration: none; padding: 0; color: var(--emphasis); font-weight: 800 }
+.tpl-course .quote-text mark.not { color: var(--bad) }
 
 /* ranked table: tighter rows than the template default (its share column and
    emphasis colour come from the template's .ranked modifier) */

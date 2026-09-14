@@ -171,7 +171,7 @@ SLIDES = [
 # ---- S3 · The value was never stuck in the model ------------------------------
 
 (8, 'STANFORD DIGITAL ECONOMY LAB', 'Same technology, very different outcomes.',
- quote('The difference was never the AI model. It was always the organization.',
+ quote('The difference was never the <mark class="not">AI model</mark>. It was always the <mark>organisation</mark>.',
        '<b>The Enterprise AI Playbook</b> · 51 enterprise deployments · April 2026'),
  ['R09']),
 
