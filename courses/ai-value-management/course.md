@@ -433,7 +433,7 @@ NBER WP 24001, November 2017.
 > are developed and implemented. The required adjustment costs, organizational
 > changes, and new skills can be modeled as a kind of intangible capital."
 
-### R22 · Klarna Form 20-F FY2025 — the audited record
+### R22 · Klarna Form 20-F FY2025 — the audited statements and the claim beside them
 
 > "Our AI assistant has handled 80% of customer service chats in the year ended
 > December 31, 2025 (according to our service chat log data), with no drop in
@@ -702,8 +702,10 @@ saving:
 > "Our AI assistant handled 80% of customer service chats in the year ended
 > December 31, 2025 … doing the work equivalent of over 850 full-time agents … and
 > in 2025 delivered approximately $59 million in cost savings."
-So the audited filing carries **both** the US$59m saving claim and the US$4m
-expense increase. **They are in the same document.** That is a stronger teaching
+So the same filing carries **both** the US$59m saving claim and the US$4m
+expense increase. **They are in the same document.** The saving is a management
+estimate against a counterfactual; only the expense line and the audited cost
+figures are attested. That is a stronger teaching
 point than the call-versus-filing contrast I first recorded, and S6 must use the
 corrected version.
 
