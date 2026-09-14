@@ -2659,6 +2659,7 @@ most. No parenthetical asides and no dashes, because neither can be heard.
 #### 01 · AI Value Management
 
 **Sources:** [R00]
+**Time:** 0:21  ·  40 words at 117 wpm
 
 **Narration:**
 Welcome to AI Value Management, a thirty-minute session for business leaders.
@@ -2668,6 +2669,7 @@ We will start with the most quoted statistic in enterprise AI, and take it apart
 #### 02 · Ninety-five per cent of AI pilots fail
 
 **Sources:** [R01], [R00]
+**Time:** 0:43  ·  83 words at 117 wpm
 
 **Narration:**
 You have almost certainly heard this figure quoted at you in the past year.
@@ -2683,6 +2685,7 @@ Hold that distinction, because it changes the size of the problem considerably.
 #### 03 · It counts organisations, not pilots
 
 **Sources:** [R01]
+**Time:** 0:48  ·  94 words at 117 wpm
 
 **Narration:**
 The report measured something narrower.
@@ -2700,6 +2703,7 @@ That is still poor. It is twenty percentage points better than the figure in cir
 #### 04 · The report relabelled its own finding
 
 **Sources:** [R01], [R02]
+**Time:** 0:57  ·  111 words at 117 wpm
 
 **Narration:**
 The slip began inside the document itself.
@@ -2718,6 +2722,7 @@ The original link at MIT no longer serves the file.
 #### 05 · Four studies, four different questions
 
 **Sources:** [R01], [R03], [R05], [R06], [R07]
+**Time:** 0:57  ·  111 words at 117 wpm
 
 **Narration:**
 If that number is unreliable, the sensible response is to look at what else has been measured.
@@ -2733,6 +2738,7 @@ Most apparent disagreement between these figures is unit substitution rather tha
 #### 06 · Where they converge
 
 **Sources:** [R03], [R05], [R06]
+**Time:** 0:57  ·  111 words at 117 wpm
 
 **Narration:**
 The units differ, so we should look for the question they answer in common.
@@ -2749,6 +2755,7 @@ That share has not moved in a year.
 #### 07 · Every figure here is a self-report
 
 **Sources:** [R03], [R07], [R08], [R33], [R34]
+**Time:** 0:47  ·  92 words at 117 wpm
 
 **Narration:**
 These sources share one property that outweighs their differences.
@@ -2766,6 +2773,7 @@ The final sections of this session return to it.
 #### 08 · The difference was never the model
 
 **Sources:** [R09]
+**Time:** 0:52  ·  101 words at 117 wpm
 
 **Narration:**
 That is the state of the evidence. The more useful question is why.
@@ -2781,6 +2789,7 @@ We should also note that one author co-founded a company that sells AI benefit m
 #### 09 · Technology was the easiest part
 
 **Sources:** [R09]
+**Time:** 0:39  ·  76 words at 117 wpm
 
 **Narration:**
 If the organisation is the constraint, we should ask what specifically got in the way.
@@ -2795,6 +2804,7 @@ Do those two things, and the rest becomes straightforward.
 #### 10 · Sixty-four per cent changed nothing else
 
 **Sources:** [R08]
+**Time:** 0:46  ·  90 words at 117 wpm
 
 **Narration:**
 That was interview evidence from companies that succeeded. Now consider a measurement.
@@ -2810,6 +2820,7 @@ This describes what firms did, measured directly.
 #### 11 · The symptoms are not the causes
 
 **Sources:** [R09], [R10]
+**Time:** 1:01  ·  119 words at 117 wpm
 
 **Narration:**
 So the surrounding work is often skipped. The Stanford study ranked why that proves fatal.
@@ -2827,6 +2838,7 @@ The result may therefore be skewed towards identifying leadership failures.
 #### 12 · Check your understanding
 
 **Sources:** [R08], [R09]
+**Time:** 0:27  ·  53 words at 117 wpm
 
 **Narration:**
 Before we turn that into a diagnosis, one question to test the distinction.
@@ -2841,6 +2853,7 @@ The measured Census finding points the same way.
 #### 13 · Four stages, four different failures
 
 **Sources:** [R00], [R08], [R06], [R12], [R03]
+**Time:** 0:44  ·  86 words at 117 wpm
 
 **Narration:**
 We can now put that evidence to work as a diagnosis you can run on your own portfolio.
@@ -2854,6 +2867,7 @@ So treat the stages as a diagnostic frame. Do not read the gaps between them as 
 #### 14 · Stage one: it was never thought relevant
 
 **Sources:** [R08], [R07]
+**Time:** 0:47  ·  92 words at 117 wpm
 
 **Narration:**
 Start with the firms that never began, because the reason is not the one usually assumed.
@@ -2868,6 +2882,7 @@ They are not the explanation for absent value.
 #### 15 · Stage two: the pilot that never shipped
 
 **Sources:** [R06], [R01]
+**Time:** 0:52  ·  101 words at 117 wpm
 
 **Narration:**
 The second stage is the one most executives picture when they hear that AI is failing.
@@ -2882,6 +2897,7 @@ The direction is consistent across sources. The precision is not.
 #### 16 · Stage three: shipped, and quietly ignored
 
 **Sources:** [R12]
+**Time:** 0:52  ·  101 words at 117 wpm
 
 **Narration:**
 The third stage is the least visible, because the project reports as delivered.
@@ -2897,6 +2913,7 @@ They also state that this part of their analysis is descriptive.
 #### 17 · Stage four, and a question
 
 **Sources:** [R03], [R12], [R00]
+**Time:** 0:50  ·  97 words at 117 wpm
 
 **Narration:**
 The fourth stage is where most organisations that get this far now sit.
@@ -2915,6 +2932,7 @@ Stage three would mean people are not using it. Here they are.
 #### 18 · Two hours a week, measured
 
 **Sources:** [R11]
+**Time:** 0:42  ·  81 words at 117 wpm
 
 **Narration:**
 Stage four deserves a proper explanation, because it is the least intuitive.
@@ -2929,6 +2947,7 @@ The question is what happened next, and the same study answers it.
 #### 19 · And nothing downstream changed
 
 **Sources:** [R11]
+**Time:** 0:40  ·  78 words at 117 wpm
 
 **Narration:**
 The same study reports what happened next.
@@ -2944,6 +2963,7 @@ What they could observe did not move.
 #### 20 · A measured null on pay and hours
 
 **Sources:** [R12]
+**Time:** 0:50  ·  97 words at 117 wpm
 
 **Narration:**
 A second study tested the same question against national administrative records rather than telemetry.
@@ -2959,6 +2979,7 @@ Note also that this paper has not been peer-reviewed.
 #### 21 · Most of the new work was supervising the tool
 
 **Sources:** [R12]
+**Time:** 0:41  ·  79 words at 117 wpm
 
 **Narration:**
 The same Danish data shows where much of the saved time went.
@@ -2971,6 +2992,7 @@ Adopting the tool created work of its own, and most of that new work is supervis
 #### 22 · A faster task breaks down four times before the accounts
 
 **Sources:** [R13], [R19], [R20], [R18], [R00]
+**Time:** 1:11  ·  139 words at 117 wpm
 
 **Narration:**
 That pattern repeats at every level between a single task and the accounts.
@@ -2987,6 +3009,7 @@ Its author argues that even this figure could be too high.
 #### 23 · Check your understanding
 
 **Sources:** [R11], [R12]
+**Time:** 0:38  ·  75 words at 117 wpm
 
 **Narration:**
 That is a lot of evidence pointing one way, so test what it does and does not show.
@@ -3002,6 +3025,7 @@ The second understates what is known, because a precise null is a finding rather
 #### 24 · Klarna published the number itself
 
 **Sources:** [R22], [R39]
+**Time:** 0:51  ·  99 words at 117 wpm
 
 **Narration:**
 All of that was general evidence. It helps to watch the problem happen to one company.
@@ -3017,6 +3041,7 @@ Neither point survived into the story that followed.
 #### 25 · What he said, and what was reported
 
 **Sources:** [R39]
+**Time:** 1:23  ·  162 words at 117 wpm
 
 **Narration:**
 Fifteen months later the chief executive gave an interview that was widely misreported.
@@ -3034,6 +3059,7 @@ His objection is to the headline and to what was built on top of it.
 #### 26 · The filings never wavered
 
 **Sources:** [R22], [R39]
+**Time:** 1:28  ·  171 words at 117 wpm
 
 **Narration:**
 There is a way to test which account is closer to the truth, and it does not involve trusting anyone.
@@ -3053,6 +3079,7 @@ AI handles more of the work each year, and a human tier is being built on top of
 #### 27 · A claimed saving and a smaller bill are different things
 
 **Sources:** [R22], [R39], [R00]
+**Time:** 0:57  ·  111 words at 117 wpm
 
 **Narration:**
 The filings settle the headcount question. The same filing also shows why a claimed saving needs checking.
@@ -3066,6 +3093,7 @@ A claimed saving and a smaller bill are different things. Ask which one you are 
 #### 28 · A rate is only as honest as its denominator
 
 **Sources:** [R24], [R25], [R00]
+**Time:** 0:58  ·  113 words at 117 wpm
 
 **Narration:**
 A second company shows how far a figure can drift from the facts behind it.
@@ -3082,6 +3110,7 @@ For any rate you are shown, ask what the denominator is and who it leaves out.
 #### 29 · Check your understanding
 
 **Sources:** [R22], [R23], [R39]
+**Time:** 0:46  ·  89 words at 117 wpm
 
 **Narration:**
 One question to test the Klarna case before we turn to attribution.
@@ -3098,6 +3127,7 @@ Read together, they show costs growing more slowly than the business, not costs 
 #### 30 · Off by a factor of three
 
 **Sources:** [R27], [R28], [R35]
+**Time:** 1:15  ·  147 words at 117 wpm
 
 **Narration:**
 That brings us to the question underneath all of this, which is whether the value can be attributed at all.
@@ -3116,6 +3146,7 @@ Microsoft's experimentation team says the same in industrial terms. External var
 #### 31 · It works at the workflow, not the accounts
 
 **Sources:** [R29], [R32], [R00]
+**Time:** 0:53  ·  104 words at 117 wpm
 
 **Narration:**
 Measurement also has a hard limit.
@@ -3133,6 +3164,7 @@ The guidance is explicit that this must be designed in before the intervention s
 #### 32 · Four conditions that separate a saving from an estimate
 
 **Sources:** [R30], [R31]
+**Time:** 1:02  ·  121 words at 117 wpm
 
 **Narration:**
 Everything so far leads to a test you can apply without any technical knowledge.
@@ -3150,6 +3182,7 @@ Anything that fails these tests is an estimate. The surveys suggest an estimate 
 #### 33 · What to do, and what to stop
 
 **Sources:** [R00], [R30], [R32], [R04], [R09]
+**Time:** 1:04  ·  124 words at 117 wpm
 
 **Narration:**
 The evidence supports five steps for the next ninety days.

@@ -1,3 +1,6 @@
 .DS_Store
 *.pdf
 courses/*/sample.html
+__pycache__/
+courses/*/qa/stills/
+.playwright-mcp/
