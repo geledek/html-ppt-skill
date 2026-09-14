@@ -40,9 +40,13 @@ Working inside this repository, they are found automatically.
 To make them available everywhere on a new Mac, link them once:
 
 ```bash
-ln -s "$PWD/.claude/skills/no-ai-slop"  ~/.claude/skills/no-ai-slop
-ln -s "$PWD/.claude/skills/sg-english"  ~/.claude/skills/sg-english
+git clone https://github.com/geledek/html-ppt-skill.git && cd html-ppt-skill
+./scripts/link-skills.sh
 ```
+
+The links point at the checkout, so `git pull` on the main branch is the sync.
+Keep them pointed at the main checkout, not a worktree — a worktree may be on a
+course branch that lags main.
 
 Edit them here and commit. A machine-local copy that drifts from this one is how
 two machines end up writing in two registers.
