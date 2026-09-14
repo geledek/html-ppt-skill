@@ -120,8 +120,7 @@ SLIDES = [
 (3, 'THE REPORT’S OWN FUNNEL', 'It counts organisations, not pilots.',
  stats(('60%', 'of organisations evaluated task-specific tools'),
        ('20%', 'reached a pilot'),
-       ('5%', 'reached production')) +
- callout('On the report’s own numbers, 5 of every 20 pilots reached production. That is a 75 per cent failure rate.'),
+       ('5%', 'reached production')),
  ['R01']),
 
 (4, 'READ THE DOCUMENT', 'The report relabelled its own finding.',
