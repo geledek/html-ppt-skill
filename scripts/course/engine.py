@@ -49,15 +49,20 @@ EU = {'AUT','BEL','BGR','HRV','CYP','CZE','DNK','EST','FIN','FRA','DEU','GRC','H
 # Jurisdictions shown on the map, and how their approach is classified.
 # Classification drives colour; omitting a major economy or colouring binding law
 # the same as guidance would both mislead. See R01-R25 in course.md.
+# The last two numbers on each row are the label's (dx, dy) offset from its pin.
+# These are hand-tuned for ai-governance-overview's enlarged 22px .map-label — the
+# Asia cluster (kor/jpn, ind/mys) collides at that size otherwise. They are course-
+# specific, not a general default: a new course with a different label size should
+# re-tune them rather than treat these as canonical.
 REGIONS = {
     'eu': ('binding',   'European Union',  'Cross-sector AI Act. Duties by system, activity and role.',            15,   49,  14,   4),
-    'kor':('binding',   'South Korea',     'AI Framework Act in force since 22 January 2026.',                    127.8, 36,  14,   4),
+    'kor':('binding',   'South Korea',     'AI Framework Act in force since 22 January 2026.',                    127.8, 36, -96,  30),
     'chn':('binding',   'China',           'Binding rules on generative AI and content labelling, already enforced.', 104, 35, -60, -14),
-    'sgp':('guidance',  'Singapore',       'Existing law, sector supervision and voluntary frameworks.',         103.8,  1.35, -78, 34),
+    'sgp':('guidance',  'Singapore',       'Existing law, sector supervision and voluntary frameworks.',         103.8,  1.35, -78, 40),
     'gbr':('guidance',  'United Kingdom',  'Existing regulators and legal frameworks, plus policy principles.',    -2,   54, -48, -16),
-    'jpn':('guidance',  'Japan',           'A promotion act with no penalties provision.',                        138,   37,  16,  -6),
-    'ind':('guidance',  'India',           'Sectoral regulators, plus binding labelling of synthetic content.',     79,   22, -52,  20),
-    'mys':('guidance',  'Malaysia',        'Voluntary guidelines. A governance Bill is drafted, not tabled.',      102,   4,  -70, -18),
+    'jpn':('guidance',  'Japan',           'A promotion act with no penalties provision.',                        138,   37,  18, -10),
+    'ind':('guidance',  'India',           'Sectoral regulators, plus binding labelling of synthetic content.',     79,   22, -70,  30),
+    'mys':('guidance',  'Malaysia',        'Voluntary guidelines. A governance Bill is drafted, not tabled.',      102,   4,  -74, -20),
     'usa':('fragmented','United States',   'No federal AI statute. State laws, and federal action against them.',  -99,  40, -58, -22),
 }
 ISO_TO_REGION = {'GBR':'gbr','KOR':'kor','CHN':'chn','SGP':'sgp','JPN':'jpn','IND':'ind','MYS':'mys','USA':'usa'}

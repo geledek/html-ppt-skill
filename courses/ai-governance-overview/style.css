@@ -49,9 +49,14 @@
 .tpl-course .component::before{content:counter(component,decimal-leading-zero);font:25px var(--font-mono);color:var(--accent);padding-top:4px}
 .tpl-course .component h4{font-size:29px;margin:0 0 9px}
 .tpl-course .component p{font-size:25px;line-height:1.4;color:var(--text-2);margin:0}
-.tpl-course .roles{width:100%;border-collapse:collapse;font-size:25px;table-layout:fixed}
+.tpl-course .roles{width:100%;border-collapse:separate;border-spacing:0;font-size:25px;table-layout:fixed}
 .tpl-course .roles th{font-size:22px;text-align:left;color:var(--accent);padding:14px 22px;border-bottom:2px solid var(--border-strong)}
-.tpl-course .roles td{padding:22px;line-height:1.4;vertical-align:top;border-bottom:1px solid var(--border-strong)}
+.tpl-course .roles td{padding:22px;line-height:1.4;vertical-align:top}
+/* The row divider is a border-top on the row's cells, not an always-on
+   border-bottom, so it fades in with the staggered row (matching the lifecycle
+   and legal-row lists). The header's border-bottom draws the line above row 1,
+   so only rows 2-4 add their own top rule. */
+.tpl-course .roles tbody.stagger > tr:not(:first-child) > td{border-top:1px solid var(--border-strong)}
 .tpl-course .roles th:first-child{width:23%}.tpl-course .roles th:last-child{width:29%}
 .tpl-course .roles td:first-child{font-weight:650}
 .tpl-course .map-layout{display:grid;grid-template-columns:1.38fr 1fr;gap:45px;align-items:center}
@@ -59,9 +64,9 @@
 .tpl-course .country{fill:var(--surface-2);stroke:var(--border-strong);stroke-width:.5}
 .tpl-course .country.selected{fill:color-mix(in srgb,var(--accent-2) 28%,var(--surface));stroke:var(--accent-2);stroke-width:.9}
 .tpl-course .map-pin{fill:var(--accent-2);stroke:var(--surface);stroke-width:2}
-.tpl-course .map-label{fill:var(--text-1);font:600 17px var(--font-sans);paint-order:stroke;stroke:var(--bg);stroke-width:4px;stroke-linejoin:round}
+.tpl-course .map-label{fill:var(--text-1);font:600 22px var(--font-sans);paint-order:stroke;stroke:var(--bg);stroke-width:4px;stroke-linejoin:round}
 .tpl-course .map-control{display:block;width:100%;text-align:left;color:var(--text-1);background:transparent;border:0;border-top:1px solid var(--border-strong);padding:24px 12px;cursor:pointer;font-family:inherit}
-.tpl-course .map-control b{font-size:31px;display:block;margin-bottom:10px}
+.tpl-course .map-control b{font-size:22px;display:block;margin-bottom:10px}
 .tpl-course .map-control span{font-size:26px;line-height:1.4;display:block;color:var(--text-2)}
 .tpl-course .map-control[aria-pressed=true]{border-left:5px solid var(--accent-2);background:var(--surface-2)}
 .tpl-course .world-map[data-focus] .country.selected{opacity:.35}
@@ -97,6 +102,15 @@
 .tpl-course .case-timeline article{border-top:2px solid var(--border-strong);padding-top:22px}
 .tpl-course .case-timeline h4{font-size:33px;margin:0 0 16px}
 .tpl-course .case-timeline p{font-size:28px;line-height:1.4;color:var(--text-2);margin:0 0 14px}
+/* Two parallel cases as bordered cards (slide 17). named-box supplies the blue
+   heading and top rule; case-cards lays them out to fill the lower frame, and
+   the cards carry more detail than the case-timeline chronologies on 15 and 16
+   because 17 compares two cases rather than walking one through its stages. */
+.tpl-course .case-cards{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:56px}
+.tpl-course .case-cards .named-box{padding:40px 40px 44px}
+.tpl-course .case-cards .named-box h4{font-size:36px;margin:0 0 20px}
+.tpl-course .case-cards .named-box p{font-size:30px;line-height:1.42;margin:0 0 18px}
+.tpl-course .case-cards .named-box p:last-child{margin-bottom:0}
 .tpl-course .case-quote{margin:26px 0 0;border-left:4px solid var(--accent);padding:15px 30px;background:var(--surface-2)}
 .tpl-course .case-quote p{font-size:32px;line-height:1.35;margin:0 0 13px}
 .tpl-course .case-quote cite{font-size:21px;color:var(--text-2);font-style:normal}

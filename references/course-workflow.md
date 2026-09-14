@@ -23,6 +23,9 @@ per-option feedback, the roadmap, and any revision at any gate.
 2. **`sg-english`** — locale. Removes the American startup register, which
    survives a slop pass because it is neither slop nor error.
 
+Both live in this repository at `.claude/skills/`, so they are available to any
+clone rather than to one machine.
+
 Order matters: fixing structure first means the locale pass edits sentences that
 are going to survive.
 

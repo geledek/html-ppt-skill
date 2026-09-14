@@ -11,7 +11,7 @@
 #   4. Nothing runs off the bottom of the 1080px stage.
 #   5. No kicker repeats the line beneath it.
 #   6. Every slide carries its number.
-#   7. Nothing moves when a quiz answer is revealed.
+#   7. A quiz reveal moves nothing, and the feedback actually appears.
 #   8. No local subresources — a linked build renders unstyled in Safari.
 # Plus one warning, which does not fail the build: a slide leaving its lower
 # frame empty. A quote slide is legitimately sparse, so that one is judgement.

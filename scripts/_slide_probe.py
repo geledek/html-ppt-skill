@@ -117,8 +117,21 @@ document.addEventListener('DOMContentLoaded', function () {
       return [Math.round(r.top), Math.round(r.left), Math.round(o.height)];
     };
     var before = snap(); opt.click(); var after = snap();
+    // The per-option feedback must actually appear on reveal. display:none .why
+    // reserves no space, so a broken template reveals nothing while "nothing
+    // moved" still passes — the check has to verify the feedback is visible, not
+    // only that the layout held. A .why is shown when it is not display:none, is
+    // visibility:visible, and has a non-zero rendered box.
+    var why = q.querySelector('.revealed .mcq .why') || q.querySelector('.mcq .why');
+    var whyShown = null;
+    if (why) {
+      var wcs = getComputedStyle(why), wr = why.getBoundingClientRect();
+      whyShown = wcs.display !== 'none' && wcs.visibility !== 'hidden' &&
+                 wr.height > 0 && wr.width > 0;
+    }
     shift = {before: before, after: after,
-             moved: before[0] !== after[0] || before[1] !== after[1] || before[2] !== after[2]};
+             moved: before[0] !== after[0] || before[1] !== after[1] || before[2] !== after[2],
+             hasWhy: why !== null, whyShown: whyShown};
   }
   document.title = JSON.stringify({maxLines: max, long: long, pos: pos, reveal: shift, over: over, dupes: dupes, echo: echo, unnumbered: unnumbered, sparse: sparse});
 });

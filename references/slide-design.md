@@ -128,6 +128,11 @@ all boxes, at least one of its slides is really a quote or a statistic.
 `layer-stack` means *concurrent layers*. Do not use it for a sequence or a
 timeline; it teaches the wrong shape. (R2-08, R2-13, R4-06, R5-11, R5-12, R5-14)
 
+**A comparison or a chronology uses `.data-table`**, which the template provides:
+`.compare` emphasises the last column, `.figures` sets it in the display face,
+`.ranked` treats the last column as a share. A course sets only its own type
+scale on top.
+
 **A diagram must be complete for the claim it makes.** A world map showing
 "jurisdictions" must not omit the largest ones, and every highlighted region must
 be labelled. An unlabelled highlight is a question the learner cannot answer.
@@ -219,6 +224,10 @@ Route every emphasis rule through one token, so a change of emphasis colour is
 one line. **Verify by measurement** — read `getComputedStyle(el).color` back from
 the built deck — not by eye. (R5-03, R5-06, R5-13)
 
+**`--emphasis` is defined in the template**, as `var(--accent-2)`, so a course
+inherits the blue without redefining it. A course overrides the token only to
+move its emphasis colour; it does not need to restate the default.
+
 ## The deck as a whole
 
 **The cover is one line.** Course title, then presenter name and credential,
@@ -269,7 +278,7 @@ means every hard rule holds.
 | Nothing overflows the 1080px stage | hard fail |
 | No kicker repeats the line beneath it | hard fail |
 | Every slide carries its number | hard fail |
-| Nothing moves on quiz reveal | hard fail |
+| Quiz reveal moves nothing, and the feedback actually appears | hard fail |
 | Self-contained — no local subresources (Safari) | hard fail |
 | Lower frame left empty | **warning** — a quote slide is legitimately sparse, so this is a list to walk at gate 3 |
 
