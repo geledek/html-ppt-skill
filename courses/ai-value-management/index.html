@@ -806,10 +806,12 @@ body.stills .decision-review button { display: none }
 .tpl-course .stat-row { gap: 130px; margin-top: 70px }
 .tpl-course .stat-fig { font-size: 200px }
 .tpl-course .stat-unit { font-size: 38px; max-width: 24ch; line-height: 1.3; margin-top: 18px }
-/* a prior-year comparison under the figure, so "flat" or "down" can be checked */
-.tpl-course .stat-trend { font-size: 27px; font-weight: 700; color: var(--emphasis); max-width: 24ch; margin-top: 20px }
+/* a prior-year comparison under the figure, so "flat" or "down" can be checked.
+   Neutral by default (grey, not the emphasis blue — a flat trend claims no
+   emphasis); an unfavourable one turns red. */
+.tpl-course .stat-trend { font-size: 27px; font-weight: 700; color: var(--text-3); max-width: 24ch; margin-top: 20px }
 /* an unfavourable trend reads in the deck's negative colour, as the quiz "wrong"
-   state and the takeaways "stop" crosses do; a flat or neutral one stays blue. */
+   state and the takeaways "stop" crosses do. */
 .tpl-course .stat-trend.down { color: var(--bad) }
 
 .tpl-course .named-box { padding: 38px 42px }
