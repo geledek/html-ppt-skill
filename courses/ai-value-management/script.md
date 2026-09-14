@@ -235,7 +235,7 @@ Stage three would mean people are not using it. Here they are.
 #### 15 · Two hours saved, and nothing downstream moved
 
 **Sources:** [R11], [R12]
-**Time:** 1:08  ·  133 words at 117 wpm
+**Time:** 1:09  ·  134 words at 117 wpm
 
 **Narration:**
 Stage four is the least intuitive, so it deserves a proper explanation.
@@ -243,7 +243,7 @@ The clearest evidence is a randomised experiment: seven thousand knowledge worke
 Workers who used the tool saved two hours on email each week. That is a measured benefit for each worker.
 Yet treated and control workers answered the same threads, attended the same meetings and finished the same documents. The authors detected no shift in the quantity or composition of anyone's work.
 
-A second study, on national records rather than telemetry, finds the same.
+A second study, on national records rather than software logs, finds the same.
 It estimates a precise null on earnings and hours, ruling out effects larger than two per cent two years after ChatGPT's launch. A precise null does not mean nothing happened; it means any effect was too small to distinguish from zero.
 
 #### 16 · Most of the new work was supervising the tool
