@@ -54,10 +54,6 @@ By the end of this session, participants will be able to:
 4. Determine which AI initiatives to discontinue and which to prioritise over the
    next 90 days.
 
-Outcome 4 is what makes this a course for executives rather than a briefing.
-Without it they leave informed and idle. Outcome 3 will meet resistance
-because it slows funding, so the Narration has to earn it.
-
 ## Research Plan
 
 <!-- APPROVED 2026-09-12. Revised twice on Ray's direction: open on the 95%

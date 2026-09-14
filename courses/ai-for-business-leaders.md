@@ -18,8 +18,8 @@ someone who missed session 1.
 
 | Course | Duration | Delivery | Status |
 |---|---|---|---|
-| `ai-governance-overview` | 30 min | self-paced | gate 2 approved, slides in progress |
-| `ai-value-management` | 30 min | recorded | gate 1 |
+| `ai-governance-overview` | 30 min | self-paced | camera-ready set delivered; `accepted_hash` not yet recorded |
+| `ai-value-management` | 30 min | recorded | gate 2; 28 slides, narration in `script.md`, awaiting acceptance |
 
 Directories are flat and unprefixed. ADR 0004 suggests `<series>-NN-name`;
 `ai-governance-overview` was named and committed before the Series existed, and
@@ -68,8 +68,10 @@ hears.
 | **use** | one concrete application of AI in one process, the unit both Courses assess | use case, initiative |
 | **owner** | the named person accountable for a use, by name and role | stakeholder, champion |
 | **the board** | whoever the leader answers to | leadership, the business |
+| **baseline** | the measure of a process recorded before the tool is used, against which any benefit is judged | before-and-after guess |
+| **benefit owner** | the named person accountable for the benefit, not for the deployment | project sponsor, product owner |
+| **cashable saving** | a saving that releases budget and would survive an impartial third party's review | efficiency, productivity gain |
 
-<!-- Extend once the Value course's Outline exists. Terms about value, such as
-     benefit,
-     baseline and realisation, belong here once defined, since a governance
-     sequel would inherit them. -->
+<!-- The value terms (baseline, benefit owner, cashable saving) are now in the
+     table, defined by the Value course. A third Course in the Series inherits
+     them; add new shared terms here as they are defined, not per Course. -->
