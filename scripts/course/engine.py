@@ -49,6 +49,11 @@ EU = {'AUT','BEL','BGR','HRV','CYP','CZE','DNK','EST','FIN','FRA','DEU','GRC','H
 # Jurisdictions shown on the map, and how their approach is classified.
 # Classification drives colour; omitting a major economy or colouring binding law
 # the same as guidance would both mislead. See R01-R25 in course.md.
+# The last two numbers on each row are the label's (dx, dy) offset from its pin.
+# These are hand-tuned for ai-governance-overview's enlarged 22px .map-label — the
+# Asia cluster (kor/jpn, ind/mys) collides at that size otherwise. They are course-
+# specific, not a general default: a new course with a different label size should
+# re-tune them rather than treat these as canonical.
 REGIONS = {
     'eu': ('binding',   'European Union',  'Cross-sector AI Act. Duties by system, activity and role.',            15,   49,  14,   4),
     'kor':('binding',   'South Korea',     'AI Framework Act in force since 22 January 2026.',                    127.8, 36, -96,  30),
