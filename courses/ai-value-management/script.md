@@ -13,14 +13,6 @@ python3 scripts/course/stamp-times.py courses/ai-value-management
 
 ## Narration
 
-One block per slide. The build reads these, so the numbering must match
-`slides.py`. Every block opens with a connecting sentence from the previous slide.
-A narrator must never read a title aloud to bridge.
-
-**Both language passes applied:** `no-ai-slop` then `sg-english`. Recorded
-delivery, so sentences run 15 to 20 words with one clause of subordination at
-most. No parenthetical asides and no dashes, because neither can be heard.
-
 ### S1 · The number everyone quotes
 
 #### 01 · AI Value Management
@@ -49,44 +41,23 @@ Take a moment.
 The figure counts organisations, not pilots.
 Hold that distinction, because it changes the size of the problem considerably.
 
-#### 03 · It counts organisations, not pilots
-
-**Sources:** [R01]
-**Time:** 0:48  ·  94 words at 117 wpm
-
-**Narration:**
-The report measured something narrower.
-Ninety-five per cent of organisations were getting zero return on their investment.
-That is a statement about companies, not about projects.
-The report also published its own funnel for task-specific tools.
-Sixty per cent of organisations evaluated such tools.
-Twenty per cent reached a pilot.
-Five per cent reached production.
-
-Five out of the twenty that piloted therefore made it through.
-On the report's own numbers, the pilot failure rate is seventy-five per cent.
-That is still poor. It is twenty percentage points better than the figure in circulation.
-
-#### 04 · The report relabelled its own finding
+#### 03 · It counts organisations, not pilots.
 
 **Sources:** [R01], [R02]
-**Time:** 0:57  ·  111 words at 117 wpm
+**Time:** 0:58  ·  113 words at 117 wpm
 
 **Narration:**
-The slip began inside the document itself.
-One paragraph after that funnel, the report describes a ninety-five per cent failure rate.
-Its own measure was organisations reporting no return, which is a different claim.
+The report measured something narrower than the headline.
+Ninety-five per cent of organisations were getting zero return, not ninety-five per cent of pilots.
+Its own funnel proves the point: sixty per cent evaluated a tool, twenty per cent piloted, five per cent reached production.
+On those numbers the pilot failure rate is seventy-five per cent, twenty points milder than the figure in circulation.
 
-Three further things belong on the record.
-The report defines success as something users or executives remarked upon, not something measured.
-Its appendix gives a second, stricter definition based on measurable indicators. The two do not agree.
-The sample was fifty-two organisations interviewed and a hundred and fifty-three leaders surveyed at four conferences.
-The document calls itself preliminary findings and disclaims the positions of any affiliated employers.
-The original link at MIT no longer serves the file.
+The document then relabelled its own result a ninety-five per cent failure rate, one paragraph later.
+Three things belong on the record. It defines success as something remarked upon, not measured. Its sample was fifty-two organisations and a hundred and fifty-three leaders at four conferences. It calls itself preliminary findings.
 
 ### S2 · What the evidence agrees on instead
 
-#### 05 · Four studies, four different questions
+#### 04 · Four studies, four different questions
 
 **Sources:** [R01], [R03], [R05], [R06], [R07]
 **Time:** 0:57  ·  111 words at 117 wpm
@@ -102,43 +73,25 @@ The United States Census Bureau samples about 1.2 million businesses and asks wh
 Note the units. Organisations, respondents, projects and businesses are not interchangeable.
 Most apparent disagreement between these figures is unit substitution rather than measurement error.
 
-#### 06 · Where they converge
+#### 05 · Where they converge
 
-**Sources:** [R03], [R05], [R06]
-**Time:** 1:03  ·  122 words at 117 wpm
+**Sources:** [R03], [R05], [R06], [R33], [R34]
+**Time:** 1:11  ·  138 words at 117 wpm
 
 **Narration:**
-The units differ, so we should look for the question they answer in common.
+The units differ, so look for the question they answer in common.
 All four bear on whether material financial impact can be evidenced.
-McKinsey finds thirty-seven per cent report any EBIT impact, and about six per cent attribute five per cent or more.
-The any-impact figure fell from thirty-nine per cent to thirty-seven.
-The high-performer share stayed at about six per cent.
+McKinsey finds thirty-seven per cent report any EBIT impact, down from thirty-nine, and about six per cent attribute five per cent or more.
 Deloitte finds twenty per cent already growing revenue, against seventy-four per cent who hope to.
 S&P finds forty-six per cent reporting no strong positive impact on any objective.
+The methods differ and the answer is the same: only a small minority can evidence material impact, and that share has not moved in a year.
 
-The methods and populations differ, and the answer is the same.
-Only a small minority of organisations can evidence material bottom-line impact.
-That share has not moved in a year.
-
-#### 07 · Every figure here is a self-report
-
-**Sources:** [R03], [R07], [R08], [R33], [R34]
-**Time:** 0:47  ·  92 words at 117 wpm
-
-**Narration:**
-These sources share one property that outweighs their differences.
-Every figure is something a respondent said, including the government statistics.
-No study located for this session audits financial statements or deployment records.
-Sixty per cent of firms in one survey monitor no financial indicator for AI at all.
-In another, sixty-eight per cent of chief AI officers begin projects they cannot assess.
-
-So the measurement problem is not only inside companies.
-It runs through the evidence base on which the entire debate rests.
-The final sections of this session return to it.
+Note what every figure here has in common. Each is a self-report, including the government statistics.
+No study located for this session audits financial statements or deployment records, so the measurement problem runs through the evidence base itself.
 
 ### S3 · The value was never stuck in the model
 
-#### 08 · The difference was never the model
+#### 06 · The difference was never the model
 
 **Sources:** [R09]
 **Time:** 0:52  ·  101 words at 117 wpm
@@ -154,38 +107,20 @@ The cases were selected because they succeeded, and the authors disclaim any cla
 Its percentages describe successful deployments. They are not base rates for the economy.
 We should also note that one author co-founded a company that sells AI benefit measurement.
 
-#### 09 · Technology was the easiest part
+#### 07 · The work around the model is what gets skipped
 
-**Sources:** [R09]
-**Time:** 0:39  ·  76 words at 117 wpm
+**Sources:** [R09], [R08]
+**Time:** 0:54  ·  105 words at 117 wpm
 
 **Narration:**
 If the organisation is the constraint, we should ask what specifically got in the way.
-Across those fifty-one cases, seventy-seven per cent of the hardest challenges were not technical.
-They were change management, data quality and process redesign.
-Technology was described consistently as the easiest part.
+Across fifty-one successful cases, seventy-seven per cent of the hardest challenges were not technical. They were change management, data quality and process redesign. Technology was described as the easiest part.
+An executive put it bluntly: all the hard work sits in process documentation and data architecture.
 
-An executive quoted in that study put it more bluntly.
-All the hard work sits in process documentation and data architecture.
-Do those two things, and the rest becomes straightforward.
+Now the measured counterpart, on a hundred and seventeen thousand firms.
+Sixty-four per cent of firms using AI made no institutional adjustment of any kind. They bought the tool and changed nothing around it. Training and new workflows reached only about fifteen per cent.
 
-#### 10 · Sixty-four per cent changed nothing else
-
-**Sources:** [R08]
-**Time:** 0:46  ·  90 words at 117 wpm
-
-**Narration:**
-That was interview evidence from companies that succeeded. Now consider a measurement.
-The United States Census Bureau surveyed more than one hundred and seventeen thousand firms.
-The sample is nationally representative and weighted.
-Sixty-four per cent of firms using AI reported no institutional adjustments of any kind.
-Training staff and developing new workflows each applied to about fifteen per cent.
-Changes to data practices ran at seven to eight per cent.
-
-Two-thirds of AI-using firms bought the tool and changed nothing around it.
-This describes what firms did, measured directly.
-
-#### 11 · The symptoms are not the causes
+#### 08 · The symptoms are not the causes
 
 **Sources:** [R09], [R10]
 **Time:** 1:01  ·  119 words at 117 wpm
@@ -203,7 +138,7 @@ Eighty-four per cent named business leadership's framing of the problem as a roo
 RAND also discloses that most interviewees were engineers rather than executives.
 The result may therefore be skewed towards identifying leadership failures.
 
-#### 12 · Check your understanding
+#### 09 · Check your understanding
 
 **Sources:** [R08], [R09]
 **Time:** 0:27  ·  53 words at 117 wpm
@@ -218,7 +153,7 @@ The measured Census finding points the same way.
 
 ### S4 · Which stage are you stuck at
 
-#### 13 · Four stages, four different failures
+#### 10 · Four stages, four different failures
 
 **Sources:** [R00], [R08], [R06], [R12], [R03]
 **Time:** 0:44  ·  86 words at 117 wpm
@@ -232,7 +167,7 @@ This structure is ours, assembled from four sources with different samples.
 No single study follows one set of projects through all four stages.
 So treat the stages as a diagnostic frame. Do not read the gaps between them as a funnel.
 
-#### 14 · Stage one: it was never thought relevant
+#### 11 · Stage one: it was never thought relevant
 
 **Sources:** [R08], [R07]
 **Time:** 0:47  ·  92 words at 117 wpm
@@ -247,7 +182,7 @@ On nationally representative evidence, regulation is not what is holding adoptio
 Your governance obligations still bind, and the companion session covers them.
 They are not the explanation for absent value.
 
-#### 15 · Stage two: the pilot that never shipped
+#### 12 · Stage two: the pilot that never shipped
 
 **Sources:** [R06], [R01]
 **Time:** 0:52  ·  101 words at 117 wpm
@@ -262,7 +197,7 @@ Two cautions. S&P has not published its field dates or question wording.
 And a rising abandonment rate partly reflects a larger stock of projects available to abandon.
 The direction is consistent across sources. The precision is not.
 
-#### 16 · Stage three: shipped, and quietly ignored
+#### 13 · Stage three: shipped, and quietly ignored
 
 **Sources:** [R12]
 **Time:** 0:52  ·  101 words at 117 wpm
@@ -278,7 +213,7 @@ Training and tools provided without encouragement were associated with smaller r
 The authors describe this as consistent with mitigating misuse rather than improving productivity.
 They also state that this part of their analysis is descriptive.
 
-#### 17 · Stage four, and a question
+#### 14 · Stage four, and a question
 
 **Sources:** [R03], [R12], [R00]
 **Time:** 0:50  ·  97 words at 117 wpm
@@ -297,54 +232,21 @@ Stage three would mean people are not using it. Here they are.
 
 ### S5 · Why a working model does not move the accounts
 
-#### 18 · Two hours a week, measured
+#### 15 · Two hours saved, and nothing downstream moved
 
-**Sources:** [R11]
-**Time:** 0:42  ·  81 words at 117 wpm
-
-**Narration:**
-Stage four deserves a proper explanation, because it is the least intuitive.
-The clearest evidence comes from a randomised experiment across sixty-six firms.
-Seven thousand one hundred and thirty-seven knowledge workers took part over six months.
-Among treated workers who used the tool, the saving was two fewer hours on email each week.
-They also reduced time worked outside regular hours.
-
-That is a measured benefit for each worker.
-The question is what happened next, and the same study answers it.
-
-#### 19 · And nothing downstream changed
-
-**Sources:** [R11]
-**Time:** 0:40  ·  78 words at 117 wpm
+**Sources:** [R11], [R12]
+**Time:** 1:08  ·  133 words at 117 wpm
 
 **Narration:**
-The same study reports what happened next.
-Treated and control workers replied to the same number of email threads.
-They attended the same number of meetings.
-They completed the same number of documents.
-The authors detected no shift in the quantity or composition of anyone's tasks.
+Stage four is the least intuitive, so it deserves a proper explanation.
+The clearest evidence is a randomised experiment: seven thousand knowledge workers across sixty-six firms, over six months.
+Workers who used the tool saved two hours on email each week. That is a measured benefit for each worker.
+Yet treated and control workers answered the same threads, attended the same meetings and finished the same documents. The authors detected no shift in the quantity or composition of anyone's work.
 
-Two hours a week were released and no measurable output changed.
-The authors are careful to say they could not observe productivity or performance directly.
-What they could observe did not move.
+A second study, on national records rather than telemetry, finds the same.
+It estimates a precise null on earnings and hours, ruling out effects larger than two per cent two years after ChatGPT's launch. A precise null does not mean nothing happened; it means any effect was too small to distinguish from zero.
 
-#### 20 · A measured null on pay and hours
-
-**Sources:** [R12]
-**Time:** 0:50  ·  97 words at 117 wpm
-
-**Narration:**
-A second study tested the same question against national administrative records rather than telemetry.
-The Danish work covered eleven occupations most exposed to chatbots.
-Employers had adopted, workers reported benefits, and new AI-related tasks were widespread.
-Using difference-in-differences, the authors estimate precise null effects on earnings and recorded hours.
-They rule out effects larger than two per cent, two years after ChatGPT's launch.
-
-A precise null has a specific meaning.
-It does not mean nothing happened. It means any effect was too small to be distinguished from zero.
-Note also that this paper has not been peer-reviewed.
-
-#### 21 · Most of the new work was supervising the tool
+#### 16 · Most of the new work was supervising the tool
 
 **Sources:** [R12]
 **Time:** 0:41  ·  79 words at 117 wpm
@@ -357,7 +259,7 @@ That covers quality review, integration work, and ethics and compliance.
 About a quarter of users spend more time on the very tasks they initially saved time on.
 Adopting the tool created work of its own, and most of that new work is supervision.
 
-#### 22 · A faster task breaks down four times before the accounts
+#### 17 · A faster task breaks down four times before the accounts
 
 **Sources:** [R13], [R19], [R20], [R18], [R00]
 **Time:** 1:11  ·  139 words at 117 wpm
@@ -374,7 +276,7 @@ The one model that estimates the whole chain projects very little.
 It adds no more than two-thirds of one per cent to productivity over ten years.
 Its author argues that even this figure could be too high.
 
-#### 23 · Check your understanding
+#### 18 · Check your understanding
 
 **Sources:** [R11], [R12]
 **Time:** 0:38  ·  75 words at 117 wpm
@@ -390,7 +292,7 @@ The second understates what is known, because a precise null is a finding rather
 
 ### S6 · One company, read two ways
 
-#### 24 · Klarna published the number itself
+#### 19 · Klarna published the number itself
 
 **Sources:** [R22], [R39]
 **Time:** 0:51  ·  99 words at 117 wpm
@@ -406,7 +308,7 @@ It is an equivalence estimate, not a count of people made redundant.
 And the release stated that customers could still choose to interact with live agents if they preferred.
 Neither point survived into the story that followed.
 
-#### 25 · What he said, and what was reported
+#### 20 · What he said, and what was reported
 
 **Sources:** [R39]
 **Time:** 1:23  ·  162 words at 117 wpm
@@ -424,7 +326,7 @@ He has pushed back five times in ten months, and the company denied it on the re
 He is careful about what he blames. He says the original article was balanced and he will not blame the journalist.
 His objection is to the headline and to what was built on top of it.
 
-#### 26 · The filings never wavered
+#### 21 · The filings never wavered
 
 **Sources:** [R22], [R39]
 **Time:** 1:28  ·  171 words at 117 wpm
@@ -444,7 +346,7 @@ That is the only textual trace of the pivot anywhere in the filings, and it conc
 So both things are true.
 AI handles more of the work each year, and a human tier is being built on top of it.
 
-#### 27 · A claimed saving and a smaller bill are different things
+#### 22 · A claimed saving and a smaller bill are different things
 
 **Sources:** [R22], [R39], [R00]
 **Time:** 0:57  ·  111 words at 117 wpm
@@ -458,7 +360,7 @@ The saving is measured against a counterfactual. The expense line records what w
 The filing explains the gap as operating leverage, because volumes grew thirty-two per cent.
 A claimed saving and a smaller bill are different things. Ask which one you are being shown.
 
-#### 28 · A rate is only as honest as its denominator
+#### 23 · A rate is only as honest as its denominator
 
 **Sources:** [R24], [R25], [R00]
 **Time:** 0:58  ·  113 words at 117 wpm
@@ -475,7 +377,7 @@ Commonwealth Bank of Australia shows the alternative.
 It publishes an eighty-six per cent resolve rate, and defines the denominator in a footnote.
 For any rate you are shown, ask what the denominator is and who it leaves out.
 
-#### 29 · Check your understanding
+#### 24 · Check your understanding
 
 **Sources:** [R22], [R23], [R39]
 **Time:** 0:46  ·  89 words at 117 wpm
@@ -492,7 +394,7 @@ Read together, they show costs growing more slowly than the business, not costs 
 
 ### S7 · Can value be attributed at all
 
-#### 30 · Off by a factor of three
+#### 25 · Off by a factor of three
 
 **Sources:** [R27], [R28], [R35]
 **Time:** 1:15  ·  147 words at 117 wpm
@@ -511,7 +413,7 @@ A baseline measured before an intervention is almost never a good estimate of th
 They call before-and-after comparison a counterfeit estimate.
 Microsoft's experimentation team says the same in industrial terms. External variation overwhelms the effect being sought.
 
-#### 31 · It works at the workflow, not the accounts
+#### 26 · It works at the workflow, not the accounts
 
 **Sources:** [R29], [R32], [R00]
 **Time:** 0:53  ·  104 words at 117 wpm
@@ -529,7 +431,7 @@ The guidance is explicit that this must be designed in before the intervention s
 
 ### S8 · The next ninety days
 
-#### 32 · Four conditions that separate a saving from an estimate
+#### 27 · Four conditions that separate a saving from an estimate
 
 **Sources:** [R30], [R31]
 **Time:** 1:02  ·  121 words at 117 wpm
@@ -547,7 +449,7 @@ Deadweight describes outcomes that would have occurred without any intervention.
 A benefit the market would have delivered anyway is not a benefit of your project.
 Anything that fails these tests is an estimate. The surveys suggest an estimate is what most organisations hold.
 
-#### 33 · What to do, and what to stop
+#### 28 · What to do, and what to stop
 
 **Sources:** [R00], [R30], [R32], [R04], [R09]
 **Time:** 1:04  ·  124 words at 117 wpm
@@ -565,3 +467,4 @@ Stop funding tools without the surrounding process work, because two-thirds of f
 Stop accepting self-reported productivity as evidence of financial return.
 Stop asking for enterprise-level return on investment, because that number cannot be produced honestly.
 Ask instead which workflow you can measure properly, and start there.
+

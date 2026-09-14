@@ -7,7 +7,7 @@ S5 (slides 18-23) and S6 (24-29) were the gate 2 representative sections and set
 the layout conventions the other sections follow.
 """
 
-SECTION_BOUNDS = [4, 7, 12, 17, 23, 29, 31, 33]
+SECTION_BOUNDS = [3, 5, 9, 14, 18, 24, 26, 28]
 
 SOURCE_LABELS = {
  'R00': ('Course teaching synthesis', None),
@@ -149,22 +149,16 @@ SLIDES = [
  ['R01']),
 
 (3, 'THE REPORT’S OWN FUNNEL', 'It counts organisations, not pilots.',
+ '<div class="lead-box">The 95 per cent counts organisations with no return, not pilots. '
+ 'The report then relabelled it a failure rate — its own funnel tells a milder story.</div>' +
  bars(('Evaluated a tool', 60, '60%', ''),
       ('Reached a pilot', 20, '20%', ''),
       ('Reached production', 5, '5%', '')),
- ['R01']),
-
-(4, 'READ THE DOCUMENT', 'The report relabelled its own finding.',
- steps(('Success', 'What users or executives remarked upon, not what was measured'),
-       ('Definitions', 'An appendix gives a stricter one, and the two do not agree'),
-       ('Sample', '52 organisations interviewed and 153 leaders surveyed at four conferences'),
-       ('Status', 'Preliminary findings. The original MIT link no longer serves the file'),
-       cls='short'),
  ['R01', 'R02']),
 
 # ---- S2 · What the evidence agrees on instead ---------------------------------
 
-(5, 'READING THE EVIDENCE', 'Different studies count different things.',
+(4, 'READING THE EVIDENCE', 'Different studies count different things.',
  '<div class="lead-box">All four ask whether AI produces measurable value. '
  'Each counts a different unit, so their headline figures are not directly comparable.</div>'
  '<table class="data-table"><thead><tr><th>Source</th><th>What it counts</th></tr></thead><tbody>'
@@ -175,37 +169,27 @@ SLIDES = [
  '</tbody></table>',
  ['R03', 'R05', 'R06', 'R07']),
 
-(6, 'THE COMMON ANSWER', 'Few organisations can show material impact.',
+(5, 'THE COMMON ANSWER', 'Few organisations can show material impact.',
  stats(('37%', 'of McKinsey respondents report any EBIT impact', ('Down from 39% in 2025', 'down')),
        ('6%', 'attribute 5 per cent or more of EBIT to AI', 'Flat, about 6% in 2025'),
-       ('20%', 'of Deloitte’s leaders already grow revenue from AI', ('Against 74% who hope to', 'down'))),
- ['R03', 'R05']),
-
-(7, 'THE EVIDENCE BASE', 'Every figure here is a self-report.',
- stats(('60%', 'of firms in one survey monitor no financial measure for AI', ('Only 40% track any', 'down')),
-       ('68%', 'of chief AI officers start projects they cannot assess', ('Though 72% fear falling behind', 'down')), cls='big') +
- callout('No study located for this session audits financial statements or deployment records.'),
- ['R33', 'R34']),
+       ('20%', 'of Deloitte’s leaders already grow revenue from AI', ('Against 74% who hope to', 'down'))) +
+ callout('Every figure here is a self-report. No study located audits financial statements or deployment records.'),
+ ['R03', 'R05', 'R33', 'R34']),
 
 # ---- S3 · The value was never stuck in the model ------------------------------
 
-(8, 'STANFORD DIGITAL ECONOMY LAB', 'Same technology, very different outcomes.',
+(6, 'STANFORD DIGITAL ECONOMY LAB', 'Same technology, very different outcomes.',
  quote('The difference was never the <mark class="not">AI model</mark>. It was always the <mark>organisation</mark>.',
        '<b>The Enterprise AI Playbook</b> · 51 enterprise deployments · April 2026'),
  ['R09']),
 
-(9, 'WHAT GOT IN THE WAY', 'Technology was the easiest part.',
- stats(('77%', 'of the hardest challenges were change, data and process, not technology'), cls='big') +
+(7, 'WHAT GOT IN THE WAY', 'The work around the model is what gets skipped.',
+ stats(('77%', 'of the hardest challenges were change, data and process, not technology'),
+       ('64%', 'of AI-using firms made no institutional adjustments at all', ('Bought the tool, nothing more', 'down')), cls='big') +
  callout('“All the hard work is in process documentation and data architecture.” <b>Executive, telecom company</b>'),
- ['R09']),
+ ['R09', 'R08']),
 
-(10, 'US CENSUS BUREAU · 117,000 FIRMS', 'Most firms changed nothing else.',
- stats(('64%', 'of AI-using firms made no institutional adjustments', ('Bought the tool, nothing more', 'down')),
-       ('15%', 'trained staff, and a similar share developed new workflows'), cls='big') +
- callout('Changes to data practices reached only 7 to 8 per cent of these firms.'),
- ['R08']),
-
-(11, 'ROOT CAUSES', 'The symptoms are not the causes.',
+(8, 'ROOT CAUSES', 'The symptoms are not the causes.',
  '<table class="data-table figures ranked"><thead><tr><th>Root cause of failure</th><th>Share of cases</th></tr></thead><tbody>'
  '<tr><td>The organisation was not ready to adopt</td><td>35%</td></tr>'
  '<tr><td>Critical knowledge was never captured</td><td>27%</td></tr>'
@@ -215,7 +199,7 @@ SLIDES = [
  callout('RAND: 84 per cent of practitioners named leadership’s framing of the problem as a root cause.'),
  ['R09', 'R10']),
 
-(12, 'CHECK YOUR UNDERSTANDING', 'Why did this pilot stall?',
+(9, 'CHECK YOUR UNDERSTANDING', 'Why did this pilot stall?',
  stem('A promising AI pilot has not reached production after a year. On the evidence, which cause is most likely?') +
  question([
    ('The model was not accurate enough',
@@ -229,31 +213,31 @@ SLIDES = [
 
 # ---- S4 · Which stage are you stuck at ----------------------------------------
 
-(13, 'A DIAGNOSIS FOR YOUR PORTFOLIO', 'Four stages, four different failures.',
+(10, 'A DIAGNOSIS FOR YOUR PORTFOLIO', 'Four stages, four different failures.',
  steps(('Never started', 'The use was never thought relevant'),
        ('Piloted, never shipped', 'The pilot stopped before production'),
        ('Shipped, not adopted', 'Delivered, but people do not use it'),
        ('Adopted, no benefit shown', 'In use, with no financial effect demonstrated')),
  ['R00']),
 
-(14, 'STAGE ONE', 'Most firms that never started think AI does not apply.',
+(11, 'STAGE ONE', 'Most firms that never started think AI does not apply.',
  stats(('65%', 'of non-adopting firms say AI is not applicable to their business'), cls='big') +
  callout('Laws and regulations ranked among the least common barriers to adoption.'),
  ['R08']),
 
-(15, 'STAGE TWO', 'Nearly half of projects stop before adoption.',
+(12, 'STAGE TWO', 'Nearly half of projects stop before adoption.',
  stats(('46%', 'of projects abandoned between proof of concept and adoption, on average'),
        ('42%', 'of companies abandoned most initiatives, up from 17 per cent a year earlier'), cls='big') +
  callout('The direction is consistent across sources. The precision is not.'),
  ['R06']),
 
-(16, 'STAGE THREE', 'Use is highest where employers encourage it.',
+(13, 'STAGE THREE', 'Use is highest where employers encourage it.',
  bars(('No employer encouragement', 40, '40%', ''),
       ('Encouragement, tools and training', 93, '93%', '')) +
  callout('Tools and training without encouragement were linked to smaller reported gains.'),
  ['R12']),
 
-(17, 'STAGE FOUR', 'Which stage is this organisation in?',
+(14, 'STAGE FOUR', 'Which stage is this organisation in?',
  stem('Staff use an AI assistant every day and report saving time. Finance cannot show any change in cost or revenue.') +
  question([
    ('Stage two: piloted, never shipped',
@@ -267,38 +251,26 @@ SLIDES = [
 
 # ---- S5 · Why a working model does not move the accounts --------------------
 
-(18, 'RANDOMISED TRIAL', 'AI saved each worker two hours of email a week.',
+(15, 'RANDOMISED TRIAL', 'Two hours saved, and nothing downstream moved.',
  stats(('2 hrs', 'less time on email each week, per worker using the tool'),
        ('7,137', 'knowledge workers in 66 firms, over six months'), cls='big') +
- '<p class="callout mt-l">A measured benefit for each worker. The open question is what happened next.</p>',
- ['R11']),
+ callout('Treated and control workers answered the same threads, attended the same meetings and finished the same documents. A second national dataset finds the same null on pay and hours.'),
+ ['R11', 'R12']),
 
-(19, 'WHAT DID NOT CHANGE', 'The saved time moved no measured output.',
- steps(('Email threads answered', 'The same in treated and control groups'),
-       ('Meetings attended', 'The same in treated and control groups'),
-       ('Documents completed', 'The same in treated and control groups')),
- ['R11']),
-
-(20, 'NATIONAL RECORDS', 'Pay and hours show no effect above two per cent.',
- stats(('2%', 'the largest effect on earnings or hours the data allow'),
-       ('25,000', 'workers per survey round, linked to national records'), cls='big') +
- '<p class="callout mt-l">A precise null. Any effect was too small to distinguish from zero.</p>',
- ['R12']),
-
-(21, 'WHERE THE TIME WENT', 'Most of the new work was supervising the tool.',
+(16, 'WHERE THE TIME WENT', 'Most of the new work was supervising the tool.',
  stats(('59%', 'of new AI tasks are oversight and integration'),
        ('41%', 'of new AI tasks involve using the tool productively'), cls='big') +
  '<p class="callout mt-l">About a quarter of users now spend longer on the very tasks they first saved time on.</p>',
  ['R12']),
 
-(22, 'FROM TASK TO ACCOUNTS', 'A faster task breaks down four times before the accounts.',
+(17, 'FROM TASK TO ACCOUNTS', 'A faster task breaks down four times before the accounts.',
  steps(('Laboratory to field', 'Field gains were substantially smaller than laboratory gains'),
        ('Task to job', 'Time saved on one task is not output gained across a job'),
        ('Worker to firm', 'No study located measures both worker gains and firm profit'),
        ('Firm to economy', 'Official statistics do not measure AI separately')),
  ['R13', 'R20', 'R00']),
 
-(23, 'CHECK YOUR UNDERSTANDING', 'Has a rollout that saves two hours a week paid for itself?',
+(18, 'CHECK YOUR UNDERSTANDING', 'Has a rollout that saves two hours a week paid for itself?',
  '<p class="lede quiz-stem">A colleague says an AI rollout has paid for itself, because staff '
  'now save two hours a week. Which statement does the evidence support?</p>' +
  question([
@@ -313,7 +285,7 @@ SLIDES = [
 
 # ---- S6 · One company, read two ways ----------------------------------------
 
-(24, 'KLARNA · FEBRUARY 2024', 'The 700-agent figure came from Klarna itself.',
+(19, 'KLARNA · FEBRUARY 2024', 'The 700-agent figure came from Klarna itself.',
  stats(('700', 'full-time agents’ worth of work, in Klarna’s own release')) +
  '<div class="grid g2 mt-l">'
  '<article class="named-box"><h4>An equivalence estimate</h4><p>Not a count of people made redundant.</p></article>'
@@ -321,7 +293,7 @@ SLIDES = [
  '</div>',
  ['R39']),
 
-(25, 'MAY 2025', 'The interview blamed cost. The headlines blamed AI.',
+(20, 'MAY 2025', 'The interview blamed cost. The headlines blamed AI.',
  '<table class="data-table compare"><thead><tr><th>What he said</th><th>What was reported</th></tr></thead><tbody>'
  '<tr><td>Cost was weighted too heavily, and quality fell</td><td>AI had failed</td></tr>'
  '<tr><td>A pilot of two new agents</td><td>A hiring spree</td></tr>'
@@ -330,7 +302,7 @@ SLIDES = [
  '<p class="callout mt-l">He calls the original article balanced. His objection is to the headline and what was built on it.</p>',
  ['R39']),
 
-(26, 'SECURITIES FILINGS', 'In its filings, headcount fell every year.',
+(21, 'SECURITIES FILINGS', 'In its filings, headcount fell every year.',
  '<div class="grid g2 filing-grid">'
  '<table class="data-table figures"><thead><tr><th>Year end</th><th>Full-time employees</th></tr></thead><tbody>'
  '<tr><td>2022</td><td>5,527</td></tr><tr><td>2023</td><td>4,352</td></tr>'
@@ -340,14 +312,14 @@ SLIDES = [
  '</div>',
  ['R22', 'R39']),
 
-(27, 'ONE ANNUAL FILING', 'A claimed saving and a smaller bill are different things.',
+(22, 'ONE ANNUAL FILING', 'A claimed saving and a smaller bill are different things.',
  stats(('US$59m', 'cost savings the filing attributes to the assistant'),
        ('+US$4m', 'rise in customer service and operations expenses')) +
  '<p class="callout mt-l">Volumes grew 32 per cent in the same year. The saving is measured '
  'against a counterfactual; the expense line records what was spent.</p>',
  ['R22']),
 
-(28, 'TWO DISCLOSED RATES', 'A rate is only as honest as its denominator.',
+(23, 'TWO DISCLOSED RATES', 'A rate is only as honest as its denominator.',
  '<div class="grid g2">'
  '<article class="named-box"><h4>Presto Automation</h4><p class="box-fig">85%</p><p>‘Non-intervention’ excluded the offsite agents '
  'who entered the orders. The US regulator opened an investigation.</p></article>'
@@ -357,7 +329,7 @@ SLIDES = [
  '<p class="callout mt-l">For any rate, ask what the denominator is and who it leaves out.</p>',
  ['R24', 'R25']),
 
-(29, 'CHECK YOUR UNDERSTANDING', 'What should a board rely on in the Klarna case?',
+(24, 'CHECK YOUR UNDERSTANDING', 'What should a board rely on in the Klarna case?',
  '<p class="lede quiz-stem">A board paper cites Klarna as proof that an AI assistant cuts customer '
  'service costs. Which evidence should the board rely on?</p>' +
  question([
@@ -372,21 +344,21 @@ SLIDES = [
 
 # ---- S7 · Can value be attributed at all --------------------------------------
 
-(30, 'THE SAME DATA, THREE METHODS', 'Observational methods were off by a factor of three.',
+(25, 'THE SAME DATA, THREE METHODS', 'Observational methods were off by a factor of three.',
  bars(('Naive before-and-after', 416, '416%', 'down'),
       ('Matched comparison', 102, '102%', ''),
       ('Randomised experiment', 77, '77%', '')) +
  callout('Only the randomised experiment is trustworthy. The World Bank calls a before-and-after comparison a counterfeit estimate.'),
  ['R28', 'R27']),
 
-(31, 'THE LIMIT OF MEASUREMENT', 'Attribution works at the workflow, not the accounts.',
+(26, 'THE LIMIT OF MEASUREMENT', 'Attribution works at the workflow, not the accounts.',
  stats(('62×', 'larger campaign needed, at the median, to detect a 10 per cent difference in return'), cls='big') +
  callout('Record a baseline on one process before anyone touches the tool. It cannot be reconstructed afterwards.'),
  ['R29', 'R32']),
 
 # ---- S8 · The next ninety days ------------------------------------------------
 
-(32, 'UK TREASURY GUIDANCE', 'Four conditions separate a saving from an estimate.',
+(27, 'UK TREASURY GUIDANCE', 'Four conditions separate a saving from an estimate.',
  steps(('Already happened', 'The cash relates to an activity that has taken place'),
        ('Not moved or deferred', 'Costs are not merely relocated or deferred'),
        ('Net of double counting', 'No benefit is claimed twice'),
@@ -394,7 +366,7 @@ SLIDES = [
  callout('<b>Deadweight</b> Outcomes that would have occurred without any intervention are not a benefit.'),
  ['R30', 'R31']),
 
-(33, 'TAKEAWAYS', 'What to do, and what to stop.',
+(28, 'TAKEAWAYS', 'What to do, and what to stop.',
  '<div class="takeaways">'
  '<section class="tk-recall">'
  '<div class="tk-block"><p class="tk-label">Where value stalls</p><ol class="tk-mini">'
