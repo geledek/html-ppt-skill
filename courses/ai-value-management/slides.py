@@ -150,7 +150,7 @@ SLIDES = [
 
 (3, 'THE REPORT’S OWN FUNNEL', 'It counts organisations, not pilots.',
  '<div class="lead-box">The 95 per cent counts organisations with no return, not pilots. '
- 'The report then relabelled it a failure rate — its own funnel tells a milder story.</div>' +
+ 'The report then relabelled it a failure rate, though its own funnel is milder.</div>' +
  bars(('Evaluated a tool', 60, '60%', ''),
       ('Reached a pilot', 20, '20%', ''),
       ('Reached production', 5, '5%', '')),
