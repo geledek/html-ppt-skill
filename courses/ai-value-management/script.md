@@ -170,7 +170,7 @@ So treat the stages as a diagnostic frame. Do not read the gaps between them as 
 #### 11 · Stage one: it was never thought relevant
 
 **Sources:** [R08], [R07]
-**Time:** 0:47  ·  92 words at 117 wpm
+**Time:** 0:46  ·  90 words at 117 wpm
 
 **Narration:**
 Start with the firms that never began, because the reason is not the one usually assumed.
@@ -179,7 +179,7 @@ Lack of knowledge came second at twenty-two per cent, then privacy and security 
 Laws and regulations ranked among the least common barriers.
 
 On nationally representative evidence, regulation is not what is holding adoption back.
-Your governance obligations still bind, and the companion session covers them.
+Your governance obligations still bind, and are covered separately.
 They are not the explanation for absent value.
 
 #### 12 · Stage two: the pilot that never shipped
