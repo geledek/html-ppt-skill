@@ -163,8 +163,8 @@ SLIDES = [
  ['R03', 'R05']),
 
 (7, 'THE EVIDENCE BASE', 'Every figure here is a self-report.',
- stats(('60%', 'of firms in one survey monitor no financial measure for AI'),
-       ('68%', 'of chief AI officers start projects they cannot assess'), cls='big') +
+ stats(('60%', 'of firms in one survey monitor no financial measure for AI', ('Only 40% track any', 'down')),
+       ('68%', 'of chief AI officers start projects they cannot assess', ('Though 72% fear falling behind', 'down')), cls='big') +
  callout('No study located for this session audits financial statements or deployment records.'),
  ['R33', 'R34']),
 
