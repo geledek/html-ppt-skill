@@ -330,11 +330,11 @@ SLIDES = [
  '</div>',
  ['R39']),
 
-(20, 'MAY 2025', 'The interview blamed cost. The headlines blamed AI.',
- '<table class="data-table compare"><thead><tr><th>What he said</th><th>What was reported</th></tr></thead><tbody>'
- '<tr><td>Cost was weighted too heavily, and quality fell</td><td>AI had failed</td></tr>'
- '<tr><td>A pilot of two new agents</td><td>A hiring spree</td></tr>'
- '<tr><td>Headcount to keep falling, to about 2,500</td><td>A reversal on AI</td></tr>'
+(20, 'MAY 2025', 'The headlines blamed AI. The interview blamed cost.',
+ '<table class="data-table compare"><thead><tr><th>What was reported</th><th>What he actually said</th></tr></thead><tbody>'
+ '<tr><td>AI had failed</td><td>Cost was weighted too heavily, and quality fell</td></tr>'
+ '<tr><td>A hiring spree</td><td>A pilot of two new agents</td></tr>'
+ '<tr><td>A reversal on AI</td><td>Headcount to keep falling, to about 2,500</td></tr>'
  '</tbody></table>'
  '<p class="callout mt-l">He calls the original article balanced. His objection is to the headline and what was built on it.</p>',
  ['R39']),
