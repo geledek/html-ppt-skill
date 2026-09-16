@@ -43,17 +43,15 @@ Hold that distinction, because it changes the size of the problem considerably.
 
 #### 03 · It counts organisations, not pilots.
 
-**Sources:** [R01], [R02]
-**Time:** 0:58  ·  113 words at 117 wpm
+**Sources:** [R01]
+**Time:** 0:43  ·  84 words at 117 wpm
 
 **Narration:**
-The report measured something narrower than the headline.
-Ninety-five per cent of organisations were getting zero return, not ninety-five per cent of pilots.
-Its own funnel proves the point: sixty per cent evaluated a tool, twenty per cent piloted, five per cent reached production.
-On those numbers the pilot failure rate is seventy-five per cent, twenty points milder than the figure in circulation.
-
-The document then relabelled its own result a ninety-five per cent failure rate, one paragraph later.
-Three things belong on the record. It defines success as something remarked upon, not measured. Its sample was fifty-two organisations and a hundred and fifty-three leaders at four conferences. It calls itself preliminary findings.
+So the number is real, but it does not count what people think.
+It counts organisations that got zero return, not pilots that failed.
+The report's own funnel shows the path: sixty per cent of organisations evaluated a tool, twenty per cent ran a pilot, five per cent reached production.
+That five per cent is the reading. The ninety-five per cent is every organisation that never reached a return.
+Before repeating a headline like this, the discipline is simple: ask what it actually counts.
 
 ### S2 · What the evidence agrees on instead
 

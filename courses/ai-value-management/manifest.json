@@ -1,7 +1,7 @@
 {
   "course_source_sha256": "3651e5aee23fabf90d83da43b19abf7d9777a8e027947b76fb7ce9a6d76b60de",
   "output": "index.html",
-  "output_sha256": "7cc701dd1344e97677087f4a25611c47d24a49ebe1ddd9f07193e694c3b29abb",
+  "output_sha256": "bcf6169edb67e5d49a2d3d8cee8b5a3e786808557b9104f73c26a6f47be33d4b",
   "slides": [
     1,
     2,
@@ -33,5 +33,5 @@
     28
   ],
   "slide_count": 29,
-  "references": 26
+  "references": 25
 }

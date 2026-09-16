@@ -148,13 +148,13 @@ SLIDES = [
  ]),
  ['R01']),
 
-(3, 'THE REPORT’S OWN FUNNEL', 'It counts organisations, not pilots.',
- '<div class="lead-box">The 95 per cent counts organisations with no return, not pilots. '
- 'The report then relabelled it a failure rate, though its own funnel is milder.</div>' +
+(3, 'WHAT THE 95% COUNTS', 'It counts organisations, not pilots.',
+ '<div class="lead-box">The 95 per cent is real. It counts organisations that got '
+ 'no return, not pilots that failed.</div>' +
  bars(('Evaluated a tool', 60, '60%', ''),
       ('Reached a pilot', 20, '20%', ''),
       ('Reached production', 5, '5%', '')),
- ['R01', 'R02']),
+ ['R01']),
 
 # ---- S2 · What the evidence agrees on instead ---------------------------------
 
