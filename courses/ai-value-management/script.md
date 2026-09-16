@@ -58,18 +58,18 @@ Before repeating a headline like this, the discipline is simple: ask what it act
 #### 04 · Four studies, four different questions
 
 **Sources:** [R01], [R03], [R05], [R06], [R07]
-**Time:** 0:57  ·  111 words at 117 wpm
+**Time:** 0:44  ·  86 words at 117 wpm
 
 **Narration:**
-If that number is unreliable, the sensible response is to look at what else has been measured.
-Four other sources ask adjacent questions, and each counts something different.
-McKinsey surveyed one thousand seven hundred and nineteen respondents and asked about EBIT.
-Deloitte surveyed three thousand two hundred and thirty-five leaders and asked which benefits they achieve today.
-S&P Global asked one thousand and six firms what share of projects they abandoned.
-The United States Census Bureau samples about 1.2 million businesses and asks whether AI is used.
+If that figure is unreliable, the sensible response is to see what else has been measured.
+Four other sources each ask a different question about value.
+McKinsey asks whether AI has moved EBIT.
+Deloitte asks which benefits organisations achieve today.
+S&P Global asks what share of projects were abandoned.
+The US Census asks simply whether AI is used at all.
 
-Note the units. Organisations, respondents, projects and businesses are not interchangeable.
-Most apparent disagreement between these figures is unit substitution rather than measurement error.
+Notice the units: organisations, respondents, projects, businesses.
+They are not interchangeable, so most apparent disagreement between these figures is a difference of unit, not of measurement.
 
 #### 05 · Where they converge
 
