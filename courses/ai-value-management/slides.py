@@ -356,7 +356,7 @@ SLIDES = [
  'would have cost without AI — not money saved on the actual bill.</p>',
  ['R22']),
 
-(23, 'KLARNA CASE STUDY · TWO DISCLOSED RATES', 'A rate is only as honest as its denominator.',
+(23, 'TWO DISCLOSED RATES', 'A rate is only as honest as its denominator.',
  '<div class="grid g2">'
  '<article class="named-box"><h4>Presto Automation</h4><p class="box-fig">85%</p><p>‘Non-intervention’ excluded the offsite agents '
  'who entered the orders. The US regulator opened an investigation.</p></article>'
