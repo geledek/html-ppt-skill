@@ -239,7 +239,7 @@ SLIDES = [
  callout('Tools and training without encouragement were linked to smaller reported gains.'),
  ['R12']),
 
-(14, 'STAGE FOUR', 'Which stage is this organisation in?',
+(14, 'CHECK YOUR UNDERSTANDING', 'Which stage is this organisation in?',
  stem('Staff use an AI assistant every day and report saving time. Finance cannot show any change in cost or revenue.') +
  question([
    ('Stage two: piloted, never shipped',
