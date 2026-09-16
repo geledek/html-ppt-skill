@@ -342,15 +342,13 @@ AI handles more of the work each year, and a human tier is being built on top of
 #### 22 · A claimed saving and a smaller bill are different things
 
 **Sources:** [R22], [R39], [R00]
-**Time:** 0:57  ·  111 words at 117 wpm
+**Time:** 0:55  ·  107 words at 117 wpm
 
 **Narration:**
 The filings settle the headcount question. The same filing also shows why a claimed saving needs checking.
-The same annual filing claims about fifty-nine million United States dollars of cost savings from the assistant.
-In the same document, the customer service and operations expense line rose by four million United States dollars, or two per cent.
-Both statements appear in one filing, and both are true.
-The saving is measured against a counterfactual. The expense line records what was spent.
-The filing explains the gap as operating leverage, because volumes grew thirty-two per cent.
+The same annual filing claims about fifty-nine million dollars of AI cost savings. Yet in that same filing, the customer service bill actually rose by four million dollars.
+Both are true. The bill went up because the company handled thirty-two per cent more chats.
+The fifty-nine million is what those extra chats would have cost without AI. It is a saving against a bigger bill that never arrived, not cash in the bank.
 A claimed saving and a smaller bill are different things. Ask which one you are being shown.
 
 #### 23 · A rate is only as honest as its denominator

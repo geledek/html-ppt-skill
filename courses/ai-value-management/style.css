@@ -46,6 +46,9 @@
 }
 .tpl-course .stat-row.big .stat-fig { font-size: 250px }
 .tpl-course .stat-row.big { margin-top: 40px }
+/* a smaller figure for text-string stats (e.g. "US$59m") that read too large at
+   the 200px default */
+.tpl-course .stat-row.small .stat-fig { font-size: 150px }
 
 /* four equal-weight figures in a 2x2 grid, so a fourth stat fills the frame
    rather than overflowing a single row. Figure shrunk from 200px and the top

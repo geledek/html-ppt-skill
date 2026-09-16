@@ -351,9 +351,9 @@ SLIDES = [
 
 (22, 'KLARNA CASE STUDY · ONE ANNUAL FILING', 'A claimed saving and a smaller bill are different things.',
  stats(('US$59m', 'cost savings the filing attributes to the assistant'),
-       ('+US$4m', 'rise in customer service and operations expenses')) +
- '<p class="callout mt-l">Volumes grew 32 per cent in the same year. The saving is measured '
- 'against a counterfactual; the expense line records what was spent.</p>',
+       ('+US$4m', 'rise in customer service and operations expenses'), cls='small') +
+ '<p class="callout mt-l">Chats grew 32 per cent that year. The US$59m is what the extra chats '
+ 'would have cost without AI — not money saved on the actual bill.</p>',
  ['R22']),
 
 (23, 'KLARNA CASE STUDY · TWO DISCLOSED RATES', 'A rate is only as honest as its denominator.',
