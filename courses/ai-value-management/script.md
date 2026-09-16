@@ -177,7 +177,7 @@ They are not the explanation for absent value.
 #### 12 · Stage two: the pilot that never shipped
 
 **Sources:** [R06], [R01]
-**Time:** 0:52  ·  101 words at 117 wpm
+**Time:** 0:50  ·  97 words at 117 wpm
 
 **Narration:**
 The second stage is the one most executives picture when they hear that AI is failing.
@@ -187,7 +187,7 @@ NANDA's funnel showed a comparable drop from pilot to production.
 
 Two cautions. S&P has not published its field dates or question wording.
 And a rising abandonment rate partly reflects a larger stock of projects available to abandon.
-The direction is consistent across sources. The precision is not.
+The direction is consistent across sources.
 
 #### 13 · Stage three: shipped, and quietly ignored
 

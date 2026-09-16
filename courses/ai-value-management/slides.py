@@ -229,7 +229,7 @@ SLIDES = [
 (12, 'STAGE TWO', 'Nearly half of projects stop before adoption.',
  stats(('46%', 'of projects abandoned between proof of concept and adoption, on average'),
        ('42%', 'of companies abandoned most initiatives, up from 17 per cent a year earlier'), cls='big') +
- callout('The direction is consistent across sources. The precision is not.'),
+ callout('The direction is consistent across sources.'),
  ['R06']),
 
 (13, 'STAGE THREE', 'Use is highest where employers encourage it.',
