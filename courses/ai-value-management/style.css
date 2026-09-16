@@ -72,6 +72,39 @@
 .tpl-course .stage-cap + .q-list { margin-top: 18px }
 .tpl-course .q-list + .stage-cap { margin-top: 18px }
 
+/* a two-slice donut for one study's split. The emphasised slice is the blue,
+   the remainder a muted grey, so the eye reads "most of it" at a glance; the
+   emphasised figure sits in the hole. --share (0-100) drives the conic sweep. */
+.tpl-course .donut-row { display: flex; align-items: center; gap: 90px; margin-top: 50px }
+.tpl-course .donut {
+  --size: 340px; --hole: 58%;
+  width: var(--size); height: var(--size); flex: none; position: relative;
+}
+.tpl-course .donut-ring {
+  position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(var(--emphasis) 0 calc(var(--share) * 1%),
+                             var(--border) calc(var(--share) * 1%) 100%);
+  -webkit-mask: radial-gradient(circle, transparent var(--hole), #000 calc(var(--hole) + 0.5%));
+          mask: radial-gradient(circle, transparent var(--hole), #000 calc(var(--hole) + 0.5%));
+}
+.tpl-course .donut-fig {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  font-family: var(--font-display); font-size: 96px; line-height: 1; color: var(--emphasis);
+}
+.tpl-course .donut-legend { list-style: none; margin: 0; padding: 0 }
+.tpl-course .donut-legend li {
+  position: relative; padding-left: 46px; font-size: 38px; line-height: 1.3;
+  color: var(--text-2); margin: 0 0 30px;
+}
+.tpl-course .donut-legend li:last-child { margin-bottom: 0 }
+.tpl-course .donut-legend li b { color: var(--text-1); font-weight: 700 }
+.tpl-course .donut-legend li::before {
+  content: ""; position: absolute; left: 0; top: 12px;
+  width: 26px; height: 26px; border-radius: 6px;
+}
+.tpl-course .donut-legend li.is-share::before { background: var(--emphasis) }
+.tpl-course .donut-legend li.is-rest::before { background: var(--border) }
+
 /* the .data-table base, its type scale and the .compare/.figures/.ranked
    modifiers are all in the template; this course keeps only the tighter row
    padding on ranked tables. */

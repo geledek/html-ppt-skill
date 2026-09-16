@@ -115,6 +115,21 @@ def quote(text, attribution):
             f'<p class="quote-attr">{attribution}</p></div>')
 
 
+def donut(share, big_label, rest_label, pct=None):
+    """A two-slice donut for one study's split. `share` is the emphasised slice
+    (0-100, drawn in the emphasis colour); the rest is the muted remainder. The
+    emphasised percentage sits in the hole. A legend names both slices."""
+    pct = share if pct is None else pct
+    return (
+        '<div class="donut-row">'
+        f'<div class="donut" style="--share:{share}"><span class="donut-ring"></span>'
+        f'<span class="donut-fig">{pct}%</span></div>'
+        '<ul class="donut-legend">'
+        f'<li class="is-share"><b>{share}%</b> {big_label}</li>'
+        f'<li class="is-rest"><b>{100 - share}%</b> {rest_label}</li>'
+        '</ul></div>')
+
+
 def callout(text, cls=''):
     classes = f'callout mt-l {cls}'.strip()
     return f'<p class="{classes}">{text}</p>'
@@ -264,8 +279,7 @@ SLIDES = [
  ['R11', 'R12']),
 
 (16, 'WHERE THE TIME WENT', 'Most of the new work was supervising the tool.',
- stats(('59%', 'of new AI tasks are oversight and integration'),
-       ('41%', 'of new AI tasks involve using the tool productively'), cls='big') +
+ donut(59, 'oversight and integration', 'using the tool productively') +
  '<p class="callout mt-l">About a quarter of users now spend longer on the very tasks they first saved time on.</p>',
  ['R12']),
 
