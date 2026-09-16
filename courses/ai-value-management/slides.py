@@ -131,17 +131,21 @@ def donut(share, big_label, rest_label, pct=None):
 
 
 def chain(nodes, links):
-    """A downward funnel: stacked bars, each narrower than the last, so value
-    visibly drains from a task saving at the top to the accounts at the bottom.
-    `nodes` is the ordered list of stage names (N of them); `links` is the N-1
-    leak captions shown between the bars. The narrowing is the message."""
+    """A downward funnel confined to the left half: stacked bars, each narrower
+    than the last, so value visibly drains from a task saving at the top to the
+    accounts at the bottom. Between the bars, an arrow reaches right to a leak
+    caption naming what is lost at that hand-off. Rows are .stagger children, so
+    they build top to bottom on the learner's input. `nodes` is the ordered stage
+    names (N); `links` is the N-1 leak captions."""
     n = len(nodes)
-    parts = ['<div class="funnel">']
+    parts = ['<div class="funnel stagger">']
     for i, name in enumerate(nodes):
-        width = 100 - i * (62 / (n - 1))          # 100% at top down to ~38%
-        parts.append(f'<div class="funnel-bar" style="--w:{width:.1f}%">{name}</div>')
+        width = 100 - i * (58 / (n - 1))          # 100% at top down to ~42% of the left column
+        parts.append(f'<div class="funnel-row"><div class="funnel-bar" style="--w:{width:.1f}%">{name}</div></div>')
         if i < n - 1:
-            parts.append(f'<div class="funnel-leak">{links[i]}</div>')
+            parts.append('<div class="funnel-row is-leak">'
+                         '<span class="funnel-arrow" aria-hidden="true"></span>'
+                         f'<span class="funnel-leak">{links[i]}</span></div>')
     parts.append('</div>')
     return ''.join(parts)
 

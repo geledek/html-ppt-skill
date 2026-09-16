@@ -105,21 +105,36 @@
 .tpl-course .donut-legend li.is-share::before { background: var(--emphasis) }
 .tpl-course .donut-legend li.is-rest::before { background: var(--border) }
 
-/* a downward funnel: stacked bars, each narrower than the last, so the gain
-   visibly drains from a task saving at the top to the accounts at the bottom.
-   The narrowing carries the message; the leak captions name what is lost at
-   each hand-off. This is a genuine sequence, so a funnel is honest here. */
-.tpl-course .funnel { display: flex; flex-direction: column; align-items: center; margin-top: 40px }
+/* a downward funnel confined to the left half: stacked bars, each narrower than
+   the last, so the gain visibly drains from a task saving at the top to the
+   accounts at the bottom. Between the bars an arrow reaches into the right half
+   to a leak caption. Rows build top to bottom on the learner's input (.stagger).
+   Honest here because this is a real sequence (unlike slide 10's stages). */
+.tpl-course .funnel { display: flex; flex-direction: column; margin-top: 30px }
+.tpl-course .funnel-row {
+  display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+  column-gap: 40px;
+}
 .tpl-course .funnel-bar {
-  width: var(--w); box-sizing: border-box;
+  grid-column: 1; justify-self: start; width: var(--w); box-sizing: border-box;
   display: grid; place-items: center; text-align: center;
-  padding: 18px 24px; border-radius: 10px;
+  padding: 16px 22px; border-radius: 10px;
   background: var(--emphasis); color: var(--surface);
-  font-weight: 700; font-size: 34px; line-height: 1.1;
+  font-weight: 700; font-size: 32px; line-height: 1.1;
+}
+.tpl-course .funnel-row.is-leak { padding: 7px 0 }
+/* the arrow sits at the right edge of the left column and points into the label */
+.tpl-course .funnel-arrow {
+  grid-column: 1; justify-self: end; position: relative;
+  width: 64px; height: 2px; background: var(--emphasis);
+}
+.tpl-course .funnel-arrow::after {
+  content: ""; position: absolute; right: -1px; top: 50%; transform: translateY(-50%);
+  border: 6px solid transparent; border-left-color: var(--emphasis);
 }
 .tpl-course .funnel-leak {
-  font-size: 24px; line-height: 1.25; color: var(--text-2);
-  padding: 9px 0; text-align: center;
+  grid-column: 2; justify-self: start;
+  font-size: 26px; line-height: 1.25; color: var(--text-2);
 }
 
 /* the .data-table base, its type scale and the .compare/.figures/.ranked
