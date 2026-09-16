@@ -253,10 +253,14 @@ SLIDES = [
 
 # ---- S5 · Why a working model does not move the accounts --------------------
 
-(15, 'RANDOMISED TRIAL', 'Two hours saved, and nothing downstream moved.',
- stats(('2 hrs', 'less time on email each week, per worker using the tool'),
-       ('7,137', 'knowledge workers in 66 firms, over six months'), cls='big') +
- callout('Treated and control workers answered the same threads, attended the same meetings and finished the same documents. A second national dataset finds the same null on pay and hours.'),
+(15, 'TWO STUDIES, ONE ANSWER', 'Two hours saved, and nothing downstream moved.',
+ '<div class="grid g2 mt-l">'
+ '<article class="named-box"><h4>Randomised trial</h4><p class="box-fig">2 hrs</p>'
+ '<p>Saved on email each week by workers using an AI assistant. 7,137 knowledge workers across 66 firms, six months.</p></article>'
+ '<article class="named-box"><h4>National records</h4><p class="box-fig">&lt;2%</p>'
+ '<p>The largest effect on pay or hours the data could rule in. About 25,000 Danish workers.</p></article>'
+ '</div>' +
+ callout('The time saving is real. No measurable effect reached pay, hours or output.'),
  ['R11', 'R12']),
 
 (16, 'WHERE THE TIME WENT', 'Most of the new work was supervising the tool.',
