@@ -118,14 +118,9 @@
 .tpl-course .funnel-bar {
   grid-column: 1; justify-self: start; width: var(--w); box-sizing: border-box;
   display: grid; place-items: center; text-align: center;
-  padding: 16px 22px; border-radius: 10px;
+  padding: 20px 22px; border-radius: 10px; margin-bottom: 22px;
   background: var(--emphasis); color: var(--surface);
-  font-weight: 700; font-size: 32px; line-height: 1.1;
-}
-.tpl-course .funnel-row.is-leak { padding: 2px 0 }
-.tpl-course .funnel-leak {
-  grid-column: 2; justify-self: start; align-self: center;
-  font-size: 26px; line-height: 1.25; color: var(--text-2);
+  font-weight: 700; font-size: 34px; line-height: 1.1;
 }
 
 /* the .data-table base, its type scale and the .compare/.figures/.ranked

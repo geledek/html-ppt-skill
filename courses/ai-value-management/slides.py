@@ -130,21 +130,17 @@ def donut(share, big_label, rest_label, pct=None):
         '</ul></div>')
 
 
-def chain(nodes, links):
+def funnel(nodes):
     """A downward funnel confined to the left half: stacked bars, each narrower
     than the last, so value visibly drains from a task saving at the top to the
-    accounts at the bottom. Between the bars, the leak caption on the right names
-    what is lost at that hand-off. Rows are .stagger children, so they build top
-    to bottom on the learner's input. `nodes` is the ordered stage names (N);
-    `links` is the N-1 leak captions."""
+    accounts at the bottom. The narrowing carries the message; the narrator names
+    what is lost at each hand-off. Bars are .stagger children, so they build top
+    to bottom on the learner's input."""
     n = len(nodes)
     widths = [100 - i * (58 / (n - 1)) for i in range(n)]   # left-column % per bar
     parts = ['<div class="funnel stagger">']
     for i, name in enumerate(nodes):
         parts.append(f'<div class="funnel-row"><div class="funnel-bar" style="--w:{widths[i]:.1f}%">{name}</div></div>')
-        if i < n - 1:
-            parts.append('<div class="funnel-row is-leak">'
-                         f'<span class="funnel-leak">{links[i]}</span></div>')
     parts.append('</div>')
     return ''.join(parts)
     parts.append('</div>')
@@ -306,11 +302,7 @@ SLIDES = [
  ['R12']),
 
 (17, 'FROM TASK TO ACCOUNTS', 'A time saving is not a financial gain.',
- chain(['Task saving', 'Field', 'Job', 'Firm', 'Economy'],
-       ['Smaller in the field than the lab',
-        'One task is not a whole job',
-        'No study links worker gains to firm profit',
-        'Not measured separately in the accounts']),
+ funnel(['Time saved on a task', 'In the field', 'Across the job', 'At the firm', 'In the accounts']),
  ['R13', 'R20', 'R00']),
 
 (18, 'CHECK YOUR UNDERSTANDING', 'Has a rollout that saves two hours a week paid for itself?',
