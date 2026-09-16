@@ -32,8 +32,28 @@
 .tpl-course .named-box p { font-size: 34px; line-height: 1.38 }
 
 .tpl-course .callout { font-size: 36px; line-height: 1.38; padding: 30px 38px }
+/* a caveat callout reads in the deck's negative colour, like the quiz "wrong"
+   state and the "down" trends, so the eye tags it as a guard rather than a claim. */
+.tpl-course .callout.caveat {
+  border-left-color: var(--bad);
+  color: var(--bad);
+  background: color-mix(in srgb, var(--bad) 7%, var(--surface));
+}
 .tpl-course .stat-row.big .stat-fig { font-size: 250px }
 .tpl-course .stat-row.big { margin-top: 40px }
+
+/* four equal-weight figures in a 2x2 grid, so a fourth stat fills the frame
+   rather than overflowing a single row. Figure shrunk from 200px and the top
+   margin tightened so two rows plus a callout clear the 1080 stage. */
+.tpl-course .stat-row.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 130px;
+  margin-top: 24px;
+}
+.tpl-course .stat-row.grid2 .stat-fig { font-size: 118px }
+.tpl-course .stat-row.grid2 .stat-unit { font-size: 34px; margin-top: 6px }
+.tpl-course .stat-row.grid2 .stat-trend { margin-top: 8px }
 .tpl-course .grid.g2 .named-box h4 { font-size: 44px }
 .tpl-course .grid.g2 .named-box p { font-size: 37px }
 

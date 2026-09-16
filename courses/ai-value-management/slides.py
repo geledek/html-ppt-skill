@@ -115,8 +115,9 @@ def quote(text, attribution):
             f'<p class="quote-attr">{attribution}</p></div>')
 
 
-def callout(text):
-    return f'<p class="callout mt-l">{text}</p>'
+def callout(text, cls=''):
+    classes = f'callout mt-l {cls}'.strip()
+    return f'<p class="{classes}">{text}</p>'
 
 
 def stem(text):
@@ -170,16 +171,18 @@ SLIDES = [
  ['R03', 'R05', 'R06', 'R07']),
 
 (5, 'THE COMMON ANSWER', 'Few organisations can show material impact.',
- stats(('37%', 'of McKinsey respondents report any EBIT impact', ('Down from 39% in 2025', 'down')),
-       ('6%', 'attribute 5 per cent or more of EBIT to AI', 'Flat, about 6% in 2025'),
-       ('20%', 'of Deloitte’s leaders already grow revenue from AI', ('Against 74% who hope to', 'down'))) +
- callout('Every figure here is a self-report. No study located audits financial statements or deployment records.'),
- ['R03', 'R05', 'R33', 'R34']),
+ stats(('37%', 'of McKinsey respondents report any EBIT impact'),
+       ('6%', 'attribute 5 per cent or more of EBIT to AI'),
+       ('20%', 'of Deloitte’s leaders already grow revenue, against 74% who hope to'),
+       ('46%', 'of S&P Global firms report no strong positive impact on any objective'),
+       cls='grid2') +
+ callout('Every figure here is self-reported, not audited.', cls='caveat'),
+ ['R03', 'R05', 'R06', 'R33', 'R34']),
 
 # ---- S3 · The value was never stuck in the model ------------------------------
 
 (6, 'STANFORD DIGITAL ECONOMY LAB', 'Same technology, very different outcomes.',
- quote('The difference was never the <mark class="not">AI model</mark>. It was always the <mark>organisation</mark>.',
+ quote('The difference was never the AI model. It was always the <mark>organisation</mark>.',
        '<b>The Enterprise AI Playbook</b> · 51 enterprise deployments · April 2026'),
  ['R09']),
 
