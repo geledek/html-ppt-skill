@@ -152,9 +152,9 @@ def chain(nodes, links):
                 f'style="--x1:{widths[i]:.1f}%; --x2:{widths[i + 1]:.1f}%">'
                 '<span class="funnel-arrow-cell"><span class="funnel-arrow" aria-hidden="true">'
                 '<svg viewBox="0 0 120 130" preserveAspectRatio="none">'
-                '<path d="M118 4 C118 70, 8 40, 8 104" fill="none" '
+                '<path d="M118 4 C118 80, 30 40, 8 104" fill="none" '
                 'stroke="currentColor" stroke-width="3" stroke-linecap="round"/>'
-                '<path d="M2 96 L8 108 L18 100 Z" fill="currentColor"/>'
+                '<path d="M8 104 L22 97 L20 111 Z" fill="currentColor"/>'
                 '</svg></span></span>'
                 f'<span class="funnel-leak">{links[i]}</span></div>')
     parts.append('</div>')
