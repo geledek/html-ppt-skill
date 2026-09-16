@@ -105,27 +105,21 @@
 .tpl-course .donut-legend li.is-share::before { background: var(--emphasis) }
 .tpl-course .donut-legend li.is-rest::before { background: var(--border) }
 
-/* a left-to-right chain whose nodes shrink, so the gain visibly drains across
-   the four hand-offs from a task saving to the accounts. The shrink carries the
-   message; each gap names what leaks there. */
-.tpl-course .leak-chain { display: flex; align-items: flex-start; margin-top: 140px }
-.tpl-course .leak-node {
-  flex: none; display: grid; place-items: center; text-align: center;
-  width: calc(172px * var(--s)); height: calc(172px * var(--s));
-  border-radius: 50%; background: color-mix(in srgb, var(--emphasis) 12%, var(--surface));
-  border: 3px solid var(--emphasis);
+/* a downward funnel: stacked bars, each narrower than the last, so the gain
+   visibly drains from a task saving at the top to the accounts at the bottom.
+   The narrowing carries the message; the leak captions name what is lost at
+   each hand-off. This is a genuine sequence, so a funnel is honest here. */
+.tpl-course .funnel { display: flex; flex-direction: column; align-items: center; margin-top: 40px }
+.tpl-course .funnel-bar {
+  width: var(--w); box-sizing: border-box;
+  display: grid; place-items: center; text-align: center;
+  padding: 18px 24px; border-radius: 10px;
+  background: var(--emphasis); color: var(--surface);
+  font-weight: 700; font-size: 34px; line-height: 1.1;
 }
-.tpl-course .leak-node span {
-  font-weight: 700; color: var(--accent); line-height: 1.1;
-  font-size: calc(30px * var(--s) + 6px); padding: 0 6px;
-}
-.tpl-course .leak-gap {
-  flex: 1; display: flex; flex-direction: column; align-items: center;
-  padding: 0 6px; margin-top: 30px;
-}
-.tpl-course .leak-arrow { color: var(--emphasis); font-size: 40px; line-height: 1 }
-.tpl-course .leak-label {
-  margin-top: 14px; font-size: 24px; line-height: 1.3; color: var(--text-2); text-align: center;
+.tpl-course .funnel-leak {
+  font-size: 24px; line-height: 1.25; color: var(--text-2);
+  padding: 9px 0; text-align: center;
 }
 
 /* the .data-table base, its type scale and the .compare/.figures/.ranked

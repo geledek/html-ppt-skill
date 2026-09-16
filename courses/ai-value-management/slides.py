@@ -131,18 +131,17 @@ def donut(share, big_label, rest_label, pct=None):
 
 
 def chain(nodes, links):
-    """A left-to-right chain whose nodes shrink, so value visibly drains across
-    the hand-offs. `nodes` is the ordered list of stage names (N of them); `links`
-    is the N-1 leak captions shown under each gap. The shrink is the message: the
-    gain that survives is smaller at every transition."""
+    """A downward funnel: stacked bars, each narrower than the last, so value
+    visibly drains from a task saving at the top to the accounts at the bottom.
+    `nodes` is the ordered list of stage names (N of them); `links` is the N-1
+    leak captions shown between the bars. The narrowing is the message."""
     n = len(nodes)
-    parts = ['<div class="leak-chain">']
+    parts = ['<div class="funnel">']
     for i, name in enumerate(nodes):
-        scale = 1 - i * (0.32 / (n - 1))          # 1.0 down to ~0.68
-        parts.append(f'<div class="leak-node" style="--s:{scale:.3f}"><span>{name}</span></div>')
+        width = 100 - i * (62 / (n - 1))          # 100% at top down to ~38%
+        parts.append(f'<div class="funnel-bar" style="--w:{width:.1f}%">{name}</div>')
         if i < n - 1:
-            parts.append(f'<div class="leak-gap"><span class="leak-arrow">→</span>'
-                         f'<span class="leak-label">{links[i]}</span></div>')
+            parts.append(f'<div class="funnel-leak">{links[i]}</div>')
     parts.append('</div>')
     return ''.join(parts)
 
