@@ -122,15 +122,15 @@
   background: var(--emphasis); color: var(--surface);
   font-weight: 700; font-size: 32px; line-height: 1.1;
 }
-.tpl-course .funnel-row.is-leak { padding: 4px 0 }
-/* the arrow curves down from near the bar's edge into the leak label, showing
-   value flowing down the funnel and draining out at that hand-off */
+.tpl-course .funnel-row.is-leak { padding: 2px 0 }
+/* the arrow curves straight down to the next bar, tracing the flow through the
+   funnel; the leak label on the right annotates what is lost at that hand-off */
 .tpl-course .funnel-arrow {
-  grid-column: 1; justify-self: end; width: 90px; height: 60px;
-  color: var(--emphasis);
+  grid-column: 1; justify-self: start; margin-left: 60px;
+  width: 54px; height: 66px; color: var(--emphasis);
 }
 .tpl-course .funnel-leak {
-  grid-column: 2; justify-self: start; align-self: end; padding-bottom: 4px;
+  grid-column: 2; justify-self: start; align-self: center;
   font-size: 26px; line-height: 1.25; color: var(--text-2);
 }
 

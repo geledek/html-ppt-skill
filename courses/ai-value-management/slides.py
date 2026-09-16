@@ -133,10 +133,11 @@ def donut(share, big_label, rest_label, pct=None):
 def chain(nodes, links):
     """A downward funnel confined to the left half: stacked bars, each narrower
     than the last, so value visibly drains from a task saving at the top to the
-    accounts at the bottom. Between the bars, an arrow reaches right to a leak
-    caption naming what is lost at that hand-off. Rows are .stagger children, so
-    they build top to bottom on the learner's input. `nodes` is the ordered stage
-    names (N); `links` is the N-1 leak captions."""
+    accounts at the bottom. Between the bars, an arrow curves downward to the next
+    bar (the flow), and the leak caption on the right annotates what is lost at
+    that hand-off. Rows are .stagger children, so they build top to bottom on the
+    learner's input. `nodes` is the ordered stage names (N); `links` is the N-1
+    leak captions."""
     n = len(nodes)
     parts = ['<div class="funnel stagger">']
     for i, name in enumerate(nodes):
@@ -144,10 +145,10 @@ def chain(nodes, links):
         parts.append(f'<div class="funnel-row"><div class="funnel-bar" style="--w:{width:.1f}%">{name}</div></div>')
         if i < n - 1:
             parts.append('<div class="funnel-row is-leak">'
-                         '<svg class="funnel-arrow" viewBox="0 0 90 60" aria-hidden="true">'
-                         '<path d="M6 6 C6 40, 40 52, 78 52" fill="none" '
+                         '<svg class="funnel-arrow" viewBox="0 0 60 70" aria-hidden="true">'
+                         '<path d="M30 4 C30 30, 30 40, 30 60" fill="none" '
                          'stroke="currentColor" stroke-width="3" stroke-linecap="round"/>'
-                         '<path d="M70 45 L80 53 L69 58 Z" fill="currentColor"/>'
+                         '<path d="M22 52 L30 66 L38 52 Z" fill="currentColor"/>'
                          '</svg>'
                          f'<span class="funnel-leak">{links[i]}</span></div>')
     parts.append('</div>')
