@@ -320,7 +320,7 @@ SLIDES = [
 
 # ---- S6 · One company, read two ways ----------------------------------------
 
-(19, 'KLARNA · FEBRUARY 2024', 'The 700-agent figure came from Klarna itself.',
+(19, 'KLARNA CASE STUDY · FEBRUARY 2024', 'The 700-agent figure came from Klarna itself.',
  '<div class="stat-beside">'
  + stats(('700', 'full-time agents’ worth of work, in Klarna’s own release'), cls='big')
  + '<div class="stack">'
@@ -330,7 +330,7 @@ SLIDES = [
  '</div>',
  ['R39']),
 
-(20, 'MAY 2025', 'The headlines blamed AI. The interview blamed cost.',
+(20, 'KLARNA CASE STUDY · MAY 2025', 'The headlines blamed AI. The interview blamed cost.',
  '<table class="data-table compare debunk"><thead><tr><th>What was reported</th><th>What he actually said</th></tr></thead><tbody>'
  '<tr><td>AI had failed</td><td>Cost was weighted too heavily, and quality fell</td></tr>'
  '<tr><td>A hiring spree</td><td>A pilot of two new agents</td></tr>'
@@ -339,7 +339,7 @@ SLIDES = [
  '<p class="callout mt-l">He calls the original article balanced. His objection is to the headline and what was built on it.</p>',
  ['R39']),
 
-(21, 'SECURITIES FILINGS', 'In its filings, headcount fell every year.',
+(21, 'KLARNA CASE STUDY · SECURITIES FILINGS', 'In its filings, headcount fell every year.',
  '<div class="grid g2 filing-grid">'
  '<table class="data-table figures"><thead><tr><th>Year end</th><th>Full-time employees</th></tr></thead><tbody>'
  '<tr><td>2022</td><td>5,527</td></tr><tr><td>2023</td><td>4,352</td></tr>'
@@ -349,14 +349,14 @@ SLIDES = [
  '</div>',
  ['R22', 'R39']),
 
-(22, 'ONE ANNUAL FILING', 'A claimed saving and a smaller bill are different things.',
+(22, 'KLARNA CASE STUDY · ONE ANNUAL FILING', 'A claimed saving and a smaller bill are different things.',
  stats(('US$59m', 'cost savings the filing attributes to the assistant'),
        ('+US$4m', 'rise in customer service and operations expenses')) +
  '<p class="callout mt-l">Volumes grew 32 per cent in the same year. The saving is measured '
  'against a counterfactual; the expense line records what was spent.</p>',
  ['R22']),
 
-(23, 'TWO DISCLOSED RATES', 'A rate is only as honest as its denominator.',
+(23, 'KLARNA CASE STUDY · TWO DISCLOSED RATES', 'A rate is only as honest as its denominator.',
  '<div class="grid g2">'
  '<article class="named-box"><h4>Presto Automation</h4><p class="box-fig">85%</p><p>‘Non-intervention’ excluded the offsite agents '
  'who entered the orders. The US regulator opened an investigation.</p></article>'
@@ -366,7 +366,7 @@ SLIDES = [
  '<p class="callout mt-l">For any rate, ask what the denominator is and who it leaves out.</p>',
  ['R24', 'R25']),
 
-(24, 'CHECK YOUR UNDERSTANDING', 'What should a board rely on in the Klarna case?',
+(24, 'KLARNA CASE STUDY · CHECK YOUR UNDERSTANDING', 'What should a board rely on in the Klarna case?',
  '<p class="lede quiz-stem">A board paper cites Klarna as proof that an AI assistant cuts customer '
  'service costs. Which evidence should the board rely on?</p>' +
  question([

@@ -288,10 +288,11 @@ The second understates what is known, because a precise zero is a finding rather
 #### 19 · Klarna published the number itself
 
 **Sources:** [R22], [R39]
-**Time:** 0:51  ·  99 words at 117 wpm
+**Time:** 1:05  ·  126 words at 117 wpm
 
 **Narration:**
 All of that was general evidence. It helps to watch the problem happen to one company.
+Klarna became the textbook case: a bold AI claim, then a media story that it had all been reversed. The filings tell a steadier story than either.
 In February 2024 Klarna announced that its AI assistant handled two-thirds of customer service chats.
 It described the assistant as doing the equivalent work of seven hundred full-time agents.
 That figure came from Klarna, not from a critic.
