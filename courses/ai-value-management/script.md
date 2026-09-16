@@ -74,12 +74,12 @@ They are not interchangeable, so most apparent disagreement between these figure
 #### 05 · Where they converge
 
 **Sources:** [R03], [R05], [R06], [R33], [R34]
-**Time:** 1:11  ·  138 words at 117 wpm
+**Time:** 1:11  ·  139 words at 117 wpm
 
 **Narration:**
 The units differ, so look for the question they answer in common.
 All four bear on whether material financial impact can be evidenced.
-McKinsey finds thirty-seven per cent report any EBIT impact, down from thirty-nine, and about six per cent attribute five per cent or more.
+McKinsey finds thirty-seven per cent report any EBIT impact, flat against last year, and about six per cent attribute five per cent or more.
 Deloitte finds twenty per cent already growing revenue, against seventy-four per cent who hope to.
 S&P finds forty-six per cent reporting no strong positive impact on any objective.
 The methods differ and the answer is the same: only a small minority can evidence material impact, and that share has not moved in a year.
@@ -92,12 +92,12 @@ No study located for this session audits financial statements or deployment reco
 #### 06 · The difference was never the model
 
 **Sources:** [R09]
-**Time:** 0:52  ·  101 words at 117 wpm
+**Time:** 0:50  ·  98 words at 117 wpm
 
 **Narration:**
 That is the state of the evidence. The more useful question is why.
 Stanford's Digital Economy Lab examined fifty-one enterprise deployments across forty-one organisations.
-Their conclusion is on screen, in their words.
+Here is what they found.
 The same technology and the same uses produced results measured in weeks for some and years for others.
 The difference was the organisation, not the model.
 
@@ -120,14 +120,14 @@ That is the pattern in firms that succeeded. Across the wider economy it is star
 #### 08 · The top reasons are organisational. Technology is last.
 
 **Sources:** [R09]
-**Time:** 0:49  ·  95 words at 117 wpm
+**Time:** 0:46  ·  90 words at 117 wpm
 
 **Narration:**
 So the surrounding work gets skipped. When Stanford ranked why deployments fail, the order is the lesson.
 Of the failures it studied, the leading reason was that the organisation was not ready to adopt.
 Next came knowledge that was never captured, then a block from legal or compliance.
 Immature technology came last, in the fewest cases.
-The chart is on screen. The three tallest bars are all organisational; the model is the shortest.
+The three tallest reasons are all organisational; the model is the shortest.
 For a leader deciding where to spend, that is the point: the money and attention belong on the organisation, not the model.
 
 #### 09 · Check your understanding

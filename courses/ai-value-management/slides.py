@@ -187,7 +187,7 @@ SLIDES = [
  ['R09']),
 
 (7, 'WHAT GOT IN THE WAY', 'The hard part was never the AI.',
- stats(('77%', 'of the hardest challenges were organisational — change, data, process — not technology'), cls='big') +
+ stats(('77%', 'of the hardest challenges were organisational: change, data and process. Not technology.'), cls='big') +
  callout('“All the hard work is in process documentation and data architecture.” <b>Executive, telecom company</b>'),
  ['R09', 'R08']),
 
