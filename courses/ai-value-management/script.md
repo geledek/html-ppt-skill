@@ -254,16 +254,17 @@ Adopting the tool created work of its own, and most of that new work is supervis
 #### 17 · A faster task breaks down four times before the accounts
 
 **Sources:** [R13], [R19], [R20], [R18], [R00]
-**Time:** 1:11  ·  139 words at 117 wpm
+**Time:** 1:23  ·  161 words at 117 wpm
 
 **Narration:**
 That pattern repeats at every level between a single task and the accounts.
 The chain from a faster task to a better financial result breaks in four identifiable places.
-First, laboratory to field. One team ran both, and the field gain was substantially smaller than the laboratory gain.
+First, laboratory to field. One team ran the same test in the lab and in the field, and the field gain was substantially smaller than the laboratory gain.
 Second, task to job. Time saved on one task is not output gained, because most jobs contain many other tasks.
 Third, worker to firm. No study located for this session measures both worker gains and firm profit.
 Fourth, firm to economy. The United States Bureau of Labor Statistics does not measure AI's contribution separately.
 
+Each hand-off keeps only part of the gain, so little survives all four.
 The one model that estimates the whole chain projects very little.
 It adds no more than two-thirds of one per cent to productivity over ten years.
 Its author argues that even this figure could be too high.

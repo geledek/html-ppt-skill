@@ -130,6 +130,24 @@ def donut(share, big_label, rest_label, pct=None):
         '</ul></div>')
 
 
+def chain(nodes, links):
+    """A left-to-right chain whose nodes shrink, so value visibly drains across
+    the hand-offs. `nodes` is the ordered list of stage names (N of them); `links`
+    is the N-1 leak captions shown under each gap. The shrink is the message: the
+    gain that survives is smaller at every transition."""
+    n = len(nodes)
+    parts = ['<div class="leak-chain">']
+    for i, name in enumerate(nodes):
+        scale = 1 - i * (0.32 / (n - 1))          # 1.0 down to ~0.68
+        parts.append(f'<div class="leak-node" style="--s:{scale:.3f}"><span>{name}</span></div>')
+        if i < n - 1:
+            parts.append(f'<div class="leak-gap"><span class="leak-arrow">→</span>'
+                         f'<span class="leak-label">{links[i]}</span></div>')
+    parts.append('</div>')
+    return ''.join(parts)
+
+
+
 def callout(text, cls=''):
     classes = f'callout mt-l {cls}'.strip()
     return f'<p class="{classes}">{text}</p>'
@@ -283,11 +301,12 @@ SLIDES = [
  '<p class="callout mt-l">About a quarter of users now spend longer on the very tasks they first saved time on.</p>',
  ['R12']),
 
-(17, 'FROM TASK TO ACCOUNTS', 'A faster task breaks down four times before the accounts.',
- steps(('Laboratory to field', 'Field gains were substantially smaller than laboratory gains'),
-       ('Task to job', 'Time saved on one task is not output gained across a job'),
-       ('Worker to firm', 'No study located measures both worker gains and firm profit'),
-       ('Firm to economy', 'Official statistics do not measure AI separately')),
+(17, 'FROM TASK TO ACCOUNTS', 'A faster task rarely reaches the accounts.',
+ chain(['Task saving', 'Field', 'Job', 'Firm', 'Economy'],
+       ['Smaller in the field than the lab',
+        'One task is not a whole job',
+        'No study links worker gains to firm profit',
+        'Not measured separately in the accounts']),
  ['R13', 'R20', 'R00']),
 
 (18, 'CHECK YOUR UNDERSTANDING', 'Has a rollout that saves two hours a week paid for itself?',
