@@ -178,6 +178,11 @@
    emphasis colour come from the template's .ranked modifier) */
 .tpl-course .data-table.ranked td { padding: 30px 32px 30px 0 }
 
+/* debunk table: the myth column holds short phrases, the correction is longer,
+   so narrow the first column and give the correction the room to sit on one line */
+.tpl-course .data-table.debunk th:first-child,
+.tpl-course .data-table.debunk td:first-child { width: 32% }
+
 /* takeaways one-pager: every enumerated set the course taught (R3-12, R5-16) */
 .tpl-course .takeaways { display: grid; grid-template-columns: 1.1fr 1fr; gap: 72px; align-items: start; margin-top: 10px }
 .tpl-course .tk-recall { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 40px }

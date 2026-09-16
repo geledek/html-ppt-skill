@@ -331,7 +331,7 @@ SLIDES = [
  ['R39']),
 
 (20, 'MAY 2025', 'The headlines blamed AI. The interview blamed cost.',
- '<table class="data-table compare"><thead><tr><th>What was reported</th><th>What he actually said</th></tr></thead><tbody>'
+ '<table class="data-table compare debunk"><thead><tr><th>What was reported</th><th>What he actually said</th></tr></thead><tbody>'
  '<tr><td>AI had failed</td><td>Cost was weighted too heavily, and quality fell</td></tr>'
  '<tr><td>A hiring spree</td><td>A pilot of two new agents</td></tr>'
  '<tr><td>A reversal on AI</td><td>Headcount to keep falling, to about 2,500</td></tr>'
