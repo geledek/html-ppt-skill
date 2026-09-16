@@ -213,10 +213,12 @@ SLIDES = [
 # ---- S4 · Which stage are you stuck at ----------------------------------------
 
 (10, 'A DIAGNOSIS FOR YOUR PORTFOLIO', 'Four stages, four different failures.',
+ '<p class="stage-cap">From an idea…</p>' +
  steps(('Never started', 'The use was never thought relevant'),
        ('Piloted, never shipped', 'The pilot stopped before production'),
        ('Shipped, not adopted', 'Delivered, but people do not use it'),
-       ('Adopted, no benefit shown', 'In use, with no financial effect demonstrated')),
+       ('Adopted, no benefit shown', 'In use, with no financial effect demonstrated'), cls='tight') +
+ '<p class="stage-cap">…to a benefit in the P&amp;L</p>',
  ['R00']),
 
 (11, 'STAGE ONE', 'Most firms that never started think AI does not apply.',
