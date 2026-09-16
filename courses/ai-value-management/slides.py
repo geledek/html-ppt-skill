@@ -133,30 +133,20 @@ def donut(share, big_label, rest_label, pct=None):
 def chain(nodes, links):
     """A downward funnel confined to the left half: stacked bars, each narrower
     than the last, so value visibly drains from a task saving at the top to the
-    accounts at the bottom. Between the bars a curved arrow sweeps from the right
-    end of the upper bar down to the right end of the next bar, tracing the flow;
-    the leak caption on the right annotates what is lost at that hand-off. Rows
-    are .stagger children, so they build top to bottom on the learner's input.
-    `nodes` is the ordered stage names (N); `links` is the N-1 leak captions."""
+    accounts at the bottom. Between the bars, the leak caption on the right names
+    what is lost at that hand-off. Rows are .stagger children, so they build top
+    to bottom on the learner's input. `nodes` is the ordered stage names (N);
+    `links` is the N-1 leak captions."""
     n = len(nodes)
     widths = [100 - i * (58 / (n - 1)) for i in range(n)]   # left-column % per bar
     parts = ['<div class="funnel stagger">']
     for i, name in enumerate(nodes):
         parts.append(f'<div class="funnel-row"><div class="funnel-bar" style="--w:{widths[i]:.1f}%">{name}</div></div>')
         if i < n - 1:
-            # arrow spans from the upper bar's right edge (--x1) to the next's (--x2),
-            # both as a % of the left column, and drops into the next bar so its head
-            # lands on the mid-point of that bar's right side, pointing left.
-            parts.append(
-                '<div class="funnel-row is-leak" '
-                f'style="--x1:{widths[i]:.1f}%; --x2:{widths[i + 1]:.1f}%">'
-                '<span class="funnel-arrow-cell"><span class="funnel-arrow" aria-hidden="true">'
-                '<svg viewBox="0 0 120 130" preserveAspectRatio="none">'
-                '<path d="M118 4 C118 80, 30 40, 8 104" fill="none" '
-                'stroke="currentColor" stroke-width="3" stroke-linecap="round"/>'
-                '<path d="M8 104 L22 97 L20 111 Z" fill="currentColor"/>'
-                '</svg></span></span>'
-                f'<span class="funnel-leak">{links[i]}</span></div>')
+            parts.append('<div class="funnel-row is-leak">'
+                         f'<span class="funnel-leak">{links[i]}</span></div>')
+    parts.append('</div>')
+    return ''.join(parts)
     parts.append('</div>')
     return ''.join(parts)
 
