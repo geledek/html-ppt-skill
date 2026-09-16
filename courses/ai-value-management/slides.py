@@ -233,6 +233,7 @@ SLIDES = [
  ['R06']),
 
 (13, 'STAGE THREE', 'Use is highest where employers encourage it.',
+ '<p class="lede">Danish researchers linked surveys of about 25,000 workers to administrative records.</p>' +
  bars(('No employer encouragement', 40, '40%', ''),
       ('Encouragement, tools and training', 93, '93%', '')) +
  callout('Tools and training without encouragement were linked to smaller reported gains.'),
