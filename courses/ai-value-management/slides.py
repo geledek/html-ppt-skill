@@ -161,11 +161,11 @@ SLIDES = [
 (4, 'READING THE EVIDENCE', 'Different studies count different things.',
  '<div class="lead-box">All four ask whether AI produces measurable value. '
  'Each counts a different unit, so their headline figures are not directly comparable.</div>'
- '<table class="data-table"><thead><tr><th>Source</th><th>What it counts</th></tr></thead><tbody>'
- '<tr><td>McKinsey, 2026</td><td>EBIT impact</td></tr>'
- '<tr><td>Deloitte, 2026</td><td>Benefits achieved today</td></tr>'
- '<tr><td>S&amp;P Global, 2025</td><td>Projects abandoned</td></tr>'
- '<tr><td>US Census Bureau</td><td>Whether AI is used at all</td></tr>'
+ '<table class="data-table"><thead><tr><th>Source</th><th>What it counts</th><th>Unit</th></tr></thead><tbody>'
+ '<tr><td>McKinsey, 2026</td><td>EBIT impact</td><td>respondents</td></tr>'
+ '<tr><td>Deloitte, 2026</td><td>Benefits achieved today</td><td>organisations</td></tr>'
+ '<tr><td>S&amp;P Global, 2025</td><td>Projects abandoned</td><td>projects</td></tr>'
+ '<tr><td>US Census Bureau</td><td>Whether AI is used at all</td><td>businesses</td></tr>'
  '</tbody></table>',
  ['R03', 'R05', 'R06', 'R07']),
 
