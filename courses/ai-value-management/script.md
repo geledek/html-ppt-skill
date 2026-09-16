@@ -304,13 +304,12 @@ Neither point survived into the story that followed.
 #### 20 · What he said, and what was reported
 
 **Sources:** [R39]
-**Time:** 1:23  ·  162 words at 117 wpm
+**Time:** 1:21  ·  158 words at 117 wpm
 
 **Narration:**
 Fifteen months later the chief executive gave an interview that was widely misreported.
 His actual words were that cost had been too predominant a factor, and that what you end up with is lower quality.
-Read carefully, he is describing how outsourced support had been organised.
-He is not saying the AI assistant produced poor quality work.
+He is describing how outsourced support had been organised, not saying the AI assistant produced poor quality work.
 
 The same article described a pilot of two people, and forecast headcount falling further to about two thousand five hundred.
 Within ten days the story had become a reversal, a hiring spree, and an admission that AI had failed.
