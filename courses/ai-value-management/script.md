@@ -214,7 +214,7 @@ They also state that this part of their analysis is descriptive.
 The fourth stage is where most organisations that get this far now sit.
 The tool is adopted, people report benefits, and no financial effect can be demonstrated.
 Thirty-seven per cent report any EBIT impact, and about six per cent attribute five per cent or more.
-The Danish study found precise null effects on earnings and recorded hours.
+The Danish study found a precise zero on earnings and recorded hours.
 
 Test that combination now.
 Read the situation on screen and choose the stage.
@@ -281,7 +281,7 @@ Choose the statement the research supports.
 The correct answer is the third.
 Individual time savings are well evidenced and firm-level financial effects are not.
 The first option is contradicted by the trial, because the tools demonstrably save time.
-The second understates what is known, because a precise null is a finding rather than an absence of research.
+The second understates what is known, because a precise zero is a finding rather than an absence of research.
 
 ### S6 · One company, read two ways
 

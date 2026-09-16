@@ -315,7 +315,7 @@ SLIDES = [
    ('The tools do not save staff time.',
     'A randomised trial across 66 firms measured two hours a week saved on email.', False),
    ('The research cannot yet say anything about financial effects.',
-    'A precise null on earnings and hours is a finding, not an absence of research.', False),
+    'A precise zero on earnings and hours is a finding, not an absence of research.', False),
    ('Time savings are well evidenced. Firm-level financial effects are not.',
     'The trial found no change in output, and national records rule out effects above two per cent.', True),
  ]),
