@@ -183,21 +183,17 @@ SLIDES = [
        '<b>The Enterprise AI Playbook</b> · 51 enterprise deployments · April 2026'),
  ['R09']),
 
-(7, 'WHAT GOT IN THE WAY', 'The work around the model is what gets skipped.',
- stats(('77%', 'of the hardest challenges were change, data and process, not technology'),
-       ('64%', 'of AI-using firms made no institutional adjustments at all', ('Bought the tool, nothing more', 'down')), cls='big') +
+(7, 'WHAT GOT IN THE WAY', 'The hard part was never the AI.',
+ stats(('77%', 'of the hardest challenges were organisational — change, data, process — not technology'), cls='big') +
  callout('“All the hard work is in process documentation and data architecture.” <b>Executive, telecom company</b>'),
  ['R09', 'R08']),
 
-(8, 'ROOT CAUSES', 'The symptoms are not the causes.',
- '<table class="data-table figures ranked"><thead><tr><th>Root cause of failure</th><th>Share of cases</th></tr></thead><tbody>'
- '<tr><td>The organisation was not ready to adopt</td><td>35%</td></tr>'
- '<tr><td>Critical knowledge was never captured</td><td>27%</td></tr>'
- '<tr><td>Legal or compliance blocked the project</td><td>18%</td></tr>'
- '<tr><td>The technology was not mature enough</td><td>16%</td></tr>'
- '</tbody></table>' +
- callout('RAND: 84 per cent of practitioners named leadership’s framing of the problem as a root cause.'),
- ['R09', 'R10']),
+(8, 'ROOT CAUSES', 'The top reasons are organisational. Technology is last.',
+ bars(('Organisation not ready to adopt', 35, '35%', ''),
+      ('Knowledge never captured', 27, '27%', ''),
+      ('Legal or compliance blocked it', 18, '18%', ''),
+      ('Technology not mature enough', 16, '16%', '')),
+ ['R09']),
 
 (9, 'CHECK YOUR UNDERSTANDING', 'Why did this pilot stall?',
  stem('A promising AI pilot has not reached production after a year. On the evidence, which cause is most likely?') +

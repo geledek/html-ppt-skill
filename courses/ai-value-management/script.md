@@ -107,36 +107,30 @@ The cases were selected because they succeeded, and the authors disclaim any cla
 Its percentages describe successful deployments. They are not base rates for the economy.
 We should also note that one author co-founded a company that sells AI benefit measurement.
 
-#### 07 · The work around the model is what gets skipped
+#### 07 · The hard part was never the AI
 
 **Sources:** [R09], [R08]
-**Time:** 0:54  ·  105 words at 117 wpm
+**Time:** 0:50  ·  98 words at 117 wpm
 
 **Narration:**
-If the organisation is the constraint, we should ask what specifically got in the way.
-Across fifty-one successful cases, seventy-seven per cent of the hardest challenges were not technical. They were change management, data quality and process redesign. Technology was described as the easiest part.
+If the organisation is the constraint, what actually got in the way?
+Stanford asked practitioners which challenges were hardest. More than three-quarters of them, seventy-seven per cent, were organisational: change management, data quality, process redesign. The model itself was the easiest part.
 An executive put it bluntly: all the hard work sits in process documentation and data architecture.
 
-Now the measured counterpart, on a hundred and seventeen thousand firms.
-Sixty-four per cent of firms using AI made no institutional adjustment of any kind. They bought the tool and changed nothing around it. Training and new workflows reached only about fifteen per cent.
+That is the pattern in firms that succeeded. Across the wider economy it is starker still. On the US Census survey of a hundred and seventeen thousand firms, most of those using AI changed nothing around the tool at all.
 
-#### 08 · The symptoms are not the causes
+#### 08 · The top reasons are organisational. Technology is last.
 
-**Sources:** [R09], [R10]
-**Time:** 1:01  ·  119 words at 117 wpm
+**Sources:** [R09]
+**Time:** 0:49  ·  95 words at 117 wpm
 
 **Narration:**
-So the surrounding work is often skipped. The Stanford study ranked why that proves fatal.
-Projects stuck in pilot, and an inability to prove return, appeared frequently.
-Both are consequences rather than causes.
-The leading cause was that the organisation was not ready to adopt, at thirty-five per cent.
-Knowledge never captured follows at twenty-seven per cent, then legal or compliance blocks at eighteen.
-Immature technology accounts for sixteen per cent.
-
-RAND interviewed sixty-five practitioners and reached a sharper version of the same point.
-Eighty-four per cent named business leadership's framing of the problem as a root cause.
-RAND also discloses that most interviewees were engineers rather than executives.
-The result may therefore be skewed towards identifying leadership failures.
+So the surrounding work gets skipped. When Stanford ranked why deployments fail, the order is the lesson.
+Of the failures it studied, the leading reason was that the organisation was not ready to adopt.
+Next came knowledge that was never captured, then a block from legal or compliance.
+Immature technology came last, in the fewest cases.
+The chart is on screen. The three tallest bars are all organisational; the model is the shortest.
+For a leader deciding where to spend, that is the point: the money and attention belong on the organisation, not the model.
 
 #### 09 · Check your understanding
 
