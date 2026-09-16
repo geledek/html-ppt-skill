@@ -31,6 +31,11 @@
 .tpl-course .named-box h4 { font-size: 40px; margin-bottom: 14px }
 .tpl-course .named-box p { font-size: 34px; line-height: 1.38 }
 
+/* a big figure on the left, its qualifiers stacked to its right */
+.tpl-course .stat-beside { display: flex; align-items: center; gap: 80px; margin-top: 40px }
+.tpl-course .stat-beside .stat-row { flex: none; margin-top: 0 }
+.tpl-course .stat-beside .stack { flex: 1; display: flex; flex-direction: column; gap: 28px }
+
 .tpl-course .callout { font-size: 36px; line-height: 1.38; padding: 30px 38px }
 /* a caveat callout reads in the deck's negative colour, like the quiz "wrong"
    state and the "down" trends, so the eye tags it as a guard rather than a claim. */

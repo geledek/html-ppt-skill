@@ -321,10 +321,12 @@ SLIDES = [
 # ---- S6 · One company, read two ways ----------------------------------------
 
 (19, 'KLARNA · FEBRUARY 2024', 'The 700-agent figure came from Klarna itself.',
- stats(('700', 'full-time agents’ worth of work, in Klarna’s own release')) +
- '<div class="grid g2 mt-l">'
- '<article class="named-box"><h4>An equivalence estimate</h4><p>Not a count of people made redundant.</p></article>'
- '<article class="named-box"><h4>People still available</h4><p>Customers could still choose to speak to a live agent.</p></article>'
+ '<div class="stat-beside">'
+ + stats(('700', 'full-time agents’ worth of work, in Klarna’s own release'), cls='big')
+ + '<div class="stack">'
+   '<article class="named-box"><h4>An equivalence estimate</h4><p>Not a count of people made redundant.</p></article>'
+   '<article class="named-box"><h4>People still available</h4><p>Customers could still choose to speak to a live agent.</p></article>'
+   '</div>'
  '</div>',
  ['R39']),
 
