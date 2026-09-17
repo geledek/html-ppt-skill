@@ -385,44 +385,21 @@ Read together, they show costs growing more slowly than the business, not costs 
 
 ### S7 · Can value be attributed at all
 
-#### 25 · Different ways of measuring the same data
+#### 25 · The limits of measuring AI value
 
-**Sources:** [R27], [R28], [R35]
-**Time:** 1:18  ·  152 words at 117 wpm
-
-**Narration:**
-That brings us to the question underneath all of this, which is whether the value can be attributed at all.
-The discipline that has argued about this longest is advertising measurement.
-Researchers ran fifteen large experiments at Facebook, measuring the same effect on the same data three different ways.
-Comparing before against after suggested a lift of four hundred and sixteen per cent.
-Careful statistical matching brought that down to one hundred and two per cent.
-The randomised test, the only trustworthy method, gave seventy-seven per cent.
-So the same data returned three very different numbers, and only the last one can be believed.
-
-The World Bank's evaluation handbook names the underlying problem directly.
-A baseline measured before an intervention is almost never a good estimate of the counterfactual.
-They call before-and-after comparison a counterfeit estimate.
-Microsoft's experimentation team says the same in industrial terms. External variation overwhelms the effect being sought.
-
-#### 26 · It works at the workflow, not the accounts
-
-**Sources:** [R29], [R32], [R00]
-**Time:** 0:53  ·  104 words at 117 wpm
+**Sources:** [R27], [R28], [R29], [R32], [R35]
+**Time:** 1:13  ·  142 words at 117 wpm
 
 **Narration:**
-Measurement also has a hard limit.
-Across twenty-five large field experiments, the median confidence interval on return was over one hundred percentage points wide.
-To distinguish a ten per cent difference in return reliably, the median campaign needed to be sixty-two times larger.
-Halving the effect you wish to detect quadruples the sample required.
-
-Attribution is achievable at the level of one workflow.
-It is not achievable at the level of the enterprise accounts.
-So the right demand is a baseline on one process, recorded before anyone touches the tool.
-The guidance is explicit that this must be designed in before the intervention starts.
+Can the value even be attributed? Measuring it runs into three limits.
+First, the method swings the number. Researchers ran fifteen experiments at Facebook, measuring the same effect three ways. Comparing before against after gave a lift of four hundred and sixteen per cent, statistical matching gave one hundred and two, and the randomised test, the only trustworthy one, gave seventy-seven.
+Second, a before-and-after comparison is unreliable. It measures against the past, which is almost never a good guide to what AI actually changed. The World Bank calls it a counterfeit estimate.
+Third, business results are too noisy. Even a controlled test cannot tell a modest gain apart from ordinary ups and downs.
+So trust a return only for one workflow at a time, never for the whole company. And record a baseline on that one process before anyone touches the tool.
 
 ### S8 · The next ninety days
 
-#### 27 · Four conditions that separate a saving from an estimate
+#### 26 · Four conditions that separate a saving from an estimate
 
 **Sources:** [R30], [R31]
 **Time:** 1:02  ·  121 words at 117 wpm
@@ -440,7 +417,7 @@ Deadweight describes outcomes that would have occurred without any intervention.
 A benefit the market would have delivered anyway is not a benefit of your project.
 Anything that fails these tests is an estimate. The surveys suggest an estimate is what most organisations hold.
 
-#### 28 · What to do, and what to stop
+#### 27 · What to do, and what to stop
 
 **Sources:** [R00], [R30], [R32], [R04], [R09]
 **Time:** 1:04  ·  124 words at 117 wpm

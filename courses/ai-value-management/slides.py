@@ -7,7 +7,7 @@ S5 (slides 18-23) and S6 (24-29) were the gate 2 representative sections and set
 the layout conventions the other sections follow.
 """
 
-SECTION_BOUNDS = [3, 5, 9, 14, 18, 24, 26, 28]
+SECTION_BOUNDS = [3, 5, 9, 14, 18, 24, 25, 27]
 
 SOURCE_LABELS = {
  'R00': ('Course teaching synthesis', None),
@@ -381,21 +381,16 @@ SLIDES = [
 
 # ---- S7 · Can value be attributed at all --------------------------------------
 
-(25, 'ONE ADVERTISING EXPERIMENT', 'Different ways of measuring the same data.',
- bars(('Before vs after', 416, '416%', 'muted'),
-      ('Matched comparison', 102, '102%', 'muted'),
-      ('Randomised test', 77, '77%', '')) +
- callout('Only the randomised experiment is trustworthy. The World Bank calls a before-and-after comparison a counterfeit estimate.'),
- ['R28', 'R27']),
-
-(26, 'THE LIMIT OF MEASUREMENT', 'Attribution works at the workflow, not the accounts.',
- stats(('62×', 'larger campaign needed, at the median, to detect a 10 per cent difference in return'), cls='big') +
- callout('Record a baseline on one process before anyone touches the tool. It cannot be reconstructed afterwards.'),
- ['R29', 'R32']),
+(25, 'WHY THE NUMBERS DISAGREE', 'The limits of measuring AI value.',
+ steps(('The method swings the number', 'The same data gave 416%, 102% or 77%'),
+       ('Before-and-after is unreliable', 'It compares to the past, not to what AI actually changed'),
+       ('Business results are too noisy', 'A modest gain cannot be told apart from chance')) +
+ callout('So trust a return only for one workflow, never the whole company — and record a baseline before anyone touches the tool.'),
+ ['R27', 'R28', 'R29', 'R32', 'R35']),
 
 # ---- S8 · The next ninety days ------------------------------------------------
 
-(27, 'UK TREASURY GUIDANCE', 'Four conditions separate a saving from an estimate.',
+(26, 'UK TREASURY GUIDANCE', 'Four conditions separate a saving from an estimate.',
  steps(('Already happened', 'The cash relates to an activity that has taken place'),
        ('Not moved or deferred', 'Costs are not merely relocated or deferred'),
        ('Net of double counting', 'No benefit is claimed twice'),
@@ -403,7 +398,7 @@ SLIDES = [
  callout('<b>Deadweight</b> Outcomes that would have occurred without any intervention are not a benefit.'),
  ['R30', 'R31']),
 
-(28, 'TAKEAWAYS', 'What to do, and what to stop.',
+(27, 'TAKEAWAYS', 'What to do, and what to stop.',
  '<div class="takeaways">'
  '<section class="tk-recall">'
  '<div class="tk-block"><p class="tk-label">Where value stalls</p><ol class="tk-mini">'
