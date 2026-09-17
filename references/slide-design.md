@@ -128,6 +128,15 @@ all boxes, at least one of its slides is really a quote or a statistic.
 `layer-stack` means *concurrent layers*. Do not use it for a sequence or a
 timeline; it teaches the wrong shape. (R2-08, R2-13, R4-06, R5-11, R5-12, R5-14)
 
+**A funnel or a flow is only for a genuine sequence; parallel items get a list.**
+A shrinking funnel (`funnel()`) or connecting arrows say "this becomes that, and
+loses something on the way" — right for a real chain (a task saving draining
+stage by stage to the accounts), wrong for categories that merely sit side by
+side. Four failure stages that a project does *not* pass through in order got a
+bracketed list, not a funnel, precisely so the shape did not imply a pipeline;
+the task-to-accounts leak, which *is* a sequence, got the funnel. Match the shape
+to whether the steps actually follow one another. (AVM)
+
 **A comparison or a chronology uses `.data-table`**, which the template provides:
 `.compare` emphasises the last column, `.figures` sets it in the display face,
 `.ranked` treats the last column as a share. A course sets only its own type
@@ -145,7 +154,10 @@ script produces "Your sector adds to it." Write what the slide argues:
 "Singapore finance: advisory, and still unissued."
 
 **A kicker must not repeat the line beneath it.** Kickers orient; they do not
-restate. (R2-01)
+restate. (R2-01) This covers near-repeats, not just exact ones: "THE LIMITS OF
+MEASUREMENT" over "The limits of measuring AI value" passes the identical-string
+check but still reads as an echo — make the kicker add something the headline
+does not ("WHY THE NUMBERS DISAGREE"). (AVM)
 
 **Cut every label that names the artefact instead of the content.**
 "PLAIN-LANGUAGE PARAPHRASE", "COURSE WORKING DEFINITION", "SECOND EDITION, 2020",
@@ -165,6 +177,20 @@ belonging to another slide dilutes this one. (R5-04)
 text as well as narration, and over every revision. Watch in particular for words
 that read as machine-written to a Singapore audience — "defensible" was the one
 Ray named.
+
+**When on-slide wording changes, re-read that slide's script block.** The slide
+and its narration drift apart silently: relabel a chart and the voice still says
+the old term, swap a headline and the transcript still leads with the old framing.
+Every edit to on-slide text is also a check of the matching `#### NN` block — fix
+both together, then rebuild so the hidden notes regenerate. (AVM)
+
+**A term that needs a sentence to explain does not go on the slide.** Keep the
+plain-language version on screen and leave the technical term in the voice, where
+the narration defines it. "Counterfactual", "operating leverage", "precise null",
+"attribution" and a bare "62×" all read cold to a leader; the slide said the
+plain thing ("not money saved on the actual bill", "before-and-after is
+unreliable") and the script kept the term. The slide is for the subject, not for
+the vocabulary. (AVM)
 
 ## Motion and interaction
 
@@ -227,6 +253,22 @@ the built deck — not by eye. (R5-03, R5-06, R5-13)
 **`--emphasis` is defined in the template**, as `var(--accent-2)`, so a course
 inherits the blue without redefining it. A course overrides the token only to
 move its emphasis colour; it does not need to restate the default.
+
+**Red is single-purpose: negative, unfavourable, or a caveat — never a second
+highlight.** Blue is the one emphasis colour; red (`--bad`) carries only "the bad
+direction / the thing to distrust." When a slide needs to play down some items
+and lift one, grey the played-down ones (`--text-3`) and keep the lifted one in
+blue — do not reach for red as a third colour. A red `<mark>` marking a rejected
+term, a red "down" bar on a plain comparison, and a red caveat callout must not
+all coexist doing different jobs; the deck had all three creeping in before they
+were unified. (AVM)
+
+**A caveat callout is red; a supporting callout is blue.** A callout that warns
+or guards the reader uses `.callout.caveat` — red left border, red text, faint
+red tint, matching the quiz "wrong" state. A callout that adds context or a
+takeaway stays the default blue. The two are a deliberate system: the colour
+tells the learner, at a glance, whether the box is a claim to hold or a guard to
+heed. (AVM)
 
 ## The deck as a whole
 
