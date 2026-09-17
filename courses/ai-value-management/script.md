@@ -385,19 +385,19 @@ Read together, they show costs growing more slowly than the business, not costs 
 
 ### S7 · Can value be attributed at all
 
-#### 25 · Off by a factor of three
+#### 25 · Different ways of measuring the same data
 
 **Sources:** [R27], [R28], [R35]
-**Time:** 1:15  ·  147 words at 117 wpm
+**Time:** 1:18  ·  152 words at 117 wpm
 
 **Narration:**
 That brings us to the question underneath all of this, which is whether the value can be attributed at all.
 The discipline that has argued about this longest is advertising measurement.
-Researchers ran fifteen large experiments at Facebook and compared methods on identical data.
-Observational methods overestimated effectiveness, and in half the studies they were off by a factor of three.
-A naive comparison of exposed against unexposed users suggested a lift of four hundred and sixteen per cent.
+Researchers ran fifteen large experiments at Facebook, measuring the same effect on the same data three different ways.
+Comparing before against after suggested a lift of four hundred and sixteen per cent.
 Careful statistical matching brought that down to one hundred and two per cent.
-The randomised answer was seventy-seven per cent.
+The randomised test, the only trustworthy method, gave seventy-seven per cent.
+So the same data returned three very different numbers, and only the last one can be believed.
 
 The World Bank's evaluation handbook names the underlying problem directly.
 A baseline measured before an intervention is almost never a good estimate of the counterfactual.
