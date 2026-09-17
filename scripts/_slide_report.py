@@ -84,4 +84,31 @@ if sparse:
     for v in sparse:
         print("        slide %s: %spx unused below the last element" % (v['slide'], v['px']))
 
+lc = d.get('lowContrast') or []
+if lc:
+    # Advisory. The contrast miss is real, but the remedy is a colour-token
+    # judgement (darkening a shared --text-3, say), so surface it rather than
+    # break the build. Name the worst offender so the warning is actionable.
+    worst = min(lc, key=lambda v: v['ratio'])
+    print("warn  %d text element(s) below WCAG AA contrast (worst: %s on %s "
+          "%.2f:1 on slide %s - %s):" % (
+              len(lc), worst['fg'], worst['bg'], worst['ratio'],
+              worst['slide'], worst['text']))
+    for v in lc:
+        print("        slide %s: %.2f:1 (needs %s:1)  %s on %s - %s..." % (
+            v['slide'], v['ratio'], v.get('need', 4.5), v['fg'], v['bg'], v['text']))
+
+cue = d.get('cue')
+if cue is None:
+    print("skip  no quiz to reveal a non-colour cue on")
+elif not cue.get('ok'):
+    # Advisory. A quiz that separates correct from wrong by colour alone is a
+    # real accessibility problem, but whether the fix is a glyph, a label or a
+    # border is a design call, so warn rather than fail.
+    print("warn  quiz correct/wrong told apart by colour alone "
+          "(correct glyph %r, wrong glyph %r)" % (cue.get('right'), cue.get('wrong')))
+else:
+    print("ok    quiz correct/wrong carry a non-colour cue (%r vs %r)" % (
+        cue.get('right'), cue.get('wrong')))
+
 sys.exit(fail)

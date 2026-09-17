@@ -1,7 +1,7 @@
 import sys
 src, out = sys.argv[1], sys.argv[2]
 s = open(src).read()
-probe = """<script>
+probe = r"""<script>
 document.addEventListener('DOMContentLoaded', function () {
   var SEL = '.h2,.lede,.callout,.concept-box p,.layer-note,.mcq b,.mcq .why,' +
             '.rm-gate p,.rm-track span,.rm-beyond li,td,.layer .layer-name';
@@ -109,6 +109,70 @@ document.addEventListener('DOMContentLoaded', function () {
     if (gap > 320) sparse.push({slide: i + 1, px: gap});
   });
 
+  // WCAG AA contrast. Every text element's computed colour must clear 4.5:1
+  // against its effective background. getComputedStyle gives an rgb/rgba string;
+  // a transparent or rgba(...,0) background is see-through, so walk up the
+  // parents until an opaque colour is found, defaulting to white at the root.
+  // relative luminance and the ratio are the WCAG formulas verbatim.
+  var parseRGB = function (s) {
+    var m = (s || '').match(/rgba?\(([^)]+)\)/);
+    if (!m) return null;
+    var p = m[1].split(',').map(function (x) { return parseFloat(x); });
+    return {r: p[0], g: p[1], b: p[2], a: p.length > 3 ? p[3] : 1};
+  };
+  var lum = function (c) {
+    var f = [c.r, c.g, c.b].map(function (v) {
+      v /= 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * f[0] + 0.7152 * f[1] + 0.0722 * f[2];
+  };
+  var ratio = function (a, b) {
+    var la = lum(a), lb = lum(b);
+    return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05);
+  };
+  // An element sitting on a translucent background composites over what is
+  // behind it. Rather than model the full stack, walk up to the first fully
+  // opaque background — that is the colour the text is legibly read against.
+  var effBg = function (el) {
+    for (var n = el; n; n = n.parentElement) {
+      var c = parseRGB(getComputedStyle(n).backgroundColor);
+      if (c && c.a >= 1) return c;
+    }
+    return {r: 255, g: 255, b: 255, a: 1};
+  };
+  var lowContrast = [];
+  document.querySelectorAll('.slide').forEach(function (sl, i) {
+    sl.querySelectorAll('*').forEach(function (el) {
+      // Only elements that render their own text (a direct non-empty text node),
+      // and only if actually painted — a hidden or zero-box element carries none.
+      var hasText = false;
+      for (var k = 0; k < el.childNodes.length; k++) {
+        var cn = el.childNodes[k];
+        if (cn.nodeType === 3 && cn.textContent.trim()) { hasText = true; break; }
+      }
+      if (!hasText || !el.getClientRects().length) return;
+      var cs = getComputedStyle(el);
+      if (cs.visibility === 'hidden' || cs.display === 'none' || parseFloat(cs.opacity) === 0) return;
+      var fg = parseRGB(cs.color);
+      if (!fg || fg.a === 0) return;
+      var bg = effBg(el);
+      var rr = ratio(fg, bg);
+      // WCAG AA: normal text needs 4.5:1, but LARGE text needs only 3:1. Large
+      // is >=24px, or >=18.66px (14pt) when bold. Applying the same tiering the
+      // guideline does keeps the check from flagging a legibly large heading.
+      var px = parseFloat(cs.fontSize);
+      var bold = parseInt(cs.fontWeight, 10) >= 700;
+      var large = px >= 24 || (bold && px >= 18.66);
+      var need = large ? 3 : 4.5;
+      if (rr < need) {
+        lowContrast.push({slide: i + 1, ratio: Math.round(rr * 100) / 100, need: need,
+                          text: el.textContent.trim().slice(0, 40),
+                          fg: cs.color, bg: 'rgb(' + bg.r + ',' + bg.g + ',' + bg.b + ')'});
+      }
+    });
+  });
+
   var shift = null, q = document.querySelector('.quiz');
   if (q) {
     var opt = q.querySelector('.mcq');
@@ -133,7 +197,32 @@ document.addEventListener('DOMContentLoaded', function () {
              moved: before[0] !== after[0] || before[1] !== after[1] || before[2] !== after[2],
              hasWhy: why !== null, whyShown: whyShown};
   }
-  document.title = JSON.stringify({maxLines: max, long: long, pos: pos, reveal: shift, over: over, dupes: dupes, echo: echo, unnumbered: unnumbered, sparse: sparse});
+
+  // Colour-is-not-the-only-signal. Once a quiz is revealed the correct and the
+  // wrong options must be told apart by more than colour, so a learner who
+  // cannot distinguish green from red still sees which is which. The template
+  // marks them with a glyph on the letter (::after content: a tick on correct,
+  // a cross on the rest). Read the ::after content of a correct option's letter
+  // and of a non-correct option's letter after reveal; each must be a non-empty
+  // glyph and the two must differ. If the only difference were the swatch
+  // colour, both glyphs would be empty (or identical) and this fails.
+  var cue = null;
+  var rq = document.querySelector('.quiz.revealed');
+  if (rq) {
+    var glyph = function (mcq) {
+      var lt = mcq && mcq.querySelector('.letter');
+      if (!lt) return '';
+      var c = getComputedStyle(lt, '::after').content;
+      if (!c || c === 'none' || c === 'normal') return '';
+      return c.replace(/^["']|["']$/g, '');   // strip the quotes CSS content carries
+    };
+    var right = glyph(rq.querySelector('.mcq.correct'));
+    var wrongEl = rq.querySelector('.mcq:not(.correct)');
+    var wrong = glyph(wrongEl);
+    cue = {right: right, wrong: wrong,
+           ok: right !== '' && wrong !== '' && right !== wrong};
+  }
+  document.title = JSON.stringify({maxLines: max, long: long, pos: pos, reveal: shift, over: over, dupes: dupes, echo: echo, unnumbered: unnumbered, sparse: sparse, lowContrast: lowContrast, cue: cue});
 });
 </script>"""
 open(out, 'w').write(s.replace('</body></html>', probe + '\n</body></html>'))

@@ -270,6 +270,16 @@ takeaway stays the default blue. The two are a deliberate system: the colour
 tells the learner, at a glance, whether the box is a claim to hold or a guard to
 heed. (AVM)
 
+**Colour is never the only signal, and text clears contrast.** Any distinction
+the eye must read — a highlighted term, a "good"/"bad" bar, a selected quiz
+option — also carries a non-colour cue: weight, a label, a glyph (the quiz's
+`✓`/`✕`), or position. About one in twelve men cannot separate red from green,
+and a projector or a greyscale print flattens the rest. Every text-on-background
+pair should clear WCAG AA 4.5:1; `check-slides.sh` warns on the ratios and on any
+quiz state told apart by colour alone. The warnings inform, they do not gate —
+darkening a muted grey is a judgement, but an unread slide number is a real
+cost. (AVM-QA)
+
 ## The deck as a whole
 
 **The cover is one line.** Course title, then presenter name and credential,
@@ -299,7 +309,18 @@ only distant or older evidence exists, say so on the slide rather than letting i
 pass as current. (R2-04)
 
 **Date-stamp jurisdiction slides consistently.** If one carries "as at <date>",
-they all do. A reader treats an undated slide as timeless. (R2-14)
+they all do. A reader treats an undated slide as timeless. (R2-14) A claim that
+carries a currency word — *current, latest, now, as of* — names a year, or it
+rots silently; `qa_text_checks.py` warns on a currency word with no date on the
+line. (AVM-QA)
+
+**Do not make the model a person.** The course does not say a model
+*understands, knows, reasons, thinks, decides,* or is *autonomous* or *unbiased*
+— except inside a quoted, attributed line. It predicts tokens; saying it
+"understands" overstates the capability, which is a claim stronger than its
+source. `qa_text_checks.py` greps for these verbs under an AI subject (a bare
+"the reason is" or "think about" is fine — the check fires only on "the model
+reasons"). (AVM-QA)
 
 **Every slide needs a connecting sentence in the script.** In a recorded course
 the narrator must never read the slide title aloud to bridge from the previous

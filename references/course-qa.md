@@ -19,13 +19,14 @@ is a separate pass.
 
 ```bash
 ./scripts/build-course.sh courses/<name>     # must rebuild cleanly
-./scripts/check-slides.sh courses/<name>     # must exit 0
+./scripts/check-slides.sh courses/<name>     # must exit 0 (layout); also warns on contrast + colour signal
+python3 scripts/qa_text_checks.py courses/<name>   # must exit 0 (language, anthropomorphic, currency)
 python3 scripts/course/stamp-times.py courses/<name>/course.md
 ```
 
 | # | Gate | How it is checked |
 |---|---|---|
-| G1 | Eight hard checks pass | `check-slides.sh` exits 0 |
+| G1 | Every hard check passes | `check-slides.sh` exits 0 (layout, kicker, quiz-reveal, self-contained). It also emits advisory warnings — sparse frame, contrast, colour-only signal — which inform judged criteria but do not gate. `qa_text_checks.py` exits 0 (language guard, no anthropomorphic overclaim, currency dated) |
 | G2 | The deck rebuilds from source | `build-course.sh` runs without error — proves `index.html` was not hand-edited |
 | G3 | Every slide cites only sources its narration declares | build guard in `engine.py` |
 | G4 | Every cited source has a label | build guard in `engine.py` |
@@ -40,8 +41,10 @@ the deck is 78% acceptable when it is not acceptable at all.
 
 ## Scoring
 
-Each dimension has five criteria. Each scores **0, 0.5 or 1**, so a dimension is
-a percentage out of 5. The overall score is Σ (dimension % × weight).
+Each dimension has five criteria unless it says otherwise — dimensions 1, 4 and
+5 note their own count where a folded-in check took them past five. Each criterion
+scores **0, 0.5 or 1**, so a dimension is a percentage out of its criterion count.
+The overall score is Σ (dimension % × weight).
 
 | Weight | Dimension |
 |---|---|
@@ -74,6 +77,17 @@ layout check can see.
    rather than merely plausible.
 5. Unverified items are visible as unverified — in the brief, on a review label,
    or on the slide — never silently promoted to fact.
+6. **Currency is dated.** A claim carrying a currency word — current, latest, now,
+   recent, as of — names a date, and a time-sensitive figure is not left to rot
+   past the `knowledge-cut-off` in `course.md`. *(grep in `qa_text_checks.py`: a
+   currency word with no year on the line is a finding)*
+7. **No anthropomorphic overclaim.** The course does not say a model
+   *understands, knows, reasons, thinks, decides,* or is *autonomous* or
+   *unbiased,* except in a quoted, attributed line. Overstating capability is a
+   claim stronger than its source. *(grep in `qa_text_checks.py`, fires only on an
+   AI subject; rule in slide-design.md)*
+
+   *(Seven criteria here; score it out of 7.)*
 
 > **Release blocker:** an unverified load-bearing claim on a slide, or a claim
 > known to be wrong. Blocks regardless of the total score.
@@ -112,8 +126,14 @@ layout check can see.
    highlighted sentence is a highlighted nothing.
 6. British spelling, SG register, no Americanism or sports metaphor, no
    rhetorical question to the reader, and none of the named tics.
+7. **The closed-set language guard passes.** No US spelling (`color`,
+   `organization`, `-ize` where `-ise` is house style), no bare `$` without a
+   currency, no `M/D/Y` date. *(grep in `qa_text_checks.py` over `slides.py` and
+   `script.md`, exempting quotes and source labels — a regression guard on the
+   `sg-english` pass, not a replacement; the pass still owns register and idiom a
+   word-list cannot see)*
 
-   *(Six criteria here; score it out of 6.)*
+   *(Seven criteria here; score it out of 7.)*
 
 ## 5 · Visual fit and density — 12%
 
@@ -127,6 +147,15 @@ layout check can see.
 5. Slides doing the same job use the same component, verified by reading computed
    styles back rather than by eye — and no more than half the slides are card
    grids.
+6. **Colour is never the only signal, and text clears contrast.** A state or a
+   distinction the eye must read — a highlighted term, a "good"/"bad" bar, a
+   selected option — also carries a non-colour cue (weight, label, glyph,
+   position), and every text-on-background pair meets 4.5:1. *(two advisory
+   warnings in `check-slides.sh` surface the contrast ratios and any
+   colour-only quiz state; they inform this judged criterion, they do not gate —
+   a colour-token call is judgement. Rule in slide-design.md)*
+
+   *(Six criteria here; score it out of 6.)*
 
 ## 6 · Deck furniture — 10%
 
@@ -139,7 +168,7 @@ layout check can see.
 ## 7 · Motion and interaction — 10%
 
 1. Builds step on the learner's input, never on a timer.
-2. Motion is paced to the voice — roughly 2.5 seconds an item at 150 wpm.
+2. Motion is paced to the voice — roughly 2.5 seconds an item at 105 wpm.
 3. What the voice enumerates animates; a definition, quotation, decision record,
    quiz or reference block does not.
 4. Every interaction shows its result unmistakably, in the emphasis colour,
@@ -196,11 +225,13 @@ A percentage is a summary, not a verdict — the blockers decide release.
 5. Verify the load-bearing claims against primary sources. Say which you could
    not reach. Never mark a claim verified because a prior brief marked it
    researched.
-6. Write `courses/<name>/qa/REPORT.md`: summary and score, Gate 0 result,
-   dimension tables, blockers, then findings ordered by severity.
+6. Write `courses/<name>/qa/REPORT.md` from
+   [qa-report-template.md](./qa-report-template.md): score at the dimension level,
+   cite evidence only for the misses, state the Gate 0 result (do not paste the
+   console output), then findings ordered by severity with a fix each.
 7. Anything that generalises beyond this course goes into
    [slide-design.md](./slide-design.md) as a rule, and into `check-slides.sh` as
-   a check that is proven to fail.
+   a check that is proven to fail on a deliberate violation.
 
 An independent reviewer — a fresh agent, or a second person — beats a self-review
 by the author of the deck. The author scores what they meant; a reviewer scores
