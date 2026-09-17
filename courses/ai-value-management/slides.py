@@ -381,10 +381,10 @@ SLIDES = [
 
 # ---- S7 · Can value be attributed at all --------------------------------------
 
-(25, 'THE SAME DATA, THREE METHODS', 'Observational methods were off by a factor of three.',
- bars(('Naive before-and-after', 416, '416%', 'down'),
-      ('Matched comparison', 102, '102%', ''),
-      ('Randomised experiment', 77, '77%', '')) +
+(25, 'ONE ADVERTISING EXPERIMENT', 'Different ways of measuring the same data.',
+ bars(('Before vs after', 416, '416%', 'muted'),
+      ('Matched comparison', 102, '102%', 'muted'),
+      ('Randomised test', 77, '77%', '')) +
  callout('Only the randomised experiment is trustworthy. The World Bank calls a before-and-after comparison a counterfeit estimate.'),
  ['R28', 'R27']),
 
